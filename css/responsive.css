@@ -140,3 +140,18 @@
   .work-dots i{width:10px;height:10px}
   .work-dots i.active{width:26px}
 }
+
+/* ---------- mobile smoothness: lighter glass blur ----------
+   backdrop-filter blur is the biggest scroll-jank source on phones;
+   smaller radius keeps the glass look but recomputes far cheaper per frame. */
+@media(max-width:720px){
+  .glass,
+  .hero-window,
+  .statusbar,
+  nav.dock,
+  .win-chrome,
+  .os-modal-backdrop{
+    backdrop-filter: blur(12px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+  }
+}
