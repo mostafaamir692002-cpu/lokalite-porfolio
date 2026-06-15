@@ -329,7 +329,7 @@
       id: "PANTOUFLA",
       glyph: "P",
       glyphClass: "wc-5",
-      tag: { en: "Family Lifestyle Brand", ar: "براند لايف ستايل عائلي" },
+      tag: { en: "Lifestyle Footwear Brand", ar: "براند أحذية لايف ستايل" },
       title: "Pantoufla",
       website: "https://pantoufla.com",
       status: { en: "Live", ar: "مشروع حي" },
@@ -408,80 +408,80 @@
       id: "THE FISHMONGER",
       glyph: "F",
       glyphClass: "wc-6",
-      tag: { en: "Artisanal Seafood Brand", ar: "براند مأكولات بحرية حِرَفي" },
-      title: "The Fishmonger",
-      website: "https://thefishmonger.co",
+      tag: { en: "Full-Stack Seafood Marketplace", ar: "منصة مأكولات بحرية متكاملة" },
+      title: "Fishmonger / Al Hoot",
+      website: "https://alhoot-eg.com",
       status: { en: "Live", ar: "مشروع حي" },
       previewImage: "assets/fishmonger_preview.jpg",
       problem_short: {
-        en: "A premium fish market with loyal walk-in customers — but zero digital commerce and 100% reliance on WhatsApp orders.",
-        ar: "سوق سمك فاخر بعملاء مخلصين — لكن صفر تجارة رقمية و١٠٠% اعتماد على طلبات الواتساب."
+        en: "A growing seafood marketplace needed a real platform — not a template store — with a proper dashboard, secure accounts, and role-based control.",
+        ar: "ماركت بليس مأكولات بحرية بينمو كان محتاج منصة حقيقية — مش متجر قالب جاهز — بداشبورد كامل، حسابات آمنة، وتحكّم بالصلاحيات."
       },
       outcome_short: {
-        en: "Brand repositioning, Shopify commerce platform, and a premium visual identity that justified higher price points.",
-        ar: "إعادة تموضع البراند، منصة تجارة شوبيفاي، وهوية بصرية راقية مبررة للأسعار الأعلى."
+        en: "Built and hardened a full-stack platform: dashboard, product management, auth, analytics, role-based permissions, and advanced Supabase RLS.",
+        ar: "بنينا وأمّنّا منصة فول-ستاك: داشبورد، إدارة منتجات، تسجيل دخول، تحليلات، صلاحيات بالأدوار، وSupabase RLS متقدم."
       },
       card: {
-        en: "Traditional fish market reborn as a premium DTC seafood brand — identity, commerce platform, and brand voice built from the ground up.",
-        ar: "سوق سمك تقليدي اتولد من جديد كبراند مأكولات بحرية DTC فاخر — هوية، منصة تجارة، وصوت براند اتبنوا من الأساس."
+        en: "A full-stack seafood marketplace engineered for control and trust — admin dashboard, secure auth, analytics, and database-level security.",
+        ar: "ماركت بليس مأكولات بحرية فول-ستاك متبني للتحكّم والثقة — داشبورد إدارة، تسجيل دخول آمن، تحليلات، وأمان على مستوى قاعدة البيانات."
       },
       meta: {
-        en: ["Brand Repositioning", "DTC Commerce", "Identity Design"],
-        ar: ["إعادة تموضع البراند", "التجارة المباشرة DTC", "تصميم الهوية"]
+        en: ["Full-Stack Build", "Admin Dashboard", "Supabase RLS"],
+        ar: ["بناء فول-ستاك", "داشبورد إدارة", "Supabase RLS"]
       },
       focusTags: {
-        en: ["Brand Repositioning", "Commerce Platform", "Visual Identity", "Premium Positioning", "DTC Strategy"],
-        ar: ["إعادة تموضع البراند", "منصة التجارة", "الهوية البصرية", "التموضع الفاخر", "استراتيجية DTC"]
+        en: ["Full-Stack Platform", "Admin Dashboard", "Authentication", "Analytics", "Security Hardening"],
+        ar: ["منصة فول-ستاك", "داشبورد إدارة", "المصادقة", "التحليلات", "تأمين النظام"]
       },
       techs: {
-        en: ["Brand Strategy", "Shopify Platform", "Visual Identity", "Positioning & Copy"],
-        ar: ["استراتيجية البراند", "منصة شوبيفاي", "الهوية البصرية", "التموضع والنصوص"]
+        en: ["Supabase", "Row-Level Security", "Auth & RBAC", "Analytics"],
+        ar: ["Supabase", "أمان على مستوى الصف", "مصادقة وصلاحيات", "تحليلات"]
       },
       focus: {
-        en: ["Brand Transformation", "Commerce Architecture", "Positioning Strategy", "Visual Identity", "Customer Experience"],
-        ar: ["تحول البراند", "بنية التجارة", "استراتيجية التموضع", "الهوية البصرية", "تجربة العميل"]
+        en: ["Platform Engineering", "Database Architecture", "Access Control", "Security", "Operations"],
+        ar: ["هندسة المنصة", "بنية قاعدة البيانات", "التحكّم بالوصول", "الأمان", "العمليات"]
       },
       overview: {
-        en: "The Fishmonger is a premium direct-to-consumer seafood brand repositioned from a traditional fish market model. We built the brand identity, the commerce infrastructure, and the premium positioning that allowed them to charge what their quality deserves.",
-        ar: "ذا فيش مونجر هو براند مأكولات بحرية مباشر للمستهلك (DTC) أُعيد تموضعه من نموذج سوق السمك التقليدي. بنينا هوية البراند، البنية التجارية، والتموضع الفاخر اللي خلّاهم يتقاضوا ثمن جودتهم الحقيقية."
+        en: "Fishmonger / Al Hoot is a full-stack seafood marketplace. I built and stabilized the platform end to end — an admin dashboard, product management, authentication, analytics, role-based permissions, a clean database architecture, security hardening, and advanced Supabase Row-Level Security.",
+        ar: "فيش مونجر / الحوت هو ماركت بليس مأكولات بحرية فول-ستاك. بنيت وثبّتت المنصة من الأول للآخر — داشبورد إدارة، إدارة منتجات، مصادقة، تحليلات، صلاحيات بالأدوار، بنية قاعدة بيانات نضيفة، تأمين النظام، وSupabase Row-Level Security متقدم."
       },
       businessContext: {
-        en: "The premium seafood market is growing but mostly served by generic delivery apps. An artisanal brand with strong product quality needed a digital identity that matched — and pricing power to go with it.",
-        ar: "سوق المأكولات البحرية الفاخرة بينمو لكن بيخدمه معظمه تطبيقات توصيل جنيريك. براند حِرَفي بجودة منتج عالية كان محتاج هوية رقمية على نفس المستوى — وقدرة تسعير تتماشى معاها."
+        en: "A seafood marketplace handling real orders and inventory can't run on a fragile template. It needed secure accounts, controlled team access, reliable data, and a dashboard the business could actually operate from.",
+        ar: "ماركت بليس مأكولات بحرية بيتعامل مع طلبات ومخزون حقيقي مينفعش يشتغل على قالب هش. كان محتاج حسابات آمنة، وصول فريق متحكّم فيه، بيانات موثوقة، وداشبورد البيزنس يقدر يشتغل منه فعلاً."
       },
       problem: {
-        en: "All orders came through WhatsApp. There was no brand identity, no pricing structure, and no way to communicate quality at a premium level. The business was invisible online.",
-        ar: "كل الطلبات جت عبر الواتساب. مكنش فيه هوية براند، ولا هيكل تسعير، ولا طريقة لإيصال الجودة على مستوى فاخر. البيزنس كان غير مرئي أونلاين."
+        en: "The platform needed to be both built and stabilized: proper authentication, role-based permissions so each team member sees only what they should, trustworthy analytics, and database-level security to protect orders and customer data.",
+        ar: "المنصة كانت محتاجة تتبني وتتثبّت: مصادقة سليمة، صلاحيات بالأدوار بحيث كل عضو يشوف اللي يخصّه بس، تحليلات موثوقة، وأمان على مستوى قاعدة البيانات يحمي الطلبات وبيانات العملاء."
       },
       solution: {
-        en: "Built a complete brand identity around the artisanal, direct-from-sea story. Launched a Shopify DTC platform with premium product photography direction, evocative copy, and a seamless mobile ordering experience.",
-        ar: "بنينا هوية براند كاملة حول قصة الحِرَفية والمباشرة من البحر. أطلقنا منصة DTC شوبيفاي مع توجيه تصوير منتج راقٍ، نصوص معبرة، وتجربة طلب موبايل سلسة."
+        en: "Engineered a full-stack platform on Supabase: an operations dashboard, product management, secure auth with role-based access control, analytics, and a hardened database with advanced Row-Level Security policies isolating data by role.",
+        ar: "هندست منصة فول-ستاك على Supabase: داشبورد عمليات، إدارة منتجات، مصادقة آمنة بصلاحيات بالأدوار، تحليلات، وقاعدة بيانات مؤمّنة بسياسات Row-Level Security متقدمة بتعزل البيانات حسب الدور."
       },
       decisions: {
         en: [
-          "Story Before Product: Led every page with the catch story, not the price — building desire before presenting the transaction.",
-          "Premium Pricing Architecture: Restructured SKU pricing to reflect the artisanal value, backed by the brand story we built.",
-          "Mobile-First Design: 80% of orders come from mobile — designed the entire checkout experience around one-thumb navigation."
+          "Security at the Database Layer: Enforced access with Supabase Row-Level Security, so permissions hold even if the front-end is bypassed.",
+          "Role-Based Access Control: Modeled clear roles so each team member's dashboard exposes only the data and actions they own.",
+          "Build then Stabilize: Prioritized hardening, reliable data, and analytics so the platform could be trusted in daily operations."
         ],
         ar: [
-          "القصة قبل المنتج: بدأنا كل صفحة بقصة الصيد، مش السعر — بنينا الرغبة قبل ما نعرض الصفقة.",
-          "هيكل تسعير فاخر: أعدنا هيكلة أسعار المنتجات لتعكس القيمة الحِرَفية، مدعومة بقصة البراند اللي بنيناها.",
-          "تصميم موبايل أولاً: ٨٠% من الطلبات من الموبايل — صممنا تجربة الدفع كاملة حول التنقل بإصبع واحد."
+          "الأمان في طبقة قاعدة البيانات: فرضت الوصول بـSupabase Row-Level Security، فالصلاحيات بتفضل صامدة حتى لو اتخطّى الواجهة.",
+          "التحكّم بالوصول بالأدوار: عملت أدوار واضحة بحيث داشبورد كل عضو يعرض البيانات والإجراءات اللي تخصّه بس.",
+          "نبني الأول وبعدين نثبّت: ركّزت على التأمين، البيانات الموثوقة، والتحليلات عشان المنصة يُعتمد عليها في التشغيل اليومي."
         ]
       },
       systemArchitecture: {
-        en: "Shopify commerce platform with custom collection architecture, photography-forward theme, and integrated local payment and delivery options.",
-        ar: "منصة تجارة شوبيفاي مع بنية مجموعات مخصصة، ثيم يحتفي بالتصوير، وبوابات دفع وتوصيل محلية متكاملة."
+        en: "Full-stack architecture on Supabase: a relational database schema, authentication and role-based permissions, an admin/operations dashboard, analytics, and advanced Row-Level Security policies hardening every table.",
+        ar: "معمارية فول-ستاك على Supabase: سكيمة قاعدة بيانات علائقية، مصادقة وصلاحيات بالأدوار، داشبورد إدارة/عمليات، تحليلات، وسياسات Row-Level Security متقدمة بتأمّن كل جدول."
       },
       outcome: {
-        en: "Transformed a WhatsApp-dependent fish market into a premium DTC brand with a digital storefront worthy of the product quality. Revenue per order increased after repositioning.",
-        ar: "حولنا سوق سمك معتمد على الواتساب لبراند DTC فاخر بواجهة رقمية على مستوى جودة المنتج. الإيراد لكل طلب زاد بعد إعادة التموضع."
+        en: "Delivered a stable, secure full-stack marketplace the team operates daily — with controlled access, trustworthy analytics, and database-level protection for orders and customer data.",
+        ar: "سلّمت ماركت بليس فول-ستاك مستقر وآمن الفريق بيشتغل عليه يوميًا — بوصول متحكّم فيه، تحليلات موثوقة، وحماية على مستوى قاعدة البيانات للطلبات وبيانات العملاء."
       },
       stats: [
-        { lbl: "BRAND STATUS", val: "Repositioned", desc: "WhatsApp orders → premium DTC commerce" },
-        { lbl: "ORDER CHANNEL", val: "100% Digital", desc: "Mobile-first checkout, zero phone dependency" }
+        { lbl: "PLATFORM", val: "Full-Stack", desc: "Dashboard, auth, analytics, RBAC" },
+        { lbl: "SECURITY", val: "RLS Hardened", desc: "Supabase Row-Level Security on every table" }
       ],
-      link: "https://thefishmonger.co"
+      link: "https://alhoot-eg.com"
     }
   ];
 
