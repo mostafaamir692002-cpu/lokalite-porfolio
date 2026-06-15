@@ -6,7 +6,8 @@
 (function (MOS) {
   "use strict";
 
-  var ORDER = [
+  /* Critical path: structure, content, scroll, boot — must run before/at first paint. */
+  var CRITICAL = [
     "space",          // WebGL world first — boot drives its convergence
     "scroll",         // Lenis + progress (space camera reads scrollProgress)
     "reveals",        // scroll-in system
@@ -15,24 +16,34 @@
     "modes",          // disciplines selector
     "modal",          // modal close bindings
     "controlCenter",  // toggles
-    "selMenu",        // hero name easter egg
-    "interactions",   // parallax / specular / hero tilt
-    "magnetic",       // magnetic button effect on CTAs
-    "scrollDots",     // right-rail section indicator
-    "cursor",         // custom cursor
-    "menu",           // mobile burger
+    "menu",           // mobile burger (nav — keep responsive)
     "lang",           // restores saved language (after carousel render)
     "theme",          // restores saved theme (may sleep the space layer)
     "boot"            // last: starts the cinematic boot → heroIntro
   ];
 
-  function run() {
-    ORDER.forEach(function (name) {
+  /* Non-critical enhancers: decorative/pointer-driven. Deferred to idle for faster TTI. */
+  var DEFERRED = [
+    "selMenu",        // hero name easter egg
+    "interactions",   // parallax / specular / hero tilt
+    "magnetic",       // magnetic button effect on CTAs
+    "scrollDots",     // right-rail section indicator
+    "cursor"          // custom cursor
+  ];
+
+  function runList(list) {
+    list.forEach(function (name) {
       var init = MOS.modules[name];
       if (!init) return;
       try { init(); }
       catch (e) { console.warn("[MOS] module failed:", name, e); }
     });
+  }
+
+  function run() {
+    runList(CRITICAL);
+    var idle = window.requestIdleCallback || function (cb) { return setTimeout(cb, 1); };
+    idle(function () { runList(DEFERRED); });
   }
 
   if (document.readyState === "loading") {
