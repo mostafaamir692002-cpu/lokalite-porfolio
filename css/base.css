@@ -137,6 +137,17 @@ body.cursor-hover .cursor-aura{width:58px;height:58px;border-color:rgba(100,212,
 }
 :focus:not(:focus-visible){outline:none}
 
+/* ---- skip to content (visible only on keyboard focus) ---- */
+.skip-link{
+  position:fixed;top:12px;left:12px;z-index:100000;
+  padding:10px 16px;border-radius:10px;
+  background:var(--blue,#0A84FF);color:#fff;
+  font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:13px;line-height:1;
+  text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.4);
+  transform:translateY(-160%);transition:transform .2s ease;
+}
+.skip-link:focus{transform:translateY(0);outline:2px solid #fff;outline-offset:2px}
+
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
   [data-reveal]{opacity:1;transform:none}

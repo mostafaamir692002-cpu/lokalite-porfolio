@@ -21,7 +21,7 @@
 }
 .mode.active .n{color:var(--blue-soft);opacity:1}
 .mode-readout{margin-top:18px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
-.mode-readout .desc h4{font-family:"Archivo";font-weight:700;font-size:22px;color:var(--ink-0)}
+.mode-readout .desc h3{font-family:"Archivo";font-weight:700;font-size:22px;color:var(--ink-0)}
 .mode-readout .desc p{color:var(--ink-2);margin-top:10px;font-size:14.5px}
 .mode-readout .desc .ar{font-family:"Noto Sans Arabic";direction:rtl;color:var(--ink-1);margin-top:12px;font-size:15px;line-height:1.9}
 .mode-readout .meterset{display:flex;flex-direction:column;gap:14px}
@@ -109,7 +109,7 @@
 .sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
 .sys-card{padding:26px;border-radius:22px}
 .sys-card .num{font-family:"JetBrains Mono";font-size:12px;color:var(--blue-soft);letter-spacing:.1em}
-.sys-card h4{font-family:"Archivo";font-weight:700;font-size:20px;color:var(--ink-0);margin:14px 0 10px}
+.sys-card h3{font-family:"Archivo";font-weight:700;font-size:20px;color:var(--ink-0);margin:14px 0 10px}
 .sys-card p{color:var(--ink-2);font-size:14px}
 .sys-card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:6px;color:var(--blue-soft);background:rgba(90,169,255,.1);border:1px solid rgba(90,169,255,.2)}
 
