@@ -1,0 +1,12 @@
+{
+  "name": "Mostafa Amir — Brand & Commerce Systems Builder",
+  "short_name": "Mostafa.OS",
+  "description": "I build the system behind the brand — strategy, identity, commerce infrastructure, and go-to-market as one system that ships.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060608",
+  "theme_color": "#060608",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
