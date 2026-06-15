@@ -152,6 +152,18 @@
 
     /* ---- pointer drag ---- */
     var wrap = MOS.$(".work-track-wrap");
+
+    /* keyboard: Left/Right arrows navigate when the carousel region is focused */
+    if (wrap) {
+      wrap.setAttribute("tabindex", "0");
+      wrap.setAttribute("role", "group");
+      wrap.setAttribute("aria-label", "Work projects carousel");
+      wrap.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") { e.preventDefault(); go(idx + 1); }
+        else if (e.key === "ArrowLeft") { e.preventDefault(); go(idx - 1); }
+      });
+    }
+
     if (wrap && window.PointerEvent) {
       var dragging = false, startX = 0, delta = 0, baseOffset = 0;
       wrap.addEventListener("pointerdown", function (e) {

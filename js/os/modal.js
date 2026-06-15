@@ -6,6 +6,35 @@
   "use strict";
 
   var diagInterval = null;
+  var lastFocused = null;
+
+  /* ---- focus management (WCAG: trap focus inside the open window) ---- */
+  function focusables(modal) {
+    return Array.prototype.slice.call(modal.querySelectorAll(
+      'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])'
+    )).filter(function (el) { return el.offsetParent !== null; });
+  }
+  function trapTab(e) {
+    if (e.key !== "Tab") return;
+    var modal = MOS.$("#osModal");
+    if (!modal) return;
+    var f = focusables(modal);
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+  function activateModal() {
+    var modal = MOS.$("#osModal");
+    if (!modal) return;
+    lastFocused = document.activeElement;
+    modal.classList.add("is-active");
+    document.body.classList.add("is-locked");
+    document.removeEventListener("keydown", trapTab, true);
+    document.addEventListener("keydown", trapTab, true);
+    var f = focusables(modal);
+    if (f.length) f[0].focus();
+  }
 
   function isArabic() {
     return (document.documentElement.getAttribute("lang") || "en") === "ar";
@@ -16,6 +45,8 @@
     var modal = MOS.$("#osModal");
     if (modal) modal.classList.remove("is-active");
     document.body.classList.remove("is-locked");
+    document.removeEventListener("keydown", trapTab, true);
+    if (lastFocused && lastFocused.focus) { try { lastFocused.focus(); } catch (e) {} lastFocused = null; }
 
     /* reset diagnostics CC toggle */
     var sysToggle = MOS.$('.toggle[data-c="sys"]');
@@ -118,9 +149,8 @@
       '</a>' +
     '</div>';
 
-    modal.classList.add("is-active");
-    document.body.classList.add("is-locked");
     MOS.$("#modalBackBtn").addEventListener("click", close);
+    activateModal();
   }
 
   function openDiagnostics() {
@@ -172,9 +202,8 @@
       '</div>' +
       '</div>';
 
-    modal.classList.add("is-active");
-    document.body.classList.add("is-locked");
     MOS.$("#modalBackBtn").addEventListener("click", close);
+    activateModal();
 
     if (diagInterval) clearInterval(diagInterval);
     diagInterval = setInterval(function () {
