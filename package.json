@@ -4,10 +4,13 @@
   "private": true,
   "description": "Mostafa.OS — Portfolio V2 · Glass OS in Space. Static, no-build site (opens via file://).",
   "scripts": {
+    "build": "node scripts/build.mjs",
     "optimize:img": "node scripts/optimize-images.mjs"
   },
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "^0.24.2",
+    "lightningcss": "^1.32.0",
     "sharp": "^0.33.5"
   }
 }

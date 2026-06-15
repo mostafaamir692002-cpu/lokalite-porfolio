@@ -1,25 +1,21 @@
-# Static site — no build step. Published from repo root.
+# Production build: `npm run build` emits a minified, hashed bundle to dist/.
+# (Source stays file://-friendly; dist/ is generated.)
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
-# Images & fonts: stable filenames, safe to cache aggressively.
+# Hashed JS bundle + images: filenames change on edit, so cache forever.
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# CSS/JS: unhashed filenames, so revalidate hourly to avoid stale UI.
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# HTML: always revalidate.
+# HTML: always revalidate (CSS is inlined here, so no /css/* rule needed).
 [[headers]]
   for = "/*.html"
   [headers.values]
