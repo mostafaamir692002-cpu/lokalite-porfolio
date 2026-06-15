@@ -122,6 +122,29 @@ body.light-mode .diag-card {
   background: rgba(15,16,21,0.02) !important;
   border: 1px solid rgba(15,16,21,0.05) !important;
 }
+
+/* modal inner surfaces — these used dark white-alpha fills that vanish on light bg */
+body.light-mode .modal-case-hero {
+  background: rgba(15,16,21,0.04) !important;
+  border-color: rgba(15,16,21,0.08) !important;
+  box-shadow: 0 10px 32px rgba(15,16,21,0.08) !important;
+}
+body.light-mode .modal-header-info .techs span {
+  background: rgba(15,16,21,0.04) !important;
+  border: 1px solid rgba(15,16,21,0.08) !important;
+  color: var(--ink-1) !important;
+}
+body.light-mode .modal-decision-list li {
+  background: rgba(15,16,21,0.025) !important;
+  border: 1px solid rgba(15,16,21,0.06) !important;
+}
+body.light-mode .modal-btn.secondary {
+  background: rgba(15,16,21,0.05) !important;
+  color: var(--ink-0) !important;
+  border: 1px solid rgba(15,16,21,0.1) !important;
+}
+body.light-mode .modal-stat-box .val,
+body.light-mode .modal-decision-list li b { color: var(--ink-0) !important; }
 body.light-mode .channel {
   background: linear-gradient(180deg, #f9fafc, #edf0f5) !important;
   border: 1px solid rgba(15,16,21,0.06) !important;
