@@ -78,7 +78,7 @@
     group.add(core);
 
     /* ---- particle nebula (converges on boot) ---- */
-    var COUNT = isMobile ? 2200 : (MOS.FINE ? 5200 : 3600);
+    var COUNT = isMobile ? 1500 : (MOS.FINE ? 5200 : 3600);
     var pos = new Float32Array(COUNT * 3);
     var col = new Float32Array(COUNT * 3);
     var scl = new Float32Array(COUNT);
