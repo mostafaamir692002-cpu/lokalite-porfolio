@@ -25,6 +25,10 @@
   --purple:#BF5AF2;
   --orange:#FF9F0A;
   --pink:#FF6482;
+  /* CTA gradient stops (bright iOS blue used across dock/contact/modal CTAs) */
+  --blue-bright:#1c8cff;
+  --blue-deep:#0a6fe0;
+  --blue-deep-2:#0860c8;
   /* signature glow */
   --glow:#5AA9FF;
   /* aurora — the space layer behind the glass.

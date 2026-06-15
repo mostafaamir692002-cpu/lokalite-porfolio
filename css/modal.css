@@ -71,7 +71,7 @@
   border: none; font-family: inherit;
 }
 .modal-btn.primary {
-  background: linear-gradient(180deg, #1c8cff, #0a6fe0); color: #fff;
+  background: linear-gradient(180deg, var(--blue-bright), var(--blue-deep)); color: #fff;
   border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 4px 12px rgba(10,111,224,0.3);
 }
 .modal-btn.secondary {
