@@ -47,7 +47,7 @@
         ar: ["بناء العلامة التجارية", "تجربة التجارة الإلكترونية", "بنية كتالوج المنتجات", "رحلة العميل", "التفكير التشغيلي"]
       },
       overview: {
-        en: "Royal Sea is a premium seafood brand that delivers high-quality catches directly to consumers. We took their offline culinary authority and translated it into a streamlined, high-converting digital shopping system tailored for a premium customer base.",
+        en: "Royal Sea sells high-quality seafood straight to customers. They already had the reputation offline; the job was an online store that matched it — clear, fast, and trustworthy enough to buy from on the first visit.",
         ar: "رويال سي هو براند مأكولات بحرية فاخر بيوصل صيد البحر الطازة للعملاء مباشرة. أخدنا هيبتهم ومصداقيتهم في السوق التقليدي وترجمناها لنظام تسوق رقمي سريع ومقنع، متصمم بالظبط لقاعدة عملاء بتبحث عن الجودة الفائقة."
       },
       businessContext: {
@@ -126,7 +126,7 @@
         ar: ["استراتيجية البراند", "تموضع الفخامة", "تصميم نظام المنتجات", "تجربة التجارة الإلكترونية", "التوجيه البصري والمحتوى"]
       },
       overview: {
-        en: "Medieval Aloud is a luxury fragrance house specializing in oud, musk, and premium Arabian oils. We designed a commerce system that elevates the brand voice and optimizes product storytelling to match the elegance of high-end perfume boutiques.",
+        en: "Medieval Aloud is a fragrance house built around oud, musk, and Arabian oils. You can't smell a product online, so the store leans on its writing, a clean layout, and a brand voice that fits what the perfumes actually cost.",
         ar: "ميدييفال ألاود هي دار عطور فاخرة متخصصة في العود والمسك والزيوت العربية الثمينة. صممنا نظام تجارة بيرتقي بنبرة البراند ويركز على سرد قصة كل منتج ليحاكي أناقة محلات العطور العالمية الفخمة."
       },
       businessContext: {
@@ -205,7 +205,7 @@
         ar: ["التجارة الرقمية", "تجربة العملاء", "هيكل المنتجات", "تصميم تدفقات عمل البيزنس"]
       },
       overview: {
-        en: "Seafood Mood is an interactive commerce platform built to bring the ocean's best harvests to metropolitan buyers. The platform connects live inventory variables with a sleek consumer ordering frontend.",
+        en: "Seafood Mood brings the day's catch to city buyers. The catch and its price change daily, so the store stays tied to what's actually in stock instead of pretending everything is always available.",
         ar: "سيفود مود هي منصة تجارية تفاعلية اتبنت عشان تقرب صيد البحر الطازة للمشترين في المدن. المنصة بتوصل متغيرات المخزون الحية بواجهة مستخدم ممتازة وسهلة الطلب."
       },
       businessContext: {
@@ -284,7 +284,7 @@
         ar: ["أنظمة الأعمال", "العمليات", "التجارة بين الشركات", "تفكير سلاسل التوريد", "التحول الرقمي"]
       },
       overview: {
-        en: "UNITED is a major B2B supplier of fresh fruits and vegetables to hotels, restaurants, and caterers. We restructured their manual wholesale ordering loop into a robust digital operations system that eliminates administrative overhead and automates daily shipping cycles.",
+        en: "UNITED supplies fresh fruit and vegetables to hotels, restaurants, and caterers. They were running the whole wholesale operation by hand, so the work was turning it into a digital system that cuts the paperwork and handles the daily shipping cycle.",
         ar: "يونايتد هي مورد B2B كبير للفواكه والخضروات للفنادق والمطاعم وشركات التموين. أعدنا هيكلة دورة طلبات الجملة اليدوية لنظام عمليات رقمي قوي بيقضي على المجهود الإداري وبيأتمت دورات الشحن اليومية."
       },
       businessContext: {
@@ -363,11 +363,11 @@
         ar: ["خلق البراند", "بنية التجارة", "تصميم الهوية", "استراتيجية الإطلاق", "رحلة العميل"]
       },
       overview: {
-        en: "Pantoufla is a Cairo-based family lifestyle brand serving the modern Egyptian household. We built the brand from scratch — from naming strategy and visual identity to a fully operational Shopify commerce system.",
-        ar: "بانتوفلا هي براند لايف ستايل عائلي قاهري بيخدم البيت المصري العصري. بنينا البراند من الصفر — من استراتيجية التسمية والهوية البصرية لنظام تجارة شوبيفاي شغّال بالكامل."
+        en: "Pantoufla is a Cairo footwear brand — slippers and casual shoes. I built it from scratch: the name and visual identity first, then a full Shopify store ready to sell.",
+        ar: "بانتوفلا براند أحذية قاهري — شباشب وأحذية كاجوال. بنيته من الصفر: الاسم والهوية البصرية الأول، وبعدها متجر شوبيفاي كامل جاهز للبيع."
       },
       businessContext: {
-        en: "The Cairo family market is underserved by brands that actually understand local lifestyle. Pantoufla needed to feel familiar and warm while projecting the quality and consistency of a modern brand.",
+        en: "There are cheap slippers everywhere and pricey shoes everywhere, but little in between that feels considered. Pantoufla needed to stay warm and approachable while still looking like a real, consistent brand.",
         ar: "سوق الأسر القاهرية فيه نقص في البراندات اللي بتفهم الحياة المحلية فعلاً. بانتوفلا كان لازم تحس بالدفا والألفة مع عرض جودة واتساق البرانداتالعصرية."
       },
       problem: {
@@ -375,19 +375,19 @@
         ar: "المؤسسون كان عندهم رؤية منتج واضحة لكن بدون إطار براند، بدون متجر رقمي، وبدون استراتيجية لدخول سوق مزدحم. كانوا محتاجين نظام إطلاق كامل، مش مجرد موقع."
       },
       solution: {
-        en: "Designed the visual identity from ground up — logo system, color palette, typography, and packaging language. Built a fully bilingual Shopify store with catalog architecture optimized for a Cairo family audience.",
+        en: "Designed the identity from scratch — logo, colors, typography, and packaging — then built a bilingual Shopify store with a catalog that's easy to browse by style.",
         ar: "صممنا الهوية البصرية من الأساس — نظام الشعار، لوحة الألوان، الخطوط، ولغة التعبئة والتغليف. بنينا متجر شوبيفاي ثنائي اللغة بالكامل مع بنية كتالوج متهندسة لجمهور الأسر القاهرية."
       },
       decisions: {
         en: [
           "Arabic-First Naming: Designed the brand language to work in Egyptian Arabic first, English second — not the other way around.",
           "Warm Visual Language: Chose a soft, earthy color palette that communicates comfort without looking generic.",
-          "Catalog by Occasion: Structured the product catalog around family occasions (morning routine, school prep, weekend mood) not product types."
+          "Built for Browsing: Organized the store so a shopper lands on the right pair quickly — by style — instead of dry product categories."
         ],
         ar: [
           "التسمية بالعربي أولاً: صممنا لغة البراند لتشتغل بالعربي المصري أولاً، الإنجليزي ثانياً — مش العكس.",
           "لغة بصرية دافية: اخترنا لوحة ألوان ناعمة وترابية بتوصل إحساس الراحة من غير ما تبان عادية.",
-          "الكتالوج حسب المناسبة: رتبنا الكتالوج حول مناسبات عائلية (روتين الصباح، تجهيز المدرسة، مود الويكند) مش حسب نوع المنتج."
+          "متصمّم للتصفّح: رتّبت المتجر بحيث الزبون يوصل لأنسب موديل بسرعة — حسب الستايل — مش حسب تصنيفات منتج جافة."
         ]
       },
       systemArchitecture: {
