@@ -7,6 +7,9 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{ -webkit-text-size-adjust:100%; }
+/* mobile feel: kill the grey tap flash + the 300ms tap delay on controls */
+*{ -webkit-tap-highlight-color: transparent; }
+a, button, input, select, textarea, [role="button"], .navbtn, .toggle, .work-dots i, .lang-switcher span, .theme-toggle, .dock-burger, .scroll-rail-dot { touch-action: manipulation; }
 body{
   font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   background:var(--void-0);
