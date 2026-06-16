@@ -183,8 +183,6 @@
           '<ul>' +
             '<li><b>' + (isAr ? "الحالة" : "Status") + ':</b> <span style="color:var(--green)">' + (isAr ? "شغّال ومتصل" : "Live & Online") + '</span></li>' +
             '<li><b>' + (isAr ? "طبقة الفضاء" : "Space Layer") + ':</b> <span>' + spaceState + '</span></li>' +
-            '<li><b>' + (isAr ? "سرعة الاستجابة" : "Latency") + ':</b> <span id="diagPing">12ms</span></li>' +
-            '<li><b>' + (isAr ? "معدل الإطارات" : "Frame Rate") + ':</b> <span id="diagFPS">60 FPS</span></li>' +
           '</ul>' +
         '</div>' +
         '<div class="diag-card">' +
@@ -204,14 +202,6 @@
 
     MOS.$("#modalBackBtn").addEventListener("click", close);
     activateModal();
-
-    if (diagInterval) clearInterval(diagInterval);
-    diagInterval = setInterval(function () {
-      var pingEl = MOS.$("#diagPing");
-      var fpsEl = MOS.$("#diagFPS");
-      if (pingEl) pingEl.textContent = Math.round(10 + Math.random() * 8) + "ms";
-      if (fpsEl) fpsEl.textContent = Math.round(58 + Math.random() * 2.5) + " FPS";
-    }, 1000);
   }
 
   MOS.modal = { openProject: openProject, openDiagnostics: openDiagnostics, close: close };
