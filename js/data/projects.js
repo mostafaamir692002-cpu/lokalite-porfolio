@@ -51,15 +51,15 @@
         ar: "رويال سي هو براند مأكولات بحرية فاخر بيوصل صيد البحر الطازة للعملاء مباشرة. أخدنا هيبتهم ومصداقيتهم في السوق التقليدي وترجمناها لنظام تسوق رقمي سريع ومقنع، متصمم بالظبط لقاعدة عملاء بتبحث عن الجودة الفائقة."
       },
       businessContext: {
-        en: "Premium seafood demands a trust-heavy customer experience. The digital storefront needed to convey absolute freshness, clarify sourcing practices, and make the premium price point feel fully justified from the first click.",
+        en: "High-end seafood is a trust purchase. The store had to make freshness obvious, be upfront about sourcing, and make the price make sense — from the first screen.",
         ar: "المأكولات البحرية الفاخرة بتحتاج ثقة كبيرة من العميل. الواجهة الرقمية كان لازم تنقل إحساس الطزاجة المطلقة، وتوضح طرق التوريد، وتخلي السعر المميز مبرر تماماً من أول كليكة."
       },
       problem: {
-        en: "Standard Shopify templates felt cheap and failed to convey quality. Sourcing variables, catch-type segregation (fresh vs. frozen), and delivery scheduling were complex, causing friction and drop-offs during checkout.",
+        en: "Off-the-shelf templates looked cheap and didn't carry the quality. On top of that, sourcing details, fresh-vs-frozen, and delivery scheduling added friction that lost people at checkout.",
         ar: "قوالب شوبيفاي التقليدية كانت بتظهر بشكل رخيص ومش بتعكس الفخامة. كمان تفاصيل التوريد، وتقسيم المنتجات (طازة ضد مجمد)، وتنسيق مواعيد التوصيل كانت معقدة وبتسبب خروج العميل من صفحة الدفع."
       },
       solution: {
-        en: "Built a customized Shopify system with a rigid, high-end visual design. Structured the 38-SKU catalog around clear freshness signals, integrated local checkout flows, and simplified delivery slot selections for Cairo logistics.",
+        en: "Built a custom Shopify setup with a tight, high-end look. Organized the 38-product catalog around clear freshness cues, set up local checkout, and made picking a delivery slot simple for Cairo.",
         ar: "بنينا نظام شوبيفاي مخصص بهيكل بصري راقي ومتماسك. رتبنا الكتالوج اللي بيضم ٣٨ منتج حول علامات طزاجة واضحة، ودمجنا بوابات الدفع المحلية، وسهلنا اختيار مواعيد التوصيل لتتناسب مع لوجستيات القاهرة."
       },
       decisions: {
@@ -79,7 +79,7 @@
         ar: "ربطنا خلفية شوبيفاي بواجهة سريعة وخفيفة. ضبطنا بوابات الدفع المحلية، وتوجيه النطاق العربي، وهيكلة البيانات الوصفية لمحركات البحث."
       },
       outcome: {
-        en: "Launched a highly functional, premium bilingual storefront. The catalog is optimized for immediate discovery, resulting in an effortless digital journey that matches the quality of the product itself.",
+        en: "The result is a fast bilingual store that's easy to browse and buy from — one that finally looks as good as the seafood it sells.",
         ar: "تم إطلاق واجهة متجر راقية وسريعة بلغتين. الكتالوج متهندس للوصول السريع للمنتجات، والنتيجة رحلة رقمية مريحة بتليق بجودة المنتج نفسه."
       },
       stats: [
@@ -130,15 +130,15 @@
         ar: "ميدييفال ألاود هي دار عطور فاخرة متخصصة في العود والمسك والزيوت العربية الثمينة. صممنا نظام تجارة بيرتقي بنبرة البراند ويركز على سرد قصة كل منتج ليحاكي أناقة محلات العطور العالمية الفخمة."
       },
       businessContext: {
-        en: "Fragrance shopping relies on sensory imagination. The digital experience must feel premium, using evocative language, clean typography, and high-end positioning to convert search interest into premium purchases.",
+        en: "You buy fragrance on imagination, so the store has to do the work with words, clean type, and positioning that signals quality — turning a search into a sale.",
         ar: "شراء العطور بيعتمد على إثارة خيال العميل وحواسه. التجربة الرقمية كان لازم تعكس الفخامة عبر نصوص منتقاة بدقة، وخطوط متناسقة، وتموضع فاخر يحول الباحثين لعملاء مشترين."
       },
       problem: {
-        en: "Oud and musk products are often poorly categorized online, leading to search confusion. The brand had zero search visibility in the highly lucrative Gulf market, and the product vocabulary lacked the premium tone expected by fragrance connoisseurs.",
+        en: "Oud and musk are often mislabeled online, so search gets confusing. The brand was invisible in the Gulf, and the product copy didn't sound like it belonged to a serious fragrance house.",
         ar: "منتجات العود والمسك غالباً بيتم تصنيفها بشكل عشوائي أونلاين، وده بيعمل تشتيت للعملاء. البراند مكنش ظاهر خالص في نتائج البحث في السوق الخليجي الغني، ومصطلحات المنتجات كانت بتفتقر للغة الفاخرة اللي بينتظرها عشاق العطور."
       },
       solution: {
-        en: "Structured the Shopify catalog with clear scent families. Wrote evocative, luxury-grade Arabic and English product narratives. Engineered a Gulf-focused SEO metadata architecture targeting premium Oud keywords.",
+        en: "Organized the catalog by scent family, rewrote the Arabic and English product copy so it actually sounds like the brand, and built SEO around the oud and musk terms people search in the Gulf.",
         ar: "رتبنا كتالوج شوبيفاي لعائلات عطور واضحة. كتبنا نصوص عطور تعبيرية وراقية جداً بالعربي والإنجليزي. وهندسنا بنية بيانات SEO مركزة على السوق الخليجي ومستهدفة للكلمات المفتاحية الفاخرة للعود."
       },
       decisions: {
@@ -158,7 +158,7 @@
         ar: "ضبطنا هيكل شوبيفاي ليكون سريع وخفيف، وحسّنا أحجام ملفات الموقع لسرعة تحميل فائقة في السعودية والإمارات، وعملنا روابط متوافقة بين اللغتين."
       },
       outcome: {
-        en: "Delivered a fully localized, premium fragrance storefront. The brand now speaks the language of luxury, and the digital shelf provides an immersive purchase experience that converts.",
+        en: "A fully localized fragrance store that sounds like itself — and is findable where its buyers actually are, in the Gulf.",
         ar: "سلّمنا متجر عطور فاخر ومعرّب بالكامل. البراند دلوقتي بيتكلم لغة الفخامة المناسبة ليه، والواجهة الرقمية بتقدم تجربة شراء ممتعة بتجيب نتايج فعالة."
       },
       stats: [
@@ -209,15 +209,15 @@
         ar: "سيفود مود هي منصة تجارية تفاعلية اتبنت عشان تقرب صيد البحر الطازة للمشترين في المدن. المنصة بتوصل متغيرات المخزون الحية بواجهة مستخدم ممتازة وسهلة الطلب."
       },
       businessContext: {
-        en: "Fresh seafood commerce is volatile. Sourcing details change daily, prices shift based on market catch volume, and customers expect fast, reliable delivery slots. The platform had to turn these challenges into a stable business asset.",
+        en: "Fresh seafood is volatile: sourcing shifts daily, prices move with the catch, and people still expect a reliable delivery slot. The store had to absorb all that and stay dependable.",
         ar: "تجارة الأسماك الطازجة متقلبة. تفاصيل التوريد بتتغير يومياً، والأسعار بتتحرك حسب حجم الصيد في اليوم، والعملاء بينتظروا مواعيد توصيل دقيقة وسريعة. كان لازم المنصة تحول التحديات دي لنقاط قوة وقيمة حقيقية."
       },
       problem: {
-        en: "Standard static carts fail when items go out of stock mid-day. Sourcing routes and order fulfillment were disconnected, leading to manual order edits and delayed delivery calls.",
+        en: "A static cart breaks the moment something sells out mid-day. Sourcing and fulfillment weren't connected either, which meant manual order fixes and late delivery calls.",
         ar: "سلة التسوق التقليدية بتبوظ لما المنتجات تخلص فجأة وسط اليوم. كمان طرق التوريد وتلبية الطلبات كانت منفصلة، وده كان بيؤدي لتعديل الطلبات يدوياً ومكالمات توصيل متأخرة."
       },
       solution: {
-        en: "Architected a responsive commerce engine that updates product availability, streamlines delivery options based on live logistics capacity, and organizes backend orders for direct routing.",
+        en: "Built a store that keeps availability current, adjusts delivery options to what logistics can actually handle, and organizes incoming orders for direct routing.",
         ar: "صممنا محرك تجاري مرن بيحدث توافر المنتجات فوراً، وبيسهل خيارات التوصيل بناءً على القدرة اللوجستية الحقيقية، ويرتب الطلبات في الخلفية للتوجيه المباشر."
       },
       decisions: {
@@ -237,7 +237,7 @@
         ar: "ربطنا خلفية المتجر بمسارات توزيع آلية، وأنظمة لتحديد العناوين محلياً، وبوابات الدفع الإلكتروني."
       },
       outcome: {
-        en: "Delivered a high-conversion seafood platform that takes the chaos out of fresh commerce. Operations are streamlined, and buyers enjoy a fast, reliable path from sea to table.",
+        en: "A seafood store that takes the guesswork out of daily stock — smoother operations, and a quick, reliable order for the buyer.",
         ar: "سلّمنا منصة مأكولات بحرية عالية التحويل شالت العشوائية من التجارة الطازة. العمليات بقت أسرع والعميل بقا يستمتع برحلة سهلة وموثوقة من البحر لطاولة الطعام."
       },
       stats: [
