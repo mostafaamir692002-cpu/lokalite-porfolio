@@ -48,19 +48,19 @@
       },
       overview: {
         en: "Royal Sea sells high-quality seafood straight to customers. They already had the reputation offline; the job was an online store that matched it — clear, fast, and trustworthy enough to buy from on the first visit.",
-        ar: "رويال سي هو براند مأكولات بحرية فاخر بيوصل صيد البحر الطازة للعملاء مباشرة. أخدنا هيبتهم ومصداقيتهم في السوق التقليدي وترجمناها لنظام تسوق رقمي سريع ومقنع، متصمم بالظبط لقاعدة عملاء بتبحث عن الجودة الفائقة."
+        ar: "رويال سي بيبيع مأكولات بحرية عالية الجودة للعملاء مباشرة. سُمعتهم كانت قوية أوفلاين أصلاً، فالشغل كان إننا نعمل متجر أونلاين على نفس المستوى — واضح، سريع، وتثق فيه وتشتري منه من أول زيارة."
       },
       businessContext: {
         en: "High-end seafood is a trust purchase. The store had to make freshness obvious, be upfront about sourcing, and make the price make sense — from the first screen.",
-        ar: "المأكولات البحرية الفاخرة بتحتاج ثقة كبيرة من العميل. الواجهة الرقمية كان لازم تنقل إحساس الطزاجة المطلقة، وتوضح طرق التوريد، وتخلي السعر المميز مبرر تماماً من أول كليكة."
+        ar: "شراء مأكولات بحرية غالية قرار قائم على الثقة. فالمتجر كان لازم يبيّن الطزاجة بوضوح، يكون صريح في مصدر المنتج، ويخلّي السعر منطقي — من أول شاشة."
       },
       problem: {
         en: "Off-the-shelf templates looked cheap and didn't carry the quality. On top of that, sourcing details, fresh-vs-frozen, and delivery scheduling added friction that lost people at checkout.",
-        ar: "قوالب شوبيفاي التقليدية كانت بتظهر بشكل رخيص ومش بتعكس الفخامة. كمان تفاصيل التوريد، وتقسيم المنتجات (طازة ضد مجمد)، وتنسيق مواعيد التوصيل كانت معقدة وبتسبب خروج العميل من صفحة الدفع."
+        ar: "القوالب الجاهزة شكلها رخيص ومبتوصّلش الجودة. وكمان تفاصيل المصدر، والتفريق بين الطازة والمجمّد، ومواعيد التوصيل كانت بتعقّد الموضوع وبتخلّي الناس تسيب صفحة الدفع."
       },
       solution: {
         en: "Built a custom Shopify setup with a tight, high-end look. Organized the 38-product catalog around clear freshness cues, set up local checkout, and made picking a delivery slot simple for Cairo.",
-        ar: "بنينا نظام شوبيفاي مخصص بهيكل بصري راقي ومتماسك. رتبنا الكتالوج اللي بيضم ٣٨ منتج حول علامات طزاجة واضحة، ودمجنا بوابات الدفع المحلية، وسهلنا اختيار مواعيد التوصيل لتتناسب مع لوجستيات القاهرة."
+        ar: "بنيت متجر شوبيفاي مخصّص بشكل راقي ومرتّب. نظّمت الكتالوج (٣٨ منتج) حول إشارات طزاجة واضحة، ظبطت الدفع المحلي، وسهّلت اختيار ميعاد التوصيل للقاهرة."
       },
       decisions: {
         en: [
@@ -80,7 +80,7 @@
       },
       outcome: {
         en: "The result is a fast bilingual store that's easy to browse and buy from — one that finally looks as good as the seafood it sells.",
-        ar: "تم إطلاق واجهة متجر راقية وسريعة بلغتين. الكتالوج متهندس للوصول السريع للمنتجات، والنتيجة رحلة رقمية مريحة بتليق بجودة المنتج نفسه."
+        ar: "النتيجة متجر سريع بلغتين سهل تتصفّحه وتشتري منه — وأخيراً شكله بقى على قد جودة المأكولات اللي بيبيعها."
       },
       stats: [
         { lbl: "CATALOG SIZE", val: "38 SKUs", desc: "Structured, translated & QA'd end-to-end" },
@@ -127,19 +127,19 @@
       },
       overview: {
         en: "Medieval Aloud is a fragrance house built around oud, musk, and Arabian oils. You can't smell a product online, so the store leans on its writing, a clean layout, and a brand voice that fits what the perfumes actually cost.",
-        ar: "ميدييفال ألاود هي دار عطور فاخرة متخصصة في العود والمسك والزيوت العربية الثمينة. صممنا نظام تجارة بيرتقي بنبرة البراند ويركز على سرد قصة كل منتج ليحاكي أناقة محلات العطور العالمية الفخمة."
+        ar: "ميدييفال ألاود دار عطور قايمة على العود والمسك والزيوت العربية. إنت مبتقدرش تشمّ المنتج أونلاين، فالمتجر بيعتمد على الكتابة، وتصميم نضيف، ونبرة براند على قد سعر العطور فعلاً."
       },
       businessContext: {
         en: "You buy fragrance on imagination, so the store has to do the work with words, clean type, and positioning that signals quality — turning a search into a sale.",
-        ar: "شراء العطور بيعتمد على إثارة خيال العميل وحواسه. التجربة الرقمية كان لازم تعكس الفخامة عبر نصوص منتقاة بدقة، وخطوط متناسقة، وتموضع فاخر يحول الباحثين لعملاء مشترين."
+        ar: "شراء العطر بيعتمد على الخيال. فالمتجر لازم يشتغل بالكلمة، والخطوط النضيفة، والتموضع اللي بيوحي بالجودة — عشان يحوّل البحث لشراء."
       },
       problem: {
         en: "Oud and musk are often mislabeled online, so search gets confusing. The brand was invisible in the Gulf, and the product copy didn't sound like it belonged to a serious fragrance house.",
-        ar: "منتجات العود والمسك غالباً بيتم تصنيفها بشكل عشوائي أونلاين، وده بيعمل تشتيت للعملاء. البراند مكنش ظاهر خالص في نتائج البحث في السوق الخليجي الغني، ومصطلحات المنتجات كانت بتفتقر للغة الفاخرة اللي بينتظرها عشاق العطور."
+        ar: "العود والمسك كتير بيتسمّوا غلط أونلاين، فالبحث بيلخبط. البراند كان مش ظاهر خالص في الخليج، ونصوص المنتجات مكانتش بتحسّ إنها بتاعة دار عطور محترمة."
       },
       solution: {
         en: "Organized the catalog by scent family, rewrote the Arabic and English product copy so it actually sounds like the brand, and built SEO around the oud and musk terms people search in the Gulf.",
-        ar: "رتبنا كتالوج شوبيفاي لعائلات عطور واضحة. كتبنا نصوص عطور تعبيرية وراقية جداً بالعربي والإنجليزي. وهندسنا بنية بيانات SEO مركزة على السوق الخليجي ومستهدفة للكلمات المفتاحية الفاخرة للعود."
+        ar: "رتّبت الكتالوج حسب عائلات العطر، وأعدت كتابة نصوص المنتجات بالعربي والإنجليزي بحيث تبان فعلاً نبرة البراند، وبنيت SEO حوالين كلمات العود والمسك اللي الناس بتدوّر بيها في الخليج."
       },
       decisions: {
         en: [
@@ -159,7 +159,7 @@
       },
       outcome: {
         en: "A fully localized fragrance store that sounds like itself — and is findable where its buyers actually are, in the Gulf.",
-        ar: "سلّمنا متجر عطور فاخر ومعرّب بالكامل. البراند دلوقتي بيتكلم لغة الفخامة المناسبة ليه، والواجهة الرقمية بتقدم تجربة شراء ممتعة بتجيب نتايج فعالة."
+        ar: "متجر عطور معرّب بالكامل بيتكلم بنبرته الحقيقية — وموجود ويتلاقى في المكان اللي عملاؤه فيه، الخليج."
       },
       stats: [
         { lbl: "SEO COVERAGE", val: "100%", desc: "Bilingual search-optimized metadata" },
@@ -206,19 +206,19 @@
       },
       overview: {
         en: "Seafood Mood brings the day's catch to city buyers. The catch and its price change daily, so the store stays tied to what's actually in stock instead of pretending everything is always available.",
-        ar: "سيفود مود هي منصة تجارية تفاعلية اتبنت عشان تقرب صيد البحر الطازة للمشترين في المدن. المنصة بتوصل متغيرات المخزون الحية بواجهة مستخدم ممتازة وسهلة الطلب."
+        ar: "سيفود مود بيوصّل صيد اليوم للناس في المدن. الصيد وسعره بيتغيّروا كل يوم، فالمتجر بيفضل مربوط باللي متوفر فعلاً بدل ما يدّعي إن كل حاجة موجودة على طول."
       },
       businessContext: {
         en: "Fresh seafood is volatile: sourcing shifts daily, prices move with the catch, and people still expect a reliable delivery slot. The store had to absorb all that and stay dependable.",
-        ar: "تجارة الأسماك الطازجة متقلبة. تفاصيل التوريد بتتغير يومياً، والأسعار بتتحرك حسب حجم الصيد في اليوم، والعملاء بينتظروا مواعيد توصيل دقيقة وسريعة. كان لازم المنصة تحول التحديات دي لنقاط قوة وقيمة حقيقية."
+        ar: "تجارة المأكولات البحرية الطازة متقلّبة: المصدر بيتغيّر يومياً، والسعر بيتحرّك مع الصيد، والناس برضه عايزة ميعاد توصيل موثوق. المتجر كان لازم يستوعب ده كله ويفضل معتمد عليه."
       },
       problem: {
         en: "A static cart breaks the moment something sells out mid-day. Sourcing and fulfillment weren't connected either, which meant manual order fixes and late delivery calls.",
-        ar: "سلة التسوق التقليدية بتبوظ لما المنتجات تخلص فجأة وسط اليوم. كمان طرق التوريد وتلبية الطلبات كانت منفصلة، وده كان بيؤدي لتعديل الطلبات يدوياً ومكالمات توصيل متأخرة."
+        ar: "السلة الثابتة بتبوظ أول ما حاجة تخلص نص اليوم. وكمان المصدر والتوصيل مكانوش متوصّلين، وده معناه تعديل طلبات يدوي ومكالمات توصيل متأخرة."
       },
       solution: {
         en: "Built a store that keeps availability current, adjusts delivery options to what logistics can actually handle, and organizes incoming orders for direct routing.",
-        ar: "صممنا محرك تجاري مرن بيحدث توافر المنتجات فوراً، وبيسهل خيارات التوصيل بناءً على القدرة اللوجستية الحقيقية، ويرتب الطلبات في الخلفية للتوجيه المباشر."
+        ar: "بنيت متجر بيخلّي التوفّر محدّث، وبيظبط خيارات التوصيل على قد اللي اللوجستيات تقدر تعمله فعلاً، وبيرتّب الطلبات الجاية للتوجيه المباشر."
       },
       decisions: {
         en: [
@@ -238,7 +238,7 @@
       },
       outcome: {
         en: "A seafood store that takes the guesswork out of daily stock — smoother operations, and a quick, reliable order for the buyer.",
-        ar: "سلّمنا منصة مأكولات بحرية عالية التحويل شالت العشوائية من التجارة الطازة. العمليات بقت أسرع والعميل بقا يستمتع برحلة سهلة وموثوقة من البحر لطاولة الطعام."
+        ar: "متجر مأكولات بحرية شال التخمين من موضوع المخزون اليومي — تشغيل أسلس، وطلب سريع وموثوق للعميل."
       },
       stats: [
         { lbl: "INVENTORY SYNC", val: "Real-time", desc: "Live stock visibility eliminates mid-day failures" },
@@ -368,15 +368,15 @@
       },
       businessContext: {
         en: "There are cheap slippers everywhere and pricey shoes everywhere, but little in between that feels considered. Pantoufla needed to stay warm and approachable while still looking like a real, consistent brand.",
-        ar: "سوق الأسر القاهرية فيه نقص في البراندات اللي بتفهم الحياة المحلية فعلاً. بانتوفلا كان لازم تحس بالدفا والألفة مع عرض جودة واتساق البرانداتالعصرية."
+        ar: "فيه شباشب رخيصة في كل حتة وأحذية غالية في كل حتة، بس مفيش كتير في النص بيحسّ إنه معمول بعناية. بانتوفلا كان لازم تفضل دافية وقريبة، وفي نفس الوقت شكلها براند حقيقي ومتّسق."
       },
       problem: {
         en: "The founders had a clear product vision but no brand framework, no digital storefront, and no strategy for entering a crowded market. They needed a full launch system, not just a website.",
-        ar: "المؤسسون كان عندهم رؤية منتج واضحة لكن بدون إطار براند، بدون متجر رقمي، وبدون استراتيجية لدخول سوق مزدحم. كانوا محتاجين نظام إطلاق كامل، مش مجرد موقع."
+        ar: "المؤسسين كان عندهم رؤية واضحة للمنتج، بس من غير هوية، من غير متجر، ومن غير خطة لدخول سوق زحمة. كانوا محتاجين نظام إطلاق كامل، مش مجرد موقع."
       },
       solution: {
         en: "Designed the identity from scratch — logo, colors, typography, and packaging — then built a bilingual Shopify store with a catalog that's easy to browse by style.",
-        ar: "صممنا الهوية البصرية من الأساس — نظام الشعار، لوحة الألوان، الخطوط، ولغة التعبئة والتغليف. بنينا متجر شوبيفاي ثنائي اللغة بالكامل مع بنية كتالوج متهندسة لجمهور الأسر القاهرية."
+        ar: "صممت الهوية من الأساس — الشعار، الألوان، الخطوط، ولغة التغليف — وبعدها بنيت متجر شوبيفاي بلغتين بكتالوج سهل تتصفّحه حسب الستايل."
       },
       decisions: {
         en: [
@@ -396,7 +396,7 @@
       },
       outcome: {
         en: "Launched a fully operational brand and commerce system in 6 weeks. Pantoufla entered the market with a clear identity, a working store, and a go-to-market plan ready to execute.",
-        ar: "أطلقنا نظام براند وتجارة شغّال بالكامل في ٦ أسابيع. بانتوفلا دخلت السوق بهوية واضحة، متجر شغّال، وخطة إطلاق جاهزة للتنفيذ."
+        ar: "أطلقت براند ومتجر شغّال بالكامل في ٦ أسابيع. بانتوفلا نزلت السوق بهوية واضحة، متجر شغّال، وخطة إطلاق جاهزة."
       },
       stats: [
         { lbl: "TIME TO LAUNCH", val: "6 Weeks", desc: "Zero-to-live: brand + store + strategy" },
