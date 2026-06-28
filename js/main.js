@@ -1,5 +1,5 @@
 /* ============================================================
-   MAIN — boot order for Mostafa.OS V2.
+   MAIN — boot order for Lokalita.OS V2.
    Each module registered itself via MOS.register();
    this file decides the sequence. Loaded last.
    ============================================================ */

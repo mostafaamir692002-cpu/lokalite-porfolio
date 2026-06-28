@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mostafaamir.com/sitemap.xml
+Sitemap: https://lokalitaeg.com/sitemap.xml

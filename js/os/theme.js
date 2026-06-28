@@ -8,7 +8,7 @@
   function applyTheme(theme) {
     var light = theme === "light";
     document.body.classList.toggle("light-mode", light);
-    try { localStorage.setItem("mostafa-os-theme", theme); } catch (e) {}
+    try { localStorage.setItem("lokalita-os-theme", theme); } catch (e) {}
     /* sleep / wake the WebGL loop (canvas already fades via CSS) */
     var wireframe = document.body.classList.contains("mode-wireframe");
     MOS.space.setActive(!light && !wireframe);
@@ -49,7 +49,7 @@
     });
 
     var savedTheme = "dark";
-    try { savedTheme = localStorage.getItem("mostafa-os-theme") || "dark"; } catch (e) {}
+    try { savedTheme = localStorage.getItem("lokalita-os-theme") || "dark"; } catch (e) {}
     applyTheme(savedTheme);
   });
 })(window.MOS = window.MOS || {});

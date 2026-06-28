@@ -1,13 +1,13 @@
 /* ============================================================
-   MOSTAFA AMIR · OS — V2 "GLASS OS IN SPACE"
+   LOKALITA · OS — V2 "GLASS OS IN SPACE"
    Design tokens — single source of truth for color & motion
    ============================================================ */
 
 :root{
   /* voids */
-  --void-0:#060608;
-  --void-1:#0a0a0e;
-  --void-2:#0e0e14;
+  --void-0:#0A1128;
+  --void-1:#0E1731;
+  --void-2:#121F42;
   /* glass grays (cool blue cast) */
   --glass-1:#15151b;
   --glass-2:#1c1d25;
@@ -18,24 +18,24 @@
   --ink-2:#8b909e;
   --ink-3:#7c8090;
   /* accents — iOS */
-  --blue:#0A84FF;
-  --blue-soft:#5AA9FF;
+  --blue:#FF9F0A;
+  --blue-soft:#FDBA74;
   --green:#30D158;
   --cyan:#64D2FF;
   --purple:#BF5AF2;
   --orange:#FF9F0A;
   --pink:#FF6482;
   /* CTA gradient stops (bright iOS blue used across dock/contact/modal CTAs) */
-  --blue-bright:#1c8cff;
-  --blue-deep:#0a6fe0;
-  --blue-deep-2:#0860c8;
+  --blue-bright:#F97316;
+  --blue-deep:#EA580C;
+  --blue-deep-2:#C2410C;
   /* signature glow */
-  --glow:#5AA9FF;
+  --glow:#FF9F0A;
   /* aurora — the space layer behind the glass.
      iOS blue leads; violet/cyan are atmosphere, never UI chrome. */
-  --aurora-a:#5AA9FF;
-  --aurora-b:#64D2FF;
-  --aurora-c:#BF5AF2;
+  --aurora-a:#FF9F0A;
+  --aurora-b:#F59E0B;
+  --aurora-c:#EA580C;
   /* lines */
   --line:rgba(255,255,255,.08);
   --line-strong:rgba(255,255,255,.14);

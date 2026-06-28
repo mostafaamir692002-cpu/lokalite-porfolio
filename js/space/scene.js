@@ -50,9 +50,9 @@
       wireframe: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
       uniforms: {
         uTime:   { value: 0 },
-        uColorA: { value: new THREE.Color("#5AA9FF") },   /* blue-soft */
-        uColorB: { value: new THREE.Color("#64D2FF") },   /* cyan */
-        uMix:    { value: 0 }                              /* scroll → violet accent */
+        uColorA: { value: new THREE.Color("#FF9F0A") },   /* orange-soft */
+        uColorB: { value: new THREE.Color("#F59E0B") },   /* amber */
+        uMix:    { value: 0 }                              /* scroll → orange-deep accent */
       },
       vertexShader: [
         "uniform float uTime; varying float vD;",
@@ -63,7 +63,7 @@
       fragmentShader: [
         "uniform vec3 uColorA; uniform vec3 uColorB; uniform float uMix; varying float vD;",
         "void main(){ float t=clamp(vD*1.8+0.5,0.0,1.0); vec3 c=mix(uColorA,uColorB,t);",
-        "  c=mix(c,vec3(0.749,0.353,0.949),uMix*0.5);",   /* #BF5AF2 violet drift on scroll */
+        "  c=mix(c,vec3(0.918,0.345,0.047),uMix*0.5);",   /* #EA580C orange drift on scroll */
         "  gl_FragColor=vec4(c,0.38);}"
       ].join("\n")
     });
@@ -73,7 +73,7 @@
     /* faint solid core inside the wireframe */
     var core = new THREE.Mesh(
       new THREE.IcosahedronGeometry(1.55, 1),
-      new THREE.MeshBasicMaterial({ color: new THREE.Color("#0d1b33"), transparent: true, opacity: 0.3 })
+      new THREE.MeshBasicMaterial({ color: new THREE.Color("#0A1128"), transparent: true, opacity: 0.3 })
     );
     group.add(core);
 
@@ -82,8 +82,8 @@
     var pos = new Float32Array(COUNT * 3);
     var col = new Float32Array(COUNT * 3);
     var scl = new Float32Array(COUNT);
-    /* aurora distribution: blue leads (60%), violet atmosphere (25%), cyan sparks (15%) */
-    var cA = new THREE.Color("#0A84FF"), cB = new THREE.Color("#BF5AF2"), cC = new THREE.Color("#64D2FF");
+    /* aurora distribution: orange leads (60%), white/light grey (25%), deep orange sparks (15%) */
+    var cA = new THREE.Color("#FF9F0A"), cB = new THREE.Color("#E5E7EB"), cC = new THREE.Color("#F97316");
     for (var i = 0; i < COUNT; i++) {
       var r = 3 + Math.pow(Math.random(), 0.6) * 9;
       var th = Math.random() * Math.PI * 2, ph = Math.acos(2 * Math.random() - 1);

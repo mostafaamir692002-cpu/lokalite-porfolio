@@ -59,8 +59,8 @@
         ar: "القوالب الجاهزة شكلها رخيص ومبتوصّلش الجودة. وكمان تفاصيل المصدر، والتفريق بين الطازة والمجمّد، ومواعيد التوصيل كانت بتعقّد الموضوع وبتخلّي الناس تسيب صفحة الدفع."
       },
       solution: {
-        en: "Built a custom Shopify setup with a tight, high-end look. Organized the 38-product catalog around clear freshness cues, set up local checkout, and made picking a delivery slot simple for Cairo.",
-        ar: "بنيت متجر شوبيفاي مخصّص بشكل راقي ومرتّب. نظّمت الكتالوج (٣٨ منتج) حول إشارات طزاجة واضحة، ظبطت الدفع المحلي، وسهّلت اختيار ميعاد التوصيل للقاهرة."
+        en: "We built a custom Shopify setup with a tight, high-end look. Organized the 38-product catalog around clear freshness cues, set up local checkout, and made picking a delivery slot simple for Cairo.",
+        ar: "بنينا متجر شوبيفاي مخصّص بشكل راقي ومرتّب. نظّمنا الكتالوج (٣٨ منتج) حول إشارات طزاجة واضحة، وضبطنا الدفع المحلي، وسهّلنا اختيار ميعاد التوصيل للقاهرة."
       },
       decisions: {
         en: [
@@ -138,8 +138,8 @@
         ar: "العود والمسك كتير بيتسمّوا غلط أونلاين، فالبحث بيلخبط. البراند كان مش ظاهر خالص في الخليج، ونصوص المنتجات مكانتش بتحسّ إنها بتاعة دار عطور محترمة."
       },
       solution: {
-        en: "Organized the catalog by scent family, rewrote the Arabic and English product copy so it actually sounds like the brand, and built SEO around the oud and musk terms people search in the Gulf.",
-        ar: "رتّبت الكتالوج حسب عائلات العطر، وأعدت كتابة نصوص المنتجات بالعربي والإنجليزي بحيث تبان فعلاً نبرة البراند، وبنيت SEO حوالين كلمات العود والمسك اللي الناس بتدوّر بيها في الخليج."
+        en: "We organized the catalog by scent family, rewrote the Arabic and English product copy so it actually sounds like the brand, and built SEO around the oud and musk terms people search in the Gulf.",
+        ar: "رتّبنا الكتالوج حسب عائلات العطر، وأعدنا كتابة نصوص المنتجات بالعربي والإنجليزي بحيث تبان فعلاً نبرة البراند، وبنينا SEO حوالين كلمات العود والمسك اللي الناس بتدوّر بيها في الخليج."
       },
       decisions: {
         en: [
@@ -217,8 +217,8 @@
         ar: "السلة الثابتة بتبوظ أول ما حاجة تخلص نص اليوم. وكمان المصدر والتوصيل مكانوش متوصّلين، وده معناه تعديل طلبات يدوي ومكالمات توصيل متأخرة."
       },
       solution: {
-        en: "Built a store that keeps availability current, adjusts delivery options to what logistics can actually handle, and organizes incoming orders for direct routing.",
-        ar: "بنيت متجر بيخلّي التوفّر محدّث، وبيظبط خيارات التوصيل على قد اللي اللوجستيات تقدر تعمله فعلاً، وبيرتّب الطلبات الجاية للتوجيه المباشر."
+        en: "We built a store that keeps availability current, adjusts delivery options to what logistics can actually handle, and organizes incoming orders for direct routing.",
+        ar: "بنينا متجر بيخلّي التوفّر محدّث، وبيظبط خيارات التوصيل على قد اللي اللوجستيات تقدر تعمله فعلاً، وبيرتّب الطلبات الجاية للتوجيه المباشر."
       },
       decisions: {
         en: [
@@ -363,20 +363,20 @@
         ar: ["خلق البراند", "بنية التجارة", "تصميم الهوية", "استراتيجية الإطلاق", "رحلة العميل"]
       },
       overview: {
-        en: "Pantoufla is a Cairo footwear brand — slippers and casual shoes. I built it from scratch: the name and visual identity first, then a full Shopify store ready to sell.",
-        ar: "بانتوفلا براند أحذية قاهري — شباشب وأحذية كاجوال. بنيته من الصفر: الاسم والهوية البصرية الأول، وبعدها متجر شوبيفاي كامل جاهز للبيع."
+        en: "Pantoufla is a Cairo footwear brand — slippers and casual shoes. We built it from scratch: the name and visual identity first, then a full Shopify store ready to sell.",
+        ar: "بانتوفلا براند أحذية قاهري — شباشب وأحذية كاجوال. بنيناه من الصفر: الاسم والهوية البصرية الأول، وبعدها متجر شوبيفاي كامل جاهز للبيع."
       },
       businessContext: {
         en: "There are cheap slippers everywhere and pricey shoes everywhere, but little in between that feels considered. Pantoufla needed to stay warm and approachable while still looking like a real, consistent brand.",
-        ar: "فيه شباشب رخيصة في كل حتة وأحذية غالية في كل حتة، بس مفيش كتير في النص بيحسّ إنه معمول بعناية. بانتوفلا كان لازم تفضل دافية وقريبة، وفي نفس الوقت شكلها براند حقيقي ومتّسق."
+        ar: "عملية شراء الشباشب عادة ما تكون إما رخيصة جداً أو غالية جداً، مع غياب الخيار المتوسط والعملي المصنوع بعناية. بانتوفلا كان لازم تفضل دافية وقريبة، وفي نفس الوقت شكلها براند حقيقي ومتّسق."
       },
       problem: {
         en: "The founders had a clear product vision but no brand framework, no digital storefront, and no strategy for entering a crowded market. They needed a full launch system, not just a website.",
         ar: "المؤسسين كان عندهم رؤية واضحة للمنتج، بس من غير هوية، من غير متجر، ومن غير خطة لدخول سوق زحمة. كانوا محتاجين نظام إطلاق كامل، مش مجرد موقع."
       },
       solution: {
-        en: "Designed the identity from scratch — logo, colors, typography, and packaging — then built a bilingual Shopify store with a catalog that's easy to browse by style.",
-        ar: "صممت الهوية من الأساس — الشعار، الألوان، الخطوط، ولغة التغليف — وبعدها بنيت متجر شوبيفاي بلغتين بكتالوج سهل تتصفّحه حسب الستايل."
+        en: "We designed the identity from scratch — logo, colors, typography, and packaging — then built a bilingual Shopify store with a catalog that's easy to browse by style.",
+        ar: "صممنا الهوية من الأساس — الشعار، الألوان، الخطوط، ولغة التغليف — وبعدها بنينا متجر شوبيفاي بلغتين بكتالوج سهل تتصفّحه حسب الستايل."
       },
       decisions: {
         en: [
@@ -442,8 +442,8 @@
         ar: ["هندسة المنصة", "بنية قاعدة البيانات", "التحكّم بالوصول", "الأمان", "العمليات"]
       },
       overview: {
-        en: "Fishmonger / Al Hoot is a full-stack seafood marketplace. I built and stabilized the platform end to end — an admin dashboard, product management, authentication, analytics, role-based permissions, a clean database architecture, security hardening, and advanced Supabase Row-Level Security.",
-        ar: "فيش مونجر / الحوت هو ماركت بليس مأكولات بحرية فول-ستاك. بنيت وثبّتت المنصة من الأول للآخر — داشبورد إدارة، إدارة منتجات، مصادقة، تحليلات، صلاحيات بالأدوار، بنية قاعدة بيانات نضيفة، تأمين النظام، وSupabase Row-Level Security متقدم."
+        en: "Fishmonger / Al Hoot is a full-stack seafood marketplace. We built and stabilized the platform end to end — an admin dashboard, product management, authentication, analytics, role-based permissions, a clean database architecture, security hardening, and advanced Supabase Row-Level Security.",
+        ar: "فيش مونجر / الحوت هو ماركت بليس مأكولات بحرية فول-ستاك. بنينا وثبّتنا المنصة من الأول للآخر — داشبورد إدارة، إدارة منتجات، مصادقة، تحليلات، صلاحيات بالأدوار، بنية قاعدة بيانات نضيفة، تأمين النظام، وSupabase Row-Level Security متقدم."
       },
       businessContext: {
         en: "A seafood marketplace handling real orders and inventory can't run on a fragile template. It needed secure accounts, controlled team access, reliable data, and a dashboard the business could actually operate from.",
@@ -454,8 +454,8 @@
         ar: "المنصة كانت محتاجة تتبني وتتثبّت: مصادقة سليمة، صلاحيات بالأدوار بحيث كل عضو يشوف اللي يخصّه بس، تحليلات موثوقة، وأمان على مستوى قاعدة البيانات يحمي الطلبات وبيانات العملاء."
       },
       solution: {
-        en: "Engineered a full-stack platform on Supabase: an operations dashboard, product management, secure auth with role-based access control, analytics, and a hardened database with advanced Row-Level Security policies isolating data by role.",
-        ar: "هندست منصة فول-ستاك على Supabase: داشبورد عمليات، إدارة منتجات، مصادقة آمنة بصلاحيات بالأدوار، تحليلات، وقاعدة بيانات مؤمّنة بسياسات Row-Level Security متقدمة بتعزل البيانات حسب الدور."
+        en: "We engineered a full-stack platform on Supabase: an operations dashboard, product management, secure auth with role-based access control, analytics, and a hardened database with advanced Row-Level Security policies isolating data by role.",
+        ar: "هندسنا منصة فول-ستاك على Supabase: داشبورد عمليات، إدارة منتجات، مصادقة آمنة بصلاحيات بالأدوار، تحليلات، وقاعدة بيانات مؤمّنة بسياسات Row-Level Security متقدمة بتعزل البيانات حسب الدور."
       },
       decisions: {
         en: [
@@ -464,9 +464,9 @@
           "Build then Stabilize: Prioritized hardening, reliable data, and analytics so the platform could be trusted in daily operations."
         ],
         ar: [
-          "الأمان في طبقة قاعدة البيانات: فرضت الوصول بـSupabase Row-Level Security، فالصلاحيات بتفضل صامدة حتى لو اتخطّى الواجهة.",
-          "التحكّم بالوصول بالأدوار: عملت أدوار واضحة بحيث داشبورد كل عضو يعرض البيانات والإجراءات اللي تخصّه بس.",
-          "نبني الأول وبعدين نثبّت: ركّزت على التأمين، البيانات الموثوقة، والتحليلات عشان المنصة يُعتمد عليها في التشغيل اليومي."
+          "الأمان في طبقة قاعدة البيانات: فرضنا الوصول بـSupabase Row-Level Security، فالصلاحيات بتفضل صامدة حتى لو اتخطّى الواجهة.",
+          "التحكّم بالوصول بالأدوار: عملنا أدوار واضحة بحيث داشبورد كل عضو يعرض البيانات والإجراءات اللي تخصّه بس.",
+          "نبني الأول وبعدين نثبّت: ركّزنا على التأمين، البيانات الموثوقة، والتحليلات عشان المنصة يُعتمد عليها في التشغيل اليومي."
         ]
       },
       systemArchitecture: {

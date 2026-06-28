@@ -160,7 +160,7 @@
 
     pill.textContent = "system://os/diagnostics";
 
-    var titleHtml = isAr ? "<h2>تشخيصات النظام Core v2.0</h2>" : "<h2>Mostafa.OS Core Diagnostic v2.0</h2>";
+    var titleHtml = isAr ? "<h2>تشخيصات نظام لوكاليتا Core v2.0</h2>" : "<h2>Lokalita.OS Core Diagnostic v2.0</h2>";
     var subtitleHtml = isAr ? '<div class="tag">تقرير التشخيص الذاتي</div>' : '<div class="tag">Diagnostics Report</div>';
     var spaceState = MOS.space.ready ? (isAr ? "شغّالة" : "Online") : (isAr ? "واقفة" : "Fallback");
 
@@ -217,7 +217,7 @@
         if (e.target === modalBackdrop) close();
       });
     }
-    /* MOSTAFA.OS label opens system diagnostics */
+    /* LOKALITA.OS label opens system diagnostics */
     var osBrandLabel = MOS.$("#osBrandLabel");
     if (osBrandLabel) {
       osBrandLabel.addEventListener("click", function () {

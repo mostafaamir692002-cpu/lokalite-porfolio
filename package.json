@@ -1,8 +1,8 @@
 {
-  "name": "portfolio_mostafa_amir",
+  "name": "lokalita-studio",
   "version": "2.0.0",
   "private": true,
-  "description": "Mostafa.OS — Portfolio V2 · Glass OS in Space. Static, no-build site (opens via file://).",
+  "description": "Lokalita — Premium Shopify & Ecommerce Studio. Static site with Glass OS interface.",
   "scripts": {
     "build": "node scripts/build.mjs",
     "optimize:img": "node scripts/optimize-images.mjs"

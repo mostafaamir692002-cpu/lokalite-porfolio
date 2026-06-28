@@ -35,7 +35,7 @@
     document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
     if (lang === "ar") ensureArabicFont();
     MOS.state.lang = lang;
-    try { localStorage.setItem("mostafa-os-lang", lang); } catch (e) {}
+    try { localStorage.setItem("lokalita-os-lang", lang); } catch (e) {}
 
     MOS.$$(".lang-switcher").forEach(function (s) {
       s.querySelectorAll("span").forEach(function (sp) {
@@ -80,7 +80,7 @@
 
   MOS.register("lang", function () {
     var savedLang = "en";
-    try { savedLang = localStorage.getItem("mostafa-os-lang") || "en"; } catch (e) {}
+    try { savedLang = localStorage.getItem("lokalita-os-lang") || "en"; } catch (e) {}
     applyLangChanges(savedLang);
 
     MOS.$$(".lang-switcher span").forEach(function (sp) {

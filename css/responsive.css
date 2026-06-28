@@ -85,7 +85,7 @@
 @media(max-width:480px){
   .statusbar{padding:8px 14px;font-size:12px}
   .statusbar .sb-right{gap:7px}
-  .statusbar .sb-right > span{display:none}     /* hide MOSTAFA.OS label */
+  .statusbar .sb-right > span{display:none}     /* hide LOKALITA.OS label */
   .sig{display:none}                            /* keep: theme, lang, wifi, battery */
 
   .hero-title{font-size:clamp(40px,17vw,64px)}

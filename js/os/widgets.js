@@ -59,9 +59,9 @@
     var pill = MOS.$("#winPill");
     var pillText = MOS.$("#winPillText");
     var pillMessages = [
-      "product.builder · live",
-      "brand & commerce systems",
-      "cairo · gmt+2"
+      "lokalita.com · live",
+      "shopify ecommerce · cairo",
+      "build · launch · grow"
     ];
     var pillIdx = 0;
     function cyclePill() {
