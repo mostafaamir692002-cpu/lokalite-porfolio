@@ -53,16 +53,16 @@
 
     /* telemetry console feed */
     var logLines = [
-      "[SYSTEM] Telemetry stream active",
-      "[METRIC] Core optimizer online",
-      "[AI] Latency monitoring active",
-      "[AI] Vector databases check: OK",
-      "[DB] Response latency: 12ms",
-      "[AGENT] Autonomous routing running",
-      "[SYSTEM] Garbage collection complete",
-      "[SYS] Throttle check: 0% limit",
-      "[SPACE] Nebula render loop: stable",
-      "[AI] Context window optimized"
+      "[Shopify API] Inventory synchronized",
+      "[Meta Pixel] InitiateCheckout tracked",
+      "[TikTok Pixel] AddToCart tracked",
+      "[GA4 Analytics] ViewItem session active",
+      "[CDN Edge] Cairo node status: 200 OK",
+      "[Shopify API] Webhook dispatched to fulfillment",
+      "[Checkout] Cart token generated successfully",
+      "[Fulfillment] Tracking number generated",
+      "[Shopify API] Order created successfully",
+      "[GA4 Analytics] Purchase event recorded"
     ];
     setInterval(function () {
       if (!MOS.state.isAutoActive) return;

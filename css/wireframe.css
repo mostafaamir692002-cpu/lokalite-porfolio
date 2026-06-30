@@ -23,21 +23,21 @@ body.mode-wireframe .meter .bar i {
 }
 body.mode-wireframe .monogram-disc {
   background: transparent !important;
-  border: 1px dashed #fff !important;
+  border: none !important;
   box-shadow: none !important;
 }
 body.mode-wireframe .monogram-disc::before {
   background: transparent !important;
-  border: 1px dashed rgba(255,255,255,0.2) !important;
+  border: none !important;
   box-shadow: none !important;
 }
 body.mode-wireframe .avatar {
   background: transparent !important;
-  border: 1px dashed rgba(255,255,255,0.4) !important;
+  border: none !important;
 }
 body.mode-wireframe .avatar i {
   background: transparent !important;
-  border: 1px dashed rgba(255,255,255,0.2) !important;
+  border: none !important;
 }
 body.mode-wireframe .avatar .ring-dot {
   background: #fff !important;

@@ -34,16 +34,16 @@
   right: 12%;
   height: 2px;
   border-radius: 0 0 3px 3px;
-  background: linear-gradient(90deg, transparent, var(--blue), var(--glow), transparent);
+  background: linear-gradient(90deg, transparent, rgba(var(--orange-rgb), 1), var(--glow), transparent);
 }
 
 /* ---- 4. Work card — blue-glow border on hover ---- */
 .work-card:hover {
-  border-color: rgba(90, 169, 255, .28) !important;
+  border-color: rgba(var(--orange-rgb), .28) !important;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.1),
     0 18px 44px rgba(0,0,0,.55),
-    0 0 28px -6px rgba(90,169,255,.22) !important;
+    0 0 28px -6px rgba(var(--orange-rgb), .22) !important;
 }
 
 /* ---- 5. Systems cards — left accent line on hover ---- */
@@ -52,11 +52,11 @@
   transition: border-color .35s var(--ease), box-shadow .35s var(--ease);
 }
 .sys-card:hover {
-  border-left-color: rgba(90,169,255,.5);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), -3px 0 18px -6px rgba(90,169,255,.25), 0 18px 44px rgba(0,0,0,.5);
+  border-left-color: rgba(var(--orange-rgb), .5);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), -3px 0 18px -6px rgba(var(--orange-rgb), .25), 0 18px 44px rgba(0,0,0,.5);
 }
 .sys-card .num {
-  color: var(--blue-soft);
+  color: rgba(var(--orange-rgb), 1);
   font-weight: 600;
 }
 
@@ -66,9 +66,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 36%, rgba(90,169,255,.16) 0%, transparent 52%),
-    radial-gradient(circle at 12% 80%, rgba(191,90,242,.09) 0%, transparent 42%),
-    radial-gradient(circle at 88% 75%, rgba(90,169,255,.06) 0%, transparent 38%);
+    radial-gradient(circle at 50% 36%, rgba(var(--orange-rgb), .06) 0%, transparent 52%),
+    radial-gradient(circle at 12% 80%, rgba(191,90,242,.05) 0%, transparent 42%),
+    radial-gradient(circle at 88% 75%, rgba(var(--orange-rgb), .02) 0%, transparent 38%);
   pointer-events: none;
   z-index: 0;
 }
@@ -110,7 +110,7 @@
   font-size: 8.5px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--blue-soft);
+  color: rgba(var(--orange-rgb), 1);
   white-space: nowrap;
 }
 .ph-badge-tl { top: 22px; left: 22px; }
@@ -131,8 +131,8 @@
   inset: 0;
   border-radius: inherit;
   background:
-    radial-gradient(circle at 12% 88%, rgba(90,169,255,.12) 0%, transparent 42%),
-    radial-gradient(circle at 88% 12%, rgba(191,90,242,.08) 0%, transparent 40%);
+    radial-gradient(circle at 12% 88%, rgba(var(--orange-rgb), .05) 0%, transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(191,90,242,.04) 0%, transparent 40%);
   pointer-events: none;
   z-index: 0;
 }
@@ -150,8 +150,8 @@
 .contact-cta {
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.4),
-    0 14px 34px rgba(10,111,224,.5),
-    0 0 24px -4px rgba(28,140,255,.35) !important;
+    0 14px 34px rgba(var(--orange-rgb),.35),
+    0 0 24px -4px rgba(var(--orange-rgb),.2) !important;
 }
 
 /* ---- 9. Footer banner — animated blue–silver sweep ---- */
@@ -160,7 +160,7 @@
     110deg,
     #ffffff 0%,
     #c8d0e0 15%,
-    var(--blue-soft) 35%,
+    rgba(var(--orange-rgb), 1) 35%,
     #e8ecf4 50%,
     var(--purple) 70%,
     #c8d0e0 85%,
@@ -186,15 +186,15 @@
   transition: background .2s, color .2s, border-color .2s, transform .2s var(--spring) !important;
 }
 .socials a.metal:hover {
-  background: rgba(90,169,255,.12) !important;
-  color: var(--blue-soft) !important;
-  border-color: rgba(90,169,255,.28) !important;
+  background: rgba(var(--orange-rgb),.12) !important;
+  color: rgba(var(--orange-rgb), 1) !important;
+  border-color: rgba(var(--orange-rgb),.28) !important;
 }
 
 /* ---- 11. Channel links — icon color on hover ---- */
-.channel:hover svg { color: var(--blue) !important; }
+.channel:hover svg { color: rgba(var(--orange-rgb), 1) !important; }
 .channel:hover {
-  border-color: rgba(90,169,255,.2) !important;
+  border-color: rgba(var(--orange-rgb),.2) !important;
 }
 
 /* ---- 12. Profile online indicator — pulsing glow ---- */
@@ -211,13 +211,13 @@
 .dock-cta {
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.4),
-    0 8px 20px rgba(10,111,224,.45),
-    0 0 18px -4px rgba(28,140,255,.28) !important;
+    0 8px 20px rgba(var(--orange-rgb),.3),
+    0 0 18px -4px rgba(var(--orange-rgb),.15) !important;
 }
 
 /* ---- 14. Hero eyebrow — make it visible right away ---- */
 .hero-eyebrow {
-  color: var(--blue-soft) !important;
+  color: rgba(var(--orange-rgb), 1) !important;
   opacity: 0;  /* keep JS animation (fade-in via GSAP) — just ensure correct color */
 }
 
@@ -242,7 +242,7 @@
 
 /* ---- 17. Mode readout meters — glow on bar fill ---- */
 .meter .bar i {
-  box-shadow: 0 0 8px rgba(90,169,255,.3);
+  box-shadow: 0 0 8px rgba(var(--orange-rgb),.3);
 }
 
 /* ---- 18. About body kicker spacing ---- */
@@ -256,7 +256,7 @@
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.2),
     0 8px 20px rgba(0,0,0,.45),
-    0 0 16px -4px rgba(90,169,255,.25) !important;
+    0 0 16px -4px rgba(var(--orange-rgb),.2) !important;
 }
 
 /* ---- 20. Responsive: hide floating badges on very small screens ---- */
@@ -266,11 +266,11 @@
 
 /* ---- 21. Hero manifesto — glow left border accent ---- */
 .hero-manifesto {
-  border-left: 2px solid rgba(90,169,255,.4) !important;
+  border-left: 2px solid rgba(var(--orange-rgb),.4) !important;
   border-top: none !important;
   border-bottom: none !important;
   border-right: none !important;
-  background: rgba(90,169,255,.05) !important;
+  background: rgba(var(--orange-rgb),.05) !important;
   border-radius: 0 12px 12px 0 !important;
   text-align: left;
 }
@@ -281,8 +281,8 @@
 }
 .testimonial-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(90,169,255,.18) !important;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 24px 56px rgba(0,0,0,.55), 0 0 28px -8px rgba(90,169,255,.18) !important;
+  border-color: rgba(var(--orange-rgb),.15) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 24px 56px rgba(0,0,0,.55), 0 0 28px -8px rgba(var(--orange-rgb),.12) !important;
 }
 
 /* ---- 23. Brand strip — hover brightens entire track ---- */
@@ -291,10 +291,10 @@
 
 /* ---- 24. Work micro-CTA — section gradient ---- */
 .work-micro-cta .work-cta-link {
-  background: linear-gradient(90deg, rgba(90,169,255,.06), rgba(191,90,242,.04));
+  background: linear-gradient(90deg, rgba(var(--orange-rgb),.04), rgba(191,90,242,.03));
 }
 .work-micro-cta .work-cta-link:hover {
-  background: linear-gradient(90deg, rgba(90,169,255,.1), rgba(191,90,242,.07));
+  background: linear-gradient(90deg, rgba(var(--orange-rgb),.07), rgba(191,90,242,.05));
 }
 
 /* ---- 25. osBrandLabel — interactive feedback ---- */
@@ -388,7 +388,7 @@
 .scroll-rail-dot.active {
   background: var(--blue-soft);
   border-color: var(--blue-soft);
-  box-shadow: 0 0 10px rgba(90, 169, 255, .5);
+  box-shadow: 0 0 10px rgba(var(--orange-rgb), .3);
   height: 20px;
   border-radius: 3px;
 }
@@ -442,5 +442,5 @@ body.light-mode .scroll-rail-dot.active { background: var(--blue); border-color:
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.12),
     0 30px 70px rgba(0,0,0,.6),
-    -8px 0 40px -12px rgba(90,169,255,.18) !important;
+    -8px 0 40px -12px rgba(var(--orange-rgb),.1) !important;
 }

@@ -5,35 +5,35 @@
 
 :root{
   /* voids */
-  --void-0:#0A1128;
-  --void-1:#0E1731;
-  --void-2:#121F42;
+  --void-0:#050a18;
+  --void-1:#0a122c;
+  --void-2:#101a3e;
   /* glass grays (cool blue cast) */
-  --glass-1:#15151b;
-  --glass-2:#1c1d25;
-  --glass-3:#23242e;
+  --glass-1:#0c1224;
+  --glass-2:#121b34;
+  --glass-3:#182444;
   /* ink */
   --ink-0:#f4f6fb;
   --ink-1:#c5cad6;
   --ink-2:#8b909e;
   --ink-3:#7c8090;
-  /* accents — iOS */
-  --blue:#FF9F0A;
+  /* accents — Shopify Amber/Orange */
+  --orange-rgb: 249, 115, 22;
+  --blue:#F97316;
   --blue-soft:#FDBA74;
   --green:#30D158;
   --cyan:#64D2FF;
   --purple:#BF5AF2;
-  --orange:#FF9F0A;
+  --orange:#F97316;
   --pink:#FF6482;
   /* CTA gradient stops (bright iOS blue used across dock/contact/modal CTAs) */
   --blue-bright:#F97316;
   --blue-deep:#EA580C;
   --blue-deep-2:#C2410C;
   /* signature glow */
-  --glow:#FF9F0A;
-  /* aurora — the space layer behind the glass.
-     iOS blue leads; violet/cyan are atmosphere, never UI chrome. */
-  --aurora-a:#FF9F0A;
+  --glow:#F97316;
+  /* aurora — the space layer behind the glass. */
+  --aurora-a:#F97316;
   --aurora-b:#F59E0B;
   --aurora-c:#EA580C;
   /* lines */

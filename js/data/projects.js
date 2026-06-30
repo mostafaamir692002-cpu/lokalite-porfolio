@@ -408,78 +408,78 @@
       id: "THE FISHMONGER",
       glyph: "F",
       glyphClass: "wc-6",
-      tag: { en: "Full-Stack Seafood Marketplace", ar: "منصة مأكولات بحرية متكاملة" },
-      title: "Fishmonger / Al Hoot",
+      tag: { en: "Headless Shopify B2B Dashboard", ar: "لوحة تحكم B2B متصلة بشوبيفاي" },
+      title: "The Fishmonger / Al Hoot",
       website: "https://alhoot-eg.com",
       status: { en: "Live", ar: "مشروع حي" },
       previewImage: "assets/fishmonger_preview.jpg",
       problem_short: {
-        en: "A growing seafood marketplace needed a real platform — not a template store — with a proper dashboard, secure accounts, and role-based control.",
-        ar: "ماركت بليس مأكولات بحرية بينمو كان محتاج منصة حقيقية — مش متجر قالب جاهز — بداشبورد كامل، حسابات آمنة، وتحكّم بالصلاحيات."
+        en: "A wholesale seafood operation running manual orders through WhatsApp — no real-time inventory visibility, no structured purchasing flow for B2B buyers.",
+        ar: "عملية بيع جملة مأكولات بحرية تعمل بأوردرات واتساب يدوية — لا رؤية فورية للمخزون، ولا مسار شراء منظم لعملاء B2B."
       },
       outcome_short: {
-        en: "Built and hardened a full-stack platform: dashboard, product management, auth, analytics, role-based permissions, and advanced Supabase RLS.",
-        ar: "بنينا وأمّنّا منصة فول-ستاك: داشبورد، إدارة منتجات، تسجيل دخول، تحليلات، صلاحيات بالأدوار، وSupabase RLS متقدم."
+        en: "Delivered a headless Shopify B2B dashboard: real-time inventory, wholesale price tiers, dedicated buyer accounts, and custom order workflows — all synced to Shopify's admin.",
+        ar: "سلّمنا لوحة تحكم B2B متصلة بشوبيفاي: مخزون فوري، أسعار جملة متعددة، حسابات مشترين مخصصة، وسير عمل طلبات مخصصة — كلها مزامنة مع Shopify Admin."
       },
       card: {
-        en: "A full-stack seafood marketplace engineered for control and trust — admin dashboard, secure auth, analytics, and database-level security.",
-        ar: "ماركت بليس مأكولات بحرية فول-ستاك متبني للتحكّم والثقة — داشبورد إدارة، تسجيل دخول آمن، تحليلات، وأمان على مستوى قاعدة البيانات."
+        en: "A custom headless Shopify B2B dashboard — real-time inventory, wholesale pricing tiers, dedicated buyer accounts, and order workflows synced directly to Shopify.",
+        ar: "لوحة تحكم B2B مخصصة متصلة بشوبيفاي — مخزون فوري، أسعار جملة متعددة، حسابات مشترين مخصصة، وأوردرات متزامنة مع Shopify."
       },
       meta: {
-        en: ["Full-Stack Build", "Admin Dashboard", "Supabase RLS"],
-        ar: ["بناء فول-ستاك", "داشبورد إدارة", "Supabase RLS"]
+        en: ["Headless Shopify", "B2B Commerce", "Custom Dashboard"],
+        ar: ["شوبيفاي Headless", "تجارة B2B", "داشبورد مخصص"]
       },
       focusTags: {
-        en: ["Full-Stack Platform", "Admin Dashboard", "Authentication", "Analytics", "Security Hardening"],
-        ar: ["منصة فول-ستاك", "داشبورد إدارة", "المصادقة", "التحليلات", "تأمين النظام"]
+        en: ["Shopify Storefront API", "B2B Commerce", "Wholesale Pricing", "Custom Dashboard", "Inventory Sync"],
+        ar: ["Shopify Storefront API", "تجارة B2B", "أسعار الجملة", "داشبورد مخصص", "مزامنة المخزون"]
       },
       techs: {
-        en: ["Supabase", "Row-Level Security", "Auth & RBAC", "Analytics"],
-        ar: ["Supabase", "أمان على مستوى الصف", "مصادقة وصلاحيات", "تحليلات"]
+        en: ["Shopify Storefront API", "Shopify Admin API", "Headless Architecture", "B2B Price Tiers"],
+        ar: ["Shopify Storefront API", "Shopify Admin API", "معمارية Headless", "أسعار جملة متعددة"]
       },
       focus: {
-        en: ["Platform Engineering", "Database Architecture", "Access Control", "Security", "Operations"],
-        ar: ["هندسة المنصة", "بنية قاعدة البيانات", "التحكّم بالوصول", "الأمان", "العمليات"]
+        en: ["Headless Shopify Architecture", "B2B Commerce Workflows", "Custom Buyer Dashboard", "Inventory Management", "Wholesale Pricing Logic"],
+        ar: ["معمارية شوبيفاي Headless", "سير عمل B2B", "داشبورد المشتري المخصص", "إدارة المخزون", "منطق أسعار الجملة"]
       },
       overview: {
-        en: "Fishmonger / Al Hoot is a full-stack seafood marketplace. We built and stabilized the platform end to end — an admin dashboard, product management, authentication, analytics, role-based permissions, a clean database architecture, security hardening, and advanced Supabase Row-Level Security.",
-        ar: "فيش مونجر / الحوت هو ماركت بليس مأكولات بحرية فول-ستاك. بنينا وثبّتنا المنصة من الأول للآخر — داشبورد إدارة، إدارة منتجات، مصادقة، تحليلات، صلاحيات بالأدوار، بنية قاعدة بيانات نضيفة، تأمين النظام، وSupabase Row-Level Security متقدم."
+        en: "Al Hoot is a wholesale seafood operation supplying restaurants, hotels, and catering companies across Cairo. They were running all their B2B orders manually through WhatsApp — no structured purchasing, no visibility, no scalability. We built a headless Shopify-powered B2B dashboard that gave their wholesale buyers a private, dedicated purchasing environment while keeping everything synced to the same Shopify admin the team already knows.",
+        ar: "الحوت هي عملية بيع جملة مأكولات بحرية بتوّرد للمطاعم والفنادق وشركات الكاترينج في القاهرة. كانوا بيشغّلوا كل أوردرات B2B يدوياً من خلال واتساب — لا شراء منظم، لا رؤية، لا قابلية للتوسع. بنينا داشبورد B2B معتمد على Shopify Headless بيدي لمشتري الجملة بيئة شراء خاصة ومخصصة — مع إبقاء كل شيء متزامن مع نفس Shopify Admin اللي الفريق بيستخدمه."
       },
       businessContext: {
-        en: "A seafood marketplace handling real orders and inventory can't run on a fragile template. It needed secure accounts, controlled team access, reliable data, and a dashboard the business could actually operate from.",
-        ar: "ماركت بليس مأكولات بحرية بيتعامل مع طلبات ومخزون حقيقي مينفعش يشتغل على قالب هش. كان محتاج حسابات آمنة، وصول فريق متحكّم فيه، بيانات موثوقة، وداشبورد البيزنس يقدر يشتغل منه فعلاً."
+        en: "B2B seafood buyers — restaurants, hotels — operate on volume, speed, and predictable pricing. They need to see exactly what's available, lock in a price tier, and submit a structured order without back-and-forth. A standard Shopify storefront isn't built for that workflow.",
+        ar: "مشترو الجملة — المطاعم والفنادق — بيشتغلوا على الكميات والسرعة وثبات السعر. محتاجين يشوفوا المخزون المتاح بالضبط، يأكدوا شريحة سعر، ويرسلوا أوردر منظم من غير ذهاب وإياب. المتجر القياسي على شوبيفاي مش مبني لهذا السير من العمل."
       },
       problem: {
-        en: "The platform needed to be both built and stabilized: proper authentication, role-based permissions so each team member sees only what they should, trustworthy analytics, and database-level security to protect orders and customer data.",
-        ar: "المنصة كانت محتاجة تتبني وتتثبّت: مصادقة سليمة، صلاحيات بالأدوار بحيث كل عضو يشوف اللي يخصّه بس، تحليلات موثوقة، وأمان على مستوى قاعدة البيانات يحمي الطلبات وبيانات العملاء."
+        en: "Every order came through WhatsApp. No structured SKU selection, no price confirmation, no order history. The team manually re-entered everything into Shopify. Stock discrepancies were common. Scaling this was impossible.",
+        ar: "كل أوردر كان بييجي من واتساب. لا اختيار SKU منظم، لا تأكيد سعر، لا سجل طلبات. الفريق كان بيُدخل كل شيء يدوياً في شوبيفاي. تعارض المخزون كان شائعاً. التوسع في هذا الوضع كان مستحيلاً."
       },
       solution: {
-        en: "We engineered a full-stack platform on Supabase: an operations dashboard, product management, secure auth with role-based access control, analytics, and a hardened database with advanced Row-Level Security policies isolating data by role.",
-        ar: "هندسنا منصة فول-ستاك على Supabase: داشبورد عمليات، إدارة منتجات، مصادقة آمنة بصلاحيات بالأدوار، تحليلات، وقاعدة بيانات مؤمّنة بسياسات Row-Level Security متقدمة بتعزل البيانات حسب الدور."
+        en: "We built a headless buyer dashboard powered by Shopify's Storefront API. Wholesale buyers log in to their private account, see real-time inventory, get their pre-negotiated price tier applied automatically, and submit structured purchase orders — all of which flow directly into Shopify as draft orders for the team to fulfill.",
+        ar: "بنينا داشبورد مشتري Headless مشغّل بـ Shopify Storefront API. مشترو الجملة بيسجلوا دخول لحساباتهم الخاصة، بيشوفوا المخزون الفوري، بيتطبّق عليهم تلقائياً شريحة السعر المتفق عليها، وبيرسلوا أوامر شراء منظمة — كلها بتتحوّل مباشرة لـ Draft Orders في شوبيفاي للفريق ينجزها."
       },
       decisions: {
         en: [
-          "Security at the Database Layer: Enforced access with Supabase Row-Level Security, so permissions hold even if the front-end is bypassed.",
-          "Role-Based Access Control: Modeled clear roles so each team member's dashboard exposes only the data and actions they own.",
-          "Build then Stabilize: Prioritized hardening, reliable data, and analytics so the platform could be trusted in daily operations."
+          "Headless over Native B2B: Shopify's native B2B features were too rigid for this catalog structure — a custom Storefront API layer gave us full control.",
+          "Buyer-Specific Price Tiers: Embedded wholesale price logic at the API level, so each buyer always sees their contracted rate — no manual overrides.",
+          "Draft Order Flow: Rather than auto-fulfillment, orders land as Shopify Draft Orders so the operations team can validate stock before confirming — maintaining accuracy at scale."
         ],
         ar: [
-          "الأمان في طبقة قاعدة البيانات: فرضنا الوصول بـSupabase Row-Level Security، فالصلاحيات بتفضل صامدة حتى لو اتخطّى الواجهة.",
-          "التحكّم بالوصول بالأدوار: عملنا أدوار واضحة بحيث داشبورد كل عضو يعرض البيانات والإجراءات اللي تخصّه بس.",
-          "نبني الأول وبعدين نثبّت: ركّزنا على التأمين، البيانات الموثوقة، والتحليلات عشان المنصة يُعتمد عليها في التشغيل اليومي."
+          "Headless بدلاً من B2B الأصلي: ميزات B2B الأصلية في شوبيفاي كانت صارمة جداً لبنية هذا الكتالوج — طبقة Storefront API المخصصة أعطتنا تحكماً كاملاً.",
+          "شرائح أسعار مخصصة لكل مشترٍ: دمجنا منطق أسعار الجملة على مستوى API، فكل مشترٍ يرى دائماً سعره المتعاقد عليه — بدون تعديلات يدوية.",
+          "مسار Draft Order: بدلاً من التنفيذ التلقائي، الأوردرات بتحط كـ Draft Orders في شوبيفاي حتى يتحقق فريق العمليات من المخزون قبل التأكيد — للحفاظ على الدقة أثناء التوسع."
         ]
       },
       systemArchitecture: {
-        en: "Full-stack architecture on Supabase: a relational database schema, authentication and role-based permissions, an admin/operations dashboard, analytics, and advanced Row-Level Security policies hardening every table.",
-        ar: "معمارية فول-ستاك على Supabase: سكيمة قاعدة بيانات علائقية، مصادقة وصلاحيات بالأدوار، داشبورد إدارة/عمليات، تحليلات، وسياسات Row-Level Security متقدمة بتأمّن كل جدول."
+        en: "Shopify Storefront API for buyer-facing product and inventory queries. Shopify Admin API for draft order creation and fulfillment tracking. Custom buyer authentication with account-level price tier mapping. Real-time inventory availability displayed from Shopify's inventory API without session caching.",
+        ar: "Shopify Storefront API لاستعلامات المنتجات والمخزون من جانب المشتري. Shopify Admin API لإنشاء Draft Orders وتتبع التنفيذ. مصادقة مشترين مخصصة مع ربط شريحة السعر على مستوى الحساب. عرض توافر المخزون الفوري من Shopify Inventory API بدون تخزين مؤقت للجلسة."
       },
       outcome: {
-        en: "Delivered a stable, secure full-stack marketplace the team operates daily — with controlled access, trustworthy analytics, and database-level protection for orders and customer data.",
-        ar: "سلّمت ماركت بليس فول-ستاك مستقر وآمن الفريق بيشتغل عليه يوميًا — بوصول متحكّم فيه، تحليلات موثوقة، وحماية على مستوى قاعدة البيانات للطلبات وبيانات العملاء."
+        en: "Eliminated manual WhatsApp order processing. Wholesale buyers now place structured, traceable purchase orders independently. The operations team processes draft orders in Shopify with full inventory visibility. Order accuracy improved and the volume the team can handle per day scaled without adding headcount.",
+        ar: "ألغينا معالجة الأوردرات اليدوية عبر واتساب. مشترو الجملة الآن بيضعوا أوامر شراء منظمة وقابلة للتتبع باستقلالية. فريق العمليات بيعالج Draft Orders في شوبيفاي مع رؤية كاملة للمخزون. تحسنت دقة الطلبات وتوسّع الحجم اليومي اللي يقدر الفريق يتعامل معه بدون توظيف إضافي."
       },
       stats: [
-        { lbl: "PLATFORM", val: "Full-Stack", desc: "Dashboard, auth, analytics, RBAC" },
-        { lbl: "SECURITY", val: "RLS Hardened", desc: "Supabase Row-Level Security on every table" }
+        { lbl: "ARCHITECTURE", val: "Headless", desc: "Shopify Storefront API + Admin API integration" },
+        { lbl: "B2B WORKFLOW", val: "Automated", desc: "Draft orders, price tiers, real-time inventory sync" }
       ],
       link: "https://alhoot-eg.com"
     }

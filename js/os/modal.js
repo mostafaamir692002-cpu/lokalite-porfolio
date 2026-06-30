@@ -70,7 +70,7 @@
     if (!modal || !body || !pill) return;
     var isAr = isArabic();
 
-    pill.textContent = "system://portfolio/project/" + projectId.toLowerCase().replace(/\s+/g, "-");
+    pill.textContent = "workspace://case-study/" + projectId.toLowerCase().replace(/\s+/g, "-");
 
     var statBoxes = "";
     data.stats.forEach(function (s) {
@@ -115,7 +115,7 @@
         '<h2>' + data.title + '</h2>' +
         '<div class="tag">' + tag + '</div>' +
         '<a href="' + data.website + '" class="project-url-display" target="_blank" rel="noopener noreferrer">' + data.website.replace('https://', '') + '</a>' +
-        '<div class="modal-focus-label" style="margin-top:14px;font-family:\'JetBrains Mono\';font-size:9px;color:var(--blue-soft);letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">' + (isAr ? "محاور المشروع" : "FOCUS AREAS") + '</div>' +
+        '<div class="modal-focus-label" style="margin-top:14px;font-family:\'JetBrains Mono\';font-size:9px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;">' + (isAr ? "محاور المشروع" : "FOCUS AREAS") + '</div>' +
         '<div class="techs" style="margin-top:0;">' + techsSpans + '</div>' +
       '</div>' +
     '</div>' +
@@ -137,7 +137,7 @@
         '<ul class="modal-decision-list">' + decisionsListHtml + '</ul>' +
         '<div class="modal-section-title">' + (isAr ? "النتائج والأثر الملموس" : "Outcome & Impact") + '</div>' +
         '<p>' + (isAr ? data.outcome.ar : data.outcome.en) + '</p>' +
-        '<div style="margin-top: 15px;"><span style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--blue-soft)">' + metricsTitle + '</span></div>' +
+        '<div style="margin-top: 15px;"><span style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--orange)">' + metricsTitle + '</span></div>' +
         statBoxes +
       '</div>' +
     '</div>' +

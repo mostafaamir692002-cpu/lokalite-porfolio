@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lokalitaeg.com/sitemap.xml
+Sitemap: https://lokalita-eg.com/sitemap.xml

@@ -72,7 +72,7 @@
 }
 .modal-btn.primary {
   background: linear-gradient(180deg, var(--blue-bright), var(--blue-deep)); color: #fff;
-  border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 4px 12px rgba(10,111,224,0.3);
+  border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 4px 12px rgba(var(--orange-rgb),0.3);
 }
 .modal-btn.secondary {
   background: rgba(255,255,255,0.05); color: var(--ink-1);

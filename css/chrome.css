@@ -35,16 +35,14 @@ nav.dock{
 }
 .dock-brand{display:flex;align-items:center;gap:11px;font-weight:600;color:var(--ink-0)}
 .dock-mono{
-  width:34px;height:34px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
-  font-family:"Archivo";font-weight:900;font-size:15px;letter-spacing:-.03em;
-  background:linear-gradient(160deg,#2b2d38,#121319);
-  border:1px solid rgba(255,255,255,.1);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 6px 14px rgba(0,0,0,.5);
-  overflow:hidden;
+  width:50px;height:50px;display:grid;place-items:center;flex:0 0 auto;
+  position:relative;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 75%);
 }
-.dock-mono{position:relative}
+.dock-mono span{display:none}
 .dock-mono img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:10px;
+  position:relative;width:100%;height:100%;object-fit:contain;display:block;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.45)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.2)) brightness(1.25) contrast(1.1);
 }
 .dock-brand small{display:block;font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase;font-weight:500}
 .dock-links{display:flex;align-items:center;gap:4px}
@@ -60,7 +58,7 @@ body.light-mode .dock-links a.active{background:rgba(15,16,21,.06)!important;col
   padding:9px 16px;border-radius:12px;white-space:nowrap;
   background:linear-gradient(180deg,var(--blue-bright),var(--blue-deep));
   border:1px solid rgba(255,255,255,.18);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 8px 20px rgba(10,111,224,.45);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 8px 20px rgba(var(--orange-rgb),.35);
   transition:transform .2s var(--spring);
 }
 .dock-cta:hover{transform:translateY(-1px)}

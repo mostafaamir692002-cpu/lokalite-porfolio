@@ -14,10 +14,13 @@
       var hh = h % 12; if (hh === 0) hh = 12;
       var t = hh + ":" + MOS.pad(m);
       var sb = MOS.$("#sbTime");
-      var wt = MOS.$("#wTime");
+      var wt = MOS.$("#cairoTime");
       var wd = MOS.$("#wDate");
       if (sb) sb.textContent = t;
-      if (wt) wt.textContent = t;
+      if (wt) {
+        var ampm = h >= 12 ? " PM" : " AM";
+        wt.textContent = t + ampm;
+      }
       if (wd) {
         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         var mon = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -26,7 +29,7 @@
     }
     tick(); setInterval(tick, 10000);
 
-    /* ---- battery ---- */
+    /* ---- battery (degraded gracefully as we remove the UI representation) ---- */
     var bar = MOS.$(".batt i");
     function setBatteryUI(level) {
       if (!bar) return;
@@ -59,9 +62,9 @@
     var pill = MOS.$("#winPill");
     var pillText = MOS.$("#winPillText");
     var pillMessages = [
-      "lokalita.com · live",
-      "shopify ecommerce · cairo",
-      "build · launch · grow"
+      "lokalita-eg.com · workspace",
+      "shopify partner · active",
+      "conversion optimization · live"
     ];
     var pillIdx = 0;
     function cyclePill() {
