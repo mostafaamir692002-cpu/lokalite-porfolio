@@ -148,12 +148,16 @@
     function closeMobileMenu() {
       menuOpen = false;
       if (mobileMenu) mobileMenu.classList.remove("is-open");
+      if (burger) burger.classList.remove("is-active");
+      document.body.classList.remove("is-locked");
     }
     if (burger) {
       burger.addEventListener("click", function (e) {
         e.stopPropagation();
         menuOpen = !menuOpen;
         if (mobileMenu) mobileMenu.classList.toggle("is-open", menuOpen);
+        if (burger) burger.classList.toggle("is-active", menuOpen);
+        document.body.classList.toggle("is-locked", menuOpen);
       });
     }
     document.addEventListener("click", function (e) {
