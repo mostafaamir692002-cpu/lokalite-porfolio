@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 relative">
             <img
-              src="/assets/lokalita-logo.png"
+              src="/assets/lokalita-logo-symbol.png"
               alt="Lokalita Logo"
               className="w-full h-full object-contain filter brightness-125 contrast-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
             />

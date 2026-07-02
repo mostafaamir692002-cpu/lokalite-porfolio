@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { useLang } from "@/context/LangContext";
 
@@ -13,6 +13,14 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
   const [progress, setProgress] = useState(0);
   const [label, setLabel] = useState("Forming the system...");
   const { lang } = useLang();
+
+  const onProgressUpdateRef = useRef(onProgressUpdate);
+  const onCompleteRef = useRef(onComplete);
+
+  useEffect(() => {
+    onProgressUpdateRef.current = onProgressUpdate;
+    onCompleteRef.current = onComplete;
+  });
 
   useEffect(() => {
     document.body.classList.add("is-locked");
@@ -41,7 +49,7 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
       onUpdate: () => {
         const val = Math.round(bootObj.p);
         setProgress(val);
-        onProgressUpdate(val / 100);
+        onProgressUpdateRef.current(val / 100);
       },
       onComplete: () => {
         clearInterval(stageInterval);
@@ -54,7 +62,7 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
             pointerEvents: "none",
             duration: 0.8,
             ease: "power2.out",
-            onComplete: onComplete,
+            onComplete: () => onCompleteRef.current(),
           });
         }, 300);
       },
@@ -64,7 +72,7 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
     const safety = setTimeout(() => {
       clearInterval(stageInterval);
       document.body.classList.remove("is-locked");
-      onComplete();
+      onCompleteRef.current();
     }, 4500);
 
     return () => {
@@ -72,7 +80,7 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
       clearTimeout(safety);
       tl.kill();
     };
-  }, [onComplete, onProgressUpdate, lang]);
+  }, [lang]);
 
   return (
     <div
@@ -83,7 +91,7 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
         {/* Monogram/Logo in Loader */}
         <div className="relative w-20 h-20 mb-8">
           <img
-            src="/assets/lokalita-logo.png"
+            src="/assets/lokalita-logo-symbol.png"
             alt="Lokalita"
             className="w-full h-full object-contain filter brightness-125 contrast-110 drop-shadow-[0_0_12px_rgba(255,255,255,0.45)]"
           />

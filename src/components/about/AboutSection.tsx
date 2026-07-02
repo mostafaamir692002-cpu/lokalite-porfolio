@@ -37,7 +37,7 @@ export default function AboutSection() {
             <div className="w-[180px] h-[180px] rounded-full bg-gradient-to-tr from-white/[0.03] to-white/[0.01] border border-white/5 flex items-center justify-center relative group-hover:scale-105 transition-transform duration-500">
               <div className="absolute inset-0 rounded-full bg-radial from-white/[0.04] to-transparent blur-md" />
               <img
-                src="/assets/lokalita-logo.png"
+                src="/assets/lokalita-logo-symbol.png"
                 alt="Lokalita"
                 className="w-24 h-24 object-contain filter brightness-125 contrast-110 drop-shadow-[0_0_12px_rgba(255,255,255,0.45)] z-10"
               />
