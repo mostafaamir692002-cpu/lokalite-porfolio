@@ -1,0 +1,2797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#070709" />
+<title>Mostafa Amir — Brand · Commerce · Operations Systems Architect</title>
+<meta name="description" content="Mostafa Amir — Brand Systems, Commerce Infrastructure & Operations Architecture. Building the systems behind brands that scale." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   MOSTAFA AMIR · OS / PORTFOLIO
+   Dark metallic iOS-glass interface — single-file build
+   ============================================================ */
+
+:root{
+  /* voids */
+  --void-0:#060608;
+  --void-1:#0a0a0e;
+  --void-2:#0e0e14;
+  /* glass grays (cool blue cast) */
+  --glass-1:#15151b;
+  --glass-2:#1c1d25;
+  --glass-3:#23242e;
+  /* ink */
+  --ink-0:#f4f6fb;
+  --ink-1:#c5cad6;
+  --ink-2:#8b909e;
+  --ink-3:#7c8090;
+  /* accents — iOS */
+  --blue:#0A84FF;
+  --blue-soft:#5AA9FF;
+  --green:#30D158;
+  --cyan:#64D2FF;
+  --purple:#BF5AF2;
+  --orange:#FF9F0A;
+  --pink:#FF6482;
+  /* signature glow */
+  --glow:#5AA9FF;
+  /* lines */
+  --line:rgba(255,255,255,.08);
+  --line-strong:rgba(255,255,255,.14);
+  /* chrome gradient */
+  --chrome:linear-gradient(176deg,#ffffff 0%,#d7dce8 16%,#9aa2b4 34%,#f2f5fb 50%,#7c8395 66%,#cfd5e3 82%,#ffffff 100%);
+  --radius:26px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+}
+
+/* ============ PREMIUM LIGHT MODE THEME VARIABLES ============ */
+body.light-mode {
+  --void-0: #f2f4f8;
+  --void-1: #e9ecf3;
+  --void-2: #ffffff;
+  --glass-1: rgba(255, 255, 255, 0.76);
+  --glass-2: rgba(240, 244, 252, 0.68);
+  --glass-3: rgba(228, 233, 245, 0.65);
+  --ink-0: #0f1015;
+  --ink-1: #3b3e4a;
+  --ink-2: #656c7a;
+  --ink-3: #8a91a0;
+  --line: rgba(15, 16, 21, 0.07);
+  --line-strong: rgba(15, 16, 21, 0.13);
+  --chrome: linear-gradient(176deg, #0f1015 0%, #2c2e39 25%, #424652 50%, #2c2e39 75%, #0f1015 100%);
+  --glow: #007aff;
+}
+/* Override glass panel shadow and borders for Light Mode */
+body.light-mode .glass {
+  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(244,248,255,.76));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 0 rgba(0,0,0,.03), 0 16px 40px rgba(15,16,21,.05);
+  border-color: rgba(15, 16, 21, 0.07) !important;
+}
+body.light-mode .hero-window {
+  background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(240,244,252,.8));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 35px 80px rgba(15,16,21,.07);
+  border-color: rgba(15, 16, 21, 0.1) !important;
+}
+body.light-mode .bg-field::before {
+  background: radial-gradient(circle at 30% 30%, rgba(0,122,255,.14), transparent 62%);
+}
+body.light-mode .bg-field::after {
+  background: radial-gradient(circle at 70% 70%, rgba(191,90,242,.1), transparent 60%);
+}
+body.light-mode .bg-grid {
+  background-image: linear-gradient(to right, rgba(15,16,21,.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,16,21,.03) 1px, transparent 1px);
+}
+body.light-mode .monogram-disc {
+  background: radial-gradient(circle at 32% 26%, rgba(255,255,255,.95), transparent 45%), conic-gradient(from 210deg,#ffffff,#c7ccd6,#f0f4fa,#b5bdcb,#e1e6f0,#d2d7e2,#ffffff);
+  box-shadow: inset 0 2px 6px rgba(255,255,255,.9), inset 0 -8px 18px rgba(0,0,0,.15), 0 18px 50px rgba(0,0,0,.08), 0 0 60px -10px rgba(0, 122, 255, 0.15);
+}
+body.light-mode .about-photo .ph-mono {
+  background: conic-gradient(from 200deg,#ffffff,#c7ccd6,#f0f4fa,#b5bdcb,#e1e6f0,#d2d7e2,#ffffff);
+  box-shadow: inset 0 2px 8px rgba(255,255,255,.9), inset 0 -10px 22px rgba(0,0,0,.1), 0 20px 50px rgba(0,0,0,.07);
+}
+body.light-mode .win-chrome {
+  background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,255,255,.1));
+  border-bottom: 1px solid rgba(15, 16, 21, 0.05) !important;
+}
+body.light-mode .sys-log-console {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 122, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(15, 16, 21, 0.08);
+}
+body.light-mode .os-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+body.light-mode .work-track::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+body.light-mode.mode-wireframe * {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+body.light-mode.mode-wireframe .glass {
+  background: #ffffff !important;
+}
+/* Premium status bar & nav dock in Light Mode */
+body.light-mode .statusbar {
+  background: linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.3)) !important;
+  border-bottom: 1px solid rgba(15,16,21,0.05) !important;
+  color: var(--ink-0) !important;
+}
+body.light-mode nav.dock {
+  background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(240,244,252,0.52)) !important;
+  border: 1px solid rgba(15,16,21,0.06) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 16px 40px rgba(15,16,21,0.05) !important;
+}
+body.light-mode .dock-links a {
+  color: var(--ink-1) !important;
+}
+body.light-mode .dock-links a:hover {
+  color: var(--ink-0) !important;
+  background: rgba(15,16,21,0.04) !important;
+}
+body.light-mode .dock-burger {
+  background: rgba(15,16,21,0.04) !important;
+  border-color: rgba(15,16,21,0.06) !important;
+  color: var(--ink-0) !important;
+}
+/* Toggles in Control Center in Light Mode */
+body.light-mode .toggle {
+  background: linear-gradient(180deg, #f8fafd, #ecf0f6) !important;
+  border: 1px solid rgba(15,16,21,0.05) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 6px 16px rgba(15,16,21,0.03) !important;
+  color: var(--ink-1) !important;
+}
+body.light-mode .toggle .lbl {
+  color: var(--ink-0) !important;
+}
+body.light-mode .toggle .st {
+  color: var(--ink-2) !important;
+}
+body.light-mode .toggle .ico {
+  background: rgba(15,16,21,0.04) !important;
+  color: var(--ink-2) !important;
+}
+body.light-mode .toggle.on .ico {
+  background: var(--_c, var(--blue)) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px -2px var(--_c, var(--blue)) !important;
+}
+body.light-mode .toggle.on .st {
+  color: var(--_c, var(--blue)) !important;
+}
+/* Metal & VStrips in Light Mode */
+body.light-mode .metal {
+  background: linear-gradient(180deg, #e4e7ee 0%, #d5d9e5 48%, #c5c9d6 100%) !important;
+  border: 1px solid rgba(15,16,21,0.06) !important;
+  box-shadow: 
+    inset 0 1.5px 0 rgba(255,255,255,.9),
+    inset 0 -2px 4px rgba(0,0,0,.04),
+    0 10px 24px rgba(0,0,0,.04),
+    0 1px 0 rgba(255,255,255,.8) !important;
+  color: var(--ink-0) !important;
+}
+body.light-mode .vstrip i {
+  background: linear-gradient(180deg, var(--glow), rgba(0,122,255,.25)) !important;
+}
+body.light-mode .vstrip span {
+  color: var(--ink-1) !important;
+}
+body.light-mode .vstrip .lab {
+  color: var(--ink-2) !important;
+}
+body.light-mode .about-photo {
+  background: linear-gradient(160deg,#e8ecf3,#d2d7e2) !important;
+  border-color: rgba(15,16,21,0.07) !important;
+}
+/* Modals in Light Mode */
+body.light-mode .os-modal-backdrop {
+  background: rgba(240, 243, 250, 0.72) !important;
+}
+body.light-mode .os-modal-window {
+  background: linear-gradient(180deg, #ffffff, #f2f5f9) !important;
+  border: 1px solid rgba(15,16,21,0.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 30px 70px rgba(15,16,21,0.08) !important;
+}
+body.light-mode .modal-stat-box {
+  background: rgba(15,16,21,0.02) !important;
+  border: 1px solid rgba(15,16,21,0.05) !important;
+}
+body.light-mode .modal-footer {
+  border-top: 1px solid rgba(15,16,21,0.05) !important;
+}
+body.light-mode .modal-header-hero {
+  border-bottom: 1px solid rgba(15,16,21,0.05) !important;
+}
+body.light-mode .diag-card {
+  background: rgba(15,16,21,0.02) !important;
+  border: 1px solid rgba(15,16,21,0.05) !important;
+}
+body.light-mode .channel {
+  background: linear-gradient(180deg, #f9fafc, #edf0f5) !important;
+  border: 1px solid rgba(15,16,21,0.06) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 8px 20px rgba(15,16,21,0.03) !important;
+  color: var(--ink-1) !important;
+}
+body.light-mode .channel:hover {
+  color: var(--ink-0) !important;
+  background: #ffffff !important;
+}
+/* Style for Theme Toggle buttons */
+.theme-toggle {
+  width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
+  background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06);
+  color: var(--ink-2); cursor: pointer; transition: all 0.25s var(--ease);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05); position: relative; overflow: hidden;
+}
+.theme-toggle:hover {
+  color: var(--ink-0); background: rgba(255,255,255,0.08);
+}
+.theme-toggle svg {
+  position: absolute; transition: transform 0.4s var(--spring), opacity 0.3s;
+}
+/* By default in dark mode, we show sun (to switch to light) */
+.theme-toggle .sun-icon {
+  opacity: 1; transform: scale(1);
+}
+.theme-toggle .moon-icon {
+  opacity: 0; transform: scale(0.4) rotate(-45deg);
+}
+/* In Light Mode switcher styles */
+body.light-mode .theme-toggle {
+  background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 2px 6px rgba(0,0,0,0.05);
+}
+body.light-mode .theme-toggle:hover {
+  background: rgba(255,255,255,0.9); color: var(--ink-0);
+}
+body.light-mode .theme-toggle .sun-icon {
+  opacity: 0; transform: scale(0.4) rotate(45deg);
+}
+body.light-mode .theme-toggle .moon-icon {
+  opacity: 1; transform: scale(1);
+}
+/* Additional premium Light Mode details */
+body.light-mode .win-pill {
+  background: rgba(15,16,21,0.04) !important;
+  border-color: rgba(15,16,21,0.04) !important;
+  color: var(--ink-2) !important;
+}
+body.light-mode .sel-menu {
+  background: #ffffff !important;
+  border: 1px solid rgba(15,16,21,0.08) !important;
+  box-shadow: 0 8px 24px rgba(15,16,21,0.06) !important;
+}
+body.light-mode .sel-menu button {
+  color: var(--ink-0) !important;
+  border-right: 1px solid rgba(15,16,21,0.06) !important;
+}
+body.light-mode .sel-menu button:hover {
+  background: rgba(15,16,21,0.04) !important;
+}
+body.light-mode .sel-menu::after {
+  background: #ffffff !important;
+  border-right: 1px solid rgba(15,16,21,0.08) !important;
+  border-bottom: 1px solid rgba(15,16,21,0.08) !important;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{ -webkit-text-size-adjust:100%; }
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--void-0);
+  color:var(--ink-1);
+  line-height:1.55;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  letter-spacing:.005em;
+}
+body.is-locked{overflow:hidden;height:100vh}
+
+/* ambient backdrop — soft cool-blue nebula on near black */
+.bg-field{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-field::before,.bg-field::after{
+  content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.55;
+}
+.bg-field::before{
+  width:62vw;height:62vw;left:-12vw;top:-18vw;
+  background:radial-gradient(circle at 30% 30%, rgba(90,169,255,.22), transparent 62%);
+}
+.bg-field::after{
+  width:54vw;height:54vw;right:-14vw;bottom:-16vw;
+  background:radial-gradient(circle at 70% 70%, rgba(191,90,242,.16), transparent 60%);
+}
+.bg-grid{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 80%);
+          mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 80%);
+}
+.bg-noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* ============ shared material classes ============ */
+.glass{
+  position:relative;
+  background:linear-gradient(180deg, rgba(34,36,46,.62), rgba(14,15,20,.66));
+  backdrop-filter:blur(26px) saturate(150%);
+  -webkit-backdrop-filter:blur(26px) saturate(150%);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10), inset 0 -1px 0 rgba(0,0,0,.5), 0 22px 60px rgba(0,0,0,.55);
+  overflow:hidden;
+}
+/* cursor-follow specular highlight */
+.glass::after{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%), rgba(120,180,255,.16), transparent 60%);
+  opacity:0;transition:opacity .5s var(--ease);
+}
+.glass:hover::after{opacity:1}
+
+.metal{
+  background:linear-gradient(180deg,#262833 0%,#191a22 48%,#101117 100%);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  box-shadow:
+    inset 0 1.5px 0 rgba(255,255,255,.20),
+    inset 0 -2px 4px rgba(0,0,0,.6),
+    0 10px 24px rgba(0,0,0,.55),
+    0 1px 0 rgba(255,255,255,.04);
+}
+.chrome-text{
+  background:var(--chrome);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:100% 100%;
+}
+
+/* ============ loader / boot ============ */
+#boot{
+  position:fixed;inset:0;z-index:9999;background:var(--void-0);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;
+  transition:opacity .8s var(--ease),visibility .8s;
+}
+#boot.done{opacity:0;visibility:hidden}
+.boot-mark{
+  width:88px;height:88px;border-radius:24px;display:grid;place-items:center;
+  font-family:"Archivo";font-weight:900;font-size:34px;letter-spacing:-.02em;
+  position:relative;
+}
+.boot-mark .chrome-text{font-size:34px}
+.boot-mark::after{
+  content:"";position:absolute;inset:-2px;border-radius:26px;
+  background:conic-gradient(from 0deg, transparent, var(--glow), transparent 40%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;padding:2px;
+  animation:spin 2.4s linear infinite;opacity:.9;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.boot-bar{width:220px;height:3px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
+.boot-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--glow));border-radius:3px}
+.boot-label{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.34em;color:var(--ink-3);text-transform:uppercase}
+.boot-pct{font-family:"JetBrains Mono";font-size:11px;color:var(--ink-2)}
+
+/* ============ status bar (global, sticky top) ============ */
+.statusbar{
+  position:sticky;top:0;z-index:120;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:9px 22px;font-family:"JetBrains Mono";font-size:13px;font-weight:600;color:var(--ink-0);
+  background:linear-gradient(180deg,rgba(8,8,11,.86),rgba(8,8,11,.4));
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.sb-time{letter-spacing:.02em;direction:ltr;display:inline-block}
+.sb-right{display:flex;align-items:center;gap:9px}
+.sb-right svg{display:block}
+.sig{display:flex;align-items:flex-end;gap:2px;height:11px}
+.sig i{width:3px;background:var(--ink-0);border-radius:1px}
+.sig i:nth-child(1){height:4px}.sig i:nth-child(2){height:6px}.sig i:nth-child(3){height:8px}.sig i:nth-child(4){height:11px}
+.batt{width:25px;height:12px;border:1.4px solid var(--ink-0);border-radius:3px;position:relative;padding:1.5px}
+.batt::after{content:"";position:absolute;right:-3px;top:3px;width:2px;height:5px;background:var(--ink-0);border-radius:0 1px 1px 0}
+.batt i{display:block;height:100%;width:78%;background:var(--green);border-radius:1px}
+
+/* ============ top nav (glass dock) ============ */
+nav.dock{
+  position:sticky;top:38px;z-index:110;
+  margin:14px auto 0;max-width:1180px;width:calc(100% - 36px);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:10px 12px 10px 18px;border-radius:22px;
+  background:linear-gradient(180deg,rgba(28,29,37,.66),rgba(12,13,18,.6));
+  backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);
+  border:1px solid var(--line);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 40px rgba(0,0,0,.45);
+  opacity:0;transform:translateY(-12px);
+}
+.dock-brand{display:flex;align-items:center;gap:11px;font-weight:600;color:var(--ink-0)}
+.dock-mono{
+  width:34px;height:34px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
+  font-family:"Archivo";font-weight:900;font-size:15px;letter-spacing:-.03em;
+  background:linear-gradient(160deg,#2b2d38,#121319);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 6px 14px rgba(0,0,0,.5);
+  overflow:hidden;
+}
+.dock-mono img{
+  width:100%;height:100%;object-fit:cover;display:block;border-radius:10px;
+}
+.dock-brand small{display:block;font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase;font-weight:500}
+.dock-links{display:flex;align-items:center;gap:4px}
+.dock-links a{
+  font-size:13px;color:var(--ink-2);text-decoration:none;padding:8px 13px;border-radius:11px;
+  transition:color .25s,background .25s;font-weight:500;
+}
+.dock-links a:hover{color:var(--ink-0);background:rgba(255,255,255,.05)}
+.dock-cta{
+  font-size:12.5px;font-weight:600;color:#fff;text-decoration:none;
+  padding:9px 16px;border-radius:12px;white-space:nowrap;
+  background:linear-gradient(180deg,#1c8cff,#0a6fe0);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 8px 20px rgba(10,111,224,.45);
+  transition:transform .2s var(--spring);
+}
+.dock-cta:hover{transform:translateY(-1px)}
+.dock-cta:active{transform:scale(.96)}
+.dock-burger{display:none}
+
+/* ============ layout shell ============ */
+.shell{position:relative;z-index:5;max-width:1180px;margin:0 auto;padding:0 18px 90px}
+section{position:relative}
+.kicker{
+  font-family:"JetBrains Mono";font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--blue-soft);display:inline-flex;align-items:center;gap:9px;
+}
+.kicker::before{content:"";width:22px;height:1px;background:linear-gradient(90deg,var(--blue-soft),transparent)}
+.sec-head{margin-bottom:34px}
+.sec-head h2{font-family:"Archivo";font-weight:800;font-size:clamp(28px,5vw,52px);line-height:1.02;letter-spacing:-.02em;color:var(--ink-0);margin-top:14px}
+.sec-head p{color:var(--ink-2);max-width:560px;margin-top:12px;font-size:15.5px}
+
+/* ============ HERO — OS dashboard ============ */
+.hero{padding:30px 0 64px}
+.hero-window{
+  border-radius:30px;padding:0;overflow:hidden;
+  background:linear-gradient(180deg,rgba(30,32,42,.6),rgba(10,11,16,.7));
+  backdrop-filter:blur(28px) saturate(150%);-webkit-backdrop-filter:blur(28px) saturate(150%);
+  border:1px solid var(--line-strong);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.4);
+}
+/* window chrome */
+.win-chrome{
+  display:flex;align-items:center;gap:14px;padding:13px 18px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),transparent);
+}
+.win-dots{display:flex;gap:8px}
+.win-dots i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 1px 1px rgba(255,255,255,.4)}
+.win-dots i:nth-child(1){background:#ff5f57}.win-dots i:nth-child(2){background:#febc2e}.win-dots i:nth-child(3){background:#28c840}
+.win-pill{
+  margin:0 auto;font-family:"JetBrains Mono";font-size:11.5px;letter-spacing:.26em;color:var(--ink-2);
+  text-transform:uppercase;padding:6px 16px;border-radius:9px;
+  background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;
+}
+.win-pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.win-tools{display:flex;gap:7px}
+.win-tools span{width:26px;height:22px;border-radius:7px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06)}
+
+/* hero body grid */
+.hero-grid{
+  display:grid;grid-template-columns:300px 1fr 230px;gap:18px;padding:22px;
+}
+
+/* — left rail: profile + control center — */
+.rail{display:flex;flex-direction:column;gap:16px}
+.profile-card{padding:20px}
+.avatar-wrap{display:flex;align-items:center;gap:14px}
+.avatar{
+  width:60px;height:60px;border-radius:18px;flex:0 0 auto;position:relative;
+  background:conic-gradient(from 140deg,#5AA9FF,#BF5AF2,#64D2FF,#5AA9FF);
+  padding:2.5px;
+}
+.avatar i{
+  display:grid;place-items:center;width:100%;height:100%;border-radius:15px;
+  background:linear-gradient(160deg,#23252f,#101117);font-family:"Archivo";font-weight:900;
+  font-size:22px;letter-spacing:-.03em;color:transparent;
+  background-clip:text;-webkit-background-clip:text;
+  background-image:var(--chrome);
+}
+.avatar img{
+  width:100%;height:100%;border-radius:15px;object-fit:cover;display:block;
+}
+.avatar .ring-dot{position:absolute;right:-3px;bottom:-3px;width:16px;height:16px;border-radius:50%;background:var(--green);border:3px solid #14151b;box-shadow:0 0 10px var(--green)}
+.profile-card h3{font-family:"Archivo";font-weight:700;font-size:18px;color:var(--ink-0);letter-spacing:-.01em}
+.profile-card .role{font-size:12.5px;color:var(--ink-2);margin-top:1px}
+.profile-meta{margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.profile-meta .row{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink-1)}
+.profile-meta .row svg{flex:0 0 auto;color:var(--blue-soft)}
+.socials{display:flex;gap:8px;margin-top:18px}
+.socials a{
+  width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:var(--ink-1);
+  text-decoration:none;transition:transform .2s var(--spring),color .2s;
+}
+.socials a:hover{transform:translateY(-2px);color:#fff}
+.socials a:active{transform:scale(.92)}
+
+/* control center 2x2 */
+.cc-title{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-3);padding:0 4px 10px}
+.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.toggle{
+  cursor:pointer;border:none;text-align:left;color:inherit;font-family:inherit;
+  padding:14px;border-radius:18px;display:flex;flex-direction:column;gap:10px;
+  background:linear-gradient(180deg,#23252f,#14151b);
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 6px 16px rgba(0,0,0,.4);
+  transition:transform .14s var(--spring);
+}
+.toggle:active{transform:scale(.95)}
+.toggle .ico{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.06);color:var(--ink-2);transition:all .3s var(--ease);
+}
+.toggle .lbl{font-size:12px;font-weight:600;color:var(--ink-1)}
+.toggle .st{font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase}
+.toggle.on .ico{background:var(--_c,var(--blue));color:#fff;box-shadow:0 0 18px -2px var(--_c,var(--blue))}
+.toggle.on .st{color:var(--_c,var(--blue-soft))}
+.toggle[data-c="ai"]{--_c:var(--green)}
+.toggle[data-c="design"]{--_c:var(--blue)}
+.toggle[data-c="auto"]{--_c:var(--purple)}
+.toggle[data-c="sys"]{--_c:var(--cyan)}
+
+/* — center: name / hero core — */
+.hero-core{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8px 6px;gap:18px;position:relative}
+.hero-eyebrow{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);opacity:0}
+.monogram-disc{
+  width:124px;height:124px;border-radius:50%;position:relative;display:grid;place-items:center;flex:0 0 auto;
+  background:
+    radial-gradient(circle at 32% 26%, rgba(255,255,255,.9), transparent 38%),
+    conic-gradient(from 210deg,#e9edf6,#7d8493,#f4f7fc,#5b616f,#cdd3e0,#9aa1b1,#e9edf6);
+  box-shadow:inset 0 2px 6px rgba(255,255,255,.6),inset 0 -8px 18px rgba(0,0,0,.5),0 18px 50px rgba(0,0,0,.6),0 0 60px -10px var(--glow);
+}
+.monogram-disc::before{content:"";position:absolute;inset:9px;border-radius:50%;background:linear-gradient(165deg,#1b1c24,#0c0d12);box-shadow:inset 0 2px 8px rgba(255,255,255,.15),inset 0 -4px 12px rgba(0,0,0,.7)}
+.monogram-disc span{position:relative;font-family:"Archivo";font-weight:900;font-size:46px;letter-spacing:-.04em}
+.monogram-disc img{
+  position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border-radius:50%;object-fit:cover;z-index:2;
+}
+.hero-title{font-family:"Archivo";font-weight:900;line-height:.92;letter-spacing:-.035em;font-size:clamp(40px,8.5vw,92px)}
+.hero-title .line{display:block;overflow:hidden}
+.hero-title .word-i{display:inline-block;transform:translateY(110%)}
+.hero-title .shine{position:relative}
+.hero-title .shine::after{
+  content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.85) 50%,transparent 62%);
+  background-size:250% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:sheen 5s var(--ease) infinite;animation-delay:2s;
+}
+@keyframes sheen{0%{background-position:160% 0}45%,100%{background-position:-60% 0}}
+.hero-sub{max-width:430px;font-size:15px;color:var(--ink-2);opacity:0}
+.hero-sub b{color:var(--ink-0);font-weight:600}
+
+/* iOS text-selection menu over the name */
+.sel-menu{
+  position:absolute;left:50%;top:-2px;transform:translateX(-50%);
+  display:flex;border-radius:11px;overflow:hidden;opacity:0;pointer-events:none;
+  background:#23242e;border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 10px 30px rgba(0,0,0,.6);font-size:12.5px;
+}
+.sel-menu button{background:none;border:none;color:var(--ink-0);font-family:inherit;font-size:12.5px;padding:8px 13px;cursor:pointer;border-right:1px solid rgba(255,255,255,.1)}
+.sel-menu button:last-child{border-right:none}
+.sel-menu button:hover{background:rgba(255,255,255,.08)}
+.sel-menu::after{content:"";position:absolute;bottom:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:#23242e;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.name-target{position:relative;border-radius:6px;transition:background .3s}
+.name-target.selected{background:rgba(10,132,255,.28);box-shadow:0 0 0 2px rgba(10,132,255,.3)}
+
+/* — right rail: widgets — */
+.widget{padding:16px}
+.w-clock .t{font-family:"Archivo";font-weight:800;font-size:34px;color:var(--ink-0);letter-spacing:-.02em;line-height:1;direction:ltr;display:inline-block}
+.w-clock .d{font-size:12px;color:var(--ink-2);margin-top:3px}
+.w-clock .loc{display:flex;align-items:center;gap:6px;margin-top:14px;font-size:12.5px;color:var(--ink-1)}
+.w-clock .loc svg{color:var(--blue-soft)}
+.w-clock .sys{display:flex;align-items:center;gap:7px;margin-top:10px;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.w-clock .sys i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 9px var(--green);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+.w-stat{display:flex;flex-direction:column;gap:13px}
+.w-stat .row{display:flex;align-items:center;justify-content:space-between}
+.w-stat .row .k{font-size:11.5px;color:var(--ink-2)}
+.w-stat .row .v{font-family:"Archivo";font-weight:700;font-size:17px;color:var(--ink-0)}
+.w-stat .bar{height:5px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden}
+.w-stat .bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--glow));width:0;transition:width 1.2s var(--ease)}
+
+/* vertical control strips (decor) */
+.hero-strips{display:flex;gap:10px;justify-content:center;margin-top:20px;padding:0 22px 22px}
+.vstrip{width:54px;height:120px;border-radius:18px;position:relative;overflow:hidden;display:grid;align-items:end}
+.vstrip i{display:block;width:100%;background:linear-gradient(180deg,var(--glow),rgba(90,169,255,.25));border-radius:0}
+.vstrip span{position:absolute;top:12px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7)}
+.vstrip .lab{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-family:"JetBrains Mono";font-size:8.5px;letter-spacing:.1em;color:var(--ink-2);text-transform:uppercase}
+
+/* ============ DISCIPLINES — mode selector ============ */
+.modes{margin-top:78px}
+.modebar{
+  display:flex;gap:8px;padding:8px;border-radius:20px;flex-wrap:wrap;
+}
+.mode{
+  flex:1 1 auto;min-width:120px;cursor:pointer;border:none;color:var(--ink-2);font-family:inherit;
+  padding:16px 14px;border-radius:14px;text-align:left;background:transparent;transition:all .3s var(--ease);
+}
+.mode .n{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.18em;opacity:.6}
+.mode .t{font-family:"Archivo";font-weight:700;font-size:16px;color:inherit;margin-top:6px;letter-spacing:.01em}
+.mode.active{
+  color:var(--ink-0);
+  background:linear-gradient(180deg,#23252f,#15161d);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 10px 24px rgba(0,0,0,.45);
+}
+.mode.active .n{color:var(--blue-soft);opacity:1}
+.mode-readout{margin-top:18px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.mode-readout .desc h4{font-family:"Archivo";font-weight:700;font-size:22px;color:var(--ink-0)}
+.mode-readout .desc p{color:var(--ink-2);margin-top:10px;font-size:14.5px}
+.mode-readout .desc .ar{font-family:"Noto Sans Arabic";direction:rtl;color:var(--ink-1);margin-top:12px;font-size:15px;line-height:1.9}
+.mode-readout .meterset{display:flex;flex-direction:column;gap:14px}
+.meter .row{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-2);margin-bottom:6px}
+.meter .row b{color:var(--ink-0);font-family:"JetBrains Mono"}
+.meter .bar{height:6px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden}
+.meter .bar i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--blue),var(--glow));width:0;transition:width 1s var(--ease)}
+
+/* ============ SELECTED WORK ============ */
+.work{margin-top:96px}
+.work-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.work-nav{display:flex;gap:10px}
+.navbtn{
+  width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center;color:var(--ink-0);
+  background:linear-gradient(180deg,#23252f,#14151b);border:1px solid rgba(255,255,255,.08);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 8px 20px rgba(0,0,0,.4);
+  transition:transform .18s var(--spring);
+}
+.navbtn:hover{transform:translateY(-2px)}
+.navbtn:active{transform:scale(.9)}
+.navbtn:disabled{opacity:.35;cursor:default;transform:none}
+.work-track-wrap{margin-top:30px;overflow:hidden}
+.work-track{display:flex;gap:20px;transition:transform .7s var(--ease);will-change:transform}
+.work-card{
+  flex:0 0 calc((100% - 40px)/3);min-width:0;border-radius:24px;overflow:hidden;cursor:pointer;
+  background:linear-gradient(180deg,rgba(34,36,46,.6),rgba(12,13,18,.66));
+  border:1px solid var(--line);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 44px rgba(0,0,0,.5);
+  transition:transform .4s var(--ease),border-color .4s;
+}
+.work-card:hover{transform:translateY(-6px);border-color:var(--line-strong)}
+.wc-vis{height:190px;position:relative;overflow:hidden;display:grid;place-items:center}
+.wc-vis .glyph{font-family:"Archivo";font-weight:900;font-size:74px;letter-spacing:-.05em;opacity:.92}
+.wc-vis::before{content:"";position:absolute;inset:0;opacity:.85}
+.wc-vis::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(255,255,255,.18),transparent 55%)}
+.wc-1::before{background:linear-gradient(135deg,#3a2b10,#0c0d12)}
+.wc-2::before{background:linear-gradient(135deg,#0c2f3a,#0c0d12)}
+.wc-3::before{background:linear-gradient(135deg,#0d3320,#0c0d12)}
+.wc-4::before{background:linear-gradient(135deg,#241046,#0c0d12)}
+.wc-5::before{background:linear-gradient(135deg,#3a0f24,#0c0d12)}
+.wc-body{padding:20px}
+.wc-body .tag{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft)}
+.wc-body h3{font-family:"Archivo";font-weight:800;font-size:23px;color:var(--ink-0);margin-top:9px;letter-spacing:-.01em}
+.wc-body p{color:var(--ink-2);font-size:13.5px;margin-top:8px}
+.wc-meta{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap}
+.wc-meta span{font-size:10.5px;color:var(--ink-1);padding:5px 10px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06)}
+.work-dots{display:flex;gap:8px;justify-content:center;margin-top:26px}
+.work-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.16);cursor:pointer;transition:all .3s}
+.work-dots i.active{width:22px;border-radius:5px;background:var(--glow)}
+
+/* ============ ABOUT ============ */
+.about{margin-top:104px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:stretch}
+.about-photo{
+  border-radius:26px;min-height:380px;position:relative;overflow:hidden;display:grid;place-items:center;
+  background:linear-gradient(160deg,#1a1b23,#0a0b0f);border:1px solid var(--line);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 22px 60px rgba(0,0,0,.5);
+}
+.about-photo .ph-mono{
+  width:160px;height:160px;border-radius:42px;display:grid;place-items:center;
+  background:conic-gradient(from 200deg,#e9edf6,#7d8493,#f4f7fc,#5b616f,#cdd3e0,#9aa1b1,#e9edf6);
+  box-shadow:inset 0 2px 8px rgba(255,255,255,.5),inset 0 -10px 22px rgba(0,0,0,.5),0 20px 50px rgba(0,0,0,.5);
+  overflow:hidden;
+}
+.about-photo .ph-mono span{font-family:"Archivo";font-weight:900;font-size:64px;letter-spacing:-.04em;background:linear-gradient(165deg,#1b1c24,#0c0d12);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about-photo .ph-mono img{
+  width:100%;height:100%;border-radius:40px;object-fit:cover;display:block;
+}
+.about-photo .ph-tag{position:absolute;bottom:18px;left:18px;font-family:"JetBrains Mono";font-size:10px;letter-spacing:.2em;color:var(--ink-2);text-transform:uppercase}
+.about-photo .ph-status{position:absolute;top:18px;right:18px;display:flex;align-items:center;gap:7px;font-size:11px;color:var(--green);font-family:"JetBrains Mono";letter-spacing:.1em}
+.about-photo .ph-status i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 9px var(--green)}
+.about-body{padding:34px}
+.about-body .ar{font-family:"Noto Sans Arabic";direction:rtl;text-align:right;font-size:17px;line-height:2;color:var(--ink-1);margin:18px 0 22px}
+.about-body p{color:var(--ink-2);font-size:15px;margin-bottom:14px}
+.about-body p b{color:var(--ink-0);font-weight:600}
+.about-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.about-tags span{font-size:12px;color:var(--ink-1);padding:8px 14px;border-radius:11px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)}
+
+/* ============ SYSTEMS / approach ============ */
+.systems{margin-top:104px}
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.sys-card{padding:26px;border-radius:22px}
+.sys-card .num{font-family:"JetBrains Mono";font-size:12px;color:var(--blue-soft);letter-spacing:.1em}
+.sys-card h4{font-family:"Archivo";font-weight:700;font-size:20px;color:var(--ink-0);margin:14px 0 10px}
+.sys-card p{color:var(--ink-2);font-size:14px}
+.sys-card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:6px;color:var(--blue-soft);background:rgba(90,169,255,.1);border:1px solid rgba(90,169,255,.2)}
+
+/* ============ CONTACT ============ */
+.contact{margin-top:104px}
+.contact-shell{padding:44px;border-radius:30px;text-align:center;position:relative;overflow:hidden}
+.contact-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -10%,rgba(90,169,255,.18),transparent 60%)}
+.contact-shell h2{position:relative;font-family:"Archivo";font-weight:900;font-size:clamp(30px,6vw,62px);letter-spacing:-.03em;line-height:1}
+.contact-shell p{position:relative;color:var(--ink-2);max-width:480px;margin:16px auto 0;font-size:15.5px}
+.channels{position:relative;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:30px 0}
+.channel{
+  display:flex;align-items:center;gap:11px;padding:13px 18px;border-radius:16px;cursor:pointer;
+  color:var(--ink-1);text-decoration:none;font-size:13.5px;font-weight:500;
+  background:linear-gradient(180deg,#23252f,#14151b);border:1px solid rgba(255,255,255,.08);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 8px 20px rgba(0,0,0,.4);
+  transition:transform .2s var(--spring),color .2s;
+}
+.channel:hover{transform:translateY(-2px);color:#fff}
+.channel:active{transform:scale(.96)}
+.channel svg{color:var(--blue-soft)}
+.contact-cta{
+  position:relative;display:inline-flex;align-items:center;gap:11px;text-decoration:none;
+  font-family:"Archivo";font-weight:700;font-size:17px;color:#fff;padding:18px 34px;border-radius:18px;
+  background:linear-gradient(180deg,#1c8cff,#0860c8);border:1px solid rgba(255,255,255,.2);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 14px 34px rgba(10,111,224,.5);
+  transition:transform .2s var(--spring);
+}
+.contact-cta:hover{transform:translateY(-2px)}
+.contact-cta:active{transform:scale(.97)}
+
+/* ============ FOOTER ============ */
+.footer{margin-top:90px;text-align:center}
+.foot-banner{
+  font-family:"Archivo";font-weight:900;font-size:clamp(34px,9vw,120px);letter-spacing:-.04em;line-height:.9;
+  padding:10px 0;
+}
+.foot-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);font-family:"JetBrains Mono";letter-spacing:.08em}
+/* home indicator */
+.home-ind{display:flex;justify-content:center;margin-top:34px}
+.home-ind i{width:138px;height:5px;border-radius:5px;background:rgba(255,255,255,.5)}
+
+/* ============ reveal system ============ */
+[data-reveal]{opacity:0;transform:translateY(42px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal][data-d="1"]{transition-delay:.08s}
+[data-reveal][data-d="2"]{transition-delay:.16s}
+[data-reveal][data-d="3"]{transition-delay:.24s}
+/* Custom premium SVG arrow micro-animations */
+.btn-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease);
+}
+.dock-cta:hover .btn-arrow,
+.contact-cta:hover .btn-arrow,
+.modal-btn.primary:hover .btn-arrow {
+  transform: translateX(4px);
+}
+/* RTL Inversion of arrow pointing */
+html[lang="ar"] .btn-arrow {
+  transform: rotate(180deg);
+}
+html[lang="ar"] .dock-cta:hover .btn-arrow,
+html[lang="ar"] .contact-cta:hover .btn-arrow,
+html[lang="ar"] .modal-btn.primary:hover .btn-arrow {
+  transform: rotate(180deg) translateX(4px);
+}
+
+/* ============ responsive ============ */
+@media(max-width:1080px){
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .hero-core{grid-column:1 / -1;order:-1;padding:14px 6px 4px}
+  .work-card{flex:0 0 calc((100% - 20px)/2)}
+  .sys-grid{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .dock-links{display:none}
+  .dock-burger{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ink-0)}
+  .hero-grid{grid-template-columns:1fr;padding:18px}
+  .hero{padding:18px 0 40px}
+  .hero-title{font-size:clamp(44px,15vw,76px)}
+  .modebar{flex-direction:column}
+  .mode{min-width:0}
+  .mode-readout{grid-template-columns:1fr;gap:18px}
+  .work-card{flex:0 0 100%}
+  .channels{flex-direction:column;align-items:stretch}
+  .channel{justify-content:center}
+  .foot-meta{justify-content:center;text-align:center;flex-direction:column}
+  .shell{padding:0 14px 70px}
+  nav.dock{width:calc(100% - 24px)}
+  /* GPU scroll optimization: reduce backdrop blur filter on mobile */
+  .glass, .hero-window, nav.dock, .statusbar, .os-modal-backdrop {
+    backdrop-filter: blur(12px) saturate(130%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(130%) !important;
+  }
+  /* Mobile responsive height for OS Modal */
+  .os-modal-window {
+    height: 92vh !important;
+    max-height: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  [data-reveal]{opacity:1;transform:none}
+}
+
+/* ============ ADDITIONS: OS-Style Modal & Wireframe Mode ============ */
+/* ============ BILINGUAL SYSTEM & GLOBAL OVERRIDES ============ */
+html[lang="en"] .lang-ar { display: none !important; }
+html[lang="ar"] .lang-en { display: none !important; }
+html[lang="ar"] { direction: rtl; }
+html[lang="en"] { direction: ltr; }
+
+html[lang="ar"] body { font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif; }
+html[lang="en"] body { font-family: "Inter", system-ui, sans-serif; }
+
+/* Custom RTL adjustments */
+html[lang="ar"] .kicker {
+  letter-spacing: 0.05em;
+}
+html[lang="ar"] .kicker::before {
+  content: ""; width: 22px; height: 1px;
+  background: linear-gradient(270deg, var(--blue-soft), transparent) !important;
+  margin-left: 9px; margin-right: 0;
+}
+html[lang="ar"] .sec-head,
+html[lang="ar"] .about-body,
+html[lang="ar"] .about-body .kicker {
+  text-align: right;
+}
+html[lang="ar"] .sec-head p {
+  margin-right: 0; margin-left: auto;
+}
+html[lang="ar"] .about-photo .ph-status {
+  right: auto; left: 18px;
+}
+html[lang="ar"] .about-photo .ph-tag {
+  left: auto; right: 18px;
+}
+html[lang="ar"] .mode {
+  text-align: right;
+}
+html[lang="ar"] .sys-card {
+  text-align: right;
+}
+html[lang="ar"] .sys-card .ic {
+  margin-left: auto; margin-right: 0;
+}
+html[lang="ar"] .win-pill::before {
+  margin-left: 8px; margin-right: 0;
+}
+html[lang="ar"] .avatar .ring-dot {
+  right: auto; left: -3px;
+}
+html[lang="ar"] .contact-shell p {
+  margin-right: auto; margin-left: auto;
+}
+html[lang="ar"] .home-ind {
+  direction: ltr;
+}
+html[lang="ar"] .work-track-wrap,
+html[lang="ar"] .work-track {
+  direction: ltr !important;
+}
+html[lang="ar"] .work-card {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Lang switcher UI Widget */
+.lang-switcher {
+  display: inline-flex; gap: 2px; padding: 2px; border-radius: 9px;
+  background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06);
+  position: relative; cursor: pointer; user-select: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.lang-switcher span {
+  font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: bold;
+  padding: 3px 8px; border-radius: 6px; color: var(--ink-2); transition: all 0.25s var(--ease);
+}
+.lang-switcher span.active {
+  background: rgba(255,255,255,0.08); color: var(--ink-0);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* 3D tilt transitions */
+.work-card {
+  transition: transform 0.15s ease, border-color 0.4s;
+  transform-style: preserve-3d;
+}
+.work-card:hover {
+  transform: none; /* Controlled by dynamic JS Tilt */
+}
+
+.os-modal-backdrop {
+  position: fixed; inset: 0; z-index: 1000; background: rgba(5, 5, 8, 0.75);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease);
+  padding: 20px;
+}
+.os-modal-backdrop.is-active { opacity: 1; pointer-events: auto; }
+.os-modal-window {
+  width: 100%; max-width: 820px; height: 85vh; max-height: 640px;
+  display: flex; flex-direction: column; transform: scale(0.95) translateY(15px);
+  transition: transform 0.45s var(--spring);
+}
+.os-modal-backdrop.is-active .os-modal-window { transform: none; }
+.os-modal-body {
+  flex: 1; overflow-y: auto; padding: 30px; -webkit-overflow-scrolling: touch;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.os-modal-body::-webkit-scrollbar { width: 6px; }
+.os-modal-body::-webkit-scrollbar-track { background: transparent; }
+.os-modal-body::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
+
+/* Modal Content Styles */
+.modal-header-hero {
+  display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: center;
+  padding-bottom: 24px; border-bottom: 1px solid var(--line);
+}
+.modal-hero-glyph {
+  width: 140px; height: 140px; border-radius: 20px; display: grid; place-items: center;
+  font-family: "Archivo"; font-weight: 900; font-size: 64px;
+}
+.modal-header-info .tag {
+  font-family: "JetBrains Mono"; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--blue-soft);
+}
+.modal-header-info h2 {
+  font-family: "Archivo"; font-weight: 800; font-size: clamp(24px, 4vw, 36px);
+  color: var(--ink-0); margin-top: 6px;
+}
+.modal-header-info .techs { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.modal-header-info .techs span {
+  font-size: 10.5px; color: var(--ink-1); padding: 4px 9px; border-radius: 6px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+}
+.modal-desc-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; }
+.modal-desc-col .ar {
+  font-family: "Noto Sans Arabic"; direction: rtl; text-align: right;
+  font-size: 15.5px; line-height: 1.85; color: var(--ink-1); margin-bottom: 16px;
+}
+.modal-desc-col p { color: var(--ink-2); font-size: 14.5px; line-height: 1.6; margin-bottom: 12px; }
+.modal-stats-col { display: flex; flex-direction: column; gap: 16px; }
+.modal-stat-box {
+  padding: 16px; border-radius: 14px; background: rgba(0,0,0,0.2); border: 1px solid var(--line);
+}
+.modal-stat-box .lbl { font-family: "JetBrains Mono"; font-size: 10px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em; }
+.modal-stat-box .val { font-family: "Archivo"; font-weight: 700; font-size: 18px; color: var(--ink-0); margin-top: 4px; }
+.modal-stat-box .desc { font-size: 12px; color: var(--ink-2); margin-top: 4px; }
+.modal-footer {
+  display: flex; justify-content: flex-end; gap: 12px; padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.modal-btn {
+  padding: 11px 22px; border-radius: 10px; font-size: 13.5px; font-weight: 600; text-decoration: none;
+  cursor: pointer; transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.modal-btn.primary {
+  background: linear-gradient(180deg, #1c8cff, #0a6fe0); color: #fff;
+  border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 4px 12px rgba(10,111,224,0.3);
+}
+.modal-btn.secondary {
+  background: rgba(255,255,255,0.05); color: var(--ink-1);
+  border: 1px solid var(--line);
+}
+.modal-btn:hover { transform: translateY(-1px); }
+.modal-btn:active { transform: scale(0.97); }
+
+/* System Console Log overlay */
+.sys-log-console {
+  position: fixed; bottom: 20px; left: 20px; z-index: 900;
+  width: 280px; font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+  padding: 14px; border-radius: 16px; color: var(--cyan);
+  background: rgba(8, 8, 12, 0.85); border: 1px solid rgba(100, 210, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  pointer-events: none; transform: translateY(120px) scale(0.9); opacity: 0;
+  transition: transform 0.4s var(--spring), opacity 0.4s;
+}
+.sys-log-console.is-active { transform: none; opacity: 1; pointer-events: auto; }
+.sys-log-title {
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid rgba(100, 210, 255, 0.15); padding-bottom: 6px; margin-bottom: 8px;
+  color: var(--ink-0); font-weight: bold; font-size: 9.5px; letter-spacing: 0.1em;
+}
+.sys-log-title i { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+.sys-log-lines { display: flex; flex-direction: column; gap: 4px; color: var(--ink-1); }
+.sys-log-lines span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Diagnostics Modal Specific overlay */
+.diagnostics-panel {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.diag-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+}
+.diag-card {
+  padding: 16px; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--line);
+}
+.diag-card h5 { font-family: "Archivo"; font-weight: 700; font-size: 13.5px; color: var(--ink-0); margin-bottom: 8px; }
+.diag-card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; font-family: "JetBrains Mono"; font-size: 11px; color: var(--ink-2); }
+.diag-card ul b { color: var(--cyan); }
+
+/* WIREFRAME MODE (Stripping design details) */
+body.mode-wireframe {
+  --void-0: #060608 !important;
+  --void-1: #07070a !important;
+  --void-2: #08080c !important;
+  --glass-1: transparent !important;
+  --glass-2: transparent !important;
+  --glass-3: transparent !important;
+  --glow: rgba(255,255,255,0.2) !important;
+  --blue-soft: #fff !important;
+  --blue: #fff !important;
+  --green: #fff !important;
+  --cyan: #fff !important;
+  --purple: #fff !important;
+  --orange: #fff !important;
+  --pink: #fff !important;
+}
+body.mode-wireframe .bg-field,
+body.mode-wireframe .bg-noise { display: none !important; }
+body.mode-wireframe .bg-grid { opacity: 0.15 !important; }
+body.mode-wireframe .glass,
+body.mode-wireframe .metal {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px dashed rgba(255, 255, 255, 0.25) !important;
+  box-shadow: none !important;
+}
+body.mode-wireframe .vstrip i,
+body.mode-wireframe .boot-bar i,
+body.mode-wireframe .bar i,
+body.mode-wireframe .meter .bar i {
+  background: #fff !important;
+  box-shadow: none !important;
+}
+body.mode-wireframe .monogram-disc {
+  background: transparent !important;
+  border: 1px dashed #fff !important;
+  box-shadow: none !important;
+}
+body.mode-wireframe .monogram-disc::before {
+  background: transparent !important;
+  border: 1px dashed rgba(255,255,255,0.2) !important;
+  box-shadow: none !important;
+}
+body.mode-wireframe .avatar {
+  background: transparent !important;
+  border: 1px dashed rgba(255,255,255,0.4) !important;
+}
+body.mode-wireframe .avatar i {
+  background: transparent !important;
+  border: 1px dashed rgba(255,255,255,0.2) !important;
+}
+body.mode-wireframe .avatar .ring-dot {
+  background: #fff !important;
+  border: 2px solid #000 !important;
+  box-shadow: none !important;
+}
+body.mode-wireframe .toggle.on .ico {
+  background: #fff !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+body.mode-wireframe .toggle.on .st {
+  color: #fff !important;
+}
+
+@media(max-width: 720px) {
+  .modal-header-hero { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .modal-desc-grid { grid-template-columns: 1fr; gap: 20px; }
+  .os-modal-window { height: 90vh; }
+  .os-modal-body { padding: 20px; }
+}
+
+/* ============ AMBIENT ORB MOTION ============ */
+.bg-field::before{animation:orbFloat1 16s ease-in-out infinite}
+.bg-field::after{animation:orbFloat2 22s ease-in-out infinite}
+@keyframes orbFloat1{
+  0%,100%{transform:translate(0,0) scale(1)}
+  28%{transform:translate(4vw,-3.5vw) scale(1.08)}
+  64%{transform:translate(-2.5vw,4vw) scale(.93)}
+}
+@keyframes orbFloat2{
+  0%,100%{transform:translate(0,0) scale(1)}
+  38%{transform:translate(-5vw,2.5vw) scale(1.06)}
+  72%{transform:translate(3.5vw,-4vw) scale(.97)}
+}
+@media(prefers-reduced-motion:reduce){
+  .bg-field::before,.bg-field::after{animation:none!important}
+}
+
+/* ============ SCROLL PROGRESS ============ */
+#scrollProgress{
+  position:fixed;top:0;left:0;height:2px;width:0;z-index:99999;
+  background:linear-gradient(90deg,var(--blue),var(--glow) 50%,var(--purple));
+  border-radius:0 1px 1px 0;pointer-events:none;
+}
+
+/* ============ CUSTOM CURSOR ============ */
+.cursor-dot{
+  position:fixed;width:7px;height:7px;background:rgba(255,255,255,.9);
+  border-radius:50%;pointer-events:none;z-index:99998;
+  transform:translate(-50%,-50%);display:none;
+  mix-blend-mode:difference;will-change:left,top;
+}
+.cursor-aura{
+  position:fixed;width:36px;height:36px;
+  border:1px solid rgba(90,169,255,.5);border-radius:50%;
+  pointer-events:none;z-index:99997;transform:translate(-50%,-50%);display:none;
+  transition:width .4s var(--spring),height .4s var(--spring),border-color .3s,opacity .3s;
+  will-change:left,top;
+}
+@media(pointer:fine){
+  .cursor-dot,.cursor-aura{display:block}
+  *{cursor:none!important}
+}
+
+/* ============ WORK TRACK DRAG ============ */
+.work-track-wrap{cursor:grab!important}
+.work-track-wrap.is-dragging{cursor:grabbing!important;user-select:none}
+.work-track-wrap.is-dragging .work-card{pointer-events:none}
+
+/* ============ MOBILE MENU ============ */
+.mobile-menu {
+  position: fixed; top: 108px; left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  width: calc(100% - 24px); max-width: 400px;
+  z-index: 108; padding: 14px; border-radius: 22px;
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+  display: none;
+}
+@media(max-width:720px){ .mobile-menu { display: block; } }
+.mobile-menu.is-open { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.mobile-menu-links { display: flex; flex-direction: column; gap: 4px; }
+.mobile-nav-link {
+  display: block; padding: 14px 16px; border-radius: 12px;
+  font-size: 15px; font-weight: 500; color: var(--ink-1);
+  text-decoration: none; transition: color .2s, background .2s;
+}
+.mobile-nav-link:hover { color: var(--ink-0); background: rgba(255,255,255,.05); }
+.mobile-menu-cta {
+  margin-top: 14px; padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.mobile-menu-cta .dock-cta { width: 100%; justify-content: center; }
+body.light-mode .mobile-nav-link { color: var(--ink-1) !important; }
+body.light-mode .mobile-nav-link:hover { color: var(--ink-0) !important; background: rgba(15,16,21,.04) !important; }
+</style>
+</head>
+<body>
+
+<!-- ambient -->
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<div class="bg-noise"></div>
+
+<!-- BOOT -->
+<div id="boot">
+  <div class="boot-mark"><span class="chrome-text">MA</span></div>
+  <div class="boot-label">Initializing System</div>
+  <div class="boot-bar"><i></i></div>
+  <div class="boot-pct">0%</div>
+</div>
+
+<!-- STATUS BAR -->
+<div class="statusbar">
+  <span class="sb-time" id="sbTime">9:41</span>
+  <div class="sb-right">
+    <button class="theme-toggle" aria-label="Toggle light and dark mode">
+      <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
+    <div class="lang-switcher" role="group" aria-label="Language Selection">
+      <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0" aria-label="Switch to English">EN</span>
+      <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
+    </div>
+    <span style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;color:var(--ink-2)">MOSTAFA.OS</span>
+    <div class="sig"><i></i><i></i><i></i><i></i></div>
+    <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M8 11.2 1 4.4a9.6 9.6 0 0 1 14 0L8 11.2Z" stroke="currentColor" stroke-width="1.3" opacity=".9"/><path d="M8 11 4.2 7.2a5.3 5.3 0 0 1 7.6 0L8 11Z" fill="currentColor"/></svg>
+    <div class="batt"><i></i></div>
+  </div>
+</div>
+
+<!-- NAV DOCK -->
+<nav class="dock" id="dock">
+  <div class="dock-brand">
+    <div class="dock-mono"><img src="mostafa-amir.jpg" alt="Mostafa Amir"></div>
+    <div>
+      <span class="lang-en">Mostafa Amir<small>Brand · Commerce · Operations</small></span>
+      <span class="lang-ar">مصطفى أمير<small>العلامة · التجارة · العمليات</small></span>
+    </div>
+  </div>
+  <div class="dock-links">
+    <a href="#work"><span class="lang-en">Work</span><span class="lang-ar">أعمالي</span></a>
+    <a href="#about"><span class="lang-en">About</span><span class="lang-ar">عني</span></a>
+    <a href="#systems"><span class="lang-en">Systems</span><span class="lang-ar">الأنظمة</span></a>
+    <a href="#modes"><span class="lang-en">Disciplines</span><span class="lang-ar">التخصصات</span></a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="theme-toggle" aria-label="Toggle light and dark mode">
+      <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
+    <div class="lang-switcher" role="group" aria-label="Language Selection">
+      <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0" aria-label="Switch to English">EN</span>
+      <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
+    </div>
+    <a href="#contact" class="dock-cta" style="display: inline-flex; align-items: center; gap: 6px;">
+      <span class="lang-en">Let's build</span>
+      <span class="lang-ar">فلنبنِ معاً</span>
+      <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <button class="dock-burger" id="burger" aria-label="menu">
+    <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 1h16M1 7h16M1 13h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+</nav>
+
+<div class="shell">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-window" data-reveal data-parallax-root>
+      <div class="win-chrome">
+        <div class="win-dots"><i></i><i></i><i></i></div>
+        <div class="win-pill">systems.architect · live</div>
+        <div class="win-tools"><span></span><span></span><span></span></div>
+      </div>
+
+      <div class="hero-grid">
+        <!-- LEFT RAIL -->
+        <div class="rail" data-px="0.4">
+          <div class="glass profile-card">
+            <div class="avatar-wrap">
+              <div class="avatar"><img src="mostafa-amir.jpg" alt="Mostafa Amir"><span class="ring-dot"></span></div>
+              <div>
+                <h3>Mostafa Amir</h3>
+                <div class="role">Brand · Commerce · Operations Architect</div>
+              </div>
+            </div>
+            <div class="profile-meta">
+              <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg> Cairo, Egypt · GMT+2</div>
+              <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Available for select work</div>
+            </div>
+            <div class="socials">
+              <a class="metal" href="mailto:mostafaamir692002@gmail.com" aria-label="Email" title="Email">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+              </a>
+              <a class="metal" href="#work" aria-label="Behance" title="Work">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 7h6M4 12h7M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="14" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
+              </a>
+              <a class="metal" href="#contact" aria-label="LinkedIn" title="Connect">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10v6M8 7.5v.01M12 16v-3a2 2 0 0 1 4 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </a>
+              <a class="metal" href="#contact" aria-label="X" title="X">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="glass" style="padding:16px">
+            <div class="cc-title">
+              <span class="lang-en">Control Center</span>
+              <span class="lang-ar">لوحة التحكم</span>
+            </div>
+            <div class="cc-grid">
+              <button class="toggle on" data-c="ai" aria-pressed="true" aria-label="Toggle AI Specular Parallax Interaction">
+                <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.5-6.5-2 2m-7 7-2 2m13 0-2-2m-7-7-2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span>
+                  <span class="lbl"><span class="lang-en">Brand Systems</span><span class="lang-ar">أنظمة العلامة</span></span><br>
+                  <span class="st"><span class="lang-en">Active</span><span class="lang-ar">نشط</span></span>
+                </span>
+              </button>
+              <button class="toggle on" data-c="design" aria-pressed="true" aria-label="Toggle Wireframe Design Mode">
+                <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h12l4 10-10 10L2 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <span>
+                  <span class="lbl"><span class="lang-en">Commerce Ops</span><span class="lang-ar">عمليات التجارة</span></span><br>
+                  <span class="st"><span class="lang-en">Active</span><span class="lang-ar">نشط</span></span>
+                </span>
+              </button>
+              <button class="toggle on" data-c="auto" aria-pressed="true" aria-label="Toggle Automation System Log overlay">
+                <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3m0 14v3m10-10h-3M5 12H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="m18 6-2 2M8 16l-2 2m12 0-2-2M8 8 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <span>
+                  <span class="lbl"><span class="lang-en">AI Automation</span><span class="lang-ar">أتمتة الذكاء</span></span><br>
+                  <span class="st"><span class="lang-en">Active</span><span class="lang-ar">نشط</span></span>
+                </span>
+              </button>
+              <button class="toggle" data-c="sys" aria-pressed="false" aria-label="Toggle Core Diagnostics Modal">
+                <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <span>
+                  <span class="lbl"><span class="lang-en">Architecture</span><span class="lang-ar">هندسة النظام</span></span><br>
+                  <span class="st"><span class="lang-en">Standby</span><span class="lang-ar">استعداد</span></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER CORE -->
+        <div class="hero-core" data-px="0.15">
+          <div class="hero-eyebrow">
+            <span class="lang-en">// Brand · Commerce · Operations Systems Architect</span>
+            <span class="lang-ar">// مهندس أنظمة · العلامة · التجارة · العمليات</span>
+          </div>
+          <div class="monogram-disc" data-px="0.7"><img src="mostafa-amir.jpg" alt="Mostafa Amir"></div>
+          <h1 class="hero-title">
+            <span class="line"><span class="word-i shine chrome-text">MOSTAFA</span></span>
+            <span class="line"><span class="name-target" id="nameTarget"><span class="word-i shine chrome-text">AMIR</span></span></span>
+            <div class="sel-menu" id="selMenu">
+              <button data-act="select">
+                <span class="lang-en">Select</span>
+                <span class="lang-ar">تحديد</span>
+              </button>
+              <button data-act="all">
+                <span class="lang-en">Select All</span>
+                <span class="lang-ar">تحديد الكل</span>
+              </button>
+              <button data-act="paste">
+                <span class="lang-en">Paste</span>
+                <span class="lang-ar">لصق</span>
+              </button>
+            </div>
+          </h1>
+          <p class="hero-sub">
+            <span class="lang-en">I architect the infrastructure behind brands that scale — brand systems, commerce operations, and AI-powered workflows. From identity to checkout to back-office automation: one coherent system, not a stack of deliverables.</span>
+            <span class="lang-ar" style="font-family:'Noto Sans Arabic'; font-size:15.5px; direction:rtl; text-align:center; line-height:1.75; display:block;">أهندس البنية التحتية للعلامات التجارية التي تتوسع — أنظمة الهوية، عمليات التجارة الإلكترونية، وتدفقات العمل المدعومة بالذكاء الاصطناعي. من الهوية إلى الدفع إلى الأتمتة الخلفية: نظام متماسك واحد، لا حزمة مهام متفرقة.</span>
+          </p>
+        </div>
+
+        <!-- RIGHT RAIL -->
+        <div class="rail" data-px="0.4">
+          <div class="glass widget w-clock">
+            <div class="t" id="wTime">9:41</div>
+            <div class="d" id="wDate">Friday, May 29</div>
+            <div class="loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg> Cairo · 27°C Clear</div>
+            <div class="sys">
+              <i></i>
+              <span class="lang-en">System Online</span>
+              <span class="lang-ar">النظام متصل</span>
+            </div>
+          </div>
+          <div class="glass widget">
+            <div class="cc-title">
+              <span class="lang-en">Throughput</span>
+              <span class="lang-ar">معدل الإنجاز</span>
+            </div>
+            <div class="w-stat">
+              <div class="row">
+                <span class="k">
+                  <span class="lang-en">Projects shipped</span>
+                  <span class="lang-ar">مشاريع مكتملة</span>
+                </span>
+                <span class="v" data-count="40" data-suffix="+">40+</span>
+              </div>
+              <div class="bar"><i data-bar="86"></i></div>
+              <div class="row">
+                <span class="k">
+                  <span class="lang-en">Years building</span>
+                  <span class="lang-ar">سنوات الخبرة</span>
+                </span>
+                <span class="v" data-count="6" data-suffix="">6</span>
+              </div>
+              <div class="bar"><i data-bar="70"></i></div>
+              <div class="row">
+                <span class="k">
+                  <span class="lang-en">Systems live</span>
+                  <span class="lang-ar">أنظمة نشطة</span>
+                </span>
+                <span class="v" data-count="12" data-suffix="">12</span>
+              </div>
+              <div class="bar"><i data-bar="60"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- decorative control strips -->
+      <div class="hero-strips" data-px="0.25">
+        <div class="vstrip metal"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 18V6m0 0-4 4m4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:72%"></i><span class="lab">Brand</span></div>
+        <div class="vstrip metal"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v2m0 14v2m9-9h-2M5 12H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:88%"></i><span class="lab">Commerce</span></div>
+        <div class="vstrip metal"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M5 8h14M5 16h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><i style="height:55%"></i><span class="lab">AI Ops</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DISCIPLINES / MODE SELECTOR ===== -->
+  <section class="modes" id="modes">
+    <div class="sec-head" data-reveal>
+      <span class="kicker">
+        <span class="lang-en">Operating Modes</span>
+        <span class="lang-ar">أوضاع التشغيل</span>
+      </span>
+      <h2>
+        <span class="lang-en">Five pillars,<br>one system.</span>
+        <span class="lang-ar">خمسة محاور،<br>نظام تشغيل واحد.</span>
+      </h2>
+      <p class="lang-en">Brand, commerce, and operations are not separate engagements — they're layers of the same system. Switch a mode to see how they connect.</p>
+      <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">العلامة التجارية والتجارة والعمليات ليست مشاريع منفصلة — بل طبقات من نظام واحد. غيّر الوضع لترى كيف تتصل هذه الطبقات ببعضها.</p>
+    </div>
+    <div class="glass modebar" data-reveal>
+      <button class="mode active" data-mode="0">
+        <div class="n">01</div>
+        <div class="t">
+          <span class="lang-en">BRAND</span>
+          <span class="lang-ar">العلامة</span>
+        </div>
+      </button>
+      <button class="mode" data-mode="1">
+        <div class="n">02</div>
+        <div class="t">
+          <span class="lang-en">COMMERCE</span>
+          <span class="lang-ar">التجارة</span>
+        </div>
+      </button>
+      <button class="mode" data-mode="2">
+        <div class="n">03</div>
+        <div class="t">
+          <span class="lang-en">OPERATIONS</span>
+          <span class="lang-ar">العمليات</span>
+        </div>
+      </button>
+      <button class="mode" data-mode="3">
+        <div class="n">04</div>
+        <div class="t">
+          <span class="lang-en">AI WORKFLOWS</span>
+          <span class="lang-ar">تدفق الذكاء</span>
+        </div>
+      </button>
+      <button class="mode" data-mode="4">
+        <div class="n">05</div>
+        <div class="t">
+          <span class="lang-en">STRATEGY</span>
+          <span class="lang-ar">الاستراتيجية</span>
+        </div>
+      </button>
+    </div>
+    <div class="glass mode-readout" data-reveal>
+      <div class="desc">
+        <h4 id="modeTitle">Brand Architecture & Identity</h4>
+        <p id="modeDesc">I build brand systems that function like software — modular, scalable, and consistent across every touchpoint. Strategy, identity, and tone as a unified design system.</p>
+        <p id="modeAr" style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;color:var(--ink-1);margin-top:10px;font-size:14.5px;line-height:1.85;display:none"></p>
+      </div>
+      <div class="meterset" id="modeMeters"></div>
+    </div>
+  </section>
+
+  <!-- ===== SELECTED WORK ===== -->
+  <section class="work" id="work">
+    <div class="work-head">
+      <div class="sec-head" style="margin-bottom:0" data-reveal>
+        <span class="kicker">
+          <span class="lang-en">Selected Work</span>
+          <span class="lang-ar">أعمال مختارة</span>
+        </span>
+        <h2>
+          <span class="lang-en">Systems in the wild.</span>
+          <span class="lang-ar">أنظمة حية في الواقع.</span>
+        </h2>
+      </div>
+      <div class="work-nav" data-reveal>
+        <button class="navbtn" id="prevBtn" aria-label="previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="navbtn" id="nextBtn" aria-label="next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+
+    <div class="work-track-wrap" data-reveal>
+      <div class="work-track" id="workTrack">
+        <article class="work-card">
+          <div class="wc-vis wc-1"><span class="glyph chrome-text">M</span></div>
+          <div class="wc-body">
+            <div class="tag">
+              <span class="lang-en">Brand System · Digital Platform</span>
+              <span class="lang-ar">نظام الهوية · منصة رقمية</span>
+            </div>
+            <h3>MEDIEVAL ALOUD</h3>
+            <p class="lang-en">Full brand architecture and digital platform for a cultural project preserving medieval Arabic music — identity to infrastructure.</p>
+            <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">نظام هوية بصرية متكامل ومنصة رقمية لمشروع ثقافي يوثق التراث الموسيقي العربي القديم.</p>
+            <div class="wc-meta lang-en"><span>Brand</span><span>Identity</span><span>Platform</span></div>
+            <div class="wc-meta lang-ar"><span>العلامة</span><span>الهوية</span><span>المنصة</span></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="wc-vis wc-2"><span class="glyph chrome-text">U</span></div>
+          <div class="wc-body">
+            <div class="tag">
+              <span class="lang-en">Brand Identity · Commerce System</span>
+              <span class="lang-ar">هوية العلامة · نظام التجارة</span>
+            </div>
+            <h3>UNITED</h3>
+            <p class="lang-en">End-to-end brand and commerce system for a fashion label. Visual architecture wired directly into the commerce infrastructure.</p>
+            <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">نظام هوية وتجارة متكامل لعلامة في قطاع الأزياء — من البنية البصرية إلى التجارة الإلكترونية.</p>
+            <div class="wc-meta lang-en"><span>Brand Strategy</span><span>Identity</span><span>Shopify</span></div>
+            <div class="wc-meta lang-ar"><span>الاستراتيجية</span><span>الهوية</span><span>شوبيفاي</span></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="wc-vis wc-3"><span class="glyph chrome-text">R</span></div>
+          <div class="wc-body">
+            <div class="tag">
+              <span class="lang-en">E-Commerce · Brand System</span>
+              <span class="lang-ar">تجارة إلكترونية · نظام الهوية</span>
+            </div>
+            <h3>ROYAL SEA</h3>
+            <p class="lang-en">Brand identity and Shopify commerce system for a premium maritime brand — checkout architecture, product systems, and operational back-end.</p>
+            <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">هوية بصرية ونظام تجارة إلكترونية على شوبيفاي لعلامة بحرية فاخرة — من التصميم إلى عمليات الدفع والمخزون.</p>
+            <div class="wc-meta lang-en"><span>Shopify</span><span>Brand</span><span>Commerce Ops</span></div>
+            <div class="wc-meta lang-ar"><span>شوبيفاي</span><span>العلامة</span><span>العمليات</span></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="wc-vis wc-4"><span class="glyph chrome-text">F</span></div>
+          <div class="wc-body">
+            <div class="tag">
+              <span class="lang-en">Commerce · Operations System</span>
+              <span class="lang-ar">التجارة · نظام العمليات</span>
+            </div>
+            <h3>FISHMONGER</h3>
+            <p class="lang-en">Commerce architecture and operations system for a fresh seafood brand — store, inventory workflows, and fulfillment automation connected end-to-end.</p>
+            <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">بنية تجارية ونظام عمليات لعلامة أسماك طازجة — متجر وأتمتة المخزون والتوريد من البداية للنهاية.</p>
+            <div class="wc-meta lang-en"><span>Commerce</span><span>Operations</span><span>Automation</span></div>
+            <div class="wc-meta lang-ar"><span>التجارة</span><span>العمليات</span><span>الأتمتة</span></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="wc-vis wc-5"><span class="glyph chrome-text">P</span></div>
+          <div class="wc-body">
+            <div class="tag">
+              <span class="lang-en">Brand · Identity · E-Commerce</span>
+              <span class="lang-ar">العلامة · الهوية · التجارة</span>
+            </div>
+            <h3>PANTOUFLA</h3>
+            <p class="lang-en">Brand system and commerce platform for a premium footwear label — visual identity that communicates luxury, paired with a Shopify store built for discovery and conversion.</p>
+            <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">نظام هوية ومنصة تجارة لعلامة أحذية فاخرة — هوية بصرية راقية مع متجر شوبيفاي مُهندَس للتصفح والتحويل.</p>
+            <div class="wc-meta lang-en"><span>Brand System</span><span>Identity</span><span>Shopify</span></div>
+            <div class="wc-meta lang-ar"><span>نظام العلامة</span><span>الهوية</span><span>شوبيفاي</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="work-dots" id="workDots"></div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about-photo" data-reveal>
+      <div class="ph-mono"><img src="mostafa-amir.jpg" alt="Mostafa Amir"></div>
+      <div class="ph-status"><i></i> ONLINE</div>
+      <div class="ph-tag">
+        <span class="lang-en">// founder · systems architect</span>
+        <span class="lang-ar">// مؤسس · مهندس أنظمة</span>
+      </div>
+    </div>
+    <div class="glass about-body" data-reveal data-d="1">
+      <span class="kicker">
+        <span class="lang-en">Introduce Myself</span>
+        <span class="lang-ar">نبذة شخصية</span>
+      </span>
+      <div class="lang-ar">
+        <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:17px; line-height:1.95; color:var(--ink-1); margin-bottom:14px;">أبني البنية التحتية للعلامات التجارية التي تتوسع. ذلك يعني أنظمة هوية تستطيع فرق العمل فعلاً استخدامها، ومتاجر شوبيفاي مُهندَسة لتحقيق الإيرادات، وتدفقات عمل تشغيلية لا تحتاج تدخلاً يدوياً للقرارات الروتينية.</p>
+        <p style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:15px; line-height:1.8; color:var(--ink-2); margin-bottom:14px;">أعمل من البداية للنهاية — من قرار التموضع الأول حتى آخر خطوة أتمتة — لأن الأجزاء لا تعمل إلا حين يُصمَّم النظام بالكامل معاً.</p>
+      </div>
+      <div class="lang-en">
+        <p>I build the infrastructure behind brands that operate at scale. That means brand systems that teams can actually use, Shopify stores engineered for revenue, and operations workflows that don't require a human in the loop for routine decisions.</p>
+        <p>I work end-to-end — from the first positioning decision to the last automation trigger — because the parts only work when the whole system is designed together.</p>
+      </div>
+      <div class="about-tags lang-en">
+        <span>Brand Systems</span><span>Commerce Infrastructure</span><span>Operations Architecture</span><span>AI Workflows</span><span>Shopify</span><span>Business Strategy</span>
+      </div>
+      <div class="about-tags lang-ar">
+        <span>أنظمة العلامة</span><span>بنية التجارة</span><span>هندسة العمليات</span><span>تدفق الذكاء الاصطناعي</span><span>شوبيفاي</span><span>استراتيجية الأعمال</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SYSTEMS / APPROACH ===== -->
+  <section class="systems" id="systems">
+    <div class="sec-head" data-reveal>
+      <span class="kicker">
+        <span class="lang-en">How I Operate</span>
+        <span class="lang-ar">منهجية عملي</span>
+      </span>
+      <h2>
+        <span class="lang-en">The operating system.</span>
+        <span class="lang-ar">نظام التشغيل الثابت.</span>
+      </h2>
+      <p class="lang-en">Every engagement runs on the same three primitives — the reason the output stays coherent from strategy to ship.</p>
+      <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">كل مشروع يعتمد على نفس المبادئ الثلاثة الأساسية — وهي السبب في أن النتيجة تظل متماسكة وقوية من التخطيط للشحن.</p>
+    </div>
+    <div class="sys-grid">
+      <div class="glass sys-card" data-reveal data-d="1">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <div class="num">01</div>
+        <h4>
+          <span class="lang-en">Architecture before execution</span>
+          <span class="lang-ar">الهندسة قبل التنفيذ</span>
+        </h4>
+        <p class="lang-en">Every engagement starts with a systems map. Brand touchpoints, commerce flows, and operational logic are designed together before anything is built — because coherence comes from the architecture, not the polish.</p>
+        <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">كل مشروع يبدأ بخريطة نظام. نقاط العلامة، تدفقات التجارة، ومنطق العمليات تُصمَّم معاً قبل بناء أي شيء — لأن الاتساق يأتي من الهندسة، لا من التلميع.</p>
+      </div>
+      <div class="glass sys-card" data-reveal data-d="2">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v6c0 5 3.5 7.5 8 8.5 4.5-1 8-3.5 8-8.5V7l-8-4Z" stroke="currentColor" stroke-width="1.5"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="num">02</div>
+        <h4>
+          <span class="lang-en">Infrastructure that scales</span>
+          <span class="lang-ar">بنية تحتية قابلة للتوسع</span>
+        </h4>
+        <p class="lang-en">I build things that don't break when the business grows. Whether it's a Shopify store handling 10× volume or a brand system used by a 20-person team — the architecture anticipates scale from day one.</p>
+        <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">أبني أنظمة لا تنهار حين يكبر العمل. سواء كان متجر شوبيفاي يستوعب عشرة أضعاف الحجم أو نظام هوية يستخدمه فريق من 20 شخصاً — الهيكل يستوعب التوسع من اليوم الأول.</p>
+      </div>
+      <div class="glass sys-card" data-reveal data-d="3">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="5" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 12h5M14 12h3M12 7v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="num">03</div>
+        <h4>
+          <span class="lang-en">Integrated, not siloed</span>
+          <span class="lang-ar">متكامل لا معزول</span>
+        </h4>
+        <p class="lang-en">Brand, commerce, and operations are one system — not three separate projects. I connect them at the strategy level, in the tools, and in the workflows, so the business runs as a unit rather than a collection of handoffs.</p>
+        <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">العلامة والتجارة والعمليات نظام واحد — لا ثلاثة مشاريع منفصلة. أربطها على مستوى الاستراتيجية والأدوات وتدفقات العمل، حتى يعمل العمل كوحدة متماسكة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="glass contact-shell" data-reveal>
+      <span class="kicker" style="position:relative;justify-content:center">
+        <span class="lang-en">Get in Touch</span>
+        <span class="lang-ar">تواصل معي</span>
+      </span>
+      <h2 class="chrome-text">
+        <span class="lang-en">Let's build something that runs.</span>
+        <span class="lang-ar">لنبنِ شيئاً يعمل.</span>
+      </h2>
+      <p class="lang-en">If you're building a brand, scaling a commerce operation, or need someone to architect the systems underneath — let's talk about what you're trying to run, not just what you're trying to build.</p>
+      <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:center;">إن كنت تبني علامة تجارية، أو تطوّر عملية تجارية، أو تحتاج شخصاً يهندس الأنظمة في العمق — تحدث معي عما تريد تشغيله، لا عما تريد بناءه فحسب.</p>
+      
+      <div class="channels">
+        <a class="channel" href="mailto:mostafaamir692002@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="lang-en">Email</span>
+          <span class="lang-ar">البريد الإلكتروني</span>
+        </a>
+        <a class="channel" href="#top">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10v6M8 7.5v.01M12 16v-3a2 2 0 0 1 4 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="lang-en">LinkedIn</span>
+          <span class="lang-ar">لينكد إن</span>
+        </a>
+        <a class="channel" href="#work">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 7h6M4 12h7M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="14" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-ar">أعمالي المختارة</span>
+        </a>
+      </div>
+      <a class="contact-cta" href="mailto:mostafaamir692002@gmail.com">
+        <span class="lang-en">Start a project</span>
+        <span class="lang-ar">ابدأ مشروعك الآن</span>
+        <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="foot-banner chrome-text" data-reveal>
+      <span class="lang-en">BUILD CALM · SHIP SMART</span>
+      <span class="lang-ar">ابنِ بهدوء · اشحن بذكاء</span>
+    </div>
+    <div class="foot-meta">
+      <span>© 2026 MOSTAFA AMIR</span>
+      <span>
+        <span class="lang-en">DESIGNED &amp; ENGINEERED AS A SYSTEM</span>
+        <span class="lang-ar">تم التصميم والهندسة كنظام تشغيل متكامل</span>
+      </span>
+      <span>
+        <span class="lang-en">CAIRO · WORLDWIDE</span>
+        <span class="lang-ar">القاهرة · حول العالم</span>
+      </span>
+    </div>
+    <div class="home-ind"><i></i></div>
+  </footer>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu glass" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <nav class="mobile-menu-links">
+    <a href="#work" class="mobile-nav-link"><span class="lang-en">Work</span><span class="lang-ar">أعمالي</span></a>
+    <a href="#about" class="mobile-nav-link"><span class="lang-en">About</span><span class="lang-ar">عني</span></a>
+    <a href="#systems" class="mobile-nav-link"><span class="lang-en">Systems</span><span class="lang-ar">الأنظمة</span></a>
+    <a href="#modes" class="mobile-nav-link"><span class="lang-en">Disciplines</span><span class="lang-ar">التخصصات</span></a>
+  </nav>
+  <div class="mobile-menu-cta">
+    <a href="#contact" class="dock-cta" style="display:inline-flex;align-items:center;gap:6px;width:100%;justify-content:center;">
+      <span class="lang-en">Start a project</span><span class="lang-ar">ابدأ مشروعك</span>
+      <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- SYSTEM CONSOLE LOG OVERLAY (Automation CC Toggle) -->
+<div class="sys-log-console" id="sysLogConsole">
+  <div class="sys-log-title">
+    <span>SYSTEM TELEMETRY</span>
+    <i></i>
+  </div>
+  <div class="sys-log-lines" id="sysLogLines">
+    <span>[SYSTEM] Init telemetry loop...</span>
+    <span>[SYSTEM] Automation toggle ON</span>
+    <span>[SYSTEM] Observer active</span>
+  </div>
+</div>
+
+<!-- OS-STYLE MODAL WINDOW OVERLAY (Project details / Diagnostics) -->
+<div class="os-modal-backdrop" id="osModal">
+  <div class="glass os-modal-window">
+    <div class="win-chrome">
+      <div class="win-dots"><i id="modalCloseBtn" style="background:#ff5f57;cursor:pointer;"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+      <div class="win-pill" id="modalPill">system://portfolio/project</div>
+      <div class="win-tools"><span id="modalCloseTxt" style="cursor:pointer;font-size:11px;font-family:'JetBrains Mono';color:var(--ink-2);padding:2px 6px;border-radius:4px;background:rgba(255,255,255,0.05)">CLOSE</span></div>
+    </div>
+    <div class="os-modal-body" id="modalBody">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+</div>
+
+<div id="scrollProgress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-aura" id="cursorAura"></div>
+
+<!-- ============ LIBS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<script>
+"use strict";
+(function(){
+  var REDUCE = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hasGSAP = typeof window.gsap !== "undefined";
+  var hasLenis = typeof window.Lenis !== "undefined";
+
+  /* ---------- character scramble ---------- */
+  function scrambleText(el, finalText, dur){
+    if(!el || REDUCE){ el.textContent = finalText; return; }
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@$%&";
+    var total = Math.max(24, Math.round(dur / 16));
+    var f = 0;
+    (function tick(){
+      f++;
+      var prog = f / total;
+      var revealed = Math.floor(prog * finalText.length);
+      var out = "";
+      for(var i = 0; i < finalText.length; i++){
+        if(i < revealed || finalText[i] === " ") out += finalText[i];
+        else out += chars[Math.floor(Math.random() * chars.length)];
+      }
+      el.textContent = out;
+      if(prog < 1) requestAnimationFrame(tick);
+      else el.textContent = finalText;
+    })();
+  }
+
+  /* ---------- live clock ---------- */
+  function pad(n){return (n<10?"0":"")+n;}
+  function tick(){
+    var d = new Date();
+    var h = d.getHours(), m = d.getMinutes();
+    var hh = h % 12; if(hh===0) hh=12;
+    var t = hh + ":" + pad(m);
+    var sb = document.getElementById("sbTime");
+    var wt = document.getElementById("wTime");
+    var wd = document.getElementById("wDate");
+    if(sb) sb.textContent = t;
+    if(wt) wt.textContent = t;
+    if(wd){
+      var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var mon=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      wd.textContent = days[d.getDay()] + ", " + mon[d.getMonth()] + " " + d.getDate();
+    }
+  }
+  tick(); setInterval(tick, 10000);
+
+  /* ---------- boot sequence ---------- */
+  var boot = document.getElementById("boot");
+  var bootBar = boot ? boot.querySelector(".boot-bar i") : null;
+  var bootPct = boot ? boot.querySelector(".boot-pct") : null;
+  var p = 0;
+  function finishBoot(){
+    if(!boot) return;
+    boot.classList.add("done");
+    document.body.classList.remove("is-locked");
+    heroIntro();
+    if(hasGSAP && window.ScrollTrigger){ try{ ScrollTrigger.refresh(); }catch(e){} }
+  }
+  document.body.classList.add("is-locked");
+  if(REDUCE || !boot){
+    if(boot) boot.classList.add("done");
+    document.body.classList.remove("is-locked");
+    setTimeout(function(){ heroIntro(); }, 30);
+  } else if(hasGSAP) {
+    var bootLabel = boot ? boot.querySelector(".boot-label") : null;
+    var bootStages = ["Initializing systems...", "Loading brand stack...", "Ready."];
+    var stageIdx = 0;
+    var stageTimer = setInterval(function(){
+      stageIdx++;
+      if(stageIdx < bootStages.length && bootLabel){
+        gsap.fromTo(bootLabel,{opacity:0,y:4},{opacity:1,y:0,duration:.3});
+        bootLabel.textContent = bootStages[stageIdx];
+      } else { clearInterval(stageTimer); }
+    }, 750);
+    var bootObj = {p:0};
+    gsap.to(bootObj, {
+      p: 100, duration: 2.1, ease: "power2.inOut",
+      onUpdate: function(){
+        var v = Math.round(bootObj.p);
+        if(bootBar) bootBar.style.width = v + "%";
+        if(bootPct) bootPct.textContent = v + "%";
+      },
+      onComplete: function(){ clearInterval(stageTimer); setTimeout(finishBoot, 300); }
+    });
+  } else {
+    var bi = setInterval(function(){
+      p += Math.random()*16 + 6;
+      if(p>=100){ p=100; clearInterval(bi); }
+      if(bootBar) bootBar.style.width = p + "%";
+      if(bootPct) bootPct.textContent = Math.floor(p) + "%";
+      if(p>=100) setTimeout(finishBoot, 360);
+    }, 150);
+  }
+  // safety: never trap the user
+  setTimeout(function(){
+    if(boot && !boot.classList.contains("done")) finishBoot();
+  }, 4500);
+
+  /* ---------- Lenis smooth scroll ---------- */
+  var lenis = null;
+  if(hasLenis && !REDUCE){
+    try{
+      lenis = new Lenis({ duration:1.15, smoothWheel:true, lerp:0.1 });
+      function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+      if(hasGSAP && window.ScrollTrigger){
+        lenis.on("scroll", ScrollTrigger.update);
+        gsap.ticker.add(function(t){ lenis.raf(t*1000); });
+        gsap.ticker.lagSmoothing(0);
+      } else {
+        requestAnimationFrame(raf);
+      }
+    }catch(e){ lenis=null; }
+  }
+
+  /* ---------- anchor smooth scroll ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener("click", function(e){
+      var id = a.getAttribute("href");
+      if(id.length<2) return;
+      var el = document.querySelector(id);
+      if(!el) return;
+      e.preventDefault();
+      if(lenis){ lenis.scrollTo(el, { offset:-80, duration:1.2 }); }
+      else { el.scrollIntoView({ behavior: REDUCE?"auto":"smooth", block:"start" }); }
+    });
+  });
+
+  /* ---------- reveal system (GSAP batch + fallback) ---------- */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+  function revealAll(){ reveals.forEach(function(el){ el.classList.add("in"); }); }
+  if(REDUCE){
+    revealAll();
+  } else if(hasGSAP && window.ScrollTrigger){
+    ScrollTrigger.batch("[data-reveal]", {
+      start:"top 86%",
+      onEnter:function(els){ els.forEach(function(el){ el.classList.add("in"); }); }
+    });
+    // animate stat/meter bars on view
+    bindBars();
+  } else if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    },{ threshold:0.14 });
+    reveals.forEach(function(el){ io.observe(el); });
+    bindBars();
+  } else {
+    revealAll();
+  }
+  // safety: force-reveal if anything is still hidden after 4.5s
+  setTimeout(revealAll, 4600);
+
+  /* ---------- progress bars fill ---------- */
+  function fillBars(scope){
+    (scope||document).querySelectorAll("[data-bar]").forEach(function(b){
+      if(b.dataset._done) return;
+      b.dataset._done = "1";
+      var v = b.getAttribute("data-bar");
+      requestAnimationFrame(function(){ b.style.width = v + "%"; });
+    });
+  }
+  function bindBars(){
+    if("IntersectionObserver" in window){
+      var io2 = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ fillBars(en.target); io2.unobserve(en.target);} });
+      },{threshold:0.2});
+      document.querySelectorAll(".w-stat").forEach(function(s){ io2.observe(s); });
+    } else { fillBars(document); }
+  }
+
+  /* ---------- counter animation ---------- */
+  function animateCounter(el){
+    if(REDUCE || el.dataset._counted) return;
+    el.dataset._counted = "1";
+    var target = parseInt(el.getAttribute("data-count") || "0", 10);
+    var suffix = el.getAttribute("data-suffix") || "";
+    var duration = 1400;
+    var start = null;
+    (function tick(ts){
+      if(!start) start = ts;
+      var prog = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - prog, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if(prog < 1) requestAnimationFrame(tick);
+    })(performance.now());
+  }
+  if("IntersectionObserver" in window){
+    var counterObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.querySelectorAll("[data-count]").forEach(animateCounter);
+          counterObs.unobserve(en.target);
+        }
+      });
+    },{threshold:0.3});
+    document.querySelectorAll(".w-stat").forEach(function(s){ counterObs.observe(s); });
+  }
+
+  /* ---------- hero intro (loader-gated) ---------- */
+  function heroIntro(){
+    if(heroIntro._done) return; heroIntro._done = true;
+    var dock = document.getElementById("dock");
+    if(REDUCE || !hasGSAP || !window.gsap){
+      revealFallback();
+      return;
+    }
+    try {
+      var tl = gsap.timeline();
+      if(dock) tl.to(dock,{opacity:1,y:0,duration:.7,ease:"power3.out"},0);
+      tl.to(".hero-eyebrow",{opacity:1,duration:.6},0.1)
+        .from(".monogram-disc",{scale:.6,opacity:0,duration:.9,ease:"back.out(1.6)"},0.15)
+        .to(".hero-title .word-i",{y:"0%",duration:1,ease:"power4.out",stagger:.12},0.3)
+        .to(".hero-sub",{opacity:1,duration:.7},0.7)
+      .call(function(){
+        var words = document.querySelectorAll(".hero-title .word-i");
+        words.forEach(function(w, i){
+          var txt = w.textContent;
+          setTimeout(function(){ scrambleText(w, txt, 850); }, i * 200);
+        });
+      }, [], 1.4);
+      fillBars(document);
+      setTimeout(playSelection, 1800);
+    } catch(e) {
+      console.warn("GSAP heroIntro timeline failed, falling back", e);
+      revealFallback();
+    }
+
+    function revealFallback() {
+      document.querySelectorAll(".word-i").forEach(function(w){ w.style.transform="none"; });
+      document.querySelectorAll(".hero-eyebrow,.hero-sub").forEach(function(e){ e.style.opacity="1"; });
+      if(dock){ dock.style.opacity="1"; dock.style.transform="none"; }
+      fillBars(document);
+    }
+  }
+
+  /* ---------- iOS text-selection menu on name ---------- */
+  function playSelection(){
+    if(REDUCE) return;
+    var menu = document.getElementById("selMenu");
+    var target = document.getElementById("nameTarget");
+    if(!menu || !target) return;
+    target.classList.add("selected");
+    if(hasGSAP){ gsap.fromTo(menu,{opacity:0,y:8},{opacity:1,y:0,duration:.4,ease:"back.out(2)"}); }
+    else { menu.style.opacity=1; }
+    setTimeout(function(){
+      if(hasGSAP){ gsap.to(menu,{opacity:0,y:6,duration:.4}); } else { menu.style.opacity=0; }
+      setTimeout(function(){ target.classList.remove("selected"); }, 400);
+    }, 2600);
+  }
+  // make the menu interactive too
+  (function(){
+    var menu = document.getElementById("selMenu");
+    var target = document.getElementById("nameTarget");
+    if(!menu||!target) return;
+    target.addEventListener("click", function(){
+      target.classList.add("selected");
+      if(hasGSAP){ gsap.fromTo(menu,{opacity:0,y:8},{opacity:1,y:0,duration:.35,ease:"back.out(2)"}); }
+      else menu.style.opacity=1;
+    });
+    menu.querySelectorAll("button").forEach(function(b){
+      b.addEventListener("click", function(e){
+        e.stopPropagation();
+        if(hasGSAP){ gsap.to(menu,{opacity:0,y:6,duration:.3}); } else menu.style.opacity=0;
+        setTimeout(function(){ target.classList.remove("selected"); },300);
+      });
+    });
+  })();
+
+  /* ---------- control-center toggles (spring) & System Logic ---------- */
+  window.isAIActive = true;
+  window.isAutoActive = true;
+
+  // Real-time Battery Integration
+  function initDynamicBattery() {
+    var bar = document.querySelector(".batt i");
+    function setBatteryUI(level) {
+      if (!bar) return;
+      var pct = Math.round(level * 100);
+      bar.style.width = pct + "%";
+      if (level < 0.2) {
+        bar.style.background = "var(--pink)";
+      } else if (level < 0.5) {
+        bar.style.background = "var(--orange)";
+      } else {
+        bar.style.background = "var(--green)";
+      }
+    }
+
+    if (navigator.getBattery) {
+      navigator.getBattery().then(function(battery) {
+        function updateBattery() {
+          setBatteryUI(battery.level);
+        }
+        updateBattery();
+        battery.addEventListener("levelchange", updateBattery);
+        battery.addEventListener("chargingchange", updateBattery);
+      }).catch(function() {
+        runFallbackBattery();
+      });
+    } else {
+      runFallbackBattery();
+    }
+
+    function runFallbackBattery() {
+      // Mock battery starts at 88% and drains very slowly
+      var mockLevel = 0.88;
+      setBatteryUI(mockLevel);
+      setInterval(function() {
+        mockLevel = Math.max(0.05, mockLevel - 0.01);
+        setBatteryUI(mockLevel);
+      }, 300000); // drain 1% every 5 minutes
+    }
+  }
+  initDynamicBattery();
+
+  // Helper for weather icons
+  function getWeatherIcon(desc, isNight) {
+    var d = (desc || "").toLowerCase();
+    if (d.indexOf("rain") > -1 || d.indexOf("drizzle") > -1 || d.indexOf("shower") > -1) {
+      return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 13a4 4 0 0 1-8 0V6a4 4 0 0 1 8 0v7z"/><path d="M8 19h.01M12 21h.01M16 19h.01M10 22h.01M14 22h.01"/></svg>';
+    }
+    if (d.indexOf("cloud") > -1 || d.indexOf("overcast") > -1 || d.indexOf("mist") > -1 || d.indexOf("fog") > -1 || d.indexOf("haze") > -1) {
+      return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/><path d="M8 16h.01M8 20h.01M12 18h.01M12 22h.01M16 16h.01M16 20h.01"/></svg>';
+    }
+    if (isNight) {
+      return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="fill:rgba(100,212,255,0.15);color:var(--blue-soft);"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    }
+    return '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="fill:rgba(255,210,100,0.15);color:var(--orange);"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  }
+
+  // Real-time Cairo Weather Integration (with sessionStorage cache, 30-min TTL)
+  function fetchLiveWeather() {
+    function setWeatherUI(temp, desc, isNight) {
+      var loc = document.querySelector(".w-clock .loc");
+      if (!loc) return;
+      var icon = getWeatherIcon(desc, isNight);
+      loc.innerHTML = icon + ' Cairo · ' + temp + '°C ' + desc;
+    }
+    var CACHE_KEY = "mostafa-weather";
+    var CACHE_TTL = 30 * 60 * 1000;
+    try {
+      var cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || "null");
+      if (cached && (Date.now() - cached.ts) < CACHE_TTL) {
+        setWeatherUI(cached.temp, cached.desc, cached.isNight);
+        return;
+      }
+    } catch(e){}
+    fetch("https://wttr.in/Cairo?format=j1")
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var temp = data.current_condition[0].temp_C;
+        var desc = data.current_condition[0].weatherDesc[0].value;
+        var hours = new Date().getHours();
+        var isNight = hours < 6 || hours > 18;
+        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({temp:temp, desc:desc, isNight:isNight, ts:Date.now()})); } catch(e){}
+        setWeatherUI(temp, desc, isNight);
+      })
+      .catch(function() {
+        var hours = new Date().getHours();
+        var isNight = hours < 6 || hours > 18;
+        setWeatherUI(isNight ? "18" : "27", isNight ? "Clear" : "Sunny", isNight);
+      });
+  }
+  fetchLiveWeather();
+
+  // Control Center Click Handlers
+  document.querySelectorAll(".toggle").forEach(function(t){
+    t.addEventListener("click", function(){
+      var on = t.classList.toggle("on");
+      t.setAttribute("aria-pressed", on ? "true":"false");
+      var st = t.querySelector(".st");
+      if(st) {
+        var stEn = st.querySelector(".lang-en");
+        var stAr = st.querySelector(".lang-ar");
+        if(stEn) stEn.textContent = on ? "Active" : "Standby";
+        if(stAr) stAr.textContent = on ? "نشط" : "استعداد";
+      }
+      if(hasGSAP && !REDUCE){
+        gsap.fromTo(t, {scale:.93}, {scale:1, duration:.5, ease:"elastic.out(1,0.5)"});
+        var ico = t.querySelector(".ico");
+        if(ico && on) gsap.fromTo(ico,{rotate:-30},{rotate:0,duration:.6,ease:"back.out(2)"});
+      }
+
+      // Specific Actions per Toggle
+      var toggleType = t.getAttribute("data-c");
+      if (toggleType === "ai") {
+        window.isAIActive = on;
+        if (!on) {
+          document.querySelectorAll("[data-px]").forEach(function(el){
+            if(hasGSAP) gsap.to(el,{x:0,y:0,duration:.5});
+            else el.style.transform = "none";
+          });
+        }
+      } else if (toggleType === "design") {
+        document.body.classList.toggle("mode-wireframe", !on);
+      } else if (toggleType === "auto") {
+        window.isAutoActive = on;
+        var consoleEl = document.getElementById("sysLogConsole");
+        if (consoleEl) {
+          consoleEl.classList.toggle("is-active", on);
+        }
+      } else if (toggleType === "sys") {
+        if (on) {
+          openDiagnosticsModal();
+        } else {
+          closeModal();
+        }
+      }
+    });
+  });
+
+  // Floating Console Simulation Logic
+  var logLines = [
+    "[SYSTEM] Telemetry stream active",
+    "[METRIC] Core optimizer online",
+    "[AI] Latency monitoring active",
+    "[AI] Vector databases check: OK",
+    "[DB] Response latency: 12ms",
+    "[AGENT] Autonomous routing running",
+    "[SYSTEM] Garbage collection complete",
+    "[SYS] Throttle check: 0% limit",
+    "[AI] Context window optimized"
+  ];
+  setInterval(function() {
+    if (window.isAutoActive) {
+      var linesContainer = document.getElementById("sysLogLines");
+      if (linesContainer) {
+        var randomLine = logLines[Math.floor(Math.random() * logLines.length)];
+        var span = document.createElement("span");
+        span.textContent = randomLine;
+        linesContainer.appendChild(span);
+        if (linesContainer.children.length > 5) {
+          linesContainer.removeChild(linesContainer.firstChild);
+        }
+      }
+    }
+  }, 2000);
+
+  // Diagnostics Modal Renderer
+  var diagInterval = null;
+  function openDiagnosticsModal() {
+    var modal = document.getElementById("osModal");
+    var pill = document.getElementById("modalPill");
+    var body = document.getElementById("modalBody");
+    if (!modal || !body || !pill) return;
+    
+    var lang = document.documentElement.getAttribute("lang") || "en";
+    var isAr = lang === "ar";
+    
+    pill.textContent = "system://os/diagnostics";
+    
+    var titleHtml = isAr ? '<h2>تشخيصات النظام Core v1.2</h2>' : '<h2>Mostafa.OS Core Diagnostic v1.2</h2>';
+    var subtitleHtml = isAr ? '<div class="tag">تقرير التشخيص الذاتي</div>' : '<div class="tag">Diagnostics Report</div>';
+    
+    body.innerHTML = '<div class="diagnostics-panel">' +
+      '<div class="modal-header-hero">' +
+        '<div class="modal-hero-glyph metal" style="color:var(--cyan);background:rgba(100,212,255,0.1);border:1px solid var(--line); font-size: 24px; font-weight: 800; width: 140px; height: 140px; border-radius: 20px; display: grid; place-items: center;">SYS</div>' +
+        '<div class="modal-header-info">' +
+          subtitleHtml +
+          titleHtml +
+          '<div class="techs">' +
+            '<span>GSAP v3.12.5</span>' +
+            '<span>Lenis v1.0.42</span>' +
+            '<span>ScrollTrigger</span>' +
+            '<span>Tailored CSS</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="diag-grid">' +
+        '<div class="diag-card">' +
+          '<h5>' + (isAr ? 'بيانات النظام الحية' : 'SYSTEM RUNTIME') + '</h5>' +
+          '<ul>' +
+            '<li><b>' + (isAr ? 'الحالة' : 'Status') + ':</b> <span style="color:var(--green)">' + (isAr ? 'نشط ومتصل' : 'Live & Online') + '</span></li>' +
+            '<li><b>' + (isAr ? 'سرعة الاستجابة' : 'Latency') + ':</b> <span id="diagPing">12ms</span></li>' +
+            '<li><b>' + (isAr ? 'معالج النظام' : 'CPU Load') + ':</b> <span id="diagCPU">8%</span></li>' +
+            '<li><b>' + (isAr ? 'معدل الإطارات' : 'Frame Rate') + ':</b> <span id="diagFPS">60 FPS</span></li>' +
+          '</ul>' +
+        '</div>' +
+        '<div class="diag-card">' +
+          '<h5>' + (isAr ? 'معايير واجهة الاستخدام' : 'INTERFACE METRICS') + '</h5>' +
+          '<ul>' +
+            '<li><b>' + (isAr ? 'محرك التمرير' : 'Scroll Engine') + ':</b> Lenis Smooth Scroll</li>' +
+            '<li><b>' + (isAr ? 'تأثيرات الحركة' : 'Motion Pref') + ':</b> ' + (REDUCE ? (isAr ? 'حركة خفيفة' : 'Reduced Motion') : (isAr ? 'حركات غنية' : 'Rich Animations')) + '</li>' +
+            '<li><b>' + (isAr ? 'شاشة العرض' : 'Viewport') + ':</b> ' + window.innerWidth + 'x' + window.innerHeight + '</li>' +
+            '<li><b>' + (isAr ? 'نظام التشغيل' : 'Platform') + ':</b> ' + navigator.platform + '</li>' +
+          '</ul>' +
+        '</div>' +
+      '</div>' +
+      '<div class="modal-footer">' +
+        '<button class="modal-btn secondary" id="modalBackBtn">' + (isAr ? 'العودة للنظام' : 'Back to System') + '</button>' +
+      '</div>' +
+      '</div>';
+      
+    modal.classList.add("is-active");
+    document.body.classList.add("is-locked");
+    
+    document.getElementById("modalBackBtn").addEventListener("click", closeModal);
+    
+    if (diagInterval) clearInterval(diagInterval);
+    diagInterval = setInterval(function() {
+      var pingEl = document.getElementById("diagPing");
+      var cpuEl = document.getElementById("diagCPU");
+      var fpsEl = document.getElementById("diagFPS");
+      
+      if (pingEl) pingEl.textContent = Math.round(10 + Math.random() * 8) + "ms";
+      if (cpuEl) cpuEl.textContent = Math.round(5 + Math.random() * 12) + "%";
+      if (fpsEl) fpsEl.textContent = Math.round(58 + Math.random() * 2.5) + " FPS";
+    }, 1000);
+  }
+
+  // Projects Rich Content Database
+  var PROJECTS_DB = {
+    "MEDIEVAL ALOUD": {
+       tag: "Brand System · Digital Platform",
+       title: "Medieval Aloud",
+       glyph: "M",
+       glyphClass: "wc-1",
+       techs: ["Brand Architecture", "Identity System", "Digital Platform", "Art Direction"],
+       arDesc: "نظام هوية بصرية متكامل ومنصة رقمية لمشروع ثقافي يوثق التراث الموسيقي العربي القديم. صممت البنية البصرية الكاملة — من لغة التصميم إلى البنية التحتية الرقمية — لتعكس عمق التراث بلغة بصرية حديثة.",
+       enDesc: "Full brand architecture and digital platform for a cultural project dedicated to medieval Arabic music. Designed the complete visual language — from identity system to digital infrastructure — bridging historical depth with contemporary craft.",
+       stats: [
+         { lbl: "BRAND TOUCHPOINTS", val: "40+", desc: "Across digital and print channels" },
+         { lbl: "SYSTEM COMPONENTS", val: "120+", desc: "Modular brand components delivered" }
+       ],
+       link: "mailto:mostafaamir692002@gmail.com"
+    },
+    "UNITED": {
+       tag: "Brand Identity · Commerce System",
+       title: "UNITED",
+       glyph: "U",
+       glyphClass: "wc-2",
+       techs: ["Brand Strategy", "Identity System", "Shopify", "Commerce Architecture"],
+       arDesc: "نظام هوية وتجارة متكامل لعلامة تجارية في قطاع الأزياء. صممت البنية البصرية الكاملة وربطتها بمنظومة التجارة الإلكترونية — من الهوية حتى الدفع — لضمان تجربة متسقة عبر كل نقطة تواصل.",
+       enDesc: "End-to-end brand and commerce system for a fashion label. Designed the complete visual architecture and wired it directly to the commerce infrastructure — identity through checkout — for a consistent experience across every touchpoint.",
+       stats: [
+         { lbl: "BRAND SYSTEM COMPONENTS", val: "200+", desc: "Consistent across all digital channels" },
+         { lbl: "STORE PERFORMANCE", val: "Top 10%", desc: "Shopify speed benchmark post-launch" }
+       ],
+       link: "mailto:mostafaamir692002@gmail.com"
+    },
+    "ROYAL SEA": {
+       tag: "E-Commerce · Brand System",
+       title: "Royal Sea",
+       glyph: "R",
+       glyphClass: "wc-3",
+       techs: ["Shopify", "Brand Identity", "Commerce Ops", "UX Architecture"],
+       arDesc: "نظام هوية بصرية وتجارة إلكترونية متكامل لعلامة بحرية فاخرة. هندست بنية متجر شوبيفاي مع تحسين مسارات الشراء، أنظمة المنتجات، والعمليات الخلفية لضمان تجربة تجارية سلسة وعالية الأداء.",
+       enDesc: "A full brand and commerce system for a premium maritime label. Engineered the Shopify store architecture — checkout flows, product systems, and operational back-end — alongside the visual identity that communicates the brand's premium positioning.",
+       stats: [
+         { lbl: "CONVERSION RATE", val: "+41%", desc: "Post-launch vs. previous store" },
+         { lbl: "PAGE SPEED SCORE", val: "96/100", desc: "Lighthouse performance benchmark" }
+       ],
+       link: "mailto:mostafaamir692002@gmail.com"
+    },
+    "FISHMONGER": {
+       tag: "Commerce · Operations System",
+       title: "Fishmonger",
+       glyph: "F",
+       glyphClass: "wc-4",
+       techs: ["Commerce Architecture", "Operations Design", "Shopify", "Workflow Automation"],
+       arDesc: "نظام تشغيلي وتجاري متكامل لعلامة أسماك طازجة. هندست بنية المتجر الإلكتروني وأنظمة المخزون وتدفقات العمل التشغيلية التي تربط التوريد بالتوصيل — أتمتة كاملة للعمليات الروتينية.",
+       enDesc: "A commerce and operations system for a fresh seafood brand. Engineered the store architecture, inventory management systems, and the operational workflows connecting sourcing to fulfillment — automating the routine so the team focuses on quality.",
+       stats: [
+         { lbl: "OPS TIME SAVED", val: "60h/mo", desc: "Through automated order workflows" },
+         { lbl: "ORDER ACCURACY", val: "99.1%", desc: "Post-automation fulfillment rate" }
+       ],
+       link: "mailto:mostafaamir692002@gmail.com"
+    },
+    "PANTOUFLA": {
+       tag: "Brand · Identity · E-Commerce",
+       title: "Pantoufla",
+       glyph: "P",
+       glyphClass: "wc-5",
+       techs: ["Brand System", "Visual Identity", "Shopify", "Product UX"],
+       arDesc: "نظام هوية بصرية ومنصة تجارة إلكترونية لعلامة أحذية منزلية فاخرة. بنيت نظاماً بصرياً يعكس الجودة والأناقة، ومتجر شوبيفاي مُهندَس للتصفح السهل والتحويل العالي.",
+       enDesc: "A brand system and commerce platform for a premium footwear label. Built a visual identity system communicating luxury and craft, paired with a Shopify store engineered for effortless discovery and high-intent conversion.",
+       stats: [
+         { lbl: "BRAND IDENTITY ASSETS", val: "80+", desc: "Across digital, packaging, and retail" },
+         { lbl: "AVG ORDER VALUE", val: "+28%", desc: "Increase post brand system launch" }
+       ],
+       link: "mailto:mostafaamir692002@gmail.com"
+    }
+  };
+
+  // Project Modal Renderer
+  function openProjectModal(projectId) {
+    var data = PROJECTS_DB[projectId];
+    if (!data) return;
+    
+    var modal = document.getElementById("osModal");
+    var pill = document.getElementById("modalPill");
+    var body = document.getElementById("modalBody");
+    if (!modal || !body || !pill) return;
+    
+    var lang = document.documentElement.getAttribute("lang") || "en";
+    var isAr = lang === "ar";
+    
+    pill.textContent = "system://portfolio/project/" + projectId.toLowerCase().replace(" ", "-");
+    
+    var statBoxes = '';
+    data.stats.forEach(function(s) {
+      statBoxes += '<div class="modal-stat-box">' +
+        '<div class="lbl">' + s.lbl + '</div>' +
+        '<div class="val chrome-text">' + s.val + '</div>' +
+        '<div class="desc">' + s.desc + '</div>' +
+      '</div>';
+    });
+    
+    var techsSpans = '';
+    data.techs.forEach(function(t) {
+      techsSpans += '<span>' + t + '</span>';
+    });
+    
+    var backBtnText = isAr ? "العودة للنظام" : "Back to System";
+    var launchBtnText = isAr ? "تشغيل المشروع" : "Launch Project";
+    var metricsTitle = isAr ? "// مقاييس الأثر" : "// IMPACT METRICS";
+    
+    body.innerHTML = '<div class="modal-header-hero">' +
+      '<div class="modal-hero-glyph ' + data.glyphClass + '">' +
+        '<span class="glyph chrome-text" style="font-size: 74px; font-weight: 900; font-family: \'Archivo\'">' + data.glyph + '</span>' +
+      '</div>' +
+      '<div class="modal-header-info">' +
+        '<div class="tag">' + data.tag + '</div>' +
+        '<h2>' + data.title + '</h2>' +
+        '<div class="techs">' + techsSpans + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="modal-desc-grid">' +
+      '<div class="modal-desc-col">' +
+        (isAr ? '<div class="ar" style="margin-bottom:0">' + data.arDesc + '</div>' : '<p style="margin-bottom:0">' + data.enDesc + '</p>') +
+      '</div>' +
+      '<div class="modal-stats-col">' +
+        '<div><span style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--blue-soft)">' + metricsTitle + '</span></div>' +
+        statBoxes +
+      '</div>' +
+    '</div>' +
+    '<div class="modal-footer">' +
+      '<button class="modal-btn secondary" id="modalBackBtn">' + backBtnText + '</button>' +
+      '<a href="' + data.link + '" class="modal-btn primary" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px;">' +
+        '<span>' + launchBtnText + '</span>' +
+        '<svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+      '</a>' +
+    '</div>';
+    
+    modal.classList.add("is-active");
+    document.body.classList.add("is-locked");
+    
+    document.getElementById("modalBackBtn").addEventListener("click", closeModal);
+  }
+
+  // Modal Closers
+  function closeModal() {
+    if (diagInterval) {
+      clearInterval(diagInterval);
+      diagInterval = null;
+    }
+    var modal = document.getElementById("osModal");
+    if (modal) {
+      modal.classList.remove("is-active");
+    }
+    document.body.classList.remove("is-locked");
+    
+    // reset diagnostic CC toggle state
+    var sysToggle = document.querySelector('.toggle[data-c="sys"]');
+    if (sysToggle && sysToggle.classList.contains("on")) {
+      sysToggle.classList.remove("on");
+      sysToggle.setAttribute("aria-pressed", "false");
+      var st = sysToggle.querySelector(".st");
+      if (st) {
+        var stEn = st.querySelector(".lang-en");
+        var stAr = st.querySelector(".lang-ar");
+        if (stEn) stEn.textContent = "Standby";
+        if (stAr) stAr.textContent = "استعداد";
+      }
+    }
+  }
+
+  var closeBtn = document.getElementById("modalCloseBtn");
+  var closeTxt = document.getElementById("modalCloseTxt");
+  var modalBackdrop = document.getElementById("osModal");
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (closeTxt) closeTxt.addEventListener("click", closeModal);
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener("click", function(e) {
+      if (e.target === modalBackdrop) {
+        closeModal();
+      }
+    });
+  }
+
+  // Attach Open Modal events to project cards
+  document.querySelectorAll(".work-card").forEach(function(card) {
+    card.addEventListener("click", function() {
+      var h3 = card.querySelector("h3");
+      if (h3) {
+        var pName = h3.textContent.trim();
+        openProjectModal(pName);
+      }
+    });
+  });
+
+
+  /* ---------- disciplines / mode selector ---------- */
+  var MODES = [
+    { t:"Brand Architecture & Identity",
+      d:"I build brand systems that function like software — modular, scalable, and consistent across every touchpoint. Strategy, identity, and tone as a unified design system.",
+      ar:"أبني أنظمة هوية بصرية تعمل كبرمجيات — قابلة للتوسع، متناسقة، وتغطي كل نقطة تواصل. الاستراتيجية والهوية والأسلوب كنظام تصميم موحد واحد.",
+      m:[["Brand Strategy",92],["Identity Systems",95],["Visual Language",90]] },
+    { t:"Shopify Commerce Infrastructure",
+      d:"End-to-end commerce architecture: Liquid themes, checkout flows, product systems, and storefront performance. Every store is a revenue engine, not a template.",
+      ar:"هندسة تجارة إلكترونية متكاملة: قوالب Liquid، مسارات الدفع، أنظمة المنتجات، وأداء الواجهة الأمامية. كل متجر هو محرك إيرادات، وليس مجرد قالب.",
+      m:[["Shopify Architecture",94],["Commerce UX",91],["Performance",92]] },
+    { t:"Business Operations & Workflows",
+      d:"I map, restructure, and automate the operational backbone of a business — from fulfillment logic to team workflows to reporting pipelines.",
+      ar:"أخطط وأعيد هيكلة العمود الفقري التشغيلي للأعمال — من منطق التنفيذ إلى سير العمل الفرقي إلى مسارات التقارير.",
+      m:[["Operations Design",88],["Workflow Systems",90],["Process Logic",86]] },
+    { t:"AI-Powered Automation",
+      d:"Custom AI agents and workflow engines that eliminate repetitive operations. Integrations that make your systems talk to each other without manual handoffs.",
+      ar:"وكلاء ذكاء اصطناعي ومحركات سير عمل مخصصة تلغي العمليات المتكررة. تكاملات تجعل أنظمتك تتواصل مع بعضها دون تدخل يدوي.",
+      m:[["AI Agents",90],["Automation Flows",94],["Integration",88]] },
+    { t:"Business Strategy & Positioning",
+      d:"Positioning, pricing architecture, and go-to-market systems. The thinking that makes the brand and the product coherent before a single pixel is designed.",
+      ar:"التموضع، هيكلة التسعير، وأنظمة الوصول للسوق. التفكير الذي يجعل العلامة التجارية والمنتج متماسكَين قبل تصميم أي شيء.",
+      m:[["Positioning",92],["Market Strategy",88],["Systems Thinking",94]] }
+  ];
+  var modeTitle=document.getElementById("modeTitle"),
+      modeDesc=document.getElementById("modeDesc"),
+      modeAr=document.getElementById("modeAr"),
+      modeMeters=document.getElementById("modeMeters");
+  function renderMeters(arr){
+    if(!modeMeters) return;
+    modeMeters.innerHTML="";
+    arr.forEach(function(row){
+      var wrap=document.createElement("div"); wrap.className="meter";
+      wrap.innerHTML='<div class="row"><span>'+row[0]+'</span><b>'+row[1]+'</b></div><div class="bar"><i></i></div>';
+      modeMeters.appendChild(wrap);
+      var bar=wrap.querySelector("i");
+      requestAnimationFrame(function(){ setTimeout(function(){ bar.style.width=row[1]+"%"; },40); });
+    });
+  }
+  function setMode(i){
+    var m=MODES[i]; if(!m) return;
+    var lang = document.documentElement.getAttribute("lang") || "en";
+    var isAr = lang === "ar";
+    if(modeTitle) modeTitle.textContent=m.t;
+    if(modeDesc){ modeDesc.textContent=m.d; modeDesc.style.display=isAr?"none":"block"; }
+    if(modeAr){ modeAr.textContent=m.ar; modeAr.style.display=isAr?"block":"none"; }
+    renderMeters(m.m);
+    if(hasGSAP && !REDUCE){
+      gsap.fromTo("#modeTitle, #modeDesc, #modeAr",{opacity:0,y:10},{opacity:1,y:0,duration:.5,stagger:.05,ease:"power2.out"});
+    }
+  }
+  document.querySelectorAll(".mode").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll(".mode").forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      setMode(parseInt(btn.getAttribute("data-mode"),10));
+    });
+  });
+  renderMeters(MODES[0].m);
+
+  /* ---------- work carousel ---------- */
+  var track=document.getElementById("workTrack");
+  var prevB=document.getElementById("prevBtn"), nextB=document.getElementById("nextBtn");
+  var dotsWrap=document.getElementById("workDots");
+  var idx=0;
+  function perView(){ var w=window.innerWidth; return w<=720?1:(w<=1080?2:3); }
+  function maxIdx(){ var n=track?track.children.length:0; return Math.max(0, n-perView()); }
+  function go(i){
+    idx=Math.max(0, Math.min(i, maxIdx()));
+    if(!track||!track.children.length) return;
+    var card=track.children[0];
+    var style=getComputedStyle(track);
+    var gap=parseFloat(style.columnGap||style.gap||"20")||20;
+    var step=card.getBoundingClientRect().width + gap;
+    track.style.transform="translateX("+(-idx*step)+"px)";
+    if(prevB) prevB.disabled = idx<=0;
+    if(nextB) nextB.disabled = idx>=maxIdx();
+    syncDots();
+  }
+  function buildDots(){
+    if(!dotsWrap) return;
+    dotsWrap.innerHTML="";
+    var pages=maxIdx()+1;
+    for(var k=0;k<pages;k++){
+      var d=document.createElement("i");
+      (function(k){ d.addEventListener("click", function(){ go(k); }); })(k);
+      dotsWrap.appendChild(d);
+    }
+    syncDots();
+  }
+  function syncDots(){
+    if(!dotsWrap) return;
+    Array.prototype.forEach.call(dotsWrap.children, function(d,k){ d.classList.toggle("active", k===idx); });
+  }
+  if(nextB) nextB.addEventListener("click", function(){ go(idx+1); });
+  if(prevB) prevB.addEventListener("click", function(){ go(idx-1); });
+  buildDots(); go(0);
+  var rtm;
+  window.addEventListener("resize", function(){ clearTimeout(rtm); rtm=setTimeout(function(){ buildDots(); go(Math.min(idx,maxIdx())); if(hasGSAP&&window.ScrollTrigger){try{ScrollTrigger.refresh();}catch(e){}} }, 200); });
+
+  /* ---------- mouse parallax on hero ---------- */
+  if(!REDUCE){
+    var pxEls=Array.prototype.slice.call(document.querySelectorAll("[data-px]"));
+    var root=document.querySelector("[data-parallax-root]");
+    if(root && pxEls.length){
+      var raf2=null;
+      root.addEventListener("mousemove", function(e){
+        if(!window.isAIActive) return;
+        var r=root.getBoundingClientRect();
+        var dx=(e.clientX-(r.left+r.width/2))/r.width;
+        var dy=(e.clientY-(r.top+r.height/2))/r.height;
+        if(raf2) cancelAnimationFrame(raf2);
+        raf2=requestAnimationFrame(function(){
+          pxEls.forEach(function(el){
+            var d=parseFloat(el.getAttribute("data-px"))||0.3;
+            var tx=(-dx*22*d).toFixed(2), ty=(-dy*18*d).toFixed(2);
+            if(hasGSAP) gsap.to(el,{x:tx,y:ty,duration:.6,ease:"power2.out"});
+            else el.style.transform="translate("+tx+"px,"+ty+"px)";
+          });
+        });
+      });
+      root.addEventListener("mouseleave", function(){
+        pxEls.forEach(function(el){ if(hasGSAP) gsap.to(el,{x:0,y:0,duration:.8,ease:"power2.out"}); else el.style.transform="none"; });
+      });
+    }
+  }
+
+  /* ---------- cursor-follow specular on glass ---------- */
+  if(!REDUCE && window.matchMedia("(pointer:fine)").matches){
+    document.querySelectorAll(".glass").forEach(function(g){
+      g.addEventListener("pointermove", function(e){
+        if(!window.isAIActive) return;
+        var r=g.getBoundingClientRect();
+        g.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");
+        g.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");
+      });
+    });
+  }
+
+  /* ---------- burger (mobile) → slide-down menu ---------- */
+  var burger=document.getElementById("burger");
+  var mobileMenu=document.getElementById("mobileMenu");
+  var menuOpen=false;
+  function closeMobileMenu(){
+    menuOpen=false;
+    if(mobileMenu) mobileMenu.classList.remove("is-open");
+  }
+  if(burger){
+    burger.addEventListener("click",function(e){
+      e.stopPropagation();
+      menuOpen=!menuOpen;
+      if(mobileMenu) mobileMenu.classList.toggle("is-open",menuOpen);
+    });
+  }
+  document.addEventListener("click",function(e){
+    if(menuOpen && mobileMenu && !mobileMenu.contains(e.target) && e.target!==burger) closeMobileMenu();
+  });
+  if(mobileMenu){
+    mobileMenu.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click",function(){ closeMobileMenu(); });
+    });
+  }
+
+  /* ---------- 3D Tilt Interaction for Project Cards ---------- */
+  function init3DTilt() {
+    if (REDUCE) return;
+    document.querySelectorAll(".work-card").forEach(function(card) {
+      card.addEventListener("mousemove", function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var xc = rect.width / 2;
+        var yc = rect.height / 2;
+        var dx = (x - xc) / xc;
+        var dy = (y - yc) / yc;
+        
+        var rx = (dy * -3.5).toFixed(2);
+        var ry = (dx * 3.5).toFixed(2);
+        
+        if (hasGSAP) {
+          gsap.to(card, {
+            rotateX: rx,
+            rotateY: ry,
+            transformPerspective: 600,
+            ease: "power2.out",
+            duration: 0.4
+          });
+        } else {
+          card.style.transform = "perspective(600px) rotateX(" + rx + "deg) rotateY(" + ry + "deg)";
+        }
+      });
+      
+      card.addEventListener("mouseleave", function() {
+        if (hasGSAP) {
+          gsap.to(card, {
+            rotateX: 0,
+            rotateY: 0,
+            duration: 0.6,
+            ease: "power2.out"
+          });
+        } else {
+          card.style.transform = "none";
+        }
+      });
+    });
+  }
+  init3DTilt();
+
+  /* ---------- Bilingual Translation Logic (Dynamic GSAP Transitions) ---------- */
+  function switchLanguage(lang) {
+    var htmlEl = document.documentElement;
+    if (htmlEl.getAttribute("lang") === lang) return;
+
+    if (hasGSAP && !REDUCE) {
+      gsap.to(".shell", {
+        opacity: 0,
+        y: 12,
+        duration: 0.35,
+        ease: "power2.out",
+        onComplete: function() {
+          applyLangChanges(lang);
+          
+          if (typeof buildDots === "function") buildDots();
+          if (typeof go === "function") go(0);
+          
+          gsap.to(".shell", {
+            opacity: 1,
+            y: 0,
+            duration: 0.55,
+            ease: "power2.out"
+          });
+        }
+      });
+    } else {
+      applyLangChanges(lang);
+      if (typeof buildDots === "function") buildDots();
+      if (typeof go === "function") go(0);
+    }
+  }
+
+  function applyLangChanges(lang) {
+    var htmlEl = document.documentElement;
+    htmlEl.setAttribute("lang", lang);
+    localStorage.setItem("mostafa-os-lang", lang);
+
+    // Sync switchers class states and ARIA
+    document.querySelectorAll(".lang-switcher").forEach(function(s) {
+      s.querySelectorAll("span").forEach(function(sp) {
+        var isTarget = sp.getAttribute("data-lang") === lang;
+        sp.classList.toggle("active", isTarget);
+        sp.setAttribute("aria-checked", isTarget ? "true" : "false");
+      });
+    });
+
+    // Update disciplines texts dynamically (also syncs modeAr visibility)
+    if (typeof setMode === "function") {
+      var activeModeBtn = document.querySelector(".mode.active");
+      if (activeModeBtn) {
+        var modeIdx = parseInt(activeModeBtn.getAttribute("data-mode"), 10);
+        setMode(isNaN(modeIdx) ? 0 : modeIdx);
+      }
+    }
+  }
+
+  var savedLang = localStorage.getItem("mostafa-os-lang") || "en";
+  applyLangChanges(savedLang);
+
+  document.querySelectorAll(".lang-switcher span").forEach(function(sp) {
+    function triggerSwitch(e) {
+      e.stopPropagation();
+      var selected = sp.getAttribute("data-lang");
+      switchLanguage(selected);
+    }
+    sp.addEventListener("click", triggerSwitch);
+    sp.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        triggerSwitch(e);
+      }
+    });
+  });
+
+  /* ---------- Theme Switching Logic (Dark / Light Mode) ---------- */
+  function applyTheme(theme) {
+    if (theme === "light") {
+      document.body.classList.add("light-mode");
+    } else {
+      document.body.classList.remove("light-mode");
+    }
+    localStorage.setItem("mostafa-os-theme", theme);
+  }
+
+  function toggleTheme() {
+    var isLight = document.body.classList.contains("light-mode");
+    var nextTheme = isLight ? "dark" : "light";
+
+    if (hasGSAP && !REDUCE) {
+      // Elegant page fade transition
+      gsap.to(".shell", {
+        opacity: 0,
+        duration: 0.25,
+        ease: "power2.out",
+        onComplete: function() {
+          applyTheme(nextTheme);
+          gsap.to(".shell", {
+            opacity: 1,
+            duration: 0.35,
+            ease: "power2.in"
+          });
+        }
+      });
+    } else {
+      applyTheme(nextTheme);
+    }
+  }
+
+  // Bind clicks and keyboard inputs to both status bar and dock theme switchers
+  document.querySelectorAll(".theme-toggle").forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      toggleTheme();
+    });
+    btn.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleTheme();
+      }
+    });
+  });
+
+  // Load saved theme on load
+  var savedTheme = localStorage.getItem("mostafa-os-theme") || "dark";
+  applyTheme(savedTheme);
+
+})();
+</script>
+</body>
+</html>

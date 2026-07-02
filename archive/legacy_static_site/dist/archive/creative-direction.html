@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mostafa Amir — Creative Direction · System 2035</title>
+<meta name="description" content="Creative direction for a cinematic, futuristic portfolio — visual system, motion, UX, WebGL, and frontend architecture." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#050409; --bg-2:#0a0814; --ink:#ECECF7; --muted:#8786A6; --faint:#46446a;
+    --purple:#7C3AED; --violet:#A855F7; --magenta:#E11D8F; --blue:#3B82F6; --cyan:#22D3EE;
+    --line:rgba(255,255,255,0.09); --glass:rgba(255,255,255,0.035);
+    --display:'Space Grotesk',sans-serif; --body:'Inter',system-ui,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace; --ar:'Noto Sans Arabic',sans-serif;
+    --ease:cubic-bezier(0.16,1,0.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:300;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:0.01em}
+  ::selection{background:var(--magenta);color:#fff}
+  a{color:inherit;text-decoration:none}
+
+  /* ambient bg */
+  .orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.4;mix-blend-mode:screen}
+  .orb.a{width:55vw;height:55vw;background:radial-gradient(circle,var(--purple),transparent 65%);top:-15vw;right:-10vw;animation:float1 26s ease-in-out infinite}
+  .orb.b{width:48vw;height:48vw;background:radial-gradient(circle,var(--magenta),transparent 65%);bottom:-15vw;left:-12vw;animation:float2 30s ease-in-out infinite}
+  .orb.c{width:38vw;height:38vw;background:radial-gradient(circle,var(--blue),transparent 65%);top:40%;left:55%;animation:float3 34s ease-in-out infinite}
+  @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-6vw,8vw)}}
+  @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(8vw,-6vw)}}
+  @keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(-8vw,-4vw)}}
+  .grain{position:fixed;inset:-50%;z-index:1;pointer-events:none;opacity:0.04;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;box-shadow:inset 0 0 220px 50px rgba(0,0,0,0.7)}
+
+  .progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:90;transform:scaleX(0);transform-origin:left;
+    background:linear-gradient(90deg,var(--violet),var(--magenta),var(--cyan))}
+
+  /* layout */
+  .wrap{position:relative;z-index:5;display:grid;grid-template-columns:260px 1fr;max-width:1440px;margin:0 auto}
+  aside{position:sticky;top:0;height:100vh;padding:2.4rem 1.6rem;border-right:1px solid var(--line);
+    display:flex;flex-direction:column;gap:1.4rem;overflow-y:auto}
+  .brand{font-family:var(--display);font-weight:600;font-size:1rem;letter-spacing:0.04em;display:flex;align-items:center;gap:.5rem}
+  .brand b{width:7px;height:7px;border-radius:50%;background:var(--magenta);box-shadow:0 0 12px var(--magenta)}
+  .aside-sub{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.18em;color:var(--muted);text-transform:uppercase;line-height:1.7}
+  .toc{display:flex;flex-direction:column;gap:.1rem;margin-top:.6rem}
+  .toc a{font-size:0.82rem;color:var(--muted);padding:.42rem .6rem;border-radius:7px;display:flex;gap:.6rem;
+    transition:color .3s,background .3s;border-left:2px solid transparent}
+  .toc a .n{font-family:var(--mono);font-size:0.7rem;opacity:.6;min-width:22px}
+  .toc a:hover{color:var(--ink);background:var(--glass)}
+  .toc a.active{color:var(--ink);border-left-color:var(--magenta);background:linear-gradient(90deg,rgba(225,29,143,0.08),transparent)}
+  .aside-foot{margin-top:auto;font-family:var(--mono);font-size:0.64rem;color:var(--faint);letter-spacing:0.08em;line-height:1.7}
+
+  main{padding:0 clamp(1.4rem,4vw,4.5rem)}
+  @media(max-width:920px){.wrap{grid-template-columns:1fr}aside{display:none}main{padding:0 1.4rem}}
+
+  /* hero of doc */
+  .doc-hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;padding:4rem 0 3rem}
+  .kicker{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);margin-bottom:1.6rem}
+  .doc-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,8vw,6.6rem);line-height:0.92;letter-spacing:-0.04em}
+  .doc-hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--violet),var(--magenta),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .doc-hero .lead{margin-top:2rem;max-width:62ch;color:var(--muted);font-size:clamp(1rem,1.4vw,1.2rem);line-height:1.7}
+  .doc-hero .lead-ar{font-family:var(--ar);direction:rtl;margin-top:1rem;max-width:60ch;color:var(--ink);font-size:1.05rem;line-height:1.9;opacity:.92}
+  .meta-row{display:flex;gap:2.4rem;flex-wrap:wrap;margin-top:2.6rem;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase}
+  .meta-row b{color:var(--ink);font-weight:500;display:block;margin-top:.3rem;font-family:var(--display);font-size:0.92rem;letter-spacing:0}
+
+  /* sections */
+  section{padding:clamp(3rem,7vh,6rem) 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem}
+  .sec-num{font-family:var(--mono);font-size:0.8rem;color:var(--magenta)}
+  h2{font-family:var(--display);font-weight:500;font-size:clamp(1.7rem,4vw,3rem);letter-spacing:-0.03em;line-height:1.05}
+  h3{font-family:var(--display);font-weight:500;font-size:1.2rem;margin:2rem 0 .9rem;letter-spacing:-0.01em}
+  h3 .tag{font-family:var(--mono);font-size:0.64rem;color:var(--cyan);letter-spacing:0.1em;margin-left:.6rem;vertical-align:middle;text-transform:uppercase}
+  p{color:var(--muted);max-width:74ch;margin-bottom:1rem}
+  p strong{color:var(--ink);font-weight:500}
+  .ar{font-family:var(--ar);direction:rtl;color:var(--ink);line-height:1.95;max-width:70ch;opacity:.92;margin-bottom:1.2rem}
+  .ar strong{color:var(--violet);font-weight:600}
+  ul{list-style:none;max-width:78ch;margin-bottom:1rem}
+  li{color:var(--muted);padding:.4rem 0 .4rem 1.4rem;position:relative;line-height:1.6}
+  li::before{content:"→";position:absolute;left:0;color:var(--magenta);font-family:var(--mono)}
+  li b{color:var(--ink);font-weight:500}
+  code{font-family:var(--mono);font-size:0.85em;background:rgba(255,255,255,0.06);padding:.1em .4em;border-radius:5px;color:var(--cyan)}
+
+  .spec{font-family:var(--mono);font-size:0.8rem;background:rgba(8,7,16,0.55);border:1px solid var(--line);border-radius:12px;
+    padding:1.2rem 1.4rem;margin:1.2rem 0;color:var(--muted);line-height:1.85;overflow-x:auto;backdrop-filter:blur(10px)}
+  .spec .c{color:var(--faint)}.spec .k{color:var(--cyan)}.spec .v{color:var(--violet)}.spec .s{color:var(--ink)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.2rem 0}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1.2rem 0}
+  @media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:14px;padding:1.4rem;background:var(--glass);backdrop-filter:blur(10px);
+    transition:transform .5s var(--ease),border-color .5s;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-4px);border-color:rgba(168,85,247,0.4)}
+  .card h4{font-family:var(--display);font-weight:500;font-size:1.05rem;margin-bottom:.5rem}
+  .card .lbl{font-family:var(--mono);font-size:0.66rem;color:var(--cyan);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:.7rem}
+  .card p{font-size:0.9rem;margin:0;color:var(--muted)}
+
+  /* color swatches */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.9rem;margin:1.4rem 0}
+  .sw{border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform .4s var(--ease)}
+  .sw:hover{transform:translateY(-4px)}
+  .sw .chip{height:74px}
+  .sw .info{padding:.7rem .8rem;font-family:var(--mono);font-size:0.7rem}
+  .sw .info b{display:block;color:var(--ink);font-size:0.78rem;margin-bottom:.2rem;font-family:var(--display);font-weight:500;letter-spacing:0}
+  .sw .info span{color:var(--muted);text-transform:uppercase;letter-spacing:0.06em}
+  .gradbar{height:54px;border-radius:12px;margin:.5rem 0 .3rem;border:1px solid var(--line)}
+  .gradlabel{font-family:var(--mono);font-size:0.68rem;color:var(--muted);margin-bottom:1rem}
+
+  /* type specimen */
+  .specimen{border:1px solid var(--line);border-radius:14px;padding:1.6rem;margin:1rem 0;background:var(--glass)}
+  .specimen .row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+  .specimen .row:last-child{border-bottom:none}
+  .specimen .lab{font-family:var(--mono);font-size:0.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap}
+  .t-xl{font-family:var(--display);font-weight:500;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-0.04em;line-height:1}
+  .t-h{font-family:var(--display);font-weight:500;font-size:1.8rem;letter-spacing:-0.02em}
+  .t-b{font-family:var(--body);font-weight:300;font-size:1.05rem}
+  .t-m{font-family:var(--mono);font-size:0.9rem;color:var(--cyan)}
+
+  /* table */
+  .tbl{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:0.85rem}
+  .tbl th,.tbl td{text-align:left;padding:.8rem .9rem;border-bottom:1px solid var(--line);vertical-align:top}
+  .tbl th{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);font-weight:400}
+  .tbl td{color:var(--muted)}.tbl td:first-child{color:var(--ink);font-weight:400;white-space:nowrap}
+  .tbl code{white-space:nowrap}
+
+  .pill{display:inline-block;font-family:var(--mono);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;
+    border:1px solid var(--line);border-radius:100px;padding:.3rem .8rem;color:var(--muted);margin:.2rem .3rem .2rem 0}
+  .pill.on{color:var(--ink);border-color:var(--magenta);background:rgba(225,29,143,0.08)}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  .endcard{border:1px solid var(--line);border-radius:18px;padding:clamp(2rem,5vw,3.4rem);margin:3rem 0;
+    background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(225,29,143,0.06));text-align:center}
+  .endcard h2{margin-bottom:1rem}
+  .endcard p{margin:0 auto 1.5rem;max-width:56ch}
+  .toast{position:fixed;bottom:1.4rem;left:50%;transform:translateX(-50%) translateY(120%);z-index:120;
+    background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:0.78rem;padding:.7rem 1.2rem;border-radius:100px;
+    transition:transform .5s var(--ease);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.orb{animation:none}}
+</style>
+</head>
+<body>
+  <div class="orbs"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+  <div class="grain"></div><div class="vignette"></div>
+  <div class="progress"></div>
+  <div class="toast" id="toast">Copied</div>
+
+  <div class="wrap">
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="brand"><b></b> MOSTAFA AMIR</div>
+      <div class="aside-sub">Creative Direction<br>System 2035 · v1.0</div>
+      <nav class="toc" id="toc">
+        <a href="#north"><span class="n">00</span> North Star</a>
+        <a href="#visual"><span class="n">01</span> Visual System</a>
+        <a href="#color"><span class="n">02</span> Color System</a>
+        <a href="#type"><span class="n">03</span> Typography</a>
+        <a href="#grid"><span class="n">04</span> Grid &amp; Space</a>
+        <a href="#art"><span class="n">05</span> Art Direction</a>
+        <a href="#structure"><span class="n">06</span> Page Structure</a>
+        <a href="#story"><span class="n">07</span> Storytelling Flow</a>
+        <a href="#ux"><span class="n">08</span> UX Concept</a>
+        <a href="#motion"><span class="n">09</span> Motion Behavior</a>
+        <a href="#transitions"><span class="n">10</span> Transitions</a>
+        <a href="#ui"><span class="n">11</span> Futuristic UI</a>
+        <a href="#hero"><span class="n">12</span> Hero Scenes</a>
+        <a href="#webgl"><span class="n">13</span> WebGL Ideas</a>
+        <a href="#components"><span class="n">14</span> Components</a>
+        <a href="#interactions"><span class="n">15</span> Interactions</a>
+        <a href="#frontend"><span class="n">16</span> Frontend Build</a>
+        <a href="#refs"><span class="n">17</span> Motion Refs</a>
+        <a href="#roadmap"><span class="n">18</span> Roadmap</a>
+      </nav>
+      <div class="aside-foot">CALM · INTELLIGENT · ALIVE<br>Designed as an installation</div>
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+      <header class="doc-hero">
+        <div class="kicker">Creative Direction · Cinematic Futuristic Portfolio</div>
+        <h1>A digital installation,<br>not a <em>portfolio.</em></h1>
+        <p class="lead">This document is the operating system for Mostafa Amir's portfolio — a complete creative direction covering visual language, motion behavior, UX, WebGL, and frontend architecture. The goal is not to present work; it is to make a visitor feel they stepped into an interface from the future, guided by a calm, precise intelligence.</p>
+        <p class="lead-ar">دي مش وثيقة شكليّة. دي نظام تشغيل كامل للموقع: هوية بصرية، حركة، تجربة استخدام، ومعمارية تقنية — كل قسم مصمَّم إن أي حد يدخل يحس إنه دخل تجربة من المستقبل، مقادة بذكاء هادئ ودقيق. الأولوية للإحساس والأجواء، مش لكثافة المعلومات.</p>
+        <div class="meta-row">
+          <span>Mood<b>Calm intelligence · Digital luxury</b></span>
+          <span>Stack<b>Next.js · GSAP · Three.js · Lenis</b></span>
+          <span>Benchmark<b>Apple · Google Lab · BMW · Awwwards</b></span>
+          <span>Year<b>2026 → built for 2035</b></span>
+        </div>
+      </header>
+
+      <!-- 00 NORTH STAR -->
+      <section id="north" class="reveal">
+        <div class="sec-head"><span class="sec-num">00</span><h2>North Star &amp; Principles</h2></div>
+        <p class="ar">المبدأ الموجِّه: <strong>الهدوء كميزة تنافسية</strong>. كل قرار تصميمي لازم يخدم إحساس واحد — ذكاء هادئ، فخامة رقمية، وغموض محسوب. لو عنصر مبيخدمش الإحساس ده، يتشال.</p>
+        <p>Every decision is measured against one feeling: <strong>a calm, intelligent system you can sense but never see working</strong>. Five operating principles govern the build:</p>
+        <ul>
+          <li><b>Atmosphere over information.</b> Density is the enemy. White space, darkness, and silence are active design materials.</li>
+          <li><b>Motion is meaning.</b> Nothing moves for decoration — motion communicates hierarchy, causality, and state.</li>
+          <li><b>Systems, not screens.</b> Identity, product, and automation share one continuous language across every surface.</li>
+          <li><b>Human-guided, AI-accelerated.</b> The work feels handcrafted at the surface, intelligent underneath.</li>
+          <li><b>Performance is a feature.</b> 60fps and fast first paint are non-negotiable; cinematic ≠ slow.</li>
+        </ul>
+        <div class="spec"><span class="c">// emotional target</span><br><span class="k">feeling</span> = <span class="s">"you entered a system, not a website"</span><br><span class="k">avoid</span> = [<span class="v">"agency template"</span>, <span class="v">"startup landing"</span>, <span class="v">"card grid"</span>, <span class="v">"hype"</span>]<br><span class="k">protect</span> = [<span class="v">"silence"</span>, <span class="v">"depth"</span>, <span class="v">"taste"</span>, <span class="v">"restraint"</span>]</div>
+      </section>
+
+      <!-- 01 VISUAL SYSTEM -->
+      <section id="visual" class="reveal">
+        <div class="sec-head"><span class="sec-num">01</span><h2>Visual System</h2></div>
+        <p class="ar">النظام البصري قايم على <strong>الظلام + العمق + الضوء الحجمي</strong>. الخلفية مش سوداء فلات — دي فضاء فيه طبقات، إضاءة، وضباب ناعم. الزجاج (glassmorphism) بيتستخدم للطبقات اللي "بتطفو" فوق الفضاء ده.</p>
+        <p>The visual system is built on four layers that always stack in the same order, creating consistent depth:</p>
+        <div class="grid2">
+          <div class="card"><div class="lbl">Layer 0 — Void</div><h4>The Space</h4><p>Near-black background with volumetric gradients and drifting light. This is the "room" everything floats in.</p></div>
+          <div class="card"><div class="lbl">Layer 1 — Signal</div><h4>WebGL / Particles</h4><p>The living 3D field: particle nebula, morphing geometry, shader light. Reacts to cursor and scroll.</p></div>
+          <div class="card"><div class="lbl">Layer 2 — Glass</div><h4>Floating UI</h4><p>Translucent panels, HUD cards, terminals — frosted, edge-lit, slightly elevated with soft shadow.</p></div>
+          <div class="card"><div class="lbl">Layer 3 — Type</div><h4>Kinetic Typography</h4><p>Massive display type as the primary visual. Always the brightest, sharpest layer.</p></div>
+        </div>
+        <p>Texture &amp; finish: a subtle <strong>film grain</strong> overlay (4–5% opacity, overlay blend) unifies everything and kills banding in gradients. A <strong>vignette</strong> focuses attention toward the center. Edges of glass panels carry a 1px gradient stroke (the "edge-light").</p>
+      </section>
+
+      <!-- 02 COLOR -->
+      <section id="color" class="reveal">
+        <div class="sec-head"><span class="sec-num">02</span><h2>Color System</h2></div>
+        <p class="ar">لوحة الألوان: <strong>أساس داكن عميق + تدرجات بنفسجي/ماجنتا/أزرق كهربائي</strong>. الألوان الزاهية تُستخدم كـ<strong>ضوء</strong> مش كمساحات — دايمًا في gradients، إضاءة، أو نص. القاعدة: 90% ظلام وحياد، 10% طيف لوني.</p>
+        <p>The 90/10 rule: <strong>90% dark neutrals, 10% spectrum</strong>. Saturated color appears as light (gradients, glows, type fills) — never as flat fills. Click any swatch to copy its value.</p>
+        <h3>Core tokens</h3>
+        <div class="swatches" id="swatches">
+          <div class="sw" data-hex="#050409"><div class="chip" style="background:#050409"></div><div class="info"><b>Void</b><span>#050409</span></div></div>
+          <div class="sw" data-hex="#0A0814"><div class="chip" style="background:#0A0814"></div><div class="info"><b>Surface</b><span>#0A0814</span></div></div>
+          <div class="sw" data-hex="#ECECF7"><div class="chip" style="background:#ECECF7"></div><div class="info"><b>Ink</b><span>#ECECF7</span></div></div>
+          <div class="sw" data-hex="#8786A6"><div class="chip" style="background:#8786A6"></div><div class="info"><b>Muted</b><span>#8786A6</span></div></div>
+          <div class="sw" data-hex="#46446A"><div class="chip" style="background:#46446A"></div><div class="info"><b>Faint</b><span>#46446A</span></div></div>
+          <div class="sw" data-hex="#7C3AED"><div class="chip" style="background:#7C3AED"></div><div class="info"><b>Purple</b><span>#7C3AED</span></div></div>
+          <div class="sw" data-hex="#A855F7"><div class="chip" style="background:#A855F7"></div><div class="info"><b>Violet</b><span>#A855F7</span></div></div>
+          <div class="sw" data-hex="#E11D8F"><div class="chip" style="background:#E11D8F"></div><div class="info"><b>Magenta</b><span>#E11D8F</span></div></div>
+          <div class="sw" data-hex="#3B82F6"><div class="chip" style="background:#3B82F6"></div><div class="info"><b>Electric Blue</b><span>#3B82F6</span></div></div>
+          <div class="sw" data-hex="#22D3EE"><div class="chip" style="background:#22D3EE"></div><div class="info"><b>Cyan</b><span>#22D3EE</span></div></div>
+        </div>
+        <h3>Signature gradients</h3>
+        <div class="gradbar" style="background:linear-gradient(90deg,#A855F7,#E11D8F,#22D3EE)"></div>
+        <div class="gradlabel">AURORA — primary. Headlines, CTAs, progress. <code>linear-gradient(90deg,#A855F7,#E11D8F,#22D3EE)</code></div>
+        <div class="gradbar" style="background:radial-gradient(circle at 30% 30%,#7C3AED,#E11D8F 60%,transparent)"></div>
+        <div class="gradlabel">NEBULA — ambient light / orbs. <code>radial-gradient(circle,#7C3AED,#E11D8F,transparent)</code></div>
+        <div class="gradbar" style="background:linear-gradient(90deg,#3B82F6,#22D3EE)"></div>
+        <div class="gradlabel">SIGNAL — accents, links, system states. <code>linear-gradient(90deg,#3B82F6,#22D3EE)</code></div>
+        <h3>Usage rules <span class="tag">do / don't</span></h3>
+        <ul>
+          <li><b>Do</b> use gradients on text via <code>background-clip:text</code> for hero and section heads.</li>
+          <li><b>Do</b> keep body copy in Muted; reserve Ink for emphasis and headlines.</li>
+          <li><b>Don't</b> fill large surfaces with saturated color — it breaks the "luxury" register instantly.</li>
+          <li><b>Don't</b> exceed 2 spectrum colors in one viewport unless inside a WebGL scene.</li>
+        </ul>
+      </section>
+
+      <!-- 03 TYPOGRAPHY -->
+      <section id="type" class="reveal">
+        <div class="sec-head"><span class="sec-num">03</span><h2>Typography System</h2></div>
+        <p class="ar">التايبوغرافي هو البطل البصري. حجم ضخم، وزن مدروس، و<strong>tracking سالب</strong> للعناوين الكبيرة. الـ mono بيدي إحساس "نظام/واجهة تقنية". في الإنتاج، الأفضل خطوط زي Clash Display أو PP Neue Montreal، وهنا بنستخدم بدائل من Google Fonts.</p>
+        <table class="tbl">
+          <tr><th>Role</th><th>Font (here)</th><th>Production alt</th><th>Use</th></tr>
+          <tr><td>Display</td><td>Space Grotesk</td><td>Clash Display / PP Neue Montreal</td><td>Hero, section heads, project titles</td></tr>
+          <tr><td>Body</td><td>Inter</td><td>Söhne / Suisse Int'l</td><td>Paragraphs, sub-copy</td></tr>
+          <tr><td>Mono</td><td>JetBrains Mono</td><td>Space Mono / Berkeley Mono</td><td>Labels, eyebrows, system UI, terminal</td></tr>
+          <tr><td>Arabic</td><td>Noto Sans Arabic</td><td>IBM Plex Arabic / TheYearofHandicrafts</td><td>Signature lines, bilingual accents</td></tr>
+        </table>
+        <h3>Type scale &amp; specimen</h3>
+        <div class="specimen">
+          <div class="row"><span class="t-xl">Mostafa</span><span class="lab">Display XL · clamp(3.2→15rem) · ‑0.04em · 0.88lh</span></div>
+          <div class="row"><span class="t-h">Story experiences</span><span class="lab">Head · clamp(1.7→3rem) · ‑0.03em</span></div>
+          <div class="row"><span class="t-b">Calm on the surface, engineered underneath.</span><span class="lab">Body · 1.05rem · 300 · 1.6lh</span></div>
+          <div class="row"><span class="t-m">SYSTEM · 01 — IDENTITY</span><span class="lab">Mono · 0.72rem · 0.3em tracking · uppercase</span></div>
+        </div>
+        <ul>
+          <li><b>Negative tracking</b> scales with size — the bigger the type, the tighter (down to ‑0.04em).</li>
+          <li><b>Line-height</b> collapses on display (0.85–0.92) and opens on body (1.6–1.7).</li>
+          <li><b>Mono uppercase + wide tracking</b> is the "system voice" — eyebrows, coordinates, status.</li>
+          <li><b>Bilingual:</b> Arabic appears as deliberate signature moments, never as a full mirror of the English.</li>
+        </ul>
+      </section>
+
+      <!-- 04 GRID -->
+      <section id="grid" class="reveal">
+        <div class="sec-head"><span class="sec-num">04</span><h2>Grid &amp; Spatial System</h2></div>
+        <p class="ar">مفيش شبكة كلاسيكية متماثلة. الإحساس <strong>spatial</strong> — عناصر بتطفو في فراغ بأعماق مختلفة. بس تحت السطح فيه نظام صارم: 12-column، إيقاع مسافات ثابت، وحواف تتنفّس.</p>
+        <p>The layout feels free and spatial, but rests on a strict 12-column grid with a consistent spacing rhythm. Asymmetry is intentional and composed, never accidental.</p>
+        <table class="tbl">
+          <tr><th>Token</th><th>Value</th><th>Use</th></tr>
+          <tr><td>Columns</td><td><code>12</code> · gutter <code>clamp(16px,2vw,32px)</code></td><td>Master grid</td></tr>
+          <tr><td>Max width</td><td><code>1440px</code> content · full-bleed scenes</td><td>Reading vs. immersive</td></tr>
+          <tr><td>Section padding</td><td><code>clamp(5rem,12vh,11rem)</code> vertical</td><td>Cinematic breathing room</td></tr>
+          <tr><td>Spacing scale</td><td><code>4 · 8 · 16 · 24 · 40 · 64 · 104px</code></td><td>Vertical rhythm</td></tr>
+          <tr><td>Depth layers (z)</td><td><code>bg · scene · glass · type · cursor</code></td><td>Consistent stacking</td></tr>
+        </table>
+        <p>Composition tactics: <strong>break the grid deliberately</strong> with oversized type that bleeds off-canvas, off-axis project rows, and floating glass panels that overlap section boundaries to create depth.</p>
+      </section>
+
+      <!-- 05 ART DIRECTION -->
+      <section id="art" class="reveal">
+        <div class="sec-head"><span class="sec-num">05</span><h2>Art Direction Notes</h2></div>
+        <p class="ar">الإخراج الفني: <strong>سينمائي، داكن، حجمي</strong>. تخيّل واجهة نظام تشغيل من فيلم sci-fi راقي — لكن من غير cliché النيون الزاعق. كل لقطة فيها مصدر ضوء واحد مهيمن، عمق، وحركة بطيئة محسوبة.</p>
+        <div class="grid2">
+          <div class="card"><div class="lbl">Lighting</div><h4>One dominant source</h4><p>Each section has a single key light (a glow, an orb) that defines depth and mood. Light moves slowly with scroll.</p></div>
+          <div class="card"><div class="lbl">Texture</div><h4>Grain + glass</h4><p>Film grain unifies; frosted glass elevates. No flat surfaces, no hard pure-black.</p></div>
+          <div class="card"><div class="lbl">Tempo</div><h4>Slow &amp; deliberate</h4><p>Everything eases in over 0.8–1.4s. Nothing snaps. The pace signals confidence.</p></div>
+          <div class="card"><div class="lbl">Restraint</div><h4>Earn every effect</h4><p>Effects are rationed. One hero moment per section. Silence between beats.</p></div>
+        </div>
+        <h3>Do / Don't</h3>
+        <ul>
+          <li><b>Do</b> let scenes breathe with negative space and darkness.</li>
+          <li><b>Do</b> treat the cursor, scroll, and loader as part of the art direction.</li>
+          <li><b>Don't</b> use stocky 3D, lens flares, or "techy" HUD clutter — it reads cheap.</li>
+          <li><b>Don't</b> animate everything at once; choreograph one focal motion at a time.</li>
+        </ul>
+      </section>
+
+      <!-- 06 STRUCTURE -->
+      <section id="structure" class="reveal">
+        <div class="sec-head"><span class="sec-num">06</span><h2>Page Structure</h2></div>
+        <p class="ar">سبع محطات، كل واحدة "مشهد" مستقل بإيقاع وإضاءة مختلفة — لكن متصلين كرحلة واحدة.</p>
+        <table class="tbl">
+          <tr><th>#</th><th>Section</th><th>Role</th><th>Signature moment</th></tr>
+          <tr><td>01</td><td>Hero — Cinematic Intro</td><td>First impression / awe</td><td>WebGL core + name forming from particles</td></tr>
+          <tr><td>02</td><td>Interactive Identity</td><td>Who he is</td><td>Statement + hover-reactive role list + marquee</td></tr>
+          <tr><td>03</td><td>Selected Work</td><td>Proof, as story</td><td>Full-bleed case rows that expand on hover</td></tr>
+          <tr><td>04</td><td>Experimental AI Lab</td><td>Edge / R&amp;D</td><td>Live "system thinking" terminal + glass cards</td></tr>
+          <tr><td>05</td><td>Systems Showcase</td><td>How he thinks</td><td>Animated node map (Strategy→Growth)</td></tr>
+          <tr><td>06</td><td>Philosophy</td><td>Values / depth</td><td>Line-by-line scroll reveal of beliefs</td></tr>
+          <tr><td>07</td><td>Contact Experience</td><td>Invitation</td><td>Command-line invite + magnetic CTA</td></tr>
+        </table>
+      </section>
+
+      <!-- 07 STORYTELLING -->
+      <section id="story" class="reveal">
+        <div class="sec-head"><span class="sec-num">07</span><h2>Immersive Storytelling Flow</h2></div>
+        <p class="ar">الموقع رحلة عاطفية ليها قوس درامي: <strong>دهشة → فهم → إثبات → فضول → ثقة → دعوة</strong>. الـ WebGL والإضاءة بيتطوروا مع التمرير عشان يدعموا القوس ده.</p>
+        <p>The scroll is a narrative arc, not a list of sections. The WebGL scene and lighting evolve continuously with scroll progress to carry the emotion:</p>
+        <table class="tbl">
+          <tr><th>Act</th><th>Section</th><th>Emotion</th><th>Scene state</th></tr>
+          <tr><td>I — Arrival</td><td>Hero</td><td>Awe, mystery</td><td>Core tight, particles dense, cool light</td></tr>
+          <tr><td>II — Recognition</td><td>Identity</td><td>Trust, clarity</td><td>Camera pulls back, palette warms</td></tr>
+          <tr><td>III — Evidence</td><td>Work</td><td>Respect</td><td>Scene recedes, type dominates</td></tr>
+          <tr><td>IV — Wonder</td><td>Lab</td><td>Curiosity</td><td>Particles energize, magenta peak</td></tr>
+          <tr><td>V — Understanding</td><td>Systems / Philosophy</td><td>Conviction</td><td>Scene calms, structure emerges</td></tr>
+          <tr><td>VI — Invitation</td><td>Contact</td><td>Desire to act</td><td>Core expands, light blooms outward</td></tr>
+        </table>
+      </section>
+
+      <!-- 08 UX -->
+      <section id="ux" class="reveal">
+        <div class="sec-head"><span class="sec-num">08</span><h2>UX Concept</h2></div>
+        <p class="ar">المبدأ: <strong>الانغماس من غير ما الناس تتوه</strong>. حرية في الإحساس، وضوح في الملاحة. مفيش قوائم تقيلة — الموقع بيقود العين بالحركة والضوء.</p>
+        <ul>
+          <li><b>Guided immersion:</b> scroll is the primary interaction; the system always signals where attention should go.</li>
+          <li><b>Minimal persistent nav:</b> a floating glass HUD with section coordinates, not a heavy menu bar.</li>
+          <li><b>Always-available exit ramps:</b> a fixed scroll-progress "system status" and quick-jump links.</li>
+          <li><b>Progressive disclosure:</b> case studies expand in place; detail is revealed on intent (hover/click), never dumped.</li>
+          <li><b>Feedback on everything:</b> cursor, hover, and click all confirm the system heard you.</li>
+          <li><b>Graceful fallbacks:</b> reduced-motion and no-WebGL paths preserve the story without the heavy GPU work.</li>
+        </ul>
+      </section>
+
+      <!-- 09 MOTION -->
+      <section id="motion" class="reveal">
+        <div class="sec-head"><span class="sec-num">09</span><h2>Motion &amp; Animation Behavior</h2></div>
+        <p class="ar">الحركة ليها قواعد فيزيائية ثابتة: <strong>easing موحّد، توقيتات محددة، و lerp ناعم</strong> لأي حاجة بتتبع الماوس أو التمرير. ده اللي بيخلي الإحساس "premium" مش عشوائي.</p>
+        <h3>Easing tokens</h3>
+        <div class="spec"><span class="k">--ease-out-expo</span> : <span class="v">cubic-bezier(0.16, 1, 0.3, 1)</span>  <span class="c">// reveals, transitions</span><br><span class="k">--ease-in-out</span>&nbsp;&nbsp; : <span class="v">cubic-bezier(0.83, 0, 0.17, 1)</span> <span class="c">// loader, page swaps</span><br><span class="k">gsap</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <span class="v">power4.out / power3.out</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="c">// staggered text</span><br><span class="k">lerp factor</span>&nbsp;&nbsp;&nbsp; : <span class="v">0.08 – 0.12</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="c">// cursor, parallax, scene follow</span></div>
+        <h3>Timing table</h3>
+        <table class="tbl">
+          <tr><th>Interaction</th><th>Duration</th><th>Easing</th><th>Notes</th></tr>
+          <tr><td>Micro (hover)</td><td>200–350ms</td><td>ease-out</td><td>Color, scale, underline</td></tr>
+          <tr><td>Text reveal</td><td>800–1200ms</td><td>power4.out</td><td>Stagger 18–40ms per unit</td></tr>
+          <tr><td>Section reveal</td><td>1000–1400ms</td><td>ease-out-expo</td><td>Clip + translate + fade</td></tr>
+          <tr><td>Page / route transition</td><td>1000–1600ms</td><td>ease-in-out</td><td>Curtain or scene morph</td></tr>
+          <tr><td>Parallax / scrub</td><td>tied to scroll</td><td>linear + lerp</td><td>Never snappy</td></tr>
+          <tr><td>Loader</td><td>2000–2400ms</td><td>ease-in-out</td><td>Counter + name type-in</td></tr>
+        </table>
+        <h3>Behavior rules</h3>
+        <ul>
+          <li><b>Stagger</b> reveals so the eye reads in sequence; never reveal a whole block at once.</li>
+          <li><b>Velocity-aware:</b> marquees and skew respond to scroll velocity for a physical feel.</li>
+          <li><b>Lerp, don't jump:</b> anything tracking input is smoothed toward its target every frame.</li>
+        </ul>
+      </section>
+
+      <!-- 10 TRANSITIONS -->
+      <section id="transitions" class="reveal">
+        <div class="sec-head"><span class="sec-num">10</span><h2>Cinematic Transitions</h2></div>
+        <p class="ar">الانتقالات هي "اللحظات السينمائية". الأهم: <strong>الـ loader → hero</strong>، والانتقال بين الأقسام، والدخول على الـ case study.</p>
+        <div class="grid2">
+          <div class="card"><div class="lbl">Boot</div><h4>Loader → Hero</h4><p>Counter to 100%, name types in, then a vertical curtain wipe reveals the scene as the hero text staggers up.</p></div>
+          <div class="card"><div class="lbl">Scene morph</div><h4>Section → Section</h4><p>No hard cuts. The WebGL scene continuously interpolates color, camera, and density driven by scroll progress.</p></div>
+          <div class="card"><div class="lbl">Case enter</div><h4>Row → Case study</h4><p>Clicked project title performs a FLIP — it scales and travels to become the case-study header (shared element).</p></div>
+          <div class="card"><div class="lbl">Route swap</div><h4>Page transitions</h4><p>An overlay panel slides up with the destination label, content cross-fades behind it, then it lifts away.</p></div>
+        </div>
+        <div class="spec"><span class="c">// shared-element / FLIP pattern (Framer Motion)</span><br><span class="k">layoutId</span>=<span class="s">"project-aurum"</span> <span class="c">// on row title AND case header</span><br><span class="k">transition</span>={<span class="v">{ duration: 1.1, ease: [0.16,1,0.3,1] }</span>}</div>
+      </section>
+
+      <!-- 11 FUTURISTIC UI -->
+      <section id="ui" class="reveal">
+        <div class="sec-head"><span class="sec-num">11</span><h2>Futuristic UI Behaviors</h2></div>
+        <p class="ar">تفاصيل الواجهة هي اللي بتبيع إحساس "النظام". مؤشر مخصص، أزرار مغناطيسية، واجهات زجاجية طايفة، وحالة نظام حيّة.</p>
+        <div class="grid3">
+          <div class="card"><div class="lbl">Cursor</div><h4>Reactive cursor</h4><p>Dot + lerped ring, difference blend. Grows and changes on interactive elements; can show contextual labels ("view", "drag").</p></div>
+          <div class="card"><div class="lbl">Magnetism</div><h4>Magnetic targets</h4><p>CTAs and nav items pull toward the cursor within a radius, snapping back with spring on exit.</p></div>
+          <div class="card"><div class="lbl">HUD</div><h4>Floating glass nav</h4><p>Frosted, edge-lit, with a live status dot ("AVAILABLE — 2026") and section coordinates.</p></div>
+          <div class="card"><div class="lbl">Status</div><h4>System telemetry</h4><p>Scroll progress framed as a "system" bar; section labels read like coordinates / log lines.</p></div>
+          <div class="card"><div class="lbl">Type</div><h4>Text scramble</h4><p>Labels decode on hover/enter (random glyphs settling into the word) for a computational feel.</p></div>
+          <div class="card"><div class="lbl">Audio</div><h4>Sound-reactive (subtle)</h4><p>Optional muted ambient pad + soft UI ticks; particle brightness can pulse to amplitude. Off by default, one-tap on.</p></div>
+        </div>
+      </section>
+
+      <!-- 12 HERO SCENES -->
+      <section id="hero" class="reveal">
+        <div class="sec-head"><span class="sec-num">12</span><h2>Hero Scene Concepts</h2></div>
+        <p class="ar">تلات اتجاهات للـ hero — كلها WebGL، وكلها تدّي إحساس "core/نواة ذكية". الأول هو المعتمد في الـ demo.</p>
+        <div class="grid3">
+          <div class="card"><div class="lbl">Concept A · shipped</div><h4>The Core</h4><p>A morphing wireframe icosahedron (noise-displaced) inside a particle nebula. Slow rotation, cursor parallax, scroll-driven color &amp; dolly. Reads as a calm intelligence at rest.</p></div>
+          <div class="card"><div class="lbl">Concept B</div><h4>Signal Field</h4><p>A GPGPU flow-field of thousands of particles that drift, react to the cursor, and momentarily resolve into "MOSTAFA AMIR" before dissolving back into motion.</p></div>
+          <div class="card"><div class="lbl">Concept C</div><h4>Spatial Grid</h4><p>An infinite perspective grid with volumetric fog and floating glyphs — a BMW-style spatial environment you appear to be moving through as you scroll.</p></div>
+        </div>
+      </section>
+
+      <!-- 13 WEBGL -->
+      <section id="webgl" class="reveal">
+        <div class="sec-head"><span class="sec-num">13</span><h2>WebGL / Three.js Scene Ideas</h2></div>
+        <p class="ar">الـ WebGL هو روح الموقع. الفكرة مش "نموذج 3D" — الفكرة <strong>أنظمة جسيمات وشيدرز</strong> بتتنفّس وتتفاعل. كله مبني على الأداء.</p>
+        <ul>
+          <li><b>Particle nebula:</b> 5–8k instanced points, custom shader, additive blending, gentle sine drift + cursor force.</li>
+          <li><b>Noise-displaced morph:</b> icosahedron displaced along normals by simplex/curl noise in the vertex shader.</li>
+          <li><b>Flow field (FBO/GPGPU):</b> positions advected by a curl-noise field for organic, fluid motion.</li>
+          <li><b>Text-to-particles:</b> sample the name into points; lerp between "formed" and "scattered" states on scroll.</li>
+          <li><b>Volumetric light / fog:</b> raymarched soft fog or layered sprites for depth and god-rays.</li>
+          <li><b>Post-processing:</b> selective bloom, subtle chromatic aberration, vignette, and shader film grain via <code>postprocessing</code>.</li>
+          <li><b>Shader gradient backdrop:</b> a full-screen fragment shader animating the aurora palette behind everything.</li>
+        </ul>
+        <div class="spec"><span class="c">// vertex — noise displacement (concept)</span><br><span class="k">float</span> d = curlNoise(position * <span class="v">1.1</span> + uTime * <span class="v">0.2</span>) * uAmp;<br><span class="k">vec3</span> p = position + normal * d;<br>gl_Position = projectionMatrix * modelViewMatrix * <span class="k">vec4</span>(p, <span class="v">1.0</span>);</div>
+        <h3>Performance budget <span class="tag">non-negotiable</span></h3>
+        <ul>
+          <li><b>DPR cap</b> at 2; <b>pause</b> rendering when canvas off-screen (IntersectionObserver).</li>
+          <li><b>Mobile:</b> ~40% particle count, bloom off, antialias off, sensor parallax optional.</li>
+          <li><b>Instancing</b> for particles; avoid per-frame allocations; reuse geometries/materials.</li>
+          <li>Target <b>60fps</b>; degrade gracefully to a CSS gradient hero if WebGL is unavailable.</li>
+        </ul>
+      </section>
+
+      <!-- 14 COMPONENTS -->
+      <section id="components" class="reveal">
+        <div class="sec-head"><span class="sec-num">14</span><h2>Component Concepts</h2></div>
+        <p class="ar">مكتبة مكوّنات قابلة لإعادة الاستخدام — كل واحد بسلوك حركي مدمج فيه.</p>
+        <div class="grid2">
+          <div class="card"><div class="lbl">&lt;CursorSystem/&gt;</div><h4>Cursor + magnetism</h4><p>Global custom cursor, hover states, and <code>data-cursor</code> / <code>data-magnetic</code> bindings.</p></div>
+          <div class="card"><div class="lbl">&lt;Scene/&gt;</div><h4>WebGL canvas</h4><p>R3F canvas with the core + particles; exposes scroll/cursor uniforms; lazy-mounted.</p></div>
+          <div class="card"><div class="lbl">&lt;KineticHeading/&gt;</div><h4>Split-text reveal</h4><p>Splits to chars/words, reveals on scroll with stagger; gradient-fill variant.</p></div>
+          <div class="card"><div class="lbl">&lt;ProjectStory/&gt;</div><h4>Expanding case row</h4><p>Full-bleed row → in-place expand → shared-element to case page.</p></div>
+          <div class="card"><div class="lbl">&lt;GlassPanel/&gt;</div><h4>HUD / card surface</h4><p>Frosted, edge-lit container with cursor-follow glow; base for lab cards &amp; nav.</p></div>
+          <div class="card"><div class="lbl">&lt;SystemMap/&gt;</div><h4>Animated node graph</h4><p>SVG nodes + flowing dashed links; hover highlights a phase.</p></div>
+          <div class="card"><div class="lbl">&lt;Terminal/&gt;</div><h4>Live log</h4><p>Types "system thinking" lines on enter; the AI-lab centerpiece.</p></div>
+          <div class="card"><div class="lbl">&lt;Marquee/&gt;</div><h4>Velocity ribbon</h4><p>Infinite scroll text that skews/accelerates with scroll velocity.</p></div>
+          <div class="card"><div class="lbl">&lt;Loader/&gt;</div><h4>Boot sequence</h4><p>Counter + name type-in + curtain reveal; gates the hero intro.</p></div>
+          <div class="card"><div class="lbl">&lt;SmoothScroll/&gt;</div><h4>Lenis provider</h4><p>Wraps the app; syncs with GSAP ScrollTrigger and scene uniforms.</p></div>
+        </div>
+      </section>
+
+      <!-- 15 INTERACTIONS -->
+      <section id="interactions" class="reveal">
+        <div class="sec-head"><span class="sec-num">15</span><h2>Interaction Ideas</h2></div>
+        <p class="ar">الـ micro-interactions هي اللي بتفرق بين "موقع حلو" و"تجربة بتتفكر". مجموعة مختارة:</p>
+        <ul>
+          <li><b>Layered hover</b> on project rows — title shifts &amp; gradient-fills, meta + description unfold, "enter" arrow slides in.</li>
+          <li><b>Cursor-follow glow</b> inside glass cards (radial light tracks the pointer).</li>
+          <li><b>Text scramble/decode</b> on labels and nav as they enter or on hover.</li>
+          <li><b>Scroll-velocity skew</b> on the marquee and large imagery for a physical, weighty feel.</li>
+          <li><b>Magnetic CTA</b> with spring-back; ripple on click.</li>
+          <li><b>Drag-to-explore</b> in the AI Lab (cards or a mini scene respond to drag inertia).</li>
+          <li><b>Hold-to-reveal</b> easter touches (press a glyph to expose a hidden detail).</li>
+          <li><b>Command-line contact</b> — typed invitation with blinking caret instead of a plain form.</li>
+        </ul>
+      </section>
+
+      <!-- 16 FRONTEND -->
+      <section id="frontend" class="reveal">
+        <div class="sec-head"><span class="sec-num">16</span><h2>Advanced Frontend Implementation</h2></div>
+        <p class="ar">المعمارية: <strong>Next.js (App Router) + TypeScript</strong>، وطبقة حركة من ثلاث أدوات بتشتغل سوا — Framer Motion للمكوّنات والانتقالات، GSAP ScrollTrigger للتمرير، Lenis للنعومة، و React Three Fiber للـ WebGL.</p>
+        <table class="tbl">
+          <tr><th>Layer</th><th>Tech</th><th>Responsibility</th></tr>
+          <tr><td>Framework</td><td>Next.js (App Router) + TS</td><td>Routing, RSC, image/font optimization</td></tr>
+          <tr><td>Styling</td><td>Tailwind + CSS vars (tokens)</td><td>Design system as variables</td></tr>
+          <tr><td>Component motion</td><td>Framer Motion</td><td>Layout, shared-element, route transitions</td></tr>
+          <tr><td>Scroll choreography</td><td>GSAP + ScrollTrigger</td><td>Pinning, scrubs, reveals, timelines</td></tr>
+          <tr><td>Smooth scroll</td><td>Lenis</td><td>Inertia; drives ScrollTrigger + scene</td></tr>
+          <tr><td>3D</td><td>React Three Fiber + drei + postprocessing</td><td>Scene graph, helpers, post FX</td></tr>
+          <tr><td>Shaders</td><td>GLSL (glslify)</td><td>Particles, morph, gradient, fog</td></tr>
+        </table>
+        <h3>Architecture &amp; performance</h3>
+        <ul>
+          <li><b>Single source of truth</b> for scroll: Lenis → ScrollTrigger.update → scene uniforms. One value drives everything.</li>
+          <li><b>Lazy-mount WebGL</b> and code-split heavy scenes; render only when in view; cap DPR.</li>
+          <li><b>Font strategy:</b> <code>next/font</code>, preload display + mono, <code>font-display:swap</code>, avoid layout shift.</li>
+          <li><b>Respect</b> <code>prefers-reduced-motion</code> and a no-WebGL fallback at every layer.</li>
+          <li><b>A11y:</b> semantic landmarks, visible focus, real headings, <code>aria</code> on canvas/decorative layers, keyboard nav.</li>
+          <li><b>Quality gates:</b> Lighthouse ≥ 90 perf on desktop, CLS ≈ 0, 60fps scroll, sub-2.5s LCP.</li>
+        </ul>
+        <div class="spec"><span class="c">// scroll → everything (one signal)</span><br><span class="k">lenis</span>.on(<span class="s">'scroll'</span>, ScrollTrigger.update)<br><span class="k">gsap</span>.ticker.add((t) => lenis.raf(t * <span class="v">1000</span>))<br><span class="c">// scene reads global scrollProgress in its render loop</span></div>
+      </section>
+
+      <!-- 17 REFS -->
+      <section id="refs" class="reveal">
+        <div class="sec-head"><span class="sec-num">17</span><h2>Motion &amp; Visual References</h2></div>
+        <p class="ar">مراجع للإلهام والـ benchmark — لكل واحد "إيه اللي ناخده منه" بالظبط.</p>
+        <table class="tbl">
+          <tr><th>Reference</th><th>Steal this</th></tr>
+          <tr><td>Apple (product pages)</td><td>Scroll-pinned product reveals, restraint, type discipline, polish</td></tr>
+          <tr><td>Google Creative Lab / Arts &amp; Culture</td><td>Playful-yet-precise motion systems, experimental WebGL</td></tr>
+          <tr><td>BMW interactive campaigns</td><td>Cinematic minimalism, spatial environments, dramatic light</td></tr>
+          <tr><td>Active Theory</td><td>Immersive WebGL worlds, bold transitions, sound design</td></tr>
+          <tr><td>Lusion / Resn</td><td>Shader craft, particle systems, tactile 3D interaction</td></tr>
+          <tr><td>Locomotive / Obys Agency</td><td>Smooth scroll choreography, editorial type, kinetic layouts</td></tr>
+          <tr><td>Cuberto / Unseen Studio</td><td>Cursor &amp; micro-interaction craft, magnetic UI</td></tr>
+          <tr><td>Awwwards SOTD</td><td>Current bar for "experiential" portfolio presentation</td></tr>
+        </table>
+        <div style="margin-top:.6rem">
+          <span class="pill on">Cinematic</span><span class="pill on">Spatial</span><span class="pill on">Shader-driven</span><span class="pill">Editorial</span><span class="pill">Kinetic type</span><span class="pill">Sound-reactive</span><span class="pill">Restrained</span>
+        </div>
+      </section>
+
+      <!-- 18 ROADMAP -->
+      <section id="roadmap" class="reveal">
+        <div class="sec-head"><span class="sec-num">18</span><h2>Build Roadmap</h2></div>
+        <p class="ar">خطة تنفيذ على مراحل — من الأساس للـ polish. كل مرحلة قابلة للشحن لوحدها.</p>
+        <table class="tbl">
+          <tr><th>Phase</th><th>Scope</th><th>Output</th></tr>
+          <tr><td>P0 — Foundation</td><td>Next.js + tokens + Lenis + layout shell + fonts</td><td>Static, smooth-scrolling skeleton</td></tr>
+          <tr><td>P1 — Motion layer</td><td>GSAP reveals, kinetic type, cursor, magnetic, loader</td><td>The "feel" is in place</td></tr>
+          <tr><td>P2 — WebGL hero</td><td>R3F core + particles + shader gradient + scroll uniforms</td><td>The signature scene</td></tr>
+          <tr><td>P3 — Content systems</td><td>Project stories, AI lab, system map, philosophy</td><td>Full narrative</td></tr>
+          <tr><td>P4 — Transitions</td><td>Shared-element case studies + route swaps + post FX</td><td>Cinematic continuity</td></tr>
+          <tr><td>P5 — Polish &amp; perf</td><td>Mobile pass, a11y, reduced-motion, Lighthouse, sound</td><td>Ship-ready installation</td></tr>
+        </table>
+        <div class="endcard">
+          <h2>Calm. Intelligent. Alive.</h2>
+          <p>This is the blueprint. The companion <code>mostafa-amir-portfolio.html</code> is a working, cinematic proof of Concept A — open it to feel the direction in motion.</p>
+          <span class="pill on">Next: build P0 → P2 in Next.js</span>
+        </div>
+      </section>
+
+      <footer style="border-top:1px solid var(--line);padding:2.4rem 0;font-family:var(--mono);font-size:0.72rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+        <span>MOSTAFA AMIR — CREATIVE DIRECTION © 2026</span>
+        <span>SYSTEMS · INTELLIGENCE · DESIGN</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+  "use strict";
+  const $=(s,e=document)=>e.querySelector(s);
+  const $$=(s,e=document)=>[...e.querySelectorAll(s)];
+
+  // progress bar
+  const prog=$('.progress');
+  addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;prog.style.transform=`scaleX(${m>0?scrollY/m:0})`;},{passive:true});
+
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+  $$('.reveal').forEach(el=>io.observe(el));
+
+  // scroll-spy active TOC
+  const links=$$('#toc a'); const map={};
+  links.forEach(a=>{const id=a.getAttribute('href').slice(1);map[id]=a;});
+  const spy=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map[en.target.id];if(a)a.classList.add('active');}});},{rootMargin:'-30% 0px -60% 0px'});
+  $$('main section[id]').forEach(s=>spy.observe(s));
+
+  // smooth anchor scroll
+  links.forEach(a=>a.addEventListener('click',e=>{const t=$(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}}));
+
+  // copy hex
+  const toast=$('#toast');let tt;
+  $$('.sw').forEach(sw=>sw.addEventListener('click',()=>{
+    const hex=sw.dataset.hex;
+    navigator.clipboard&&navigator.clipboard.writeText(hex).then(()=>{
+      toast.textContent='Copied '+hex;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),1400);
+    }).catch(()=>{});
+  }));
+  </script>
+</body>
+</html>

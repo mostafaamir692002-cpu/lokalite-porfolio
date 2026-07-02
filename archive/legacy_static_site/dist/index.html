@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Lokalita — Premium Shopify Ecommerce Partner</title>
+  <meta name="description"
+    content="Lokalita builds, launches, and scales high-converting Shopify brands. We partner with retail companies to design and develop custom storefronts, optimize conversion paths, and scale customer acquisition." />
+  <meta property="og:title" content="Lokalita — Premium Shopify Ecommerce Partner" />
+  <meta property="og:description"
+    content="We partner with ambitious retail brands to build and launch high-performing Shopify storefronts. Brand strategy, custom development, and go-to-market — executed as one cohesive project." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lokalita-eg.com/assets/lokalita-logo-original.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Lokalita — Premium Shopify Ecommerce Partner" />
+  <meta property="og:url" content="https://lokalita-eg.com/" />
+  <meta property="og:site_name" content="Lokalita" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_EG" />
+  <meta name="theme-color" content="#060608" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f2f4f8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="mask-icon" href="assets/favicon.svg" color="#0A84FF" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://lokalita-eg.com/" />
+  <meta name="author" content="Lokalita" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lokalita — Premium Shopify Ecommerce Partner" />
+  <meta name="twitter:description"
+    content="We partner with ambitious retail brands to build and launch high-performing Shopify storefronts. Brand strategy, custom development, and go-to-market — executed as one cohesive project." />
+  <meta name="twitter:image" content="https://lokalita-eg.com/assets/lokalita-logo-original.png" />
+  <meta name="twitter:image:alt" content="Lokalita — Premium Shopify Ecommerce Partner" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lokalita",
+  "url": "https://lokalita-eg.com/",
+  "logo": "https://lokalita-eg.com/assets/lokalita-logo-original.png",
+  "image": "https://lokalita-eg.com/assets/lokalita-logo-original.png",
+  "description": "Lokalita builds, launches, and scales high-converting Shopify brands. We partner with retail companies to design and develop custom storefronts, optimize conversion paths, and scale customer acquisition.",
+  "email": "lokalita75@gmail.com",
+  "telephone": "+20 111 863 0150",
+  "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61579605985661",
+    "https://www.instagram.com/lokalitaeg/",
+    "https://wa.me/201118630150"
+  ]
+}
+</script>
+
+  <!-- perf: early connections for fonts + CDN libs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <!-- Noto Sans Arabic is lazy-loaded by js/os/lang.js only when Arabic is activated (saves ~80KB for EN visitors). -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- styles (load order matters: tokens → base → materials → components → themes → rtl → responsive) -->
+<style>:root{--void-0:#050a18;--void-1:#0a122c;--void-2:#101a3e;--glass-1:#0c1224;--glass-2:#121b34;--glass-3:#182444;--ink-0:#f4f6fb;--ink-1:#c5cad6;--ink-2:#8b909e;--ink-3:#7c8090;--orange-rgb:249, 115, 22;--blue:#f97316;--blue-soft:#fdba74;--green:#30d158;--cyan:#64d2ff;--purple:#bf5af2;--orange:#f97316;--pink:#ff6482;--blue-bright:#f97316;--blue-deep:#ea580c;--blue-deep-2:#c2410c;--glow:#f97316;--aurora-a:#f97316;--aurora-b:#f59e0b;--aurora-c:#ea580c;--line:#ffffff14;--line-strong:#ffffff24;--chrome:linear-gradient(176deg,#fff 0%,#d7dce8 16%,#9aa2b4 34%,#f2f5fb 50%,#7c8395 66%,#cfd5e3 82%,#fff 100%);--radius:26px;--ease:cubic-bezier(.22,.61,.36,1);--spring:cubic-bezier(.34,1.56,.64,1)}body.light-mode .hero-title .shine:after{mix-blend-mode:multiply}body.light-mode{--void-0:#f2f4f8;--void-1:#e9ecf3;--void-2:#fff;--glass-1:#ffffffc2;--glass-2:#f0f4fcad;--glass-3:#e4e9f5a6;--ink-0:#0f1015;--ink-1:#3b3e4a;--ink-2:#656c7a;--ink-3:#8a91a0;--line:#0f101512;--line-strong:#0f101521;--chrome:linear-gradient(176deg, #0f1015 0%, #2c2e39 25%, #424652 50%, #2c2e39 75%, #0f1015 100%);--glow:#007aff}body.mode-wireframe{--void-0:#060608!important;--void-1:#07070a!important;--void-2:#08080c!important;--glass-1:transparent!important;--glass-2:transparent!important;--glass-3:transparent!important;--glow:#fff3!important;--blue-soft:#fff!important;--blue:#fff!important;--green:#fff!important;--cyan:#fff!important;--purple:#fff!important;--orange:#fff!important;--pink:#fff!important}*,:before,:after{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}*{-webkit-tap-highlight-color:transparent}a,button,input,select,textarea,[role=button],.navbtn,.toggle,.work-dots i,.lang-switcher span,.theme-toggle,.dock-burger,.scroll-rail-dot{touch-action:manipulation}body{background:var(--void-0);color:var(--ink-1);-webkit-font-smoothing:antialiased;text-rendering:optimizelegibility;letter-spacing:.005em;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55;overflow-x:hidden}body.is-locked{height:100vh;overflow:hidden}#space{z-index:0;pointer-events:none;opacity:0;transition:opacity 1.8s var(--ease);position:fixed;inset:0}#space.is-ready{opacity:1}body.light-mode #space,body.mode-wireframe #space{opacity:0}.bg-field{z-index:1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.bg-field:before,.bg-field:after{content:"";filter:blur(120px);opacity:.38;border-radius:50%;position:absolute}.bg-field:before{background:radial-gradient(circle at 30% 30%, rgba(var(--orange-rgb),.12), transparent 62%);width:62vw;height:62vw;top:-18vw;left:-12vw}.bg-field:after{background:radial-gradient(circle at 70% 70%,#bf5af221,#0000 60%);width:54vw;height:54vw;bottom:-16vw;right:-14vw}.bg-grid{z-index:1;pointer-events:none;opacity:.4;background-image:linear-gradient(#ffffff06 1px,#0000 1px),linear-gradient(90deg,#ffffff06 1px,#0000 1px);background-size:64px 64px;position:fixed;inset:0;-webkit-mask-image:radial-gradient(80% 70% at 50% 30%,#000 30%,#0000 80%);mask-image:radial-gradient(80% 70% at 50% 30%,#000 30%,#0000 80%)}.bg-noise{z-index:2;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");position:fixed;inset:0}.bg-field:before{animation:16s ease-in-out infinite orbFloat1}.bg-field:after{animation:22s ease-in-out infinite orbFloat2}@keyframes orbFloat1{0%,to{transform:translate(0)scale(1)}28%{transform:translate(4vw,-3.5vw)scale(1.08)}64%{transform:translate(-2.5vw,4vw)scale(.93)}}@keyframes orbFloat2{0%,to{transform:translate(0)scale(1)}38%{transform:translate(-5vw,2.5vw)scale(1.06)}72%{transform:translate(3.5vw,-4vw)scale(.97)}}.shell{z-index:5;max-width:1180px;margin:0 auto;padding:0 18px 90px;position:relative}section{position:relative}.kicker{letter-spacing:.32em;text-transform:uppercase;color:var(--blue-soft);align-items:center;gap:9px;font-family:JetBrains Mono;font-size:11px;display:inline-flex}.kicker:before{content:"";background:linear-gradient(90deg,var(--blue-soft),transparent);width:22px;height:1px}.sec-head{margin-bottom:34px}.sec-head h2{letter-spacing:-.02em;color:var(--ink-0);margin-top:14px;font-family:Archivo;font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.02}.sec-head p{color:var(--ink-2);max-width:560px;margin-top:12px;font-size:15.5px}[data-reveal]{opacity:0;filter:blur(6px);transition:opacity .65s var(--ease),transform .65s var(--ease),filter .55s var(--ease);transform:translateY(32px)}[data-reveal].in{opacity:1;filter:blur();transform:none}@media (prefers-reduced-motion:reduce){[data-reveal]{filter:none}}[data-reveal][data-d="1"]{transition-delay:80ms}[data-reveal][data-d="2"]{transition-delay:.16s}[data-reveal][data-d="3"]{transition-delay:.24s}[data-reveal][data-d="4"]{transition-delay:.32s}[data-reveal][data-d="5"]{transition-delay:.4s}[data-reveal][data-d="6"]{transition-delay:.48s}.btn-arrow{vertical-align:middle;transition:transform .25s var(--ease);flex-shrink:0;display:inline-block}.dock-cta:hover .btn-arrow,.contact-cta:hover .btn-arrow,.modal-btn.primary:hover .btn-arrow{transform:translate(4px)}#scrollProgress{z-index:99999;background:linear-gradient(90deg,var(--blue),var(--glow) 50%,var(--purple));pointer-events:none;border-radius:0 1px 1px 0;width:0;height:2px;position:fixed;top:0;left:0}.cursor-dot{pointer-events:none;z-index:99998;mix-blend-mode:difference;will-change:left,top;background:#ffffffe6;border-radius:50%;width:7px;height:7px;display:none;position:fixed;transform:translate(-50%,-50%)}.cursor-aura{border:1px solid rgba(var(--orange-rgb),.45);pointer-events:none;z-index:99997;width:36px;height:36px;transition:width .4s var(--spring),height .4s var(--spring),border-color .3s,opacity .3s;will-change:left,top;border-radius:50%;display:none;position:fixed;transform:translate(-50%,-50%)}body.cursor-hover .cursor-aura{border-color:#64d4ffcc;width:58px;height:58px}@media (pointer:fine){body.cursor-on .cursor-dot,body.cursor-on .cursor-aura{display:block}body.cursor-on *{cursor:none!important}}:focus-visible{outline:2px solid var(--blue-soft);outline-offset:3px;border-radius:6px}:focus:not(:focus-visible){outline:none}.skip-link{z-index:100000;background:var(--blue,#0a84ff);color:#fff;border-radius:10px;padding:10px 16px;font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;line-height:1;text-decoration:none;transition:transform .2s;position:fixed;top:12px;left:12px;transform:translateY(-160%);box-shadow:0 8px 24px #0006}.skip-link:focus{outline-offset:2px;outline:2px solid #fff;transform:translateY(0)}@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.001ms!important;animation-duration:.001ms!important;animation-iteration-count:1!important}[data-reveal]{opacity:1;transform:none}.bg-field:before,.bg-field:after{animation:none!important}}.glass{-webkit-backdrop-filter:blur(26px)saturate(150%);border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(#22242e9e,#0e0f14a8);position:relative;overflow:hidden;box-shadow:inset 0 1px #ffffff1a,inset 0 -1px #00000080,0 22px 60px #0000008c}.glass:after{content:"";pointer-events:none;border-radius:inherit;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%), #78b4ff29, transparent 60%);opacity:0;transition:opacity .5s var(--ease);position:absolute;inset:0}.glass:hover:after{opacity:1}.metal{background:linear-gradient(#262833 0%,#191a22 48%,#101117 100%);border:1px solid #ffffff12;border-radius:18px;box-shadow:inset 0 1.5px #fff3,inset 0 -2px 4px #0009,0 10px 24px #0000008c,0 1px #ffffff0a}.chrome-text{background:var(--chrome);color:#0000;background-size:100% 100%;-webkit-background-clip:text;background-clip:text}.theme-toggle{width:30px;height:30px;color:var(--ink-2);cursor:pointer;transition:all .25s var(--ease);background:#0000004d;border:1px solid #ffffff0f;border-radius:9px;place-items:center;display:grid;position:relative;overflow:hidden;box-shadow:inset 0 1px #ffffff0d}.theme-toggle:hover{color:var(--ink-0);background:#ffffff14}.theme-toggle svg{transition:transform .4s var(--spring), opacity .3s;position:absolute}.theme-toggle .sun-icon{opacity:1;transform:scale(1)}.theme-toggle .moon-icon{opacity:0;transform:scale(.4)rotate(-45deg)}.lang-switcher{cursor:pointer;user-select:none;background:#0000004d;border:1px solid #ffffff0f;border-radius:9px;gap:2px;padding:2px;display:inline-flex;position:relative;box-shadow:inset 0 1px #ffffff0d}.lang-switcher span{color:var(--ink-2);transition:all .25s var(--ease);border-radius:6px;padding:3px 8px;font-family:JetBrains Mono,monospace;font-size:10px;font-weight:700}.lang-switcher span.active{color:var(--ink-0);background:#ffffff14;box-shadow:inset 0 1px #ffffff14,0 2px 6px #0000004d}#boot{z-index:9999;transition:opacity .9s var(--ease),visibility .9s;background:radial-gradient(90% 70% at 50% 45%,#0606082e,#0606089e 100%);flex-direction:column;justify-content:center;align-items:center;gap:30px;display:flex;position:fixed;inset:0}#boot.done{opacity:0;visibility:hidden}body.is-locked .statusbar,body.is-locked nav.dock,body.is-locked .shell,body.is-locked .mobile-menu{visibility:hidden}.boot-mark{letter-spacing:-.02em;-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);background:linear-gradient(#22242e80,#0e0f148c);border-radius:24px;place-items:center;width:88px;height:88px;font-family:Archivo;font-size:34px;font-weight:900;display:grid;position:relative;box-shadow:inset 0 1px #ffffff1f,0 22px 60px #0000008c}.boot-mark .chrome-text{font-size:34px}.boot-mark:after{content:"";background:conic-gradient(from 0deg, transparent, var(--glow), transparent 40%);-webkit-mask-composite:xor;opacity:.9;border-radius:26px;padding:2px;animation:2.4s linear infinite spin;position:absolute;inset:-2px;-webkit-mask-image:linear-gradient(#000 0 0),linear-gradient(#000 0 0);-webkit-mask-position:0 0,0 0;-webkit-mask-size:auto,auto;-webkit-mask-repeat:repeat,repeat;-webkit-mask-clip:content-box,border-box;-webkit-mask-origin:content-box,border-box;mask-composite:exclude;mask-mode:match-source,match-source}@keyframes spin{to{transform:rotate(360deg)}}.boot-bar{background:#ffffff14;border-radius:3px;width:220px;height:3px;overflow:hidden}.boot-bar i{background:linear-gradient(90deg,var(--blue),var(--glow));border-radius:3px;width:0;height:100%;display:block}.boot-label{letter-spacing:.34em;color:var(--ink-2);text-transform:uppercase;text-shadow:0 1px 12px #000c;font-family:JetBrains Mono;font-size:11px}.boot-pct{color:var(--ink-2);font-family:JetBrains Mono;font-size:11px}.statusbar{z-index:120;color:var(--ink-0);-webkit-backdrop-filter:blur(20px);background:linear-gradient(#08080bdb,#08080b66);border-bottom:1px solid #ffffff0d;justify-content:space-between;align-items:center;padding:9px 22px;font-family:JetBrains Mono;font-size:13px;font-weight:600;display:flex;position:sticky;top:0}.sb-time{letter-spacing:.02em;direction:ltr;display:inline-block}.sb-right{align-items:center;gap:9px;display:flex}.sb-right svg{display:block}.sig{align-items:flex-end;gap:2px;height:11px;display:flex}.sig i{background:var(--ink-0);border-radius:1px;width:3px}.sig i:first-child{height:4px}.sig i:nth-child(2){height:6px}.sig i:nth-child(3){height:8px}.sig i:nth-child(4){height:11px}.batt{border:1.4px solid var(--ink-0);border-radius:3px;width:25px;height:12px;padding:1.5px;position:relative}.batt:after{content:"";background:var(--ink-0);border-radius:0 1px 1px 0;width:2px;height:5px;position:absolute;top:3px;right:-3px}.batt i{background:var(--green);border-radius:1px;width:78%;height:100%;display:block}nav.dock{z-index:110;-webkit-backdrop-filter:blur(24px)saturate(150%);border:1px solid var(--line);opacity:0;background:linear-gradient(#1c1d25a8,#0c0d1299);border-radius:22px;justify-content:space-between;align-items:center;gap:16px;width:calc(100% - 36px);max-width:1180px;margin:14px auto 0;padding:10px 12px 10px 18px;display:flex;position:sticky;top:38px;transform:translateY(-12px);box-shadow:inset 0 1px #ffffff14,0 18px 40px #00000073}.dock-brand{color:var(--ink-0);align-items:center;gap:11px;font-weight:600;display:flex}.dock-mono{background:radial-gradient(circle,#ffffff40 0%,#ffffff0d 50%,#0000 75%);flex:none;place-items:center;width:50px;height:50px;display:grid;position:relative}.dock-mono span{display:none}.dock-mono img{object-fit:contain;filter:drop-shadow(0 0 6px #ffffff73)drop-shadow(0 0 12px #fff3)brightness(1.25)contrast(1.1);width:100%;height:100%;display:block;position:relative}.dock-brand small{letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase;font-family:JetBrains Mono;font-size:9.5px;font-weight:500;display:block}.dock-links{align-items:center;gap:4px;display:flex}.dock-links a{color:var(--ink-2);border-radius:11px;padding:8px 13px;font-size:13px;font-weight:500;text-decoration:none;transition:color .25s,background .25s}.dock-links a:hover{color:var(--ink-0);background:#ffffff0d}.dock-links a.active{color:var(--ink-0);background:#ffffff12;box-shadow:inset 0 1px #ffffff14}body.light-mode .dock-links a.active{color:var(--ink-0)!important;background:#0f10150f!important}.dock-cta{color:#fff;white-space:nowrap;background:linear-gradient(180deg,var(--blue-bright),var(--blue-deep));box-shadow:inset 0 1px 0 #fff6,0 8px 20px rgba(var(--orange-rgb),.35);transition:transform .2s var(--spring);border:1px solid #ffffff2e;border-radius:12px;padding:9px 16px;font-size:12.5px;font-weight:600;text-decoration:none}.dock-cta:hover{transform:translateY(-1px)}.dock-cta:active{transform:scale(.96)}.dock-burger{border:1px solid var(--line);width:42px;height:42px;color:var(--ink-0);cursor:pointer;background:#ffffff0d;border-radius:13px;padding:0;transition:background .2s,border-color .2s;display:none;position:relative}.dock-burger:hover{background:#ffffff14}.dock-burger i{width:18px;height:1.6px;transition:transform .25s var(--ease), opacity .25s var(--ease), top .25s var(--ease);background-color:currentColor;border-radius:1px;position:absolute;left:12px}.dock-burger i:first-child{top:15px}.dock-burger i:nth-child(2){top:20px}.dock-burger i:nth-child(3){top:25px}.dock-burger.is-active i:first-child{transform:translateY(5px)rotate(45deg)}.dock-burger.is-active i:nth-child(2){opacity:0}.dock-burger.is-active i:nth-child(3){transform:translateY(-5px)rotate(-45deg)}.mobile-menu{z-index:108;width:100vw;height:100dvh;padding:max(112px, env(safe-area-inset-top) + 80px) 24px max(40px, env(safe-area-inset-bottom) + 20px);-webkit-backdrop-filter:blur(28px)saturate(180%);opacity:0;pointer-events:none;transition:opacity .35s var(--ease), transform .35s var(--ease);will-change:transform, opacity;background:#08090de6;border:none;flex-direction:column;justify-content:space-between;display:flex;position:fixed;top:0;left:0;transform:translateY(-15px);box-shadow:0 20px 80px #0009}body.light-mode .mobile-menu{background:#f2f4f8e6;box-shadow:0 20px 80px #0f101526}.mobile-menu.is-open{opacity:1;pointer-events:auto;transform:translateY(0)}@media (width<=720px){.mobile-menu{display:flex}}.mobile-menu-links{flex-direction:column;gap:8px;display:flex}.mobile-nav-link{color:var(--ink-1);transition:color .2s var(--ease), background .2s var(--ease), transform .2s var(--ease);border:1px solid #0000;border-radius:16px;padding:16px 20px;font-size:20px;font-weight:600;text-decoration:none;display:block}.mobile-nav-link:hover{color:var(--ink-0);border-color:var(--line);background:#ffffff0d;transform:translate(4px)}body.light-mode .mobile-nav-link:hover{background:#0f10150a}.mobile-menu-cta{margin-top:auto;padding-top:20px}.mobile-menu-cta .dock-cta{width:100%;box-shadow:inset 0 1px 0 #fff6, 0 14px 30px rgba(var(--orange-rgb),.28);border-radius:16px;justify-content:center;padding:15px 20px;font-size:14.5px}.mobile-menu-settings{border-top:1px solid var(--line);justify-content:space-between;align-items:center;margin-top:18px;padding-top:18px;display:flex}.mobile-menu-settings .theme-toggle{border:1px solid var(--line);color:var(--ink-0);cursor:pointer;width:44px;height:44px;transition:background .2s var(--ease), border-color .2s var(--ease), transform .15s var(--spring);background:#ffffff08;border-radius:14px;justify-content:center;align-items:center;display:flex}.mobile-menu-settings .theme-toggle:active{transform:scale(.93)}body.light-mode .mobile-menu-settings .theme-toggle{background:#0f101508}.mobile-menu-settings .lang-switcher{border:1px solid var(--line);background:#00000040;border-radius:13px;gap:2px;padding:3px;display:flex}body.light-mode .mobile-menu-settings .lang-switcher{background:#0f10150d}.mobile-menu-settings .lang-switcher span{color:var(--ink-2);cursor:pointer;transition:color .2s var(--ease), background .2s var(--ease);border-radius:10px;padding:7px 14px;font-family:JetBrains Mono;font-size:12px;font-weight:700}.mobile-menu-settings .lang-switcher span.active{color:var(--ink-0);background:#ffffff14;box-shadow:0 2px 8px #0003}body.light-mode .mobile-menu-settings .lang-switcher span.active{background:var(--void-2);box-shadow:0 2px 8px #0f10150f}.hero{padding:30px 0 64px}.hero-window{-webkit-backdrop-filter:blur(28px)saturate(150%);border:1px solid var(--line-strong);background:linear-gradient(#1e202a99,#0a0b10b3);border-radius:30px;padding:0;overflow:hidden;box-shadow:inset 0 1px #ffffff1f,0 40px 100px #0009,0 0 0 1px #0006}.win-chrome{background:linear-gradient(#ffffff0a,#0000);border-bottom:1px solid #ffffff0f;align-items:center;gap:14px;padding:13px 18px;display:flex}.win-dots{gap:8px;display:flex}.win-dots i{border-radius:50%;width:12px;height:12px;box-shadow:inset 0 1px 1px #fff6}.win-dots i:first-child{background:#ff5f57}.win-dots i:nth-child(2){background:#febc2e}.win-dots i:nth-child(3){background:#28c840}.win-pill{letter-spacing:.26em;color:var(--ink-2);text-transform:uppercase;background:#00000059;border:1px solid #ffffff0f;border-radius:9px;align-items:center;gap:8px;margin:0 auto;padding:6px 16px;font-family:JetBrains Mono;font-size:11.5px;display:flex}.win-pill:before{content:"";background:var(--green);width:6px;height:6px;box-shadow:0 0 8px var(--green);border-radius:50%}.win-tools{gap:7px;display:flex}.win-tools span{background:#ffffff0d;border:1px solid #ffffff0f;border-radius:7px;width:26px;height:22px}.hero-grid{grid-template-columns:300px 1fr 230px;gap:18px;padding:22px;display:grid}.rail{flex-direction:column;gap:16px;display:flex}.profile-card{padding:20px}.avatar-wrap{align-items:center;gap:14px;display:flex}.avatar{background:radial-gradient(circle,#ffffff40 0%,#ffffff0d 50%,#0000 75%);flex:none;width:86px;height:86px;padding:0;position:relative}.avatar i{display:none}.avatar img{object-fit:contain;filter:drop-shadow(0 0 10px #ffffff80)drop-shadow(0 0 20px #ffffff40)brightness(1.25)contrast(1.1);border-radius:0;width:100%;height:100%;display:block;position:relative}.avatar .ring-dot{background:var(--green);width:16px;height:16px;box-shadow:0 0 10px var(--green);border:3px solid #14151b;border-radius:50%;position:absolute;bottom:-3px;right:-3px}.profile-card h3{color:var(--ink-0);letter-spacing:-.01em;font-family:Archivo;font-size:18px;font-weight:700}.profile-card .role{color:var(--ink-2);margin-top:1px;font-size:12.5px}.profile-meta{flex-direction:column;gap:9px;margin-top:16px;display:flex}.profile-meta .row{color:var(--ink-1);align-items:center;gap:9px;font-size:12.5px;display:flex}.profile-meta .row svg{color:var(--blue-soft);flex:none}.socials{gap:8px;margin-top:18px;display:flex}.socials a{width:38px;height:38px;color:var(--ink-1);border:1px solid var(--line);transition:background .2s,color .2s,transform .2s var(--spring);background:#ffffff08;border-radius:12px;place-items:center;padding:9px;display:grid}.socials a:hover{color:var(--ink-0);background:#ffffff14;transform:translateY(-1px)}.cc-title{letter-spacing:.26em;text-transform:uppercase;color:var(--ink-3);padding:0 4px 10px;font-family:JetBrains Mono;font-size:10px}.cc-grid{grid-template-columns:1fr 1fr;gap:11px;display:grid}.toggle{cursor:pointer;text-align:left;color:inherit;transition:transform .14s var(--spring);background:linear-gradient(#23252f,#14151b);border:1px solid #ffffff0f;border-radius:18px;flex-direction:column;gap:10px;padding:14px;font-family:inherit;display:flex;box-shadow:inset 0 1px #ffffff1f,0 6px 16px #0006}.toggle:active{transform:scale(.95)}.toggle .ico{width:34px;height:34px;color:var(--ink-2);transition:all .3s var(--ease);background:#ffffff0f;border-radius:50%;place-items:center;display:grid}.toggle .lbl{color:var(--ink-1);font-size:12px;font-weight:600}.toggle .st{letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;font-family:JetBrains Mono;font-size:9.5px}.toggle.on .ico{background:var(--_c,var(--blue));color:#fff;box-shadow:0 0 18px -2px var(--_c,var(--blue))}.toggle.on .st{color:var(--_c,var(--blue-soft))}.toggle[data-c=ai]{--_c:var(--green)}.toggle[data-c=design]{--_c:var(--blue)}.toggle[data-c=auto]{--_c:var(--purple)}.toggle[data-c=sys]{--_c:var(--cyan)}.hero-core{text-align:center;flex-direction:column;justify-content:center;align-items:center;gap:18px;padding:8px 6px;display:flex;position:relative}.hero-eyebrow{letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2);opacity:0;font-family:JetBrains Mono;font-size:11px}.monogram-disc{background:radial-gradient(circle,#ffffff47 0%,#ffffff0f 50%,#0000 75%);flex:none;place-items:center;width:180px;height:180px;display:grid;position:relative}.monogram-disc:before,.monogram-disc span{display:none}.monogram-disc img{object-fit:contain;z-index:2;filter:drop-shadow(0 0 12px #ffffff8c)drop-shadow(0 0 28px #ffffff4d)brightness(1.25)contrast(1.1);width:100%;height:100%;position:relative}.hero-title{letter-spacing:-.035em;font-family:Archivo;font-size:clamp(40px,8.5vw,92px);font-weight:900;line-height:.92}.hero-title .line{display:block;overflow:hidden}.hero-title .word-i{display:inline-block;transform:translateY(110%)}.hero-title .shine{position:relative}.hero-title .shine:after{content:"";pointer-events:none;mix-blend-mode:screen;background:linear-gradient(105deg,#0000 38%,#ffffffd9 50%,#0000 62%) 0 0/250% 100%;color:#0000;animation:sheen 5s var(--ease) infinite;-webkit-background-clip:text;background-clip:text;animation-delay:2s;position:absolute;inset:0}@keyframes sheen{0%{background-position:160% 0}45%,to{background-position:-60% 0}}.hero-sub{max-width:430px;color:var(--ink-2);opacity:0;font-size:15px}.hero-manifesto{max-width:380px;color:var(--ink-1);opacity:0;background:rgba(var(--orange-rgb),.06);border:1px solid rgba(var(--orange-rgb),.12);letter-spacing:.01em;border-radius:12px;padding:12px 18px;font-size:15px;font-weight:500;line-height:1.6}.hero-manifesto em{color:var(--blue-soft);font-style:normal;font-weight:600}.hero-cta-row{opacity:0;flex-wrap:wrap;justify-content:center;gap:12px;display:flex}.hero-btn-primary{letter-spacing:.01em;color:#fff;background:linear-gradient(180deg, var(--blue-bright), var(--blue-deep-2));transition:transform .18s var(--spring), box-shadow .2s;border:1px solid #fff3;border-radius:14px;align-items:center;gap:7px;padding:13px 22px;font-family:Archivo;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;box-shadow:inset 0 1px #fff6,0 10px 26px #0a6fe073}.hero-btn-primary:hover{transform:translateY(-2px);box-shadow:inset 0 1px #fff6,0 14px 32px #0a6fe08c}.hero-btn-primary:active{transform:scale(.97)}.hero-btn-ghost{color:var(--ink-1);transition:transform .18s var(--spring), color .2s, background .2s;background:#ffffff0d;border:1px solid #ffffff1a;border-radius:14px;align-items:center;gap:6px;padding:13px 22px;font-family:Archivo;font-size:14px;font-weight:600;text-decoration:none;display:inline-flex}.hero-btn-ghost:hover{color:var(--ink-0);background:#ffffff17;transform:translateY(-2px)}.hero-sub b{color:var(--ink-0);font-weight:600}.sel-menu{opacity:0;pointer-events:none;background:#23242e;border:1px solid #ffffff1f;border-radius:11px;font-size:12.5px;display:flex;position:absolute;top:-2px;left:50%;overflow:hidden;transform:translate(-50%);box-shadow:0 10px 30px #0009}.sel-menu button{color:var(--ink-0);cursor:pointer;background:0 0;border:none;border-right:1px solid #ffffff1a;padding:8px 13px;font-family:inherit;font-size:12.5px}.sel-menu button:last-child{border-right:none}.sel-menu button:hover{background:#ffffff14}.sel-menu:after{content:"";background:#23242e;border-bottom:1px solid #ffffff1f;border-right:1px solid #ffffff1f;width:10px;height:10px;position:absolute;bottom:-5px;left:50%;transform:translate(-50%)rotate(45deg)}.name-target{border-radius:6px;transition:background .3s;position:relative}.name-target.selected{background:rgba(var(--orange-rgb),.28);box-shadow:0 0 0 2px rgba(var(--orange-rgb),.3)}.widget{padding:16px}.w-clock .t{color:var(--ink-0);letter-spacing:-.02em;direction:ltr;font-family:Archivo;font-size:34px;font-weight:800;line-height:1;display:inline-block}.w-clock .d{color:var(--ink-2);margin-top:3px;font-size:12px}.w-clock .loc{color:var(--ink-1);align-items:center;gap:6px;margin-top:14px;font-size:12.5px;display:flex}.w-clock .loc svg{color:var(--blue-soft)}.w-clock .sys{letter-spacing:.14em;text-transform:uppercase;color:var(--green);align-items:center;gap:7px;margin-top:10px;font-family:JetBrains Mono;font-size:10.5px;display:flex}.w-clock .sys i{background:var(--green);width:7px;height:7px;box-shadow:0 0 9px var(--green);border-radius:50%;animation:2.4s ease-in-out infinite pulse}@keyframes pulse{50%{opacity:.4}}.w-stat{flex-direction:column;gap:13px;display:flex}.w-stat .row{justify-content:space-between;align-items:center;display:flex}.w-stat .row .k{color:var(--ink-2);font-size:11.5px}.w-stat .row .v{color:var(--ink-0);font-family:Archivo;font-size:17px;font-weight:700}.w-stat .bar{background:#ffffff14;border-radius:4px;height:5px;overflow:hidden}.w-stat .bar i{background:linear-gradient(90deg,var(--blue),var(--glow));width:0;height:100%;transition:width 1.2s var(--ease);border-radius:4px;display:block}.scroll-cue{letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);flex-direction:column;align-items:center;gap:10px;margin-top:26px;font-family:JetBrains Mono;font-size:10px;display:flex}.scroll-cue i{background:linear-gradient(var(--line-strong),transparent);width:1px;height:42px;position:relative;overflow:hidden}.scroll-cue i:after{content:"";background:var(--glow);width:100%;height:50%;animation:scrolldot 2.2s var(--ease) infinite;position:absolute;top:0;left:0}@keyframes scrolldot{0%{transform:translateY(-100%)}to{transform:translateY(220%)}}@media (prefers-reduced-motion:reduce){.scroll-cue i:after{animation:none}}.hero-strips{justify-content:center;gap:10px;margin-top:20px;padding:0 22px 22px;display:flex}.vstrip{border-radius:18px;align-items:end;width:54px;height:120px;display:grid;position:relative;overflow:hidden}.vstrip i{background:linear-gradient(180deg,var(--glow),rgba(var(--orange-rgb),.25));border-radius:0;width:100%;display:block}.vstrip span{text-align:center;color:#ffffffb3;position:absolute;top:12px;left:0;right:0}.vstrip .lab{text-align:center;letter-spacing:.1em;color:var(--ink-2);text-transform:uppercase;font-family:JetBrains Mono;font-size:8.5px;position:absolute;bottom:9px;left:0;right:0}.modes{margin-top:78px}.modebar{border-radius:20px;flex-wrap:wrap;gap:8px;padding:8px;display:flex}.mode{cursor:pointer;min-width:120px;color:var(--ink-2);text-align:left;transition:all .3s var(--ease);background:0 0;border:none;border-radius:14px;flex:auto;padding:16px 14px;font-family:inherit}.mode .n{letter-spacing:.18em;opacity:.6;font-family:JetBrains Mono;font-size:10px}.mode .t{color:inherit;letter-spacing:.01em;margin-top:6px;font-family:Archivo;font-size:16px;font-weight:700}.mode.active{color:var(--ink-0);background:linear-gradient(#23252f,#15161d);box-shadow:inset 0 1px #ffffff24,0 10px 24px #00000073}.mode.active .n{color:var(--blue-soft);opacity:1}.mode-readout{grid-template-columns:1fr 1fr;align-items:center;gap:24px;margin-top:18px;padding:24px;display:grid}.mode-readout .desc h3{color:var(--ink-0);font-family:Archivo;font-size:22px;font-weight:700}.mode-readout .desc p{color:var(--ink-2);margin-top:10px;font-size:14.5px}.mode-readout .desc .ar{color:var(--ink-1);direction:rtl;margin-top:12px;font-family:Noto Sans Arabic;font-size:15px;line-height:1.9}.mode-readout .meterset{flex-direction:column;gap:14px;display:flex}.meter .row{color:var(--ink-2);justify-content:space-between;margin-bottom:6px;font-size:12px;display:flex}.meter .row b{color:var(--ink-0);font-family:JetBrains Mono}.meter .bar{background:#ffffff12;border-radius:5px;height:6px;overflow:hidden}.meter .bar i{background:linear-gradient(90deg,var(--blue),var(--glow));width:0;height:100%;transition:width 1s var(--ease);border-radius:5px;display:block}.work{margin-top:96px}.work-head{flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;display:flex}.work-nav{gap:10px;display:flex}.navbtn{cursor:pointer;width:48px;height:48px;color:var(--ink-0);transition:transform .18s var(--spring);background:linear-gradient(#23252f,#14151b);border:1px solid #ffffff14;border-radius:50%;place-items:center;display:grid;box-shadow:inset 0 1px #ffffff29,0 8px 20px #0006}.navbtn:hover{transform:translateY(-2px)}.navbtn:active{transform:scale(.9)}.navbtn:disabled{opacity:.35;cursor:default;transform:none}.work-track-wrap{cursor:grab;margin-top:30px;overflow:hidden}.work-track-wrap.is-dragging{cursor:grabbing;user-select:none}.work-track-wrap.is-dragging .work-card{pointer-events:none}.work-track{transition:transform .7s var(--ease);will-change:transform;gap:20px;display:flex}.work-card{cursor:pointer;border:1px solid var(--line);min-width:0;transform-style:preserve-3d;background:linear-gradient(#22242e99,#0c0d12a8);border-radius:24px;flex:0 0 calc(33.3333% - 13.3333px);transition:transform .15s,border-color .4s;overflow:hidden;box-shadow:inset 0 1px #ffffff14,0 18px 44px #00000080}.work-card:hover{border-color:var(--line-strong)}.wc-vis{place-items:center;height:220px;display:grid;position:relative;overflow:hidden}.wc-vis .glyph{letter-spacing:-.05em;opacity:.92;font-family:Archivo;font-size:74px;font-weight:900}.wc-vis:before{content:"";opacity:.85;position:absolute;inset:0}.wc-vis:after{content:"";background:radial-gradient(circle at 70% 20%,#ffffff2e,#0000 55%);position:absolute;inset:0}.wc-1:before{background:linear-gradient(135deg,#3a2b10,#0c0d12)}.wc-2:before{background:linear-gradient(135deg,#0c2f3a,#0c0d12)}.wc-3:before{background:linear-gradient(135deg,#0d3320,#0c0d12)}.wc-4:before{background:linear-gradient(135deg,#241046,#0c0d12)}.wc-5:before{background:linear-gradient(135deg,#3a0f24,#0c0d12)}.wc-6:before{background:linear-gradient(135deg,#063a38,#0c0d12)}.wc-body{padding:20px}.wc-body .tag{letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft);font-family:JetBrains Mono;font-size:10px}.wc-body h3{color:var(--ink-0);letter-spacing:-.01em;margin-top:9px;font-family:Archivo;font-size:23px;font-weight:800}.wc-body p{color:var(--ink-2);margin-top:8px;font-size:13.5px}.wc-meta{flex-wrap:wrap;gap:7px;margin-top:16px;display:flex}.wc-meta span{color:var(--ink-1);background:#ffffff0d;border:1px solid #ffffff0f;border-radius:8px;padding:5px 10px;font-size:10.5px}.work-dots{justify-content:center;gap:8px;margin-top:26px;display:flex}.work-dots i{cursor:pointer;background:#ffffff29;border-radius:50%;width:7px;height:7px;transition:all .3s}.work-dots i.active{background:var(--glow);border-radius:5px;width:22px}.about{grid-template-columns:.9fr 1.1fr;align-items:stretch;gap:28px;margin-top:104px;display:grid}.about-photo{border:1px solid var(--line);background:linear-gradient(160deg,#1a1b23,#0a0b0f);border-radius:26px;place-items:center;min-height:380px;display:grid;position:relative;overflow:hidden;box-shadow:inset 0 1px #ffffff14,0 22px 60px #00000080}.about-photo .ph-mono{background:radial-gradient(circle,#ffffff4d 0%,#ffffff0f 50%,#0000 75%);place-items:center;width:220px;height:220px;display:grid;position:relative;overflow:visible}.about-photo .ph-mono span{display:none}.about-photo .ph-mono img{object-fit:contain;filter:drop-shadow(0 0 12px #fff9)drop-shadow(0 0 28px #ffffff4d)brightness(1.25)contrast(1.1);border-radius:0;width:100%;height:100%;display:block;position:relative}.about-photo .ph-tag{letter-spacing:.2em;color:var(--ink-2);text-transform:uppercase;font-family:JetBrains Mono;font-size:10px;position:absolute;bottom:18px;left:18px}.about-photo .ph-status{color:var(--green);letter-spacing:.1em;align-items:center;gap:7px;font-family:JetBrains Mono;font-size:11px;display:flex;position:absolute;top:18px;right:18px}.about-photo .ph-status i{background:var(--green);width:7px;height:7px;box-shadow:0 0 9px var(--green);border-radius:50%}.about-body{padding:34px}.about-body .ar{text-align:right;color:var(--ink-1);direction:rtl;margin:18px 0 22px;font-family:Noto Sans Arabic;font-size:17px;line-height:2}.about-body p{color:var(--ink-2);margin-bottom:14px;font-size:15px}.about-body p b{color:var(--ink-0);font-weight:600}.about-tags{flex-wrap:wrap;gap:9px;margin-top:22px;display:flex}.about-tags span{color:var(--ink-1);background:#ffffff0d;border:1px solid #ffffff12;border-radius:11px;padding:8px 14px;font-size:12px}.systems{margin-top:104px}.sys-grid{grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;display:grid}.sys-card{border-radius:22px;padding:26px}.sys-card .num{color:var(--blue-soft);letter-spacing:.1em;font-family:JetBrains Mono;font-size:12px}.sys-card h3{color:var(--ink-0);margin:14px 0 10px;font-family:Archivo;font-size:20px;font-weight:700}.sys-card p{color:var(--ink-2);font-size:14px}.sys-card .ic{width:46px;height:46px;color:var(--blue-soft);background:rgba(var(--orange-rgb),.08);border:1px solid rgba(var(--orange-rgb),.18);border-radius:14px;place-items:center;margin-bottom:6px;display:grid}.contact{margin-top:104px}.contact-shell{text-align:center;border-radius:30px;padding:44px;position:relative;overflow:hidden}.contact-shell:before{content:"";background:radial-gradient(circle at 50% -10%,rgba(var(--orange-rgb),.1),transparent 60%);position:absolute;inset:0}.contact-shell h2{letter-spacing:-.03em;font-family:Archivo;font-size:clamp(30px,6vw,62px);font-weight:900;line-height:1;position:relative}.contact-shell p{color:var(--ink-2);max-width:480px;margin:16px auto 0;font-size:15.5px;position:relative}.channels{flex-wrap:wrap;justify-content:center;gap:12px;margin:30px 0;display:flex;position:relative}.channel{cursor:pointer;color:var(--ink-1);transition:transform .2s var(--spring),color .2s;background:linear-gradient(#23252f,#14151b);border:1px solid #ffffff14;border-radius:16px;align-items:center;gap:11px;padding:13px 18px;font-size:13.5px;font-weight:500;text-decoration:none;display:flex;box-shadow:inset 0 1px #ffffff24,0 8px 20px #0006}.channel:hover{color:#fff;transform:translateY(-2px)}.channel:active{transform:scale(.96)}.channel svg{color:var(--blue-soft)}.contact-cta{color:#fff;background:linear-gradient(180deg,var(--blue-bright),var(--blue-deep-2));transition:transform .2s var(--spring);border:1px solid #fff3;border-radius:18px;align-items:center;gap:11px;padding:18px 34px;font-family:Archivo;font-size:17px;font-weight:700;text-decoration:none;display:inline-flex;position:relative;box-shadow:inset 0 1px #fff6,0 14px 34px #0a6fe080}.contact-cta:hover{transform:translateY(-2px)}.contact-cta:active{transform:scale(.97)}.footer{text-align:center;margin-top:90px}.foot-banner{letter-spacing:-.04em;padding:10px 0;font-family:Archivo;font-size:clamp(34px,9vw,120px);font-weight:900;line-height:.9}.foot-meta{border-top:1px solid var(--line);color:var(--ink-3);letter-spacing:.08em;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-top:30px;padding-top:24px;font-family:JetBrains Mono;font-size:12.5px;display:flex}.home-ind{justify-content:center;margin-top:34px;display:flex}.home-ind i{background:#ffffff80;border-radius:5px;width:138px;height:5px}.wc-case-row{margin-bottom:12px}.wc-case-label{letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:5px;font-family:JetBrains Mono;font-size:9px;display:inline-block}.wc-case-text{color:var(--ink-2);margin:0;font-size:12.5px;line-height:1.55}.wc-outcome-row{border-top:1px solid #ffffff0d;padding-top:10px}.wc-outcome-label{color:var(--green)!important}.wc-outcome-text{color:var(--ink-1)!important}.wc-actions{flex-wrap:wrap;gap:8px;margin-top:16px;display:flex}.wc-btn-primary{letter-spacing:.08em;color:#0c0d12;background:linear-gradient(135deg, var(--glow), var(--blue));cursor:pointer;border:none;border-radius:10px;flex:auto;justify-content:center;align-items:center;gap:5px;padding:9px 14px;font-family:JetBrains Mono;font-size:10.5px;font-weight:600;text-decoration:none;transition:opacity .2s,transform .15s;display:inline-flex}.wc-btn-primary:hover{opacity:.88;transform:translateY(-1px)}.wc-btn-primary:active{transform:scale(.97)}.wc-btn-secondary{letter-spacing:.08em;color:var(--ink-1);cursor:pointer;background:#ffffff0d;border:1px solid #ffffff17;border-radius:10px;flex:auto;justify-content:center;align-items:center;gap:5px;padding:9px 14px;font-family:JetBrains Mono;font-size:10.5px;font-weight:500;transition:background .2s,color .2s,transform .15s;display:inline-flex}.wc-btn-secondary:hover{color:var(--ink-0);background:#ffffff17;transform:translateY(-1px)}.wc-btn-secondary:active{transform:scale(.97)}.brand-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:52px;padding:18px 0;overflow:hidden}.bs-inner{align-items:center;gap:28px;display:flex}.bs-label{letter-spacing:.28em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;border-right:1px solid var(--line-strong);flex:none;padding-right:20px;font-family:JetBrains Mono;font-size:9.5px}.bs-track{flex:auto;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#0000,#000 10% 90%,#0000);mask-image:linear-gradient(90deg,#0000,#000 10% 90%,#0000)}.bs-logos{white-space:nowrap;gap:32px;animation:22s linear infinite scrollBrands;display:flex}.bs-logos span{letter-spacing:.04em;color:var(--ink-2);flex:none;font-family:Archivo;font-size:15px;font-weight:700;transition:color .3s}.bs-logos span:hover{color:var(--ink-0)}.bs-sep{color:var(--blue-soft);opacity:.5;flex:none}@keyframes scrollBrands{0%{transform:translate(0)}to{transform:translate(-50%)}}@media (prefers-reduced-motion:reduce){.bs-logos{animation:none}}.work-micro-cta{justify-content:center;margin-top:36px;display:flex}.work-cta-link{color:var(--ink-1);transition:color .2s, transform .2s var(--spring);border-radius:18px;align-items:center;gap:10px;padding:16px 28px;font-size:14.5px;font-weight:500;text-decoration:none;display:inline-flex}.work-cta-link:hover{color:var(--ink-0);transform:translateY(-2px)}.work-cta-link svg{color:var(--blue-soft);transition:transform .25s var(--ease)}.work-cta-link:hover svg{transform:translate(4px)}.testimonials{margin-top:104px}.test-grid{grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;display:grid}.testimonial-card{border-radius:22px;flex-direction:column;gap:20px;padding:28px;display:flex;position:relative;overflow:hidden}.testimonial-card:before{content:"“";color:var(--blue-soft);opacity:.08;pointer-events:none;font-family:Archivo;font-size:72px;font-weight:900;line-height:1;position:absolute;top:14px;right:20px}.test-quote{color:var(--ink-1);flex:auto;font-size:14.5px;line-height:1.72}.test-author{border-top:1px solid var(--line);align-items:center;gap:13px;padding-top:16px;display:flex}.test-avatar{background:linear-gradient(135deg, var(--glass-2), var(--glass-3));border:1px solid var(--line-strong);width:40px;height:40px;color:var(--blue-soft);border-radius:12px;flex:none;place-items:center;font-family:Archivo;font-size:13px;font-weight:700;display:grid}.test-name{color:var(--ink-0);font-family:Archivo;font-size:14px;font-weight:700}.test-role{letter-spacing:.1em;color:var(--blue-soft);margin-top:2px;font-family:JetBrains Mono;font-size:10.5px}.about-origin{font-weight:500;color:var(--ink-1)!important;margin-bottom:16px!important;font-size:16px!important;line-height:1.65!important}.about-market{letter-spacing:.06em;font-family:JetBrains Mono;color:var(--ink-3)!important;margin-top:8px!important;font-size:13px!important}.contact-timeline{letter-spacing:.16em;color:var(--blue-soft);opacity:.75;font-family:JetBrains Mono;font-size:11px;margin-top:10px!important}@media (width<=860px){.test-grid{grid-template-columns:1fr}.bs-label{display:none}.bs-track{-webkit-mask-image:none;mask-image:none}}body.light-mode .test-stars{color:var(--orange)}.proof-grid{flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:18px;display:flex}.testimonial-card.review-proof{flex:0 330px;gap:0;padding:10px}.testimonial-card.review-proof:before{display:none}.review-proof img,.review-proof video{border:1px solid var(--line);border-radius:14px;width:100%;height:auto;display:block}.testimonial-card.review-video{flex:0 300px}.review-video video{background:#000}@media (width<=720px){.proof-grid .testimonial-card.review-proof{flex:100%;max-width:430px}}.os-modal-backdrop{z-index:1000;-webkit-backdrop-filter:blur(16px)saturate(120%);opacity:0;pointer-events:none;transition:opacity .4s var(--ease);background:#050508bf;justify-content:center;align-items:center;padding:20px;display:flex;position:fixed;inset:0}.os-modal-backdrop.is-active{opacity:1;pointer-events:auto}.os-modal-window{width:100%;max-width:820px;height:85vh;max-height:640px;transition:transform .45s var(--spring);flex-direction:column;display:flex;transform:scale(.95)translateY(15px)}.os-modal-backdrop.is-active .os-modal-window{transform:none}.os-modal-body{-webkit-overflow-scrolling:touch;flex-direction:column;flex:1;gap:24px;padding:30px;display:flex;overflow-y:auto}.os-modal-body::-webkit-scrollbar{width:6px}.os-modal-body::-webkit-scrollbar-track{background:0 0}.os-modal-body::-webkit-scrollbar-thumb{background:#ffffff1a;border-radius:3px}.modal-header-hero{border-bottom:1px solid var(--line);grid-template-columns:140px 1fr;align-items:center;gap:24px;padding-bottom:24px;display:grid}.modal-hero-glyph{border-radius:20px;place-items:center;width:140px;height:140px;font-family:Archivo;font-size:64px;font-weight:900;display:grid}.modal-header-info .tag{letter-spacing:.16em;text-transform:uppercase;color:var(--blue-soft);font-family:JetBrains Mono;font-size:11px}.modal-header-info h2{color:var(--ink-0);margin-top:6px;font-family:Archivo;font-size:clamp(24px,4vw,36px);font-weight:800}.modal-header-info .techs{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.modal-header-info .techs span{color:var(--ink-1);background:#ffffff0a;border:1px solid #ffffff0f;border-radius:6px;padding:4px 9px;font-size:10.5px}.modal-desc-grid{grid-template-columns:1.1fr .9fr;gap:28px;display:grid}.modal-desc-col .ar{text-align:right;color:var(--ink-1);direction:rtl;margin-bottom:16px;font-family:Noto Sans Arabic;font-size:15.5px;line-height:1.85}.modal-desc-col p{color:var(--ink-2);margin-bottom:12px;font-size:14.5px;line-height:1.6}.modal-stats-col{flex-direction:column;gap:16px;display:flex}.modal-stat-box{border:1px solid var(--line);background:#0003;border-radius:14px;padding:16px}.modal-stat-box .lbl{color:var(--ink-3);text-transform:uppercase;letter-spacing:.1em;font-family:JetBrains Mono;font-size:10px}.modal-stat-box .val{color:var(--ink-0);margin-top:4px;font-family:Archivo;font-size:18px;font-weight:700}.modal-stat-box .desc{color:var(--ink-2);margin-top:4px;font-size:12px}.modal-footer{border-top:1px solid var(--line);justify-content:flex-end;gap:12px;padding-top:20px;display:flex}.modal-btn{cursor:pointer;border:none;border-radius:10px;align-items:center;gap:8px;padding:11px 22px;font-family:inherit;font-size:13.5px;font-weight:600;text-decoration:none;transition:transform .2s;display:inline-flex}.modal-btn.primary{background:linear-gradient(180deg, var(--blue-bright), var(--blue-deep));color:#fff;box-shadow:0 4px 12px rgba(var(--orange-rgb),.3);border:1px solid #ffffff2e}.modal-btn.secondary{color:var(--ink-1);border:1px solid var(--line);background:#ffffff0d}.modal-btn:hover{transform:translateY(-1px)}.modal-btn:active{transform:scale(.97)}.sys-log-console{z-index:900;width:280px;color:var(--cyan);pointer-events:none;opacity:0;transition:transform .4s var(--spring), opacity .4s;background:#08080cd9;border:1px solid #64d2ff33;border-radius:16px;padding:14px;font-family:JetBrains Mono,monospace;font-size:10.5px;position:fixed;bottom:20px;left:20px;transform:translateY(120px)scale(.9);box-shadow:0 10px 30px #0009}.sys-log-console.is-active{opacity:1;pointer-events:auto;transform:none}.sys-log-title{color:var(--ink-0);letter-spacing:.1em;border-bottom:1px solid #64d2ff26;justify-content:space-between;align-items:center;margin-bottom:8px;padding-bottom:6px;font-size:9.5px;font-weight:700;display:flex}.sys-log-title i{background:var(--cyan);width:6px;height:6px;box-shadow:0 0 8px var(--cyan);border-radius:50%}.sys-log-lines{color:var(--ink-1);flex-direction:column;gap:4px;display:flex}.sys-log-lines span{white-space:nowrap;text-overflow:ellipsis;display:block;overflow:hidden}.diagnostics-panel{flex-direction:column;gap:20px;display:flex}.diag-grid{grid-template-columns:repeat(2,1fr);gap:14px;display:grid}.diag-card{border:1px solid var(--line);background:#ffffff05;border-radius:12px;padding:16px}.diag-card h5{color:var(--ink-0);margin-bottom:8px;font-family:Archivo;font-size:13.5px;font-weight:700}.diag-card ul{color:var(--ink-2);flex-direction:column;gap:6px;font-family:JetBrains Mono;font-size:11px;list-style:none;display:flex}.diag-card ul b{color:var(--cyan)}.modal-case-hero{border:1px solid var(--line);background:#0000004d;border-radius:16px;width:100%;margin-bottom:20px;overflow:hidden;box-shadow:0 8px 32px #00000080}.modal-preview-img{object-fit:cover;width:100%;height:auto;display:block}.project-status-badge{text-transform:uppercase;color:#34c759;letter-spacing:.05em;background:#28c84026;border:1px solid #28c84040;border-radius:20px;align-items:center;gap:6px;margin-bottom:8px;padding:4px 10px;font-family:JetBrains Mono;font-size:10px;font-weight:700;display:inline-flex}.project-url-display{color:var(--cyan);margin-top:4px;font-family:JetBrains Mono;font-size:11px;text-decoration:none;display:block}.project-url-display:hover{text-decoration:underline}.modal-section-title{color:var(--blue-soft);text-transform:uppercase;letter-spacing:.1em;border-left:2px solid var(--blue-soft);margin-top:18px;margin-bottom:8px;padding-left:8px;font-family:JetBrains Mono;font-size:11px;font-weight:700}.modal-decision-list{flex-direction:column;gap:10px;padding:0;list-style:none;display:flex}.modal-decision-list li{border:1px solid var(--line);color:var(--ink-2);background:#ffffff05;border-radius:10px;padding:12px;font-size:13px;line-height:1.5}.modal-decision-list li b{color:var(--ink-0);margin-bottom:3px;font-size:13.5px;display:block}@media (width<=720px){.modal-header-hero{text-align:center;grid-template-columns:1fr;justify-items:center}.modal-desc-grid{grid-template-columns:1fr;gap:20px}.os-modal-window{height:90vh}.os-modal-body{padding:20px}}body.light-mode .glass{background:linear-gradient(#ffffffd1,#f4f8ffc2);box-shadow:inset 0 1px #ffffffe6,inset 0 -1px #00000008,0 16px 40px #0f10150d;border-color:#0f101512!important}body.light-mode .hero-window{background:linear-gradient(#ffffffd9,#f0f4fccc);box-shadow:inset 0 1px #ffffffe6,0 35px 80px #0f101512;border-color:#0f10151a!important}body.light-mode .bg-field:before{background:radial-gradient(circle at 30% 30%,#007aff24,#0000 62%)}body.light-mode .bg-field:after{background:radial-gradient(circle at 70% 70%,#bf5af21a,#0000 60%)}body.light-mode .bg-grid{background-image:linear-gradient(90deg,#0f101508 1px,#0000 1px),linear-gradient(#0f101508 1px,#0000 1px)}body.light-mode .monogram-disc,body.light-mode .about-photo .ph-mono{box-shadow:none;background:0 0}body.light-mode .win-chrome{background:linear-gradient(#fffc,#ffffff1a);border-bottom:1px solid #0f10150d!important}body.light-mode .sys-log-console{background:#ffffffd9;border:1px solid #007aff26;box-shadow:0 10px 30px #0f101514}body.light-mode .os-modal-body::-webkit-scrollbar-thumb{background:#00000026}body.light-mode .work-track::-webkit-scrollbar-thumb{background:#00000026}body.light-mode.mode-wireframe *{border-color:#00000026!important}body.light-mode.mode-wireframe .glass{background:#fff!important}body.light-mode .statusbar{color:var(--ink-0)!important;background:linear-gradient(#ffffffc2,#ffffff4d)!important;border-bottom:1px solid #0f10150d!important}body.light-mode nav.dock{background:linear-gradient(#ffffffb8,#f0f4fc85)!important;border:1px solid #0f10150f!important;box-shadow:inset 0 1px #ffffffd9,0 16px 40px #0f10150d!important}body.light-mode .dock-links a{color:var(--ink-1)!important}body.light-mode .dock-links a:hover{color:var(--ink-0)!important;background:#0f10150a!important}body.light-mode .dock-burger{color:var(--ink-0)!important;background:#0f10150a!important;border-color:#0f10150f!important}body.light-mode .toggle{color:var(--ink-1)!important;background:linear-gradient(#f8fafd,#ecf0f6)!important;border:1px solid #0f10150d!important;box-shadow:inset 0 1px #ffffffe6,0 6px 16px #0f101508!important}body.light-mode .toggle .lbl{color:var(--ink-0)!important}body.light-mode .toggle .st{color:var(--ink-2)!important}body.light-mode .toggle .ico{color:var(--ink-2)!important;background:#0f10150a!important}body.light-mode .toggle.on .ico{background:var(--_c,var(--blue))!important;color:#fff!important;box-shadow:0 4px 12px -2px var(--_c,var(--blue))!important}body.light-mode .toggle.on .st{color:var(--_c,var(--blue))!important}body.light-mode .metal{color:var(--ink-0)!important;background:linear-gradient(#e4e7ee 0%,#d5d9e5 48%,#c5c9d6 100%)!important;border:1px solid #0f10150f!important;box-shadow:inset 0 1.5px #ffffffe6,inset 0 -2px 4px #0000000a,0 10px 24px #0000000a,0 1px #fffc!important}body.light-mode .vstrip i{background:linear-gradient(180deg, var(--glow), #007aff40)!important}body.light-mode .vstrip span{color:var(--ink-1)!important}body.light-mode .vstrip .lab{color:var(--ink-2)!important}body.light-mode .about-photo{background:linear-gradient(160deg,#e8ecf3,#d2d7e2)!important;border-color:#0f101512!important}body.light-mode .os-modal-backdrop{background:#f0f3fab8!important}body.light-mode .os-modal-window{background:linear-gradient(#fff,#f2f5f9)!important;border:1px solid #0f101514!important;box-shadow:inset 0 1px #ffffffe6,0 30px 70px #0f101514!important}body.light-mode .modal-stat-box{background:#0f101505!important;border:1px solid #0f10150d!important}body.light-mode .modal-footer{border-top:1px solid #0f10150d!important}body.light-mode .modal-header-hero{border-bottom:1px solid #0f10150d!important}body.light-mode .diag-card{background:#0f101505!important;border:1px solid #0f10150d!important}body.light-mode .modal-case-hero{background:#0f10150a!important;border-color:#0f101514!important;box-shadow:0 10px 32px #0f101514!important}body.light-mode .modal-header-info .techs span{color:var(--ink-1)!important;background:#0f10150a!important;border:1px solid #0f101514!important}body.light-mode .modal-decision-list li{background:#0f101506!important;border:1px solid #0f10150f!important}body.light-mode .modal-btn.secondary{color:var(--ink-0)!important;background:#0f10150d!important;border:1px solid #0f10151a!important}body.light-mode .modal-stat-box .val,body.light-mode .modal-decision-list li b{color:var(--ink-0)!important}body.light-mode .channel{color:var(--ink-1)!important;background:linear-gradient(#f9fafc,#edf0f5)!important;border:1px solid #0f10150f!important;box-shadow:inset 0 1px #ffffffe6,0 8px 20px #0f101508!important}body.light-mode .channel:hover{color:var(--ink-0)!important;background:#fff!important}body.light-mode .theme-toggle{background:#ffffffb3;border:1px solid #0000000f;box-shadow:inset 0 1px #fffc,0 2px 6px #0000000d}body.light-mode .theme-toggle:hover{color:var(--ink-0);background:#ffffffe6}body.light-mode .theme-toggle .sun-icon{opacity:0;transform:scale(.4)rotate(45deg)}body.light-mode .theme-toggle .moon-icon{opacity:1;transform:scale(1)}body.light-mode .win-pill{color:var(--ink-2)!important;background:#0f10150a!important;border-color:#0f10150a!important}body.light-mode .sel-menu{background:#fff!important;border:1px solid #0f101514!important;box-shadow:0 8px 24px #0f10150f!important}body.light-mode .sel-menu button{color:var(--ink-0)!important;border-right:1px solid #0f10150f!important}body.light-mode .sel-menu button:hover{background:#0f10150a!important}body.light-mode .sel-menu:after{background:#fff!important;border-bottom:1px solid #0f101514!important;border-right:1px solid #0f101514!important}body.light-mode .mobile-nav-link{color:var(--ink-1)!important}body.light-mode .mobile-nav-link:hover{color:var(--ink-0)!important;background:#0f10150a!important}body.light-mode .navbtn{color:var(--ink-0)!important;background:linear-gradient(#fff,#eef1f6)!important;border:1px solid #0f101514!important;box-shadow:inset 0 1px #ffffffe6,0 8px 20px #0f10150f!important}body.light-mode .work-card{background:linear-gradient(#ffffffeb,#f4f8ffdb)!important;border-color:#0f101514!important;box-shadow:inset 0 1px #ffffffe6,0 18px 44px #0f101514!important}body.light-mode .wc-meta span{color:var(--ink-1)!important;background:#0f10150a!important;border:1px solid #0f101514!important}body.light-mode .wc-btn-secondary{color:var(--ink-0)!important;background:#0f10150a!important;border:1px solid #0f10151a!important}body.light-mode .wc-btn-secondary:hover{background:#0f101514!important}body.light-mode .wc-outcome-row{border-top-color:#0f101514!important}body.light-mode .sec-head h2{background:linear-gradient(128deg,#0f1015 0%,#3b3e4a 48%,#0a6fe0 110%)!important;-webkit-text-fill-color:transparent!important;color:#0000!important;-webkit-background-clip:text!important;background-clip:text!important}body.light-mode .foot-banner{background:linear-gradient(110deg, #0f1015 0%, #3b3e4a 15%, var(--blue) 35%, #2c2e39 50%, var(--purple) 70%, #3b3e4a 85%, #0f1015 100%)!important;-webkit-text-fill-color:transparent!important;color:#0000!important;-webkit-background-clip:text!important;background-clip:text!important}body.light-mode .bg-field:before{opacity:.6;filter:blur(95px);background:radial-gradient(circle at 30% 30%,#0a84ff52,#0000 60%);animation:18s ease-in-out infinite orbFloat1L}body.light-mode .bg-field:after{opacity:.55;filter:blur(95px);background:radial-gradient(circle at 70% 70%,#bf5af242,#0000 60%);animation:24s ease-in-out infinite orbFloat2L}@keyframes orbFloat1L{0%,to{transform:translate(0)scale(1)}30%{transform:translate(7vw,-5vw)scale(1.15)}65%{transform:translate(-5vw,6vw)scale(.88)}}@keyframes orbFloat2L{0%,to{transform:translate(0)scale(1)}35%{transform:translate(-7vw,4vw)scale(1.12)}70%{transform:translate(6vw,-6vw)scale(.9)}}@media (prefers-reduced-motion:reduce){body.light-mode .bg-field:before,body.light-mode .bg-field:after{animation:none!important}}body.mode-wireframe .bg-field,body.mode-wireframe .bg-noise{display:none!important}body.mode-wireframe .bg-grid{opacity:.15!important}body.mode-wireframe .glass,body.mode-wireframe .metal{-webkit-backdrop-filter:none!important;box-shadow:none!important;background:0 0!important;border:1px dashed #ffffff40!important}body.mode-wireframe .vstrip i,body.mode-wireframe .boot-bar i,body.mode-wireframe .bar i,body.mode-wireframe .meter .bar i{box-shadow:none!important;background:#fff!important}body.mode-wireframe .monogram-disc,body.mode-wireframe .monogram-disc:before{box-shadow:none!important;background:0 0!important;border:none!important}body.mode-wireframe .avatar,body.mode-wireframe .avatar i{background:0 0!important;border:none!important}body.mode-wireframe .avatar .ring-dot{box-shadow:none!important;background:#fff!important;border:2px solid #000!important}body.mode-wireframe .toggle.on .ico{color:#000!important;box-shadow:none!important;background:#fff!important}body.mode-wireframe .toggle.on .st{color:#fff!important}html[lang=en] .lang-ar,html[lang=ar] .lang-en{display:none!important}html[lang=ar]{direction:rtl}html[lang=en]{direction:ltr}html[lang=ar] body{font-family:Noto Sans Arabic,Inter,system-ui,sans-serif}html[lang=en] body{font-family:Inter,system-ui,sans-serif}html[lang=ar] .kicker{letter-spacing:.05em}html[lang=ar] .kicker:before{content:"";width:22px;height:1px;margin-left:9px;margin-right:0;background:linear-gradient(270deg, var(--blue-soft), transparent)!important}html[lang=ar] .sec-head,html[lang=ar] .about-body,html[lang=ar] .about-body .kicker{text-align:right}html[lang=ar] .sec-head p{margin-left:auto;margin-right:0}html[lang=ar] .about-photo .ph-status{left:18px;right:auto}html[lang=ar] .about-photo .ph-tag{left:auto;right:18px}html[lang=ar] .mode,html[lang=ar] .sys-card{text-align:right}html[lang=ar] .sys-card .ic{margin-left:auto;margin-right:0}html[lang=ar] .win-pill:before{margin-left:8px;margin-right:0}html[lang=ar] .avatar .ring-dot{left:-3px;right:auto}html[lang=ar] .contact-shell p{margin-left:auto;margin-right:auto}html[lang=ar] .home-ind{direction:ltr}html[lang=ar] .work-track-wrap,html[lang=ar] .work-track{direction:ltr!important}html[lang=ar] .work-card{text-align:right;direction:rtl}html[lang=ar] .btn-arrow{transform:rotate(180deg)}html[lang=ar] .dock-cta:hover .btn-arrow,html[lang=ar] .contact-cta:hover .btn-arrow,html[lang=ar] .modal-btn.primary:hover .btn-arrow{transform:rotate(180deg)translate(4px)}@media (width<=1080px){.hero-grid{grid-template-columns:1fr 1fr}.hero-core{order:-1;grid-column:1/-1;padding:14px 6px 4px}.work-card{flex:0 0 calc(50% - 10px)}.sys-grid,.about{grid-template-columns:1fr}}@media (width<=900px){.mode-readout{grid-template-columns:1fr;gap:18px}.contact-shell{padding:36px 28px}.modal-desc-grid{grid-template-columns:1fr;gap:20px}.dock-links a{padding:8px 10px;font-size:12.5px}.hero-strips .vstrip{width:48px;height:104px}}@media (width<=720px){.statusbar{display:none!important}.dock-links{display:none}.dock-burger{display:flex}nav.dock{width:calc(100% - 24px);top:max(12px, env(safe-area-inset-top));padding:8px 10px 8px 14px}nav.dock .lang-switcher,.dock-cta{display:none!important}.dock-brand small{letter-spacing:.14em}.hero-grid{grid-template-columns:1fr;gap:12px;padding:14px}.hero-grid .rail{gap:12px}.profile-card{padding:16px}.profile-meta{gap:8px;margin-top:12px}.profile-meta .row{font-size:12px}.socials{margin-top:14px}.widget{padding:14px}.hero{padding:14px 0 32px}.hero-title{margin-bottom:6px;font-size:clamp(38px,14vw,70px);line-height:.95}.hero-sub{margin-bottom:4px;font-size:14px;line-height:1.6}.hero-manifesto{padding:10px 14px;font-size:13.5px}.monogram-disc{width:96px;height:96px}.monogram-disc span{font-size:34px}.hero-strips{margin-top:10px;padding:0 12px 14px}.modebar{-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;border-radius:18px;justify-content:flex-start;gap:8px;padding:8px 12px;overflow-x:auto;flex-direction:row!important}.modebar::-webkit-scrollbar{display:none}.mode{scroll-snap-align:start;min-width:unset;flex:none;padding:10px 18px;font-size:11.5px}.mode-readout{grid-template-columns:1fr;gap:18px;padding:20px}.work-card{flex:0 0 100%}.navbtn{width:44px;height:44px}.about-body{padding:24px}.channels{flex-direction:column;align-items:stretch}.channel{justify-content:center;min-height:48px}.contact-shell{padding:30px 20px}.contact-cta{justify-content:center;width:100%;min-height:50px}.foot-meta{text-align:center;flex-direction:column;justify-content:center;gap:8px}.shell{padding:0 14px 70px}.sys-log-console,.cursor-dot,.cursor-aura{display:none!important}.glass,.hero-window,nav.dock,.statusbar,.os-modal-backdrop{-webkit-backdrop-filter:blur(12px)saturate(130%)!important}.os-modal-window{height:92vh!important;max-height:none!important}.modal-hero-glyph{width:110px;height:110px;font-size:48px}.modal-header-hero{text-align:center;grid-template-columns:1fr;justify-items:center}.modes,.work,.about,.systems,.contact{content-visibility:auto;contain-intrinsic-size:auto 640px}.diag-grid{grid-template-columns:1fr}}@media (width<=480px){.statusbar{padding:8px 14px;font-size:12px}.statusbar .sb-right{gap:7px}.statusbar .sb-right>span,.sig{display:none}.hero-title{font-size:clamp(40px,17vw,64px)}.hero-eyebrow{letter-spacing:.22em;font-size:9.5px}.win-pill{letter-spacing:.16em;padding:5px 10px;font-size:9.5px}.win-tools{display:none}.sec-head h2{font-size:clamp(26px,8vw,38px)}.foot-banner{font-size:clamp(30px,11vw,52px)}.hero-strips .vstrip{border-radius:14px;width:42px;height:92px}.wc-vis{height:160px}.os-modal-body{gap:18px;padding:16px}.modal-footer{flex-direction:column}.modal-btn{justify-content:center}}@media (width<=380px){.hero-grid{padding:14px}.hero-title{font-size:clamp(36px,18vw,54px)}.avatar{width:52px;height:52px}.cc-grid{grid-template-columns:1fr}.hero-strips{gap:7px}.about-photo{min-height:300px}.about-photo .ph-mono{width:128px;height:128px}}@supports (padding:max(0px)){.statusbar{padding-left:max(22px, env(safe-area-inset-left));padding-right:max(22px, env(safe-area-inset-right));padding-top:max(9px, env(safe-area-inset-top))}.shell{padding-left:max(18px, env(safe-area-inset-left));padding-right:max(18px, env(safe-area-inset-right));padding-bottom:max(90px, calc(70px + env(safe-area-inset-bottom)))}.sys-log-console{bottom:max(20px, env(safe-area-inset-bottom));left:max(20px, env(safe-area-inset-left))}}@media (pointer:coarse){.dock-links a,.mobile-nav-link{padding:12px 16px}.lang-switcher span{padding:6px 10px;font-size:11px}.theme-toggle{width:36px;height:36px}.work-dots i{width:10px;height:10px}.work-dots i.active{width:26px}}@media (width<=720px){.glass,.hero-window,.statusbar,nav.dock,.win-chrome,.os-modal-backdrop{-webkit-backdrop-filter:blur(12px)saturate(140%)!important}}.sec-head h2{background:linear-gradient(128deg,#f4f6fb 0%,#c5cad6 48%,#5aa9ff 110%);-webkit-text-fill-color:transparent;color:#0000;-webkit-background-clip:text;background-clip:text}.kicker{color:var(--blue)}.kicker:before{background:linear-gradient(90deg, var(--blue), transparent);opacity:.75}.mode{position:relative}.mode.active:before{content:"";background:linear-gradient(90deg, transparent, rgba(var(--orange-rgb), 1), var(--glow), transparent);border-radius:0 0 3px 3px;height:2px;position:absolute;top:0;left:12%;right:12%}.work-card:hover{border-color:rgba(var(--orange-rgb), .28)!important;box-shadow:inset 0 1px 0 #ffffff1a, 0 18px 44px #0000008c, 0 0 28px -6px rgba(var(--orange-rgb), .22)!important}.sys-card{transition:border-color .35s var(--ease), box-shadow .35s var(--ease);border-left:2px solid #0000}.sys-card:hover{border-left-color:rgba(var(--orange-rgb), .5);box-shadow:inset 0 1px 0 #ffffff1f, -3px 0 18px -6px rgba(var(--orange-rgb), .25), 0 18px 44px #00000080}.sys-card .num{color:rgba(var(--orange-rgb), 1);font-weight:600}.about-photo:before{content:"";background:radial-gradient(circle at 50% 36%, rgba(var(--orange-rgb), .06) 0%, transparent 52%), radial-gradient(circle at 12% 80%, #bf5af20d 0%, transparent 42%), radial-gradient(circle at 88% 75%, rgba(var(--orange-rgb), .02) 0%, transparent 38%);pointer-events:none;z-index:0;position:absolute;inset:0}.about-photo .ph-mono,.about-photo .ph-tag,.about-photo .ph-status{z-index:2;position:relative}.ph-badge{z-index:3;-webkit-backdrop-filter:blur(16px);background:#14151cd1;border:1px solid #ffffff1a;border-radius:14px;flex-direction:column;align-items:center;gap:2px;padding:10px 15px;animation:5s ease-in-out infinite badgeFloat;display:flex;position:absolute;box-shadow:inset 0 1px #ffffff1a,0 10px 28px #00000073}.ph-badge:nth-child(5){animation-delay:2.5s}.ph-badge .bv{letter-spacing:-.025em;color:var(--ink-0);font-family:Archivo;font-size:22px;font-weight:800;line-height:1}.ph-badge .bk{letter-spacing:.18em;text-transform:uppercase;color:rgba(var(--orange-rgb), 1);white-space:nowrap;font-family:JetBrains Mono;font-size:8.5px}.ph-badge-tl{top:22px;left:22px}.ph-badge-br{bottom:52px;right:22px}@keyframes badgeFloat{0%,to{transform:translateY(0)}50%{transform:translateY(-4px)}}@media (prefers-reduced-motion:reduce){.ph-badge{animation:none}}.contact-shell:after{content:"";border-radius:inherit;background:radial-gradient(circle at 12% 88%, rgba(var(--orange-rgb), .05) 0%, transparent 42%), radial-gradient(circle at 88% 12%, #bf5af20a 0%, transparent 40%);pointer-events:none;z-index:0;position:absolute;inset:0}.contact-shell .kicker,.contact-shell h2,.contact-shell p,.contact-shell .channels,.contact-shell .contact-cta{z-index:1;position:relative}.contact-cta{box-shadow:inset 0 1px 0 #fff6, 0 14px 34px rgba(var(--orange-rgb),.35), 0 0 24px -4px rgba(var(--orange-rgb),.2)!important}.foot-banner{background:linear-gradient(110deg, #fff 0%, #c8d0e0 15%, rgba(var(--orange-rgb), 1) 35%, #e8ecf4 50%, var(--purple) 70%, #c8d0e0 85%, #fff 100%)!important;color:#0000!important;background-size:220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;animation:12s linear infinite footSheen!important}@keyframes footSheen{0%{background-position:0%}to{background-position:220%}}@media (prefers-reduced-motion:reduce){.foot-banner{background-position:50%!important;animation:none!important}}.socials a.metal{border-radius:12px;transition:background .2s, color .2s, border-color .2s, transform .2s var(--spring)!important}.socials a.metal:hover{background:rgba(var(--orange-rgb),.12)!important;color:rgba(var(--orange-rgb), 1)!important;border-color:rgba(var(--orange-rgb),.28)!important}.channel:hover svg{color:rgba(var(--orange-rgb), 1)!important}.channel:hover{border-color:rgba(var(--orange-rgb),.2)!important}.avatar .ring-dot{animation:2.6s ease-in-out infinite dotPulse}@keyframes dotPulse{0%,to{box-shadow:0 0 10px var(--green)}50%{box-shadow:0 0 20px var(--green), 0 0 36px #30d15838}}@media (prefers-reduced-motion:reduce){.avatar .ring-dot{animation:none}}.dock-cta{box-shadow:inset 0 1px 0 #fff6, 0 8px 20px rgba(var(--orange-rgb),.3), 0 0 18px -4px rgba(var(--orange-rgb),.15)!important}.hero-eyebrow{opacity:0;color:rgba(var(--orange-rgb), 1)!important}.win-pill:before{animation:3s ease-in-out infinite pillPulse}@keyframes pillPulse{0%,to{box-shadow:0 0 8px var(--green);opacity:1}50%{box-shadow:0 0 14px var(--green);opacity:.55}}@media (prefers-reduced-motion:reduce){.win-pill:before{animation:none}}.work-card:hover .wc-vis img{opacity:1!important;transform:scale(1.04)!important}.wc-vis img{transition:opacity .4s var(--ease), transform .5s var(--ease)}.meter .bar i{box-shadow:0 0 8px rgba(var(--orange-rgb),.3)}.about-body .kicker{margin-bottom:20px;display:inline-flex}.navbtn:hover{box-shadow:inset 0 1px 0 #fff3, 0 8px 20px #00000073, 0 0 16px -4px rgba(var(--orange-rgb),.2)!important}@media (width<=480px){.ph-badge{display:none}}.hero-manifesto{text-align:left;border-left:2px solid rgba(var(--orange-rgb),.4)!important;background:rgba(var(--orange-rgb),.05)!important;border-top:none!important;border-bottom:none!important;border-right:none!important;border-radius:0 12px 12px 0!important}.testimonial-card{transition:transform .2s var(--spring), box-shadow .3s, border-color .3s}.testimonial-card:hover{transform:translateY(-3px);border-color:rgba(var(--orange-rgb),.15)!important;box-shadow:inset 0 1px 0 #ffffff1a, 0 24px 56px #0000008c, 0 0 28px -8px rgba(var(--orange-rgb),.12)!important}.brand-strip{transition:background .3s}.brand-strip:hover .bs-logos span{color:var(--ink-1)}.work-micro-cta .work-cta-link{background:linear-gradient(90deg, rgba(var(--orange-rgb),.04), #bf5af208)}.work-micro-cta .work-cta-link:hover{background:linear-gradient(90deg, rgba(var(--orange-rgb),.07), #bf5af20d)}#osBrandLabel:hover{color:var(--blue-soft)!important}.test-stars{letter-spacing:2px;color:var(--orange);margin-bottom:12px;font-size:13px;display:block}.sys-card,.testimonial-card{position:relative;overflow:hidden}.sys-card:after,.testimonial-card:after{content:"";transition:background-position .55s var(--ease);pointer-events:none;border-radius:inherit;background:linear-gradient(105deg,#0000 35%,#ffffff0d 50%,#0000 65%) 200% 0/250% 100%;position:absolute;inset:0}.sys-card:hover:after,.testimonial-card:hover:after{background-position:-50% 0}.hero-btn-primary,.contact-cta,.dock-cta{will-change:transform}.scroll-rail{z-index:1000;pointer-events:all;flex-direction:column;gap:10px;display:flex;position:fixed;top:50%;right:22px;transform:translateY(-50%)}.scroll-rail-dot{width:6px;height:6px;transition:all .35s var(--spring);background:#fff3;border:1px solid #ffffff1f;border-radius:50%;display:block;position:relative}.scroll-rail-dot:after{content:attr(title);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap;opacity:0;pointer-events:none;font-family:JetBrains Mono;font-size:9.5px;transition:opacity .2s;position:absolute;top:50%;right:16px;transform:translateY(-50%)}.scroll-rail-dot:hover:after{opacity:1}.scroll-rail-dot.active{background:var(--blue-soft);border-color:var(--blue-soft);box-shadow:0 0 10px rgba(var(--orange-rgb), .3);border-radius:3px;height:20px}@media (width<=900px){.scroll-rail{display:none}}body.light-mode .scroll-rail-dot{background:#00000026;border-color:#0000001a}body.light-mode .scroll-rail-dot.active{background:var(--blue);border-color:var(--blue)}#winPillText{vertical-align:middle;display:inline-block}.wc-vis:before{transition:opacity .4s var(--ease)!important}.work-card:hover .wc-vis:before{opacity:.55!important}.sec-head h2{background-size:200% 100%;animation:8s linear infinite headShimmer}@keyframes headShimmer{0%{background-position:100% 0}to{background-position:-100% 0}}@media (prefers-reduced-motion:reduce){.sec-head h2{background-position:0 0;animation:none}}.hero-sub b{background:linear-gradient(90deg, var(--ink-0), var(--blue-soft));-webkit-text-fill-color:transparent;-webkit-background-clip:text;background-clip:text}.wc-body{z-index:1;position:relative}.about-photo{transition:box-shadow .4s var(--ease)}.about-photo:hover{box-shadow:inset 0 1px 0 #ffffff1f, 0 30px 70px #0009, -8px 0 40px -12px rgba(var(--orange-rgb),.1)!important}</style>
+</head>
+
+<body>
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <!-- THE WORLD — WebGL space layer (lives behind the glass) -->
+  <div id="space"></div>
+
+  <!-- ambient -->
+  <div class="bg-field"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+
+  <!-- SCROLL RAIL — right-side section indicator (hidden on mobile via CSS) -->
+  <nav class="scroll-rail" id="scrollRail" aria-label="Section navigation">
+    <a class="scroll-rail-dot" href="#top" title="Hero" aria-label="Hero"></a>
+    <a class="scroll-rail-dot" href="#work" title="Work" aria-label="Work"></a>
+    <a class="scroll-rail-dot" href="#about" title="About" aria-label="About"></a>
+    <a class="scroll-rail-dot" href="#systems" title="Approach" aria-label="Approach"></a>
+    <a class="scroll-rail-dot" href="#modes" title="Services" aria-label="Services"></a>
+    <a class="scroll-rail-dot" href="#contact" title="Contact" aria-label="Contact"></a>
+  </nav>
+
+  <!-- BOOT — space forms behind this overlay -->
+  <div id="boot">
+    <div class="boot-mark"><img src="assets/lokalita-logo.png" alt="Lokalita" width="88" height="88"
+        style="width:100%;height:100%;object-fit:cover;border-radius:22px;"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="chrome-text"
+        style="display:none">L</span></div>
+    <div class="boot-label">Loading Lokalita...</div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-pct">0%</div>
+  </div>
+
+  <!-- STATUS BAR -->
+  <div class="statusbar">
+    <span class="sb-time" id="sbTime">9:41</span>
+    <span class="sb-indicator" style="font-family:'JetBrains Mono';font-size:10.5px;color:var(--green);display:inline-flex;align-items:center;gap:6px;margin-left:14px;"><i class="pulse-dot" style="width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);display:inline-block;"></i>SHOPIFY API: 100% UPTIME</span>
+    <div class="sb-right">
+      <button class="theme-toggle" aria-label="Toggle light and dark mode">
+        <svg class="sun-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <svg class="moon-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+      </button>
+      <div class="lang-switcher" role="group" aria-label="Language Selection">
+        <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0"
+          aria-label="Switch to English">EN</span>
+        <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
+      </div>
+      <button id="osBrandLabel"
+        style="background:none;border:none;cursor:pointer;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;color:var(--ink-2);padding:0;margin-right:12px;"
+        title="Open platform audit status">LOKALITA.WORKFLOW</button>
+      <span class="sb-stat-item" style="font-family:'JetBrains Mono';font-size:10.5px;color:var(--ink-3);display:inline-flex;align-items:center;gap:4px;margin-right:12px;">
+        <span class="lang-en">PIXEL SYNC: OK</span><span class="lang-ar">البكسل: متزامن</span>
+      </span>
+      <span class="sb-stat-item" style="font-family:'JetBrains Mono';font-size:10.5px;color:var(--ink-3);display:inline-flex;align-items:center;gap:4px;">
+        <span class="lang-en">CDN: ACTIVE</span><span class="lang-ar">الشبكة: نشطة</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- NAV DOCK -->
+  <nav class="dock" id="dock">
+    <div class="dock-brand">
+      <div class="dock-mono"><span class="chrome-text">L</span><img src="assets/lokalita-logo.png" alt="Lokalita"
+          width="34" height="34" decoding="async" onerror="this.remove()"></div>
+      <div>
+        <span class="lang-en">Lokalita<small>Shopify Ecommerce</small></span>
+        <span class="lang-ar">لوكاليتا<small>تجارة إلكترونية</small></span>
+      </div>
+    </div>
+    <div class="dock-links">
+      <a href="#work"><span class="lang-en">Work</span><span class="lang-ar">أعمالنا</span></a>
+      <a href="#about"><span class="lang-en">About</span><span class="lang-ar">عنّا</span></a>
+      <a href="#systems"><span class="lang-en">Approach</span><span class="lang-ar">المنهجية</span></a>
+      <a href="#modes"><span class="lang-en">Services</span><span class="lang-ar">خدماتنا</span></a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="lang-switcher" role="group" aria-label="Language Selection">
+        <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0"
+          aria-label="Switch to English">EN</span>
+        <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
+      </div>
+      <a href="#contact" class="dock-cta" style="display: inline-flex; align-items: center; gap: 6px;">
+        <span class="lang-en">Start a Project</span>
+        <span class="lang-ar">ابدأ مشروعك</span>
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+    <button class="dock-burger" id="burger" aria-label="menu">
+      <i></i>
+      <i></i>
+      <i></i>
+    </button>
+  </nav>
+
+  <div class="shell">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top" tabindex="-1">
+      <div class="hero-window" data-reveal data-parallax-root>
+        <div class="win-chrome">
+          <div class="win-dots"><i></i><i></i><i></i></div>
+          <div class="win-pill" id="winPill"><span id="winPillText">lokalita.com · live</span></div>
+          <div class="win-tools"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="hero-grid">
+          <!-- LEFT RAIL -->
+          <div class="rail" data-px="0.4">
+            <div class="glass profile-card">
+              <div class="avatar-wrap">
+                <div class="avatar"><i>L</i><img src="assets/lokalita-logo.png" alt="Lokalita" width="60" height="60"
+                    decoding="async" onerror="this.remove()"><span class="ring-dot"></span></div>
+                <div>
+                  <h3>Lokalita</h3>
+                  <div class="role">
+                    <span class="lang-en">Shopify Ecommerce Partner</span>
+                    <span class="lang-ar">شريك شوبيفاي المعتمد</span>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-meta">
+                <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" stroke="currentColor"
+                      stroke-width="1.6" />
+                    <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6" />
+                  </svg> <span class="lang-en">Cairo, Egypt · GMT+2</span><span class="lang-ar">القاهرة، مصر ·
+                    GMT+2</span></div>
+                <div class="row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                  </svg> <span class="lang-en">Consultations Open</span><span class="lang-ar">الاستشارات مفتوحة</span></div>
+              </div>
+              <div class="socials">
+                <a class="metal" href="mailto:lokalita75@gmail.com" aria-label="Email" title="Email" target="_blank"
+                  rel="noopener">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6" />
+                    <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" />
+                  </svg>
+                </a>
+                <a class="metal" href="https://www.facebook.com/profile.php?id=61579605985661" aria-label="Facebook"
+                  title="Facebook" target="_blank" rel="noopener noreferrer">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
+                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <a class="metal" href="https://www.instagram.com/lokalitaeg/" aria-label="Instagram" title="Instagram"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" />
+                    <circle cx="17" cy="7" r="1" fill="currentColor" />
+                  </svg>
+                </a>
+                <a class="metal" href="https://wa.me/201118630150" aria-label="WhatsApp" title="WhatsApp"
+                  target="_blank" rel="noopener noreferrer">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                      stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="glass" style="padding:16px">
+              <div class="cc-title">
+                <span class="lang-en">UI Optimization</span>
+                <span class="lang-ar">تحسين واجهة العرض</span>
+              </div>
+              <div class="cc-grid">
+                <button class="toggle on" data-c="ai" aria-pressed="true"
+                  aria-label="Toggle motion engine">
+                  <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.5-6.5-2 2m-7 7-2 2m13 0-2-2m-7-7-2-2"
+                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" />
+                    </svg></span>
+                  <span>
+                    <span class="lbl"><span class="lang-en">Motion Engine</span><span class="lang-ar">محرك الحركة</span></span><br>
+                    <span class="st"><span class="lang-en">Active</span><span class="lang-ar">شغّال</span></span>
+                  </span>
+                </button>
+                <button class="toggle on" data-c="design" aria-pressed="true"
+                  aria-label="Toggle Blueprint wireframe mode">
+                  <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                      <path d="M6 2h12l4 10-10 10L2 12Z" stroke="currentColor" stroke-width="1.5"
+                        stroke-linejoin="round" />
+                      <circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.5" />
+                    </svg></span>
+                  <span>
+                    <span class="lbl"><span class="lang-en">Store Schema</span><span
+                        class="lang-ar">مخطط المتجر</span></span><br>
+                    <span class="st"><span class="lang-en">Render On</span><span class="lang-ar">شغّال</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER CORE -->
+          <div class="hero-core" data-px="0.15">
+            <div class="hero-eyebrow">
+              <span class="lang-en">// Shopify Partner · Cairo, Egypt</span>
+              <span class="lang-ar">// شريك شوبيفاي · القاهرة، مصر</span>
+            </div>
+            <div class="monogram-disc" data-px="0.7"><span class="chrome-text">L</span><img
+                src="assets/lokalita-logo.png" alt="Lokalita" width="124" height="124" decoding="async"
+                onerror="this.remove()"></div>
+            <h1 class="hero-title">
+              <span class="line"><span class="word-i shine chrome-text">LOKALITA</span></span>
+              <span class="line"><span class="name-target" id="nameTarget"><span
+                    class="word-i shine chrome-text">SHOPIFY</span></span></span>
+            </h1>
+            <p class="hero-sub">
+              <span class="lang-en">We build, launch, and scale high-converting Shopify storefronts. By integrating custom commerce engineering, visual positioning, and conversion strategy, we deliver commercial platforms that run efficiently.</span>
+              <span class="lang-ar"
+                style="font-family:'Noto Sans Arabic'; font-size:15.5px; direction:rtl; text-align:center; line-height:1.75; display:block;">نصمم ونطور وننمي متاجر شوبيفاي عالية الأداء. ندمج استراتيجية العلامة البصرية، والهندسة المخصصة للتجارة، وحسابات النمو الرقمي لنقدم منصات تجارية تعمل بكفاءة تامة.</span>
+            </p>
+            <div class="hero-manifesto">
+              <span class="lang-en">An ecommerce store is a commercial engine. We optimize every interaction and collection layout to turn visitors into conversions.</span>
+              <span class="lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;display:block;">المتجر الإلكتروني هو محرك مبيعات متكامل. نحسن كل تفاعل وتقسيم للمنتجات لتحويل الزوار إلى عملاء فعليين.</span>
+            </div>
+            <div class="hero-cta-row">
+              <a href="#work" class="hero-btn-primary lang-en">Explore Case Studies <svg class="btn-arrow" width="14"
+                  height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg></a>
+              <a href="#work" class="hero-btn-primary lang-ar" style="font-family:'Noto Sans Arabic'">استعراض دراسات الحالة <svg
+                  class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg></a>
+              <a href="#contact" class="hero-btn-ghost lang-en">Schedule Consultation →</a>
+              <a href="#contact" class="hero-btn-ghost lang-ar" style="font-family:'Noto Sans Arabic'">← احجز استشارة</a>
+            </div>
+          </div>
+
+          <!-- RIGHT RAIL -->
+          <div class="rail" data-px="0.4">
+            <div class="glass widget w-clock" style="padding:18px;display:flex;flex-direction:column;gap:14px;text-align:left;">
+              <div class="cc-title" style="padding-bottom:2px;border-bottom:1px solid var(--line);margin-bottom:4px;font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.12em;">
+                <span class="lang-en">Shopify Workspace</span>
+                <span class="lang-ar">بيئة عمل شوبيفاي</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;font-family:'JetBrains Mono';font-size:11px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="color:var(--ink-2);"><span class="lang-en">Store Engine:</span><span class="lang-ar">محرك المتجر:</span></span>
+                  <span style="color:var(--green);font-weight:bold;"><span class="lang-en">Active</span><span class="lang-ar">نشط</span></span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="color:var(--ink-2);"><span class="lang-en">Tracking Pixels:</span><span class="lang-ar">البكسل والتتبع:</span></span>
+                  <span style="color:var(--green);"><span class="lang-en">Synced</span><span class="lang-ar">متزامن</span></span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="color:var(--ink-2);"><span class="lang-en">Cairo Head:</span><span class="lang-ar">توقيت القاهرة:</span></span>
+                  <span id="cairoTime" style="color:var(--ink-1);">9:41 PM</span>
+                </div>
+              </div>
+              <div class="sys" style="margin-top:6px;display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono';font-size:10px;color:var(--green);text-transform:uppercase;">
+                <i style="width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 9px var(--green);display:inline-block;"></i>
+                <span class="lang-en">Merchant Active</span>
+                <span class="lang-ar">المنصة متصلة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- decorative control strips -->
+        <div class="hero-strips" data-px="0.25">
+          <a href="#systems" class="vstrip metal" title="View Approach"><span><svg width="15" height="15"
+                viewBox="0 0 24 24" fill="none">
+                <path d="M12 18V6m0 0-4 4m4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg></span><i style="height:72%"></i><span class="lab">Strategy</span></a>
+          <a href="#work" class="vstrip metal" title="View Work"><span><svg width="15" height="15" viewBox="0 0 24 24"
+                fill="none">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" />
+                <path d="M12 3v2m0 14v2m9-9h-2M5 12H3" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" />
+              </svg></span><i style="height:88%"></i><span class="lab">Product</span></a>
+          <a href="#modes" class="vstrip metal" title="View Disciplines"><span><svg width="15" height="15"
+                viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M5 8h14M5 16h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg></span><i style="height:55%"></i><span class="lab">Systems</span></a>
+        </div>
+      </div>
+
+      <!-- scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="lang-en">explore work ↓</span>
+        <span class="lang-ar">استعرض الأعمال ↓</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- ===== BRAND LOGO STRIP ===== -->
+    <section class="brand-strip" aria-hidden="true">
+      <div class="bs-inner" data-reveal>
+        <span class="bs-label lang-en">Clients</span>
+        <span class="bs-label lang-ar" style="font-family:'Noto Sans Arabic'">عملاؤنا</span>
+        <div class="bs-track">
+          <div class="bs-logos">
+            <span>Royal Sea</span><span class="bs-sep">·</span>
+            <span>Medieval Aloud</span><span class="bs-sep">·</span>
+            <span>Seafood Mood</span><span class="bs-sep">·</span>
+            <span>UNITED</span><span class="bs-sep">·</span>
+            <span>Pantoufla</span><span class="bs-sep">·</span>
+            <span>The Fishmonger</span><span class="bs-sep">·</span>
+            <!-- duplicate for seamless loop -->
+            <span>Royal Sea</span><span class="bs-sep">·</span>
+            <span>Medieval Aloud</span><span class="bs-sep">·</span>
+            <span>Seafood Mood</span><span class="bs-sep">·</span>
+            <span>UNITED</span><span class="bs-sep">·</span>
+            <span>Pantoufla</span><span class="bs-sep">·</span>
+            <span>The Fishmonger</span><span class="bs-sep">·</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SELECTED WORK (cards render from js/data/projects.js) ===== -->
+    <section class="work" id="work">
+      <div class="work-head">
+        <div class="sec-head" style="margin-bottom:0" data-reveal>
+          <span class="kicker">
+            <span class="lang-en">Selected Work</span>
+            <span class="lang-ar">شغل مختار</span>
+          </span>
+          <h2>
+            <span class="lang-en">Selected work.</span>
+            <span class="lang-ar">أعمال مختارة.</span>
+          </h2>
+        </div>
+        <div class="work-nav" data-reveal>
+          <button class="navbtn" id="prevBtn" aria-label="previous"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></button>
+          <button class="navbtn" id="nextBtn" aria-label="next"><svg width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></button>
+        </div>
+      </div>
+
+      <div class="work-track-wrap" data-reveal>
+        <div class="work-track" id="workTrack"><!-- rendered by js/os/carousel.js --></div>
+      </div>
+      <div class="work-dots" id="workDots"></div>
+
+      <!-- micro-CTA after work -->
+      <div class="work-micro-cta" data-reveal>
+        <a href="#contact" class="glass work-cta-link">
+          <span class="lang-en">Have a project in mind? Let's talk.</span>
+          <span class="lang-ar" style="font-family:'Noto Sans Arabic';direction:rtl;">عندك مشروع؟ تواصل معنا.</span>
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <div class="about-photo" data-reveal>
+        <div class="ph-badge ph-badge-tl">
+          <span class="bv">15+</span>
+          <span class="bk">Stores Launched</span>
+        </div>
+        <div class="ph-mono"><span>L</span><img src="assets/lokalita-logo.png" alt="Lokalita" width="160" height="160"
+            loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="ph-badge ph-badge-br">
+          <span class="bv">Cairo</span>
+          <span class="bk">Egypt</span>
+        </div>
+        <div class="ph-status"><i></i> ACTIVE</div>
+        <div class="ph-tag">
+          <span class="lang-en">// shopify partner · eg</span>
+          <span class="lang-ar">// شريك شوبيفاي · مصر</span>
+        </div>
+      </div>
+      <div class="glass about-body" data-reveal data-d="1">
+        <span class="kicker">
+          <span class="lang-en">system://about</span>
+          <span class="lang-ar">عن لوكاليتا</span>
+        </span>
+        <div class="lang-ar">
+          <p
+            style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:15px; line-height:1.85; color:var(--ink-2); margin-bottom:10px;">
+            كثير من أصحاب العلامات التجارية الذين نتحدث إليهم لديهم الفكرة الصحيحة، لكنهم يتعثرون في التنفيذ. المتجر لا يبيع، الهوية لا تعكس المنتج، أو العمليات تستهلك وقتهم بدلاً من توليد الدخل. هذه هي المشاكل التي نحلها.
+          </p>
+          <p
+            style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:17px; line-height:1.95; color:var(--ink-1); margin-bottom:14px;">
+            نبني متاجر شوبيفاي احترافية ونساعد العلامات التجارية على الإطلاق والنمو. من تصميم الهوية البصرية إلى برمجة المتجر والتسويق الرقمي — كل شيء في مشروع واحد منسجم.</p>
+          <p
+            style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:15px; line-height:1.8; color:var(--ink-2); margin-bottom:14px;">
+            لا نبيع قوالب جاهزة. كل مشروع يبدأ بفهم عميق للمنتج والسوق والعميل — ثم نبني حوله ما يناسبه تحديداً.</p>
+          <p
+            style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right; font-size:14.5px; line-height:1.75; color:var(--ink-2);">
+            مقرنا القاهرة. نعمل مع عملاء في مصر ومنطقة الخليج.</p>
+        </div>
+        <div class="lang-en">
+          <p class="about-origin">Many brand owners we work with have a clear product and a real market — but the store isn't converting, the identity doesn't match what they sell, or operations are eating into time that should be spent growing.</p>
+          <p>We build Shopify stores from the ground up and help brands launch properly. That means brand identity, store development, and a go-to-market plan — not as separate projects, but as one cohesive engagement.</p>
+          <p>We don't sell templates or generic setups. Every project starts with understanding the business, the product, and the customer — then we build what fits.</p>
+          <p class="about-market">Based in Cairo. Working with brands across Egypt and the Gulf.</p>
+        </div>
+        <div class="about-tags lang-en">
+          <span>Shopify Development</span><span>Brand Identity</span><span>Store Design</span><span>Performance Marketing</span><span>Go-to-Market</span><span>Conversion Optimization</span>
+        </div>
+        <div class="about-tags lang-ar">
+          <span>تطوير شوبيفاي</span><span>هوية العلامة</span><span>تصميم المتجر</span><span>تسويق رقمي</span><span>إطلاق للسوق</span><span>تحسين التحويلات</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <!-- TESTIMONIALS — general, anonymous client reviews (no names/brands). -->
+    <section class="testimonials" id="testimonials">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">
+          <span class="lang-en">Client Voices</span>
+          <span class="lang-ar">آراء العملاء</span>
+        </span>
+        <h2>
+          <span class="lang-en">Some of what<br>clients have said.</span>
+          <span class="lang-ar">بعض آراء<br>العملاء.</span>
+        </h2>
+      </div>
+      <div class="test-grid proof-grid">
+        <figure class="glass testimonial-card review-proof" data-reveal data-d="1">
+          <picture>
+            <source type="image/webp" srcset="assets/review-1.webp"><img src="assets/review-1.jpg"
+              alt="Client review message" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <figure class="glass testimonial-card review-proof review-video" data-reveal data-d="2">
+          <video controls playsinline preload="metadata">
+            <source src="assets/review-video.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="glass testimonial-card review-proof" data-reveal data-d="3">
+          <picture>
+            <source type="image/webp" srcset="assets/review-2.webp"><img src="assets/review-2.jpg"
+              alt="Client review message" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== HOW I THINK / WORKFLOW ===== -->
+    <section class="systems" id="systems">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">
+          <span class="lang-en">core://approach</span>
+          <span class="lang-ar">كيف نعمل</span>
+        </span>
+        <h2>
+          <span class="lang-en">How we work.</span>
+          <span class="lang-ar">كيف نعمل.</span>
+        </h2>
+        <p class="lang-en">Every project follows the same discipline — understand the business first, then build. No assumptions, no guesswork.</p>
+        <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">كل مشروع يبدأ بفهم البيزنس أولاً، ثم البناء. لا افتراضات، لا تخمين.
+        </p>
+      </div>
+      <div class="sys-grid">
+        <div class="glass sys-card" data-reveal data-d="1">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+              <path d="M12 6v6l4 2" />
+            </svg></div>
+          <div class="num">01 / DISCOVERY</div>
+          <h3><span class="lang-en">Understand the Business</span><span class="lang-ar">فهم البيزنس</span></h3>
+          <p class="lang-en">We start by understanding the product, the market, and the customer. What's selling, what isn't, and why. This shapes everything that comes after.</p>
+          <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">نبدأ بفهم المنتج والسوق والعميل. ما الذي يباع، ما الذي لا يباع، ولماذا. هذا يشكّل كل ما يأتي بعده.</p>
+        </div>
+        <div class="glass sys-card" data-reveal data-d="2">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
+            </svg></div>
+          <div class="num">02 / STRATEGY</div>
+          <h3><span class="lang-en">Define the Strategy</span><span class="lang-ar">تحديد الاستراتيجية</span></h3>
+          <p class="lang-en">Before any design starts, we define positioning, pricing, and the customer journey. These decisions are harder to change later, so they have to be right from the start.</p>
+          <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">قبل أي تصميم، نحدد التموضع والتسعير ومسار العميل. هذه القرارات يصعب تغييرها لاحقاً، لذا يجب أن تكون صحيحة من البداية.</p>
+        </div>
+        <div class="glass sys-card" data-reveal data-d="3">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="9" rx="1" />
+              <rect x="14" y="3" width="7" height="5" rx="1" />
+              <rect x="14" y="12" width="7" height="9" rx="1" />
+              <rect x="3" y="16" width="7" height="5" rx="1" />
+              <path d="M7 12v4M17 8v4" />
+            </svg></div>
+          <div class="num">03 / BRAND & DESIGN</div>
+          <h3><span class="lang-en">Brand &amp; Visual Identity</span><span class="lang-ar">العلامة والهوية البصرية</span></h3>
+          <p class="lang-en">Logo, colors, typography, and tone of voice — built to work across the store, packaging, and every customer touchpoint.</p>
+          <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">الشعار والألوان والخطوط ونبرة الكتابة — مصممة للعمل عبر المتجر والتغليف وكل نقطة تواصل مع العميل.</p>
+        </div>
+        <div class="glass sys-card" data-reveal data-d="4">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M9 3v18M3 9h18M3 15h18" />
+            </svg></div>
+          <div class="num">04 / DEVELOPMENT</div>
+          <h3><span class="lang-en">Shopify Development</span><span class="lang-ar">تطوير شوبيفاي</span></h3>
+          <p class="lang-en">Custom Shopify setup, theme development, product catalog architecture, payment configuration, and everything needed to go live.</p>
+          <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">إعداد شوبيفاي المخصص، تطوير القالب، بنية كتالوج المنتجات، ضبط المدفوعات، وكل ما يلزم للإطلاق.</p>
+        </div>
+        <div class="glass sys-card" data-reveal data-d="5">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 3.5s2.25-1 3.5-2.5M12 5l-8 8V20h7l8-8z" />
+              <path d="M9 15l1.5 1.5M19 5l-3 3M14 8l3 3M9.5 14.5c.75-.75 2-2.75 3-4" />
+            </svg></div>
+          <div class="num">05 / LAUNCH</div>
+          <h3><span class="lang-en">Launch &amp; Go Live</span><span class="lang-ar">الإطلاق للسوق</span></h3>
+          <p class="lang-en">We test everything end-to-end before go-live — checkout, integrations, analytics tracking, and mobile performance. Then we launch.</p>
+          <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">نختبر كل شيء من البداية للنهاية قبل الإطلاق — الدفع، التكاملات، تتبع التحليلات، والأداء على الموبايل. ثم نطلق.</p>
+        </div>
+        <div class="glass sys-card" data-reveal data-d="6">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 6l-8.5 8.5-5-5L1 18" />
+              <path d="M17 6h6v6" />
+            </svg></div>
+          <div class="num">06 / GROWTH</div>
+          <h3><span class="lang-en">Marketing &amp; Growth</span><span class="lang-ar">التسويق والنمو</span></h3>
+          <p class="lang-en">Performance marketing, conversion rate optimization, and ongoing improvements based on real sales data — not guesswork.</p>
+          <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">تسويق رقمي، تحسين معدلات التحويل، وتحسينات مستمرة بناءً على بيانات المبيعات الحقيقية — لا تخمين.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DISCIPLINES / MODE SELECTOR ===== -->
+    <section class="modes" id="modes">
+      <div class="sec-head" data-reveal>
+        <span class="kicker">
+          <span class="lang-en">Services</span>
+          <span class="lang-ar">خدماتنا</span>
+        </span>
+        <h2>
+          <span class="lang-en">What we do.</span>
+          <span class="lang-ar">ماذا نفعل.</span>
+        </h2>
+        <p class="lang-en">From initial strategy to post-launch growth — select a discipline to see how we approach it.</p>
+        <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:right;">من الاستراتيجية الأولى إلى النمو بعد الإطلاق — اختر تخصصاً لترى كيف نتعامل معه.</p>
+      </div>
+      <div class="glass modebar" data-reveal>
+        <button class="mode active" data-mode="0">
+          <div class="n">01</div>
+          <div class="t"><span class="lang-en">STRATEGY</span><span class="lang-ar">الاستراتيجية</span></div>
+        </button>
+        <button class="mode" data-mode="1">
+          <div class="n">02</div>
+          <div class="t"><span class="lang-en">SHOPIFY</span><span class="lang-ar">شوبيفاي</span></div>
+        </button>
+        <button class="mode" data-mode="2">
+          <div class="n">03</div>
+          <div class="t"><span class="lang-en">BRAND</span><span class="lang-ar">الهوية</span></div>
+        </button>
+        <button class="mode" data-mode="3">
+          <div class="n">04</div>
+          <div class="t"><span class="lang-en">LAUNCH</span><span class="lang-ar">الإطلاق</span></div>
+        </button>
+        <button class="mode" data-mode="4">
+          <div class="n">05</div>
+          <div class="t"><span class="lang-en">MARKETING</span><span class="lang-ar">التسويق</span></div>
+        </button>
+      </div>
+      <div class="glass mode-readout" data-reveal>
+        <div class="desc">
+          <h3 id="modeTitle">Product Strategy &amp; Positioning</h3>
+          <p id="modeDesc">Before any design starts, we define what the product should be, how it's priced, and who it's for. Every decision that follows depends on getting this right.</p>
+          <p id="modeAr"
+            style="font-family:'Noto Sans Arabic';direction:rtl;text-align:right;color:var(--ink-1);margin-top:10px;font-size:14.5px;line-height:1.85;display:none">
+          </p>
+        </div>
+        <div class="meterset" id="modeMeters"></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="glass contact-shell" data-reveal>
+        <span class="kicker" style="position:relative;justify-content:center">
+          <span class="lang-en">// schedule a consultation</span>
+          <span class="lang-ar">// احجز استشارتك</span>
+        </span>
+        <h2 class="chrome-text">
+          <span class="lang-en">Ready to build<br>your store?</span>
+          <span class="lang-ar">جاهز لبناء<br>متجرك؟</span>
+        </h2>
+        <p class="lang-en">Tell us about your brand and where you want to go. We'll assess what needs to happen and give you a clear plan — no vague proposals, no wasted time.</p>
+        <p class="lang-ar" style="font-family:'Noto Sans Arabic'; direction:rtl; text-align:center;">أخبرنا عن علامتك التجارية وأهدافك. سنقيّم الوضع الحالي ونقدم لك خطة واضحة — لا مقترحات مبهمة، لا وقت ضائع.</p>
+        <p class="contact-timeline lang-en">Typically responding within 24 hours. Based in Cairo, working with brands across Egypt and the Gulf.</p>
+
+        <div class="channels">
+          <a class="channel" href="mailto:lokalita75@gmail.com" target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6" />
+              <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <span class="lang-en">Email</span>
+            <span class="lang-ar">الإيميل</span>
+          </a>
+          <a class="channel" href="https://wa.me/201118630150" target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="lang-en">WhatsApp</span>
+            <span class="lang-ar">واتساب</span>
+          </a>
+          <a class="channel" href="https://www.instagram.com/lokalitaeg/" target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="17" cy="7" r="1" fill="currentColor"/>
+            </svg>
+            <span class="lang-en">Instagram</span>
+            <span class="lang-ar">انستقرام</span>
+          </a>
+          <a class="channel" href="https://www.facebook.com/profile.php?id=61579605985661" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="lang-en">Facebook</span>
+            <span class="lang-ar">فيسبوك</span>
+          </a>
+        </div>
+        <a class="contact-cta" href="mailto:lokalita75@gmail.com">
+          <span class="lang-en">Send us a message</span>
+          <span class="lang-ar">أرسل لنا رسالة</span>
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14m-6-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="foot-banner chrome-text" data-reveal>
+        <span class="lang-en">BUILD. LAUNCH. GROW.</span>
+        <span class="lang-ar">ابني. أطلق. انمو.</span>
+      </div>
+      <div class="foot-meta">
+        <span>© 2026 LOKALITA</span>
+        <span>
+          <span class="lang-en">SHOPIFY ECOMMERCE PARTNER · CAIRO, EG</span>
+          <span class="lang-ar">شريك شوبيفاي · القاهرة</span>
+        </span>
+        <span>
+          <span class="lang-en">lokalita75@gmail.com</span>
+          <span class="lang-ar">lokalita75@gmail.com</span>
+        </span>
+      </div>
+      <div class="home-ind"><i></i></div>
+    </footer>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu glass" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <nav class="mobile-menu-links">
+      <a href="#work" class="mobile-nav-link"><span class="lang-en">Work</span><span class="lang-ar">أعمالنا</span></a>
+      <a href="#about" class="mobile-nav-link"><span class="lang-en">About</span><span class="lang-ar">عنّا</span></a>
+      <a href="#systems" class="mobile-nav-link"><span class="lang-en">Approach</span><span
+          class="lang-ar">المنهجية</span></a>
+      <a href="#modes" class="mobile-nav-link"><span class="lang-en">Services</span><span
+          class="lang-ar">خدماتنا</span></a>
+    </nav>
+    <div class="mobile-menu-cta">
+      <a href="#contact" class="dock-cta"
+        style="display:inline-flex;align-items:center;gap:6px;width:100%;justify-content:center;">
+        <span class="lang-en">Start a project</span><span class="lang-ar">ابدأ مشروعك</span>
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+    <div class="mobile-menu-settings">
+      <button class="theme-toggle" aria-label="Toggle light and dark mode">
+        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+      </button>
+      <div class="lang-switcher" role="group" aria-label="Language Selection">
+        <span class="active" data-lang="en" role="radio" aria-checked="true" tabindex="0"
+          aria-label="Switch to English">EN</span>
+        <span data-lang="ar" role="radio" aria-checked="false" tabindex="0" aria-label="Switch to Arabic">AR</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYSTEM CONSOLE LOG OVERLAY -->
+  <div class="sys-log-console" id="sysLogConsole">
+    <div class="sys-log-title">
+      <span>SYSTEM TELEMETRY</span>
+      <i></i>
+    </div>
+    <div class="sys-log-lines" id="sysLogLines">
+      <span>[SYSTEM] Init telemetry loop...</span>
+      <span>[SPACE] Nebula online</span>
+      <span>[SYSTEM] Observer active</span>
+    </div>
+  </div>
+
+  <!-- OS-STYLE MODAL WINDOW -->
+  <div class="os-modal-backdrop" id="osModal">
+    <div class="glass os-modal-window">
+      <div class="win-chrome">
+        <div class="win-dots"><i id="modalCloseBtn" style="background:#ff5f57;cursor:pointer;"></i><i
+            style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+        <div class="win-pill" id="modalPill">system://portfolio/project</div>
+        <div class="win-tools"><span id="modalCloseTxt"
+            style="cursor:pointer;font-size:11px;font-family:'JetBrains Mono';color:var(--ink-2);padding:2px 6px;border-radius:4px;background:rgba(255,255,255,0.05)">CLOSE</span>
+        </div>
+      </div>
+      <div class="os-modal-body" id="modalBody"><!-- injected by js/os/modal.js --></div>
+    </div>
+  </div>
+
+  <div id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-aura" id="cursorAura"></div>
+
+  <!-- ============ LIBS (CDN) — defer keeps order, frees the parser ============ -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- ============ APP (order matters; main.js orchestrates) ============ -->
+<script defer src="js/app.c6bd5e491d.js"></script>
+</body>
+
+</html>
