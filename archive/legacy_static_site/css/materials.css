@@ -1,0 +1,71 @@
+/* ============================================================
+   MATERIALS — shared physical surfaces: glass, metal, chrome,
+   theme toggle, language switcher
+   ============================================================ */
+
+.glass{
+  position:relative;
+  background:linear-gradient(180deg, rgba(34,36,46,.62), rgba(14,15,20,.66));
+  backdrop-filter:blur(26px) saturate(150%);
+  -webkit-backdrop-filter:blur(26px) saturate(150%);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10), inset 0 -1px 0 rgba(0,0,0,.5), 0 22px 60px rgba(0,0,0,.55);
+  overflow:hidden;
+}
+/* cursor-follow specular highlight */
+.glass::after{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%), rgba(120,180,255,.16), transparent 60%);
+  opacity:0;transition:opacity .5s var(--ease);
+}
+.glass:hover::after{opacity:1}
+
+.metal{
+  background:linear-gradient(180deg,#262833 0%,#191a22 48%,#101117 100%);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  box-shadow:
+    inset 0 1.5px 0 rgba(255,255,255,.20),
+    inset 0 -2px 4px rgba(0,0,0,.6),
+    0 10px 24px rgba(0,0,0,.55),
+    0 1px 0 rgba(255,255,255,.04);
+}
+.chrome-text{
+  background:var(--chrome);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:100% 100%;
+}
+
+/* ---- theme toggle button ---- */
+.theme-toggle {
+  width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
+  background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06);
+  color: var(--ink-2); cursor: pointer; transition: all 0.25s var(--ease);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05); position: relative; overflow: hidden;
+}
+.theme-toggle:hover {
+  color: var(--ink-0); background: rgba(255,255,255,0.08);
+}
+.theme-toggle svg {
+  position: absolute; transition: transform 0.4s var(--spring), opacity 0.3s;
+}
+/* dark mode shows sun (to switch to light) */
+.theme-toggle .sun-icon { opacity: 1; transform: scale(1); }
+.theme-toggle .moon-icon { opacity: 0; transform: scale(0.4) rotate(-45deg); }
+
+/* ---- language switcher ---- */
+.lang-switcher {
+  display: inline-flex; gap: 2px; padding: 2px; border-radius: 9px;
+  background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06);
+  position: relative; cursor: pointer; user-select: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.lang-switcher span {
+  font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: bold;
+  padding: 3px 8px; border-radius: 6px; color: var(--ink-2); transition: all 0.25s var(--ease);
+}
+.lang-switcher span.active {
+  background: rgba(255,255,255,0.08); color: var(--ink-0);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 6px rgba(0,0,0,0.3);
+}

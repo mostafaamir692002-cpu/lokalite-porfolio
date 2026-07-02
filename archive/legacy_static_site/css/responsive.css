@@ -1,0 +1,193 @@
+/* ============================================================
+   RESPONSIVE — all breakpoints in one place.
+   Breakpoints: 1080 (tablet landscape) · 900 (tablet portrait)
+   · 720 (phone) · 480 (small phone) · 380 (compact)
+   + iPhone safe-area insets.
+   ============================================================ */
+
+/* ---------- ≤1080px — tablet landscape ---------- */
+@media(max-width:1080px){
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .hero-core{grid-column:1 / -1;order:-1;padding:14px 6px 4px}
+  .work-card{flex:0 0 calc((100% - 20px)/2)}
+  .sys-grid{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+}
+
+/* ---------- ≤900px — tablet portrait ---------- */
+@media(max-width:900px){
+  .mode-readout{grid-template-columns:1fr;gap:18px}
+  .contact-shell{padding:36px 28px}
+  .modal-desc-grid{grid-template-columns:1fr;gap:20px}
+  .dock-links a{padding:8px 10px;font-size:12.5px}
+  .hero-strips .vstrip{width:48px;height:104px}
+}
+
+/* ---------- ≤720px — phone ---------- */
+@media(max-width:720px){
+  .statusbar{display:none !important}           /* Hide statusbar on mobile to save vertical space */
+  .dock-links{display:none}
+  .dock-burger{display:flex}                    /* display burger button on mobile */
+  nav.dock{
+    width:calc(100% - 24px);
+    top:max(12px, env(safe-area-inset-top));    /* notch-aware positioning */
+    padding:8px 10px 8px 14px;
+  }
+  nav.dock .lang-switcher{display:none !important} /* hide duplicate lang switcher in dock on mobile */
+  .dock-cta{display:none !important}            /* CTA lives in the mobile menu */
+  .dock-brand small{letter-spacing:.14em}
+
+  .hero-grid{grid-template-columns:1fr;padding:14px;gap:12px}
+  .hero-grid .rail{gap:12px}
+  .profile-card { padding: 16px; }
+  .profile-meta { margin-top: 12px; gap: 8px; }
+  .profile-meta .row { font-size: 12px; }
+  .socials { margin-top: 14px; }
+  .widget { padding: 14px; }
+  
+  .hero{padding:14px 0 32px}
+  .hero-title{font-size:clamp(38px,14vw,70px);line-height:0.95;margin-bottom:6px}
+  .hero-sub{font-size:14px;line-height:1.6;margin-bottom:4px}
+  .hero-manifesto { font-size: 13.5px; padding: 10px 14px; }
+  .monogram-disc{width:96px;height:96px}
+  .monogram-disc span{font-size:34px}
+  .hero-strips{padding:0 12px 14px;margin-top:10px}
+
+  /* Horizontal swipeable modebar (services selector) */
+  .modebar{
+    flex-direction:row !important;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+    gap:8px;
+    padding:8px 12px;
+    border-radius:18px;
+    justify-content:flex-start;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .modebar::-webkit-scrollbar{
+    display:none;
+  }
+  .mode{
+    flex:0 0 auto;
+    scroll-snap-align:start;
+    padding:10px 18px;
+    font-size:11.5px;
+    min-width:unset;
+  }
+  .mode-readout{grid-template-columns:1fr;gap:18px;padding:20px}
+
+  .work-card{flex:0 0 100%}
+  .navbtn{width:44px;height:44px}
+
+  .about-body{padding:24px}
+
+  .channels{flex-direction:column;align-items:stretch}
+  .channel{justify-content:center;min-height:48px} /* large touch target */
+  .contact-shell{padding:30px 20px}
+  .contact-cta{width:100%;justify-content:center;min-height:50px} /* large touch target */
+
+  .foot-meta{justify-content:center;text-align:center;flex-direction:column;gap:8px}
+  .shell{padding:0 14px 70px}
+
+  /* telemetry console overlaps content on phones — hide it */
+  .sys-log-console{display:none !important}
+
+  /* custom cursor is pointless on touch — native scrolling only */
+  .cursor-dot,.cursor-aura{display:none !important}
+
+  /* GPU scroll optimization: lighter backdrop blur on mobile */
+  .glass, .hero-window, nav.dock, .statusbar, .os-modal-backdrop {
+    backdrop-filter: blur(12px) saturate(130%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(130%) !important;
+  }
+  .os-modal-window {
+    height: 92vh !important;
+    max-height: none !important;
+  }
+  .modal-hero-glyph{width:110px;height:110px;font-size:48px}
+  .modal-header-hero{grid-template-columns:1fr;justify-items:center;text-align:center}
+
+  /* rendering perf: skip offscreen section painting on phones */
+  .modes,.work,.about,.systems,.contact{
+    content-visibility:auto;
+    contain-intrinsic-size:auto 640px;
+  }
+  .diag-grid{grid-template-columns:1fr}
+}
+
+/* ---------- ≤480px — small phone ---------- */
+@media(max-width:480px){
+  .statusbar{padding:8px 14px;font-size:12px}
+  .statusbar .sb-right{gap:7px}
+  .statusbar .sb-right > span{display:none}     /* hide LOKALITA.OS label */
+  .sig{display:none}                            /* keep: theme, lang, wifi, battery */
+
+  .hero-title{font-size:clamp(40px,17vw,64px)}
+  .hero-eyebrow{font-size:9.5px;letter-spacing:.22em}
+  .win-pill{font-size:9.5px;letter-spacing:.16em;padding:5px 10px}
+  .win-tools{display:none}
+
+  .sec-head h2{font-size:clamp(26px,8vw,38px)}
+  .foot-banner{font-size:clamp(30px,11vw,52px)}
+
+  .hero-strips .vstrip{width:42px;height:92px;border-radius:14px}
+  .wc-vis{height:160px}
+  .os-modal-body{padding:16px;gap:18px}
+  .modal-footer{flex-direction:column}
+  .modal-btn{justify-content:center}
+}
+
+/* ---------- ≤380px — compact ---------- */
+@media(max-width:380px){
+  .hero-grid{padding:14px}
+  .hero-title{font-size:clamp(36px,18vw,54px)}
+  .avatar{width:52px;height:52px}
+  .cc-grid{grid-template-columns:1fr}
+  .hero-strips{gap:7px}
+  .about-photo{min-height:300px}
+  .about-photo .ph-mono{width:128px;height:128px}
+}
+
+/* ---------- notched devices: safe-area insets ---------- */
+@supports (padding: max(0px)) {
+  .statusbar{
+    padding-left:max(22px, env(safe-area-inset-left));
+    padding-right:max(22px, env(safe-area-inset-right));
+    padding-top:max(9px, env(safe-area-inset-top));
+  }
+  .shell{
+    padding-left:max(18px, env(safe-area-inset-left));
+    padding-right:max(18px, env(safe-area-inset-right));
+    padding-bottom:max(90px, calc(70px + env(safe-area-inset-bottom)));
+  }
+  .sys-log-console{
+    bottom:max(20px, env(safe-area-inset-bottom));
+    left:max(20px, env(safe-area-inset-left));
+  }
+}
+
+/* ---------- coarse pointers: bigger touch targets ---------- */
+@media(pointer:coarse){
+  .dock-links a,.mobile-nav-link{padding:12px 16px}
+  .lang-switcher span{padding:6px 10px;font-size:11px}
+  .theme-toggle{width:36px;height:36px}
+  .work-dots i{width:10px;height:10px}
+  .work-dots i.active{width:26px}
+}
+
+/* ---------- mobile smoothness: lighter glass blur ----------
+   backdrop-filter blur is the biggest scroll-jank source on phones;
+   smaller radius keeps the glass look but recomputes far cheaper per frame. */
+@media(max-width:720px){
+  .glass,
+  .hero-window,
+  .statusbar,
+  nav.dock,
+  .win-chrome,
+  .os-modal-backdrop{
+    backdrop-filter: blur(12px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
+  }
+}
