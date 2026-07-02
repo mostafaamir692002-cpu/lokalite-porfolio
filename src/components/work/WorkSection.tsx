@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLang } from "@/context/LangContext";
 import { PROJECTS, Project } from "@/data/projects";
+import { cn } from "@/lib/cn";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 
@@ -103,5 +104,3 @@ export default function WorkSection() {
     </section>
   );
 }
-
-import { cn } from "@/lib/cn";

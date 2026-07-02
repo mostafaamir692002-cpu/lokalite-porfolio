@@ -2,6 +2,7 @@
 
 import { useLang } from "@/context/LangContext";
 import { Project } from "@/data/projects";
+import { cn } from "@/lib/cn";
 
 interface ProjectCardProps {
   project: Project;
@@ -135,6 +136,3 @@ export default function ProjectCard({ project, onOpenCaseStudy }: ProjectCardPro
     </article>
   );
 }
-
-// Inline helper for class joining since we require cn
-import { cn } from "@/lib/cn";
