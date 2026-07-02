@@ -10,10 +10,8 @@ export default function ServicesRow() {
     {
       ...SERVICES[0],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <path d="M16 10a4 4 0 0 1-8 0" />
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+          <path d="M19.789 6.096a1.401 1.401 0 0 0-1.325-.94h-2.14L15.358.905A1.406 1.406 0 0 0 14.103.5h-4.2a1.406 1.406 0 0 0-1.256.405L7.68 5.156H5.539a1.401 1.401 0 0 0-1.325.94L2.03 12.352a1.406 1.406 0 0 0 .197 1.341l2.46 3.39A1.406 1.406 0 0 0 5.82 17.5h12.36a1.406 1.406 0 0 0 1.134-.417l2.46-3.39a1.406 1.406 0 0 0 .197-1.341zM9.903 1.9h4.2c.171 0 .328.095.408.248l.61 1.259H8.885l.61-1.259A.456.456 0 0 1 9.903 1.9zm8.277 14.2H5.82a.456.456 0 0 1-.368-.135L2.99 12.576a.456.456 0 0 1-.064-.436l2.183-6.284H18.89l2.183 6.284a.456.456 0 0 1-.064.436l-2.463 3.39a.456.456 0 0 1-.368.135z" />
         </svg>
       ),
       label: { en: "Shopify Development", ar: "تطوير شوبيفاي" },
@@ -22,11 +20,12 @@ export default function ServicesRow() {
     {
       ...SERVICES[1],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-          <path d="M12 19l7-7 3 3-7 7-3-3z" />
-          <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-          <path d="M2 2l7.5 7.5" />
-          <circle cx="11" cy="11" r="2" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+          <path d="M12 2L3 11l9 9 9-9-9-9z" className="opacity-80" />
+          <circle cx="12" cy="11" r="4" strokeDasharray="2 2" className="text-accent" />
+          <circle cx="12" cy="11" r="1.5" fill="currentColor" />
+          <line x1="12" y1="2" x2="12" y2="20" strokeWidth="1" className="opacity-30" />
+          <line x1="3" y1="11" x2="21" y2="11" strokeWidth="1" className="opacity-30" />
         </svg>
       ),
       label: { en: "Brand Identity", ar: "هوية العلامة والتصميم" },
@@ -35,36 +34,22 @@ export default function ServicesRow() {
     {
       ...SERVICES[2],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-          <path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 3.5s2.25-1 3.5-2.5" />
-          <path d="M14 9l-4 4" />
-          <path d="M9 14l-4-4" />
-          <path d="M9 14l3 3c.8 1.4 1.5 2 3 2l4-4c0-1.5-.6-2.2-2-3l-3-3" />
-          <path d="M15 9l3-3c.8-1.4 1.5-2 3-2l-4 4c0 1.5-.6 2.2-2 3l-3 3" />
-          <path d="M9 14c-2.5 0-6-4.5-6-4.5l4-4s4.5 3.5 4.5 6" />
-          <path d="M15 9c2.5 0 6 4.5 6 4.5l-4 4s-4.5-3.5-4.5-6" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+          <path d="M12 2s4 4 4 10c0 3-1.5 5-4 7-2.5-2-4-4-4-7 0-6 4-10 4-10z" />
+          <path d="M9 15v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3" className="opacity-60" />
+          <path d="M15 15v3a2 2 0 012 2h1a2 2 0 012-2v-3" className="opacity-60" />
+          <path d="M2 12a10 10 0 0110-10" strokeDasharray="3 3" className="text-accent" />
+          <path d="M12 18v3" strokeWidth="2" className="text-accent" />
         </svg>
       ),
       label: { en: "Launch & Tracking", ar: "الإطلاق والدخول للسوق" },
       desc: { en: "Everything set for a smooth and data-driven launch.", ar: "إعداد متكامل ودقيق لتجربة إطلاق ناجحة مبنية على البيانات." }
-    },
-    {
-      ...SERVICES[3],
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-          <line x1="18" y1="20" x2="18" y2="10" />
-          <line x1="12" y1="20" x2="12" y2="4" />
-          <line x1="6" y1="20" x2="6" y2="14" />
-        </svg>
-      ),
-      label: { en: "Performance Marketing", ar: "التسويق الرقمي" },
-      desc: { en: "Data-driven campaigns that drive real growth.", ar: "حملات تسويقية مدروسة ومحسنة لتحقيق أعلى عوائد أرباح." }
     }
   ];
 
   return (
     <div className="w-full mt-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
         {serviceData.map((s, idx) => (
           <div
             key={idx}

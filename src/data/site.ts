@@ -54,9 +54,4 @@ export const SERVICES = [
     title: "Launch & Tracking",
     description: "Everything set for a smooth and data-driven launch.",
   },
-  {
-    icon: "marketing",
-    title: "Performance Marketing",
-    description: "Data-driven campaigns that drive real growth.",
-  },
 ] as const;

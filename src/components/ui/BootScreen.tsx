@@ -89,11 +89,11 @@ export default function BootScreen({ onComplete, onProgressUpdate }: BootScreenP
     >
       <div className="flex flex-col items-center max-w-[280px] w-full text-center">
         {/* Monogram/Logo in Loader */}
-        <div className="relative w-20 h-20 mb-8">
+        <div className="relative w-24 h-24 mb-8">
           <img
             src="/assets/lokalita-logo-symbol.png"
             alt="Lokalita"
-            className="w-full h-full object-contain filter brightness-125 contrast-110 drop-shadow-[0_0_12px_rgba(255,255,255,0.45)]"
+            className="w-full h-full object-contain filter brightness-150 contrast-125 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
           />
         </div>
         

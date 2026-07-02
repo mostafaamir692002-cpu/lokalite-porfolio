@@ -39,7 +39,7 @@ export default function AboutSection() {
               <img
                 src="/assets/lokalita-logo-symbol.png"
                 alt="Lokalita"
-                className="w-24 h-24 object-contain filter brightness-125 contrast-110 drop-shadow-[0_0_12px_rgba(255,255,255,0.45)] z-10"
+                className="w-32 h-32 object-contain filter brightness-150 contrast-125 drop-shadow-[0_0_20px_rgba(255,255,255,0.85)] z-10"
               />
             </div>
           </div>

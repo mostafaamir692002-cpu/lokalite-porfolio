@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { AdaptiveDpr } from "@react-three/drei";
 import SceneContent from "./SceneContent";
@@ -13,8 +14,9 @@ export default function HeroCanvas({ scrollProgress, bootProgress }: HeroCanvasP
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
       <Canvas
+        dpr={[1, 2]}
         gl={{
-          antialias: true,
+          antialias: false, // Maintain optimized performance on mobile/low-end screens
           alpha: true,
           powerPreference: "high-performance",
         }}

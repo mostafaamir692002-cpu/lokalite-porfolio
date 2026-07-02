@@ -31,11 +31,12 @@ export default function Navbar() {
       >
         {/* Brand Logo & Wordmark */}
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 relative">
+          <div className="w-14 h-14 rounded-full bg-void-2/80 border border-white/10 flex items-center justify-center p-0 shadow-[0_0_15px_rgba(255,255,255,0.05),_inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-sm relative overflow-hidden group select-none">
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             <img
               src="/assets/lokalita-logo-symbol.png"
               alt="Lokalita Logo"
-              className="w-full h-full object-contain filter brightness-125 contrast-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+              className="w-[82%] h-[82%] object-contain filter brightness-150 contrast-125 drop-shadow-[0_0_14px_rgba(255,255,255,1.0)] drop-shadow-[0_0_6px_rgba(255,255,255,0.8)]"
             />
           </div>
           <span className="font-display font-black text-lg tracking-[0.12em] text-white uppercase">

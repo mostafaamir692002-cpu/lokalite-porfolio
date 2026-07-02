@@ -105,7 +105,7 @@ export default function HeroSection({ scrollProgress, bootProgress, isBooted }: 
 
       {/* Hero Body Grid Content */}
       <div className="flex-1 max-w-[1400px] w-full mx-auto px-6 md:px-8 mt-6 relative z-10 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr_440px] gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr_640px] gap-8 items-start">
           {/* Left Column: Profile Sidebar */}
           <div className="order-2 lg:order-1">
             <ProfileSidebar />

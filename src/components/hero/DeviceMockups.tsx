@@ -5,132 +5,156 @@ import { useLang } from "@/context/LangContext";
 export default function DeviceMockups() {
   const { isRtl } = useLang();
 
-  const handleViewProject = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    const event = new CustomEvent("open-project", { detail: "SEAFOOD MOOD" });
+  const handleOpenProject = (projectId: string) => {
+    const event = new CustomEvent("open-project", { detail: projectId });
     window.dispatchEvent(event);
   };
 
   return (
     <div 
-      className="relative w-[500px] h-[340px] flex-shrink-0 select-none scale-[0.85] sm:scale-95 lg:scale-100 origin-center"
-      style={{ perspective: "1000px" }}
+      className="relative w-[680px] h-[480px] flex-shrink-0 select-none scale-[0.82] sm:scale-90 lg:scale-100 origin-center"
+      style={{ perspective: "1200px" }}
       dir="ltr"
     >
-      {/* Laptop Mockup (Back Layer) */}
+      {/* 1. LAPTOP MOCKUP (z-index: 10) */}
       <div 
-        className="absolute left-[30px] top-[35px] transition-transform duration-500 hover:scale-[1.02] animate-mockup-laptop opacity-0"
+        className="absolute left-[95px] top-[115px] transition-transform duration-500 hover:scale-[1.01] animate-mockup-laptop opacity-0"
         style={{
-          transform: "rotateY(-15deg) rotateX(10deg) rotateZ(-1deg)",
+          transform: "rotateY(-14deg) rotateX(8deg) rotateZ(-1deg)",
           transformStyle: "preserve-3d",
           zIndex: 10
         }}
       >
-        <div className="relative w-[440px] h-[270px] rounded-xl bg-[#090b11] border-[10px] border-[#181a20] shadow-[0_25px_60px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col">
-          {/* Bezel Camera Dot */}
-          <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-void-0 border border-white/5 z-20" />
+        {/* Laptop Screen Body */}
+        <div className="relative w-[540px] h-[330px] rounded-[18px] bg-[#090b11] border-[10px] border-[#0a0d16] border-l-[#1c2235] border-t-[#181d2f] shadow-[0_30px_70px_rgba(0,0,0,0.85),_0_0_40px_rgba(14,165,233,0.1),_0_0_20px_rgba(249,115,22,0.06)] overflow-hidden flex flex-col">
+          {/* Bezel Camera Dot & Lens Reflection */}
+          <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-void-0 border border-white/10 z-20 flex items-center justify-center">
+            <div className="w-0.5 h-0.5 rounded-full bg-sky-500/80" />
+          </div>
           
-          {/* Header */}
-          <div className="px-4 py-2 border-b border-white/5 bg-void-0/40 flex justify-between items-center text-[7px] text-ink-2">
-            <span className="font-semibold text-white tracking-widest font-mono">Seafood Mood Store</span>
-            <div className="flex gap-3">
-              <span>SHOP</span>
-              <span>COLLECTIONS</span>
-              <span>ABOUT</span>
-              <span>CONTACT</span>
+          {/* Browser Chrome Header */}
+          <div className="px-4 py-2 border-b border-white/5 bg-void-0/60 flex justify-between items-center text-[7px] text-ink-2 select-none z-10">
+            <div className="flex gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-500/80" />
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500/80" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
             </div>
-            <div className="flex gap-2">
-              <span>🔍</span>
-              <span>🛒</span>
+            <span className="font-semibold text-white/50 tracking-wider font-mono scale-90">medieval-aloud.com</span>
+            <div className="flex gap-2 text-white/30">
+              <span>🔒</span>
             </div>
           </div>
           
-          {/* Body with Real Screenshot */}
+          {/* Screen Content - Medieval Aloud Project */}
           <div 
-            className="flex-1 bg-[#0d0f17] relative overflow-hidden cursor-pointer"
-            onClick={handleViewProject}
+            className="flex-1 bg-[#060810] relative overflow-hidden cursor-pointer group"
+            onClick={() => handleOpenProject("MEDIEVAL ALOUD")}
           >
             <img 
-              src="/assets/fishmonger_preview.jpg" 
-              alt="Seafood Mood Storefront" 
-              className="w-full h-full object-cover object-top opacity-85 hover:opacity-100 transition-opacity duration-300"
+              src="https://medieval-aloud.com/cdn/shop/files/ChatGPT_Image_May_24_2026_06_48_23_PM.png?v=1779637738&width=1200" 
+              alt="Medieval Aloud Storefront" 
+              className="w-full h-full object-cover object-top opacity-85 group-hover:opacity-95 transition-opacity duration-300"
             />
+            {/* Glossy Reflection Sheen */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/8 via-transparent to-transparent opacity-40 pointer-events-none" />
+            {/* Orange Cinematic Light Edge Highlight */}
+            <div className="absolute inset-0 border-l border-l-accent/20 border-t border-t-accent/10 pointer-events-none" />
           </div>
         </div>
+
+        {/* MacBook Base Lip (3D Keyboard bevel) */}
+        <div 
+          className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[103%] h-2.5 bg-gradient-to-b from-[#1c2235] via-[#0a0d16] to-[#05060b] border border-white/10 rounded-b-md shadow-md"
+          style={{ transform: "rotateX(20deg)" }}
+        />
       </div>
 
-      {/* Phone Mockup (Middle Layer, overlapping) */}
+      {/* 2. PHONE SHADOW CAST ON LAPTOP (z-index: 15) */}
       <div 
-        className="absolute left-[10px] top-[75px] transition-all duration-500 hover:scale-[1.03] animate-mockup-phone opacity-0"
+        className="absolute left-[10px] top-[160px] w-[145px] h-[260px] bg-black/60 rounded-[24px] blur-[8px] pointer-events-none"
         style={{
-          transform: "rotateY(-12deg) rotateX(8deg) rotateZ(-2deg)",
+          transform: "rotateY(-12deg) rotateX(6deg) rotateZ(-1.5deg) translateY(12px) translateX(-5px)",
+          zIndex: 15
+        }}
+      />
+
+      {/* 3. PHONE MOCKUP (z-index: 20, overlapping laptop) */}
+      <div 
+        className="absolute left-[10px] top-[160px] transition-all duration-500 hover:scale-[1.02] animate-mockup-phone opacity-0"
+        style={{
+          transform: "rotateY(-12deg) rotateX(6deg) rotateZ(-1.5deg)",
           transformStyle: "preserve-3d",
           zIndex: 20
         }}
       >
-        <div className="w-[140px] h-[240px] rounded-[24px] bg-[#090b11] border-[5px] border-[#181a20] shadow-[0_20px_50px_rgba(0,0,0,0.7)] overflow-hidden flex flex-col relative">
-          {/* Speaker / Camera Notch */}
-          <div className="absolute top-1 left-1/2 -translate-x-1/2 w-10 h-3 rounded-full bg-[#181a20] z-20 flex items-center justify-center">
-            <span className="w-1.5 h-1.5 rounded-full bg-slate-900 ml-2" />
+        {/* Phone Case Body */}
+        <div className="w-[145px] h-[260px] rounded-[24px] bg-[#090b11] border-[5px] border-[#0a0d16] border-l-[#1c2235] border-t-[#181d2f] shadow-[0_20px_45px_rgba(0,0,0,0.7),_inset_0_1px_0_rgba(255,255,255,0.1)] overflow-hidden flex flex-col relative">
+          {/* Dynamic Island Notch */}
+          <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-10 h-3 rounded-full bg-[#0a0d16] z-20 flex items-center justify-center">
+            <span className="w-1 h-1 rounded-full bg-slate-900 ml-3" />
           </div>
 
-          {/* Body Content with Real Screenshot */}
+          {/* Screen Content - Royal Sea Project */}
           <div 
-            className="flex-1 bg-[#10121a] relative overflow-hidden cursor-pointer"
-            onClick={handleViewProject}
+            className="flex-1 bg-[#060810] relative overflow-hidden cursor-pointer group"
+            onClick={() => handleOpenProject("ROYAL SEA")}
           >
             <img 
-              src="/assets/fishmonger_preview.jpg" 
-              alt="Seafood Mood Mobile" 
-              className="w-full h-full object-cover object-top opacity-85 hover:opacity-100 transition-opacity duration-300"
+              src="https://royal-sea-eg.com/cdn/shop/files/ChatGPT_Image_Jun_3_2026_09_47_12_PM.png?v=1780512456&width=1200" 
+              alt="Royal Sea Mobile" 
+              className="w-full h-full object-cover object-top opacity-85 group-hover:opacity-95 transition-opacity duration-300"
             />
+            {/* Screen reflection sheen */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent opacity-30 pointer-events-none" />
+            {/* Orange Cinematic Light Edge Highlight */}
+            <div className="absolute inset-0 border-l border-l-accent/20 border-t border-t-accent/10 pointer-events-none" />
           </div>
         </div>
       </div>
 
-      {/* "Latest Project" Glass Card (Front Layer) */}
+      {/* 4. "LATEST PROJECT" GLASS CARD (z-index: 30, overlapping bottom-right of laptop) */}
       <div 
-        className="absolute bottom-[15px] right-[-20px] transition-all duration-500 hover:scale-[1.03] glass-panel-b glass-specular w-[220px] p-4 flex flex-col gap-3 animate-mockup-card opacity-0 cursor-pointer"
+        className="absolute bottom-[15px] right-[-20px] transition-all duration-500 hover:scale-[1.03] glass-panel-b glass-specular w-[210px] p-4 flex flex-col gap-3 shadow-[0_25px_60px_rgba(0,0,0,0.75),_inset_0_1px_0_rgba(255,255,255,0.15)] animate-mockup-card opacity-0"
         style={{ zIndex: 30 }}
-        onClick={handleViewProject}
       >
-        <div className="flex justify-between items-center">
-          <span className="text-[9px] font-mono tracking-wider text-ink-2 uppercase">
-            {isRtl ? "أحدث المشاريع" : "Latest Project"}
+        {/* Header */}
+        <div className="flex justify-between items-center select-none">
+          <span className="text-[9px] font-mono tracking-wider text-ink-2 uppercase font-medium">
+            {isRtl ? "معرض المشاريع" : "Portfolio Showcase"}
           </span>
           <div className="w-5 h-5 rounded-full border border-white/15 bg-white/5 flex items-center justify-center">
-            <span className="text-[8px] text-white">↗</span>
+            <span className="text-[8px] text-white">✨</span>
           </div>
         </div>
 
-        {/* Project Snapshot */}
-        <div className="flex gap-3 items-center">
-          <div className="w-16 h-12 rounded-lg overflow-hidden bg-void-2 flex-shrink-0 relative">
-            <img
-              src="/assets/fishmonger_preview.jpg"
-              alt="Seafood Mood"
-              className="w-full h-full object-cover opacity-80"
-            />
-          </div>
-          <div className="flex flex-col">
-            <h6 className="font-display font-bold text-xs text-white">
-              Seafood Mood
-            </h6>
-            <span className="text-[9px] text-ink-2 leading-tight">
-              {isRtl ? "منصة تجارة مأكولات بحرية" : "Premium seafood store"}
-            </span>
-          </div>
+        {/* Portfolio Showcase Description */}
+        <div className="flex flex-col min-w-0 gap-1">
+          <h6 className="font-display font-bold text-xs text-white leading-tight">
+            {isRtl ? "متاجر صُنعت لتبيع" : "Stores Built to Sell"}
+          </h6>
+          <p className="text-[9.5px] text-ink-2 leading-normal mt-0.5">
+            {isRtl 
+              ? "مجموعة مختارة من علامات شوبيفاي الفاخرة التي قمنا بتصميمها وتطويرها." 
+              : "A selection of custom premium Shopify storefronts designed and engineered by Lokalita."}
+          </p>
         </div>
 
-        {/* Action Link */}
-        <div className="flex justify-between items-center border-t border-white/5 pt-2">
-          <span className="text-[10px] text-accent font-medium hover:underline">
-            {isRtl ? "عرض دراسة الحالة" : "View Case Study"}
+        {/* Action Link Row */}
+        <a 
+          href="#work"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="flex justify-between items-center border-t border-white/5 pt-2 select-none group/btn cursor-pointer"
+        >
+          <span className="text-[9px] text-accent font-semibold uppercase tracking-wider group-hover/btn:underline">
+            {isRtl ? "تصفح كل المشاريع" : "Explore All Work"}
           </span>
           <div className="w-4 h-4 rounded-full border border-accent/30 flex items-center justify-center">
-            <span className="text-[8px] text-accent">→</span>
+            <span className="text-[8px] text-accent">↓</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );
