@@ -99,6 +99,14 @@ export default function ProfileSidebar() {
 
         {/* Social Icons */}
         <div className="flex gap-2 mt-4">
+          <a
+            href={SITE.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 rounded-lg border border-white/5 bg-white/3 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-200 text-ink-2"
+          >
+            <span className="text-xs uppercase font-mono scale-90">web</span>
+          </a>
           {Object.entries(SITE.socials).map(([key, url]) => (
             <a
               key={key}

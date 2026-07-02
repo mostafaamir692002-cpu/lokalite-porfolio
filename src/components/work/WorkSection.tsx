@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLang } from "@/context/LangContext";
 import { PROJECTS, Project } from "@/data/projects";
 import { cn } from "@/lib/cn";
@@ -11,6 +11,18 @@ export default function WorkSection() {
   const { isRtl } = useLang();
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    const handleOpenProject = (e: Event) => {
+      const projectId = (e as CustomEvent).detail;
+      const proj = PROJECTS.find((p) => p.id === projectId);
+      if (proj) {
+        setActiveProject(proj);
+      }
+    };
+    window.addEventListener("open-project", handleOpenProject);
+    return () => window.removeEventListener("open-project", handleOpenProject);
+  }, []);
 
   // We determine cards visible per screen size for sliding bounds:
   // Desktop: 3 cards. Max index = 3 (since total is 6)

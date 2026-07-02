@@ -200,16 +200,21 @@ export default function HeroSection({ scrollProgress, bootProgress, isBooted }: 
         </span>
       </div>
 
-      {/* Fixed Chat Bubble Float (Bottom Right) */}
-      <a 
-        href={SITE.socials.whatsapp}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-8 z-[80] w-12 h-12 rounded-full bg-gradient-to-b from-[#23252f] to-[#14151b] border border-white/10 flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 group interactive"
-      >
-        <span className="absolute top-0 right-0 w-2.5 h-2.5 bg-success rounded-full border-2 border-[#060810] shadow-[0_0_8px_#30D158] animate-pulse" />
-        <span className="text-lg group-hover:scale-110 transition-transform duration-200">💬</span>
-      </a>
+      {/* Fixed Chat & Podium Logo Group Float (Bottom Right) */}
+      <div className="fixed bottom-6 right-8 z-[80] flex flex-col items-center gap-2">
+        <div className="scale-[0.65] sm:scale-75 origin-bottom animate-scroll-cue opacity-0">
+          <FloatingLogo />
+        </div>
+        <a 
+          href={SITE.socials.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full bg-gradient-to-b from-[#23252f] to-[#14151b] border border-white/10 flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 group interactive"
+        >
+          <span className="absolute top-0 right-0 w-2.5 h-2.5 bg-success rounded-full border-2 border-[#060810] shadow-[0_0_8px_#30D158] animate-pulse" />
+          <span className="text-lg group-hover:scale-110 transition-transform duration-200">💬</span>
+        </a>
+      </div>
     </header>
   );
 }
